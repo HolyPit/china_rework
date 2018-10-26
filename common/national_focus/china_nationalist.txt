@@ -57,8 +57,8 @@ focus_tree = {
 		icon = GFX_goal_support_fascism #icon = GFX_goal_tripartite_pact
 		mutually_exclusive = { focus = CHI_democracy }
 
-		x = -15
-		y = 0
+		x = -6
+		y = 1
 		relative_position_id = CHI_three_principles_of_the_people
 
 		cost = 5
@@ -136,7 +136,7 @@ focus = {
 }
 
 focus = {
-	id = CHI_coorptrate_with_japan
+	id = CHI_coorperate_with_japan
 	icon = GFX_focus_chi_collaboration_with_the_japanese
 
 	x = 0
@@ -271,7 +271,7 @@ focus = {
 		id = CHI_welfare
 		icon = GFX_goal_generic_consumer_goods
 		prerequisite = { focus = CHI_three_principles_of_the_people }
-		x = -4
+		x = -12
 		y = 1
 		relative_position_id = CHI_three_principles_of_the_people
 
