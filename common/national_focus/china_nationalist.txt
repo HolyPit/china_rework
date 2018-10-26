@@ -55,7 +55,7 @@ focus_tree = {
 	focus = {
 		id = CHI_the_indirect_approach
 		icon = GFX_goal_support_fascism #icon = GFX_goal_tripartite_pact
-		mutually_exclusive = { focus = CHI_three_principles_of_the_people }
+		mutually_exclusive = { focus = CHI_democracy }
 
 		x = -15
 		y = 0
@@ -74,7 +74,7 @@ focus_tree = {
 
 	focus = {
 		id = CHI_right_wing_uprising
-		icon = GFX_goal_support_fascism #icon = GFX_goal_tripartite_pact
+		icon = GFX_goal_generic_major_war
 
 		x = 0
 		y = 1
@@ -102,6 +102,134 @@ focus_tree = {
 
 				}
 	}
+}
+}
+
+focus = {
+	id = CHI_invite_wang_zhaoming
+	icon = GFX_goal_molotov_ribbentrop_pact
+	mutually_exclusive = { focus = CHI_strengthen_he_regime }
+
+	x = 1
+	y = 1
+	relative_position_id = CHI_right_wing_uprising
+	prerequisite = { focus =  CHI_right_wing_uprising }
+
+	cost = 5
+
+	completion_reward = {
+
+		add_popularity = { ideology = fascism popularity = 0.30 }
+
+
+		create_country_leader = {
+			name = "Wang Zhaoming"
+			desc = "POLITICS_HE_YINGQIN_DESC"
+			picture = "GFX_portrait_chi_wang_jingwei"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {
+				anti_democrat
+			}
+}
+}
+}
+
+focus = {
+	id = CHI_coorptrate_with_japan
+	icon = GFX_focus_chi_collaboration_with_the_japanese
+
+	x = 0
+	y = 1
+	relative_position_id = CHI_invite_wang_zhaoming
+	prerequisite = { focus =  CHI_invite_wang_zhaoming }
+
+	cost = 5
+
+	available = {
+
+		NOT = { has_war_with = JAP }
+		is_subject = no
+		is_in_faction = no
+		NOT = {
+			any_other_country = {
+				is_in_faction_with = JAP
+				has_war_with = CHI
+			}
+		}
+		JAP = {
+			is_faction_leader = yes
+			has_government = fascism
+			is_subject = no
+		}
+	}
+
+	bypass = {
+		AND = {
+			is_in_faction_with = JAP
+			JAP = {
+				is_faction_leader = yes
+				has_government = fascism
+			}
+		}
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = yes
+
+	completion_reward = {
+
+		JAP = {
+			country_event = generic.2
+		}
+
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+focus = {
+	id = CHI_strengthen_he_regime
+	icon = GFX_focus_generic_support_the_left_right
+	mutually_exclusive = { focus = CHI_invite_wang_zhaoming }
+
+	x = -1
+	y = 1
+	relative_position_id = CHI_right_wing_uprising
+	prerequisite = { focus =  CHI_right_wing_uprising }
+
+	cost = 5
+
+	completion_reward = {
+		create_country_leader = {
+			name = "He Yingqin"
+			desc = "POLITICS_HE_YINGQIN_DESC"
+			picture = "GFX_portrait_chi_he_yingqin"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {
+				dictator
+				generallissimo
+			}
+}
 }
 }
 
@@ -404,6 +532,7 @@ focus_tree = {
 	focus = {
 		id = CHI_democracy
 		icon = GFX_goal_support_democracy
+		mutually_exclusive = { focus = CHI_the_indirect_approach }
 		prerequisite = { focus = CHI_three_principles_of_the_people }
 		x = 0
 		y = 1
