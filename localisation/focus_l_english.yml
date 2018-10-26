@@ -2055,3 +2055,9 @@
  unlocks_decision:0 "Unlocks Decision: "
  CHI_the_indirect_approach:0 "The Indirect Approach"
  CHI_the_indirect_approach_desc:0 "The Indirect Approach"
+ CHI_right_wing_uprising:0 "Right Wing Uprising"
+ CHI_right_wing_uprising_desc:0 "Right Wing Uprising"
+
+
+ ####### ideas localisation #####
+CHI_chinese_nationalism:0 "Chinese Nationlism"
