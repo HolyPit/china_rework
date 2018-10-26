@@ -63,17 +63,6 @@ focus_tree = {
 
 		cost = 5
 
-
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-
 		available_if_capitulated = yes
 
 		completion_reward = {
