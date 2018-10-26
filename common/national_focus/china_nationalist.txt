@@ -136,7 +136,7 @@ focus = {
 }
 
 focus = {
-	id = CHI_coorperate_with_japan
+	id = CHI_cooperate_with_japan
 	icon = GFX_focus_chi_collaboration_with_the_japanese
 
 	x = 0
