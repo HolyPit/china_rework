@@ -13,7 +13,7 @@ focus_tree = {
 
 	default = no
 
-	continuous_focus_position = { x = 20 y = 1000 }
+	continuous_focus_position = { x = 20 y = 1500 }
 
 #	focus = {
 #		id = CHI_
@@ -405,6 +405,27 @@ focus = {
 }
 }
 
+focus = {
+	id = CHI_prepare_for_war
+	icon = GFX_focus_generic_little_entente
+
+
+	x = 0
+	y = 1
+	relative_position_id = CHI_a_debt_of_blood
+	prerequisite = { focus =  CHI_a_debt_of_blood }
+	mutually_exclusive = {focus = CHI_tsingtao_for_peace}
+
+	cost = 5
+
+	completion_reward = {
+
+	add_ideas = war_economy
+
+
+}
+}
+
 
 focus = {
 	id = CHI_reorganise_the_northeastern_army
@@ -413,8 +434,8 @@ focus = {
 
 	x = 0
 	y = 1
-	relative_position_id = CHI_a_debt_of_blood
-	prerequisite = { focus =  CHI_a_debt_of_blood }
+	relative_position_id = CHI_prepare_for_war
+	prerequisite = { focus =  CHI_prepare_for_war }
 
 
 	cost = 10
@@ -485,6 +506,72 @@ focus = {
 			}
 		}
 	}
+}
+
+focus = {
+	id = CHI_recruit_spies_in_kwantung
+	icon = GFX_focus_prc_infiltration
+
+
+	x = 0
+	y = 1
+	relative_position_id = CHI_reorganise_the_northeastern_army
+	prerequisite = { focus =  CHI_reorganise_the_northeastern_army }
+	prerequisite = { focus = CHI_pick_a_fight_with_japan }
+
+	available = {
+		has_political_power > 150
+	}
+
+
+	cost = 5
+
+	completion_reward = {
+		add_political_power = -150
+		MAN = {
+			add_stability = -0.1
+			add_war_support = -0.1
+		}
+		JAP = {
+			add_stability = -0.02
+		}
+}
+}
+
+focus = {
+	id = CHI_nothing_personal
+	icon = GFX_focus_jap_showa_restoration
+
+
+	x = 0
+	y = 1
+	relative_position_id = CHI_recruit_spies_in_kwantung
+	prerequisite = { focus =  CHI_recruit_spies_in_kwantung }
+
+	available = {
+		has_political_power > 300
+	}
+
+
+	cost = 5
+
+	completion_reward = {
+		add_political_power = -300
+
+		JAP = {
+			kill_country_leader = yes
+			hidden_effect = { remove_ideas = JAP_hirohito }
+			#add_stability = -0.6
+			create_country_leader = {
+				name = "Hideki Tojo"
+				desc = "hideki_tojo"
+				picture = "gfx/leaders/JAP/Portrait_Japan_Generic_land_2.dds"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+			}
+		}
+
+}
 }
 
 
@@ -1260,7 +1347,7 @@ focus = {
 		id = CHI_pick_a_fight_with_japan
 		icon = GFX_focus_AST_war_japan
 		prerequisite = { focus = CHI_united_front focus = CHI_anti_communism
-		focus = CHI_reorganise_the_northeastern_army}
+		focus = CHI_prepare_for_war}
 		x = 1
 		y = 1
 		relative_position_id = CHI_united_front
@@ -1590,7 +1677,7 @@ focus = {
 		id = CHI_industrial_evacuations
 		icon = GFX_goal_generic_construct_infrastructure
 		prerequisite = { focus = CHI_war_of_resistance }
-		x = -2
+		x = 4
 		y = 1
 		relative_position_id = CHI_war_of_resistance
 

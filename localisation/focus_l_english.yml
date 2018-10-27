@@ -2081,7 +2081,12 @@
  CHI_reorganise_the_northeastern_army:0 "Reorganise the Northeastern Army"
  CHI_reorganise_the_northeastern_army_desc:0 "Reorganise the Northeastern Army"
  CHI_reorganise_the_northeastern_army_tt:0 "Gain 10 units with 9 Infantry battalions."
-
+ CHI_prepare_for_war:0 "Prepare for War"
+ CHI_prepare_for_war_desc:0 "Prepare for War"
+ CHI_recruit_spies_in_kwantung:0 "Recruit Spies in Kwantung"
+ CHI_recruit_spies_in_kwantung_desc:0 "Recruit Spies in Kwantung"
+ CHI_nothing_personal:0 "Nothing Personal"
+ CHI_nothing_personal-desc:0 "Nothing Personal"
 
 
 
