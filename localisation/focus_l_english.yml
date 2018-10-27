@@ -2071,6 +2071,13 @@
  CHI_support_zhang_xueliang_desc:0 "Support Zhang Xueliang"
  CHI_support_chiang:0 "Support Chiang Kai-Shek"
  CHI_support_chiang_desc:0 "Support Chiang Kai-Shek"
+ CHI_a_debt_of_blood:0 "A Debt of Blood"
+ CHI_a_debt_of_blood_desc:0 "A Debt of Blood"
+ CHI_tsingtao_for_peace:0 "Tsingtao for Peace"
+ CHI_tsingtao_for_peace_desc:0 "Tsingtao for Peace"
+ CHI_delay_japanese_invation:0 "Delay Japanese Invation"
+ CHI_delay_japanese_invation_desc:0 "Delay Japanese Invation"
+ CHI_delay_japanese_invation_tt:0 "Japan will not stage the Marco Polo Bridge Incident until 1939"
 
 
 
@@ -2083,3 +2090,8 @@ CHI_party_military_affairs_commission_long:0 "Military Affairs Commission"
 CHI_party_military_affairs_commission:0 "MAC"
 CHI_party_fengtian_clique_long:0 "Fengtian Clique"
 CHI_party_fengtian_clique:0 "FC"
+
+  #### traits ####
+  young_marshal:0 "Young Marshel"
+  dislikes_japan:0 "Dislikes Japan"
+  brilliant_strategist:0 "Brilliant Strategist"

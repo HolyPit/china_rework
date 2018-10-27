@@ -1,8 +1,41 @@
 leader_traits = {
 
+	young_marshal = {
+		random = no
+		political_power_factor = -0.1
+
+		ai_will_do = {
+			factor = 1
+			}
+		}
+
+
+		dislikes_japan = {
+			random = no
+			ai_strategy = {
+				type = antagonize
+				id = "JAP"
+				value = 200
+			}
+
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
 	dictator = {
 		random = no
 		political_power_factor = 0.25
+
+		ai_will_do = {
+			factor = 1
+		}
+	}
+
+	brilliant_strategist = {
+		random = no
+		political_power_factor = 0.15
+		defensive_war_stability_factor = 0.4
 
 		ai_will_do = {
 			factor = 1

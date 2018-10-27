@@ -1,6 +1,6 @@
 focus_tree = {
 	id = japan_wtt_focus
-	
+
 	country = {
 		factor = 0
 		modifier = {
@@ -8,7 +8,7 @@ focus_tree = {
 			tag = JAP
 		}
 	}
-	
+
 
 	default = no
 
@@ -83,7 +83,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			has_government = communism			
+			has_government = communism
 		}
 
 		cancel_if_invalid = yes
@@ -145,7 +145,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			has_government = communism			
+			has_government = communism
 		}
 
 		cancel_if_invalid = yes
@@ -229,7 +229,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			has_government = communism			
+			has_government = communism
 		}
 
 		cancel_if_invalid = yes
@@ -273,7 +273,7 @@ focus_tree = {
 				limit = {
 					MAN = { is_subject_of = ROOT }
 				}
-				set_autonomy = { target = MAN autonomy_state = autonomy_free } 
+				set_autonomy = { target = MAN autonomy_state = autonomy_free }
 				MAN = {
 					set_autonomy = { target = MEN autonomy_state = autonomy_integrated_puppet }
 				}
@@ -287,72 +287,72 @@ focus_tree = {
 			hidden_effect = {
 				division_template = { name = "Japanese People's Regiment" division_names_group = JAP_INF_01 is_locked = yes regiments = { infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } infantry = { x = 2 y = 0 } } }
 				532 = {
-					create_unit = { 
-						division = "name = \"1. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0" 
+					create_unit = {
+						division = "name = \"1. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
 						owner = ROOT
 					}
-					create_unit = { 
-						division = "name = \"2. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0" 
+					create_unit = {
+						division = "name = \"2. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
 						owner = ROOT
 					}
-					create_unit = { 
-						division = "name = \"3. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0" 
+					create_unit = {
+						division = "name = \"3. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
 						owner = ROOT
 					}
-					create_unit = { 
-						division = "name = \"4. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0" 
+					create_unit = {
+						division = "name = \"4. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
 						owner = ROOT
 					}
-					create_unit = { 
-						division = "name = \"5. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0" 
+					create_unit = {
+						division = "name = \"5. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
 						owner = ROOT
 					}
 				}
 				531 = {
-					create_unit = { 
-						division = "name = \"6. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0" 
+					create_unit = {
+						division = "name = \"6. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
 						owner = ROOT
 					}
-					create_unit = { 
-						division = "name = \"7. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0" 
+					create_unit = {
+						division = "name = \"7. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
 						owner = ROOT
 					}
-					create_unit = { 
-						division = "name = \"8. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0" 
+					create_unit = {
+						division = "name = \"8. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
 						owner = ROOT
 					}
-					create_unit = { 
-						division = "name = \"9. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0" 
+					create_unit = {
+						division = "name = \"9. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
 						owner = ROOT
 					}
-					create_unit = { 
-						division = "name = \"10. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0" 
+					create_unit = {
+						division = "name = \"10. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
 						owner = ROOT
 					}
 				}
 				534 = {
-					create_unit = { 
-						division = "name = \"11. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0" 
+					create_unit = {
+						division = "name = \"11. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
 						owner = ROOT
 					}
-					create_unit = { 
-						division = "name = \"12. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0" 
+					create_unit = {
+						division = "name = \"12. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
 						owner = ROOT
 					}
 				}
 				535 = {
-					create_unit = { 
-						division = "name = \"13. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0" 
+					create_unit = {
+						division = "name = \"13. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
 						owner = ROOT
 					}
-					create_unit = { 
-						division = "name = \"14. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0" 
+					create_unit = {
+						division = "name = \"14. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
 						owner = ROOT
 					}
 				}
 				537 = {
-					create_unit = { 
-						division = "name = \"15. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0" 
+					create_unit = {
+						division = "name = \"15. Japanese People's Regiment\" division_template = \"Japanese People's Regiment\" start_experience_factor = 0"
 						owner = ROOT
 					}
 				}
@@ -366,44 +366,44 @@ focus_tree = {
 					hidden_effect = {
 						division_template = { name = "Japanese Loyalist Regiment" division_names_group = JAP_INF_01 is_locked = yes regiments = { infantry = { x = 0 y = 0 } infantry = { x = 1 y = 0 } infantry = { x = 2 y = 0 } } }
 						529 = {
-							create_unit = { 
-								division = "name = \"1. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0" 
+							create_unit = {
+								division = "name = \"1. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0"
 								owner = PREV
 							}
-							create_unit = { 
-								division = "name = \"2. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0" 
+							create_unit = {
+								division = "name = \"2. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0"
 								owner = PREV
 							}
-							create_unit = { 
-								division = "name = \"3. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0" 
+							create_unit = {
+								division = "name = \"3. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0"
 								owner = PREV
 							}
-							create_unit = { 
-								division = "name = \"4. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0" 
+							create_unit = {
+								division = "name = \"4. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0"
 								owner = PREV
 							}
-							create_unit = { 
-								division = "name = \"5. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0" 
+							create_unit = {
+								division = "name = \"5. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0"
 								owner = PREV
 							}
 						}
 						530 = {
-							create_unit = { 
-								division = "name = \"6. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0" 
+							create_unit = {
+								division = "name = \"6. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0"
 								owner = PREV
 							}
-							create_unit = { 
-								division = "name = \"7. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0" 
+							create_unit = {
+								division = "name = \"7. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0"
 								owner = PREV
 							}
 						}
 						533 = {
-							create_unit = { 
-								division = "name = \"8. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0" 
+							create_unit = {
+								division = "name = \"8. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0"
 								owner = PREV
 							}
-							create_unit = { 
-								division = "name = \"9. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0" 
+							create_unit = {
+								division = "name = \"9. Japanese Loyalist Regiment\" division_template = \"Japanese Loyalist Regiment\" start_experience_factor = 0"
 								owner = PREV
 							}
 						}
@@ -818,7 +818,7 @@ focus_tree = {
 			}
 			swap_ideas = {
 				remove_idea = JAP_zaibatsus
-				add_idea = JAP_nationalize_the_zaibatsus				
+				add_idea = JAP_nationalize_the_zaibatsus
 			}
 		}
 
@@ -843,7 +843,7 @@ focus_tree = {
 			}
 			swap_ideas = {
 				remove_idea = JAP_zaibatsus
-				add_idea = JAP_nationalize_the_zaibatsus				
+				add_idea = JAP_nationalize_the_zaibatsus
 			}
 		}
 	}
@@ -936,7 +936,7 @@ focus_tree = {
 					level = 1
 					instant_build = yes
 				}
-			}			
+			}
 		}
 	}
 
@@ -1108,9 +1108,18 @@ focus_tree = {
 
 		cost = 10
 
-		available = { 
-			is_puppet = no 
-			NOT = { has_war_with = CHI }
+		available = {
+			is_puppet = no
+			if = {
+			OR = {
+			Not = {CHI ={has_completed_focus = CHI_delay_japanese_invation}}
+			date > 1939.01.01
+			}
+			}
+
+			NOT = { has_war_with = CHI
+			has_non_aggression_pact_with =CHI
+		}
 		}
 		bypass = {
 			OR = {
@@ -1246,8 +1255,8 @@ focus_tree = {
 
 		completion_reward = {
 			JAP_intervene_in_china_remove = yes
-			add_named_threat = { threat = 15 name = JAP_secure_china }		
-			USA = { add_war_support = 0.05 }	
+			add_named_threat = { threat = 15 name = JAP_secure_china }
+			USA = { add_war_support = 0.05 }
 			unlock_decision_tooltip = JAP_ichi_go
 		}
 	}
@@ -1344,7 +1353,7 @@ focus_tree = {
 				name = JAP_strike_south_doctrine
 				bonus = 0.5
 				uses = 2
-				category = naval_doctrine	
+				category = naval_doctrine
 			}
 			unlock_decision_tooltip = JAP_pressure_france
 		}
@@ -1522,7 +1531,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			OR = {			
+			OR = {
 				has_wargoal_against = INS
 				has_war_with = INS
 			}
@@ -1792,8 +1801,8 @@ focus_tree = {
 						original_tag = ITA
 						has_government = fascism
 						has_war_with = ROOT
-					}	
-				}	
+					}
+				}
 			}
 		}
 
@@ -1855,7 +1864,7 @@ focus_tree = {
 			}
 			swap_ideas = {
 				remove_idea = JAP_zaibatsus
-				add_idea = JAP_guide_the_zaibatsus				
+				add_idea = JAP_guide_the_zaibatsus
 			}
 		}
 
@@ -1957,7 +1966,7 @@ focus_tree = {
 			random_owned_controlled_state = {
 				limit = {
 					ROOT = { has_full_control_of_state = PREV }
-					is_core_of = ROOT					
+					is_core_of = ROOT
 					free_building_slots = {
 						building = industrial_complex
 						size > 1
@@ -2018,7 +2027,7 @@ focus_tree = {
 				name = JAP_coal_liquification
 				bonus = 0.5
 				uses = 1
-				category = synth_resources	
+				category = synth_resources
 			}
 		}
 	}
@@ -2055,7 +2064,7 @@ focus_tree = {
 
 		completion_reward = {
 			if = {
-				limit = {	
+				limit = {
 					has_war_support < 0.5
 				}
 				add_war_support = 0.1
@@ -2162,7 +2171,7 @@ focus_tree = {
 		completion_reward = {
 			random_owned_controlled_state = {
 				limit = {
-					is_fully_controlled_by = PREV						
+					is_fully_controlled_by = PREV
 					free_building_slots = {
 						building = arms_factory
 						size > 1
@@ -2179,7 +2188,7 @@ focus_tree = {
 			}
 			random_owned_controlled_state = {
 				limit = {
-					is_fully_controlled_by = PREV						
+					is_fully_controlled_by = PREV
 					free_building_slots = {
 						building = arms_factory
 						size > 1
@@ -2326,11 +2335,11 @@ focus_tree = {
 				}
 			}
 			custom_effect_tooltip = kamikaze_focus_tooltip
-			if = { 
+			if = {
 				limit = {
 					has_dlc = "Waking the Tiger"
 				}
-				custom_effect_tooltip = cost_reduced_last_stand 
+				custom_effect_tooltip = cost_reduced_last_stand
 			}
 		}
 	}
@@ -2447,7 +2456,7 @@ focus_tree = {
 			}
 			swap_ideas = {
 				remove_idea = JAP_zaibatsus
-				add_idea = JAP_zaibatsus_challenged			
+				add_idea = JAP_zaibatsus_challenged
 			}
 		}
 
@@ -2591,7 +2600,7 @@ focus_tree = {
 				name = JAP_prepare_for_war_with_the_soviet_union
 				bonus = 0.5
 				uses = 1
-				category = land_doctrine	
+				category = land_doctrine
 			}
 			every_owned_state = {
 				limit = {
@@ -2662,7 +2671,7 @@ focus_tree = {
 			factor = 1
 		}
 
-		available = {			
+		available = {
 			NOT = { has_war_with = FRA }
 			NOT = { has_war_with = ENG }
 			NOT = { has_war_with = USA }
@@ -2760,7 +2769,7 @@ focus_tree = {
 					name = JAP_build_up_the_manchurian_army
 					bonus = 0.5
 					uses = 2
-					category = land_doctrine	
+					category = land_doctrine
 				}
 				add_autonomy_ratio = {
 					value = -0.08333
@@ -2808,7 +2817,7 @@ focus_tree = {
 
 		complete_tooltip = {
 
-		}		
+		}
 
 		completion_reward = {
 			air_experience = 25
@@ -3048,7 +3057,7 @@ focus_tree = {
 		}
 
 		bypass = {
-			OR = {				
+			OR = {
 				has_war_with = SOV
 				has_wargoal_against = SOV
 			}
@@ -3199,7 +3208,7 @@ focus_tree = {
 				name = JAP_german_rocketry
 				bonus = 0.5
 				uses = 1
-				category = rocketry	
+				category = rocketry
 			}
 			add_ideas = JAP_german_rocketry
 			random_country = {
@@ -3315,7 +3324,7 @@ focus_tree = {
 			}
 			swap_ideas = {
 				remove_idea = JAP_zaibatsus
-				add_idea = JAP_nationalize_the_zaibatsus				
+				add_idea = JAP_nationalize_the_zaibatsus
 			}
 		}
 
@@ -3661,7 +3670,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = JAP_pacific_guardian 
+		id = JAP_pacific_guardian
 		icon = GFX_focus_jap_pacific_guardian
 		prerequisite = { focus = JAP_west_pacific_treaty_organization focus = JAP_rekindle_the_old_alliance }
 		x = 1
@@ -3952,7 +3961,7 @@ focus_tree = {
 		completion_reward = {
 			add_to_tech_sharing_group = JAP_ultimate_deterrence
 			every_country = {
-				limit = { is_in_faction_with = ROOT }				
+				limit = { is_in_faction_with = ROOT }
 				add_to_tech_sharing_group = JAP_ultimate_deterrence
 			}
 		}
@@ -4035,7 +4044,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			MAN = {				
+			MAN = {
 				add_stability = 0.1
 				add_war_support = 0.1
 				add_political_power = 150
@@ -4083,7 +4092,7 @@ focus_tree = {
 					add_resource = {
 						type = steel
 						amount = 16
-					}				
+					}
 				}
 				add_extra_state_shared_building_slots = 2
 				add_building_construction = {
@@ -4178,7 +4187,7 @@ focus_tree = {
 		available_if_capitulated = no
 
 		complete_tooltip = {
-			MAN = {			
+			MAN = {
 				random_state = {
 					limit = {
 						has_state_flag = JAP_expand_manchurian_railways_Inf1
@@ -4206,7 +4215,7 @@ focus_tree = {
 			MAN = {
 				random_owned_controlled_state = {
 					limit = {
-						is_fully_controlled_by = PREV						
+						is_fully_controlled_by = PREV
 						free_building_slots = {
 							building = infrastructure
 							size > 0
@@ -4222,7 +4231,7 @@ focus_tree = {
 				}
 				random_owned_controlled_state = {
 					limit = {
-						is_fully_controlled_by = PREV						
+						is_fully_controlled_by = PREV
 						free_building_slots = {
 							building = infrastructure
 							size > 1
@@ -4302,7 +4311,7 @@ focus_tree = {
 		available = {
 			MAN = {
 				is_subject_of = ROOT
-				has_full_control_of_state = 716				
+				has_full_control_of_state = 716
 			}
 		}
 
@@ -4379,7 +4388,7 @@ focus_tree = {
 		prerequisite = { focus = JAP_the_manchurian_project }
 		x = 0
 		y = 1
-		relative_position_id = JAP_the_manchurian_project 
+		relative_position_id = JAP_the_manchurian_project
 
 		cost = 10
 
@@ -4425,7 +4434,7 @@ focus_tree = {
 							level < 2
 						}
 					}
-				}				
+				}
 			}
 		}
 	}
@@ -4435,7 +4444,7 @@ focus_tree = {
 		icon = GFX_goal_generic_army_doctrines
 		x = 6
 		y = 0
-		relative_position_id = JAP_the_manchurian_project 
+		relative_position_id = JAP_the_manchurian_project
 
 		cost = 10
 
@@ -4507,7 +4516,7 @@ focus_tree = {
 				name = JAP_small_arms_modernization
 				bonus = 0.5
 				uses = 1
-				category = infantry_weapons	
+				category = infantry_weapons
 			}
 		}
 	}
@@ -4587,7 +4596,7 @@ focus_tree = {
 				name = JAP_modern_artillery
 				bonus = 0.5
 				uses = 2
-				category = artillery	
+				category = artillery
 			}
 		}
 	}
@@ -4627,7 +4636,7 @@ focus_tree = {
 				name = JAP_armored_divisions
 				bonus = 0.5
 				uses = 1
-				category = armor	
+				category = armor
 			}
 		}
 	}
@@ -4787,13 +4796,13 @@ focus_tree = {
 				name = JAP_fighter_modernization
 				bonus = 0.5
 				uses = 1
-				category = light_fighter		
+				category = light_fighter
 			}
 			add_tech_bonus = {
 				name = JAP_fighter_modernization
 				bonus = 0.5
 				uses = 1
-				category = cat_heavy_fighter	
+				category = cat_heavy_fighter
 			}
 		}
 	}
@@ -4951,7 +4960,7 @@ focus_tree = {
 				bonus = 0.5
 				uses = 1
 				category = cas_bomber
-				category = tactical_bomber					
+				category = tactical_bomber
 			}
 		}
 	}
@@ -4992,7 +5001,7 @@ focus_tree = {
 				name = JAP_strategic_bomber_effort
 				bonus = 0.5
 				uses = 2
-				category = cat_strategic_bomber	
+				category = cat_strategic_bomber
 			}
 		}
 	}
@@ -5130,7 +5139,7 @@ focus_tree = {
 				name = JAP_supremacy_of_the_battlefleet
 				bonus = 0.5
 				uses = 1
-				category = shbb_tech	
+				category = shbb_tech
 			}
 			random_owned_controlled_state = {
 				limit = {
@@ -5153,7 +5162,7 @@ focus_tree = {
 			random_owned_controlled_state = {
 				limit = {
 					ROOT = { has_full_control_of_state = PREV }
-					is_core_of = ROOT					
+					is_core_of = ROOT
 					free_building_slots = {
 						building = dockyard
 						size > 1
@@ -5256,7 +5265,7 @@ focus_tree = {
 				name = JAP_expand_the_snlf
 				bonus = 0.5
 				uses = 1
-				category = marine_tech	
+				category = marine_tech
 			}
 		}
 	}
@@ -5335,7 +5344,7 @@ focus_tree = {
 				name = JAP_modern_escorts
 				bonus = 0.5
 				uses = 1
-				category = dd_tech	
+				category = dd_tech
 			}
 		}
 	}
@@ -5418,7 +5427,7 @@ focus_tree = {
 				name = JAP_the_ultimate_battleship
 				bonus = 0.75
 				uses = 1
-				category = shbb_tech	
+				category = shbb_tech
 			}
 		}
 	}
@@ -5458,8 +5467,8 @@ focus_tree = {
 				name = JAP_cruiser_modernization
 				bonus = 0.75
 				uses = 1
-				category = cl_tech	
-				category = ca_tech	
+				category = cl_tech
+				category = ca_tech
 			}
 		}
 	}

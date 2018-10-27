@@ -76,12 +76,13 @@ focus_tree = {
 
 	focus = {
 		id = CHI_right_wing_uprising
-		icon = GFX_goal_generic_major_war
+		icon = GFX_focus_prc_remove_chiang_kai_shek
 
 		x = 0
 		y = 1
 		relative_position_id = CHI_the_indirect_approach
 		prerequisite = { focus =  CHI_the_indirect_approach }
+		mutually_exclusive = { focus = CHI_support_zhang_xueliang }
 
 		cost = 5
 
@@ -103,7 +104,7 @@ focus_tree = {
 				expire = "1965.1.1"
 				ideology = fascism_ideology
 				traits = {
-
+					brilliant_strategist
 				}
 	}
 }
@@ -118,6 +119,7 @@ focus = {
 	y = 1
 	relative_position_id = CHI_the_indirect_approach
 	prerequisite = { focus =  CHI_the_indirect_approach focus = CHI_nationalism }
+	mutually_exclusive = { focus = CHI_right_wing_uprising focus = CHI_support_chiang }
 
 	cost = 5
 
@@ -132,6 +134,8 @@ focus = {
 			ideology = despotism
 			traits = {
 				fascist_sympathies
+				young_marshal
+				dislikes_japan
 			}
   }
 	create_country_leader = {
@@ -140,7 +144,10 @@ focus = {
 		picture = "GFX_portrait_chi_zhang_xueliang"
 		expire = "1965.1.1"
 		ideology = fascism_ideology
-		traits = {fascist_sympathies}
+		traits = {fascist_sympathies
+			young_marshal
+			dislikes_japan
+		}
 	}
 	set_party_name = { ideology = fascism long_name = CHI_party_fengtian_clique_long
 	name = CHI_party_fengtian_clique }
@@ -258,7 +265,6 @@ focus = {
 			}
 		}
 		JAP = {
-			is_faction_leader = yes
 			has_government = fascism
 			is_subject = no
 		}
@@ -280,8 +286,9 @@ focus = {
 
 	completion_reward = {
 
+
 		JAP = {
-			country_event = generic.2
+			set_autonomy = { target = CHI autonomy_state = autonomy_wtt_imperial_subject }
 		}
 
 
@@ -320,24 +327,14 @@ focus = {
 		set_party_name = { ideology = fascism long_name = CHI_party_military_affairs_commission_long
 			name = CHI_party_military_affairs_commission }
 
-		create_country_leader = {
-			name = "He Yingqin"
-			desc = "POLITICS_HE_YINGQIN_DESC"
-			picture = "GFX_portrait_chi_he_yingqin"
-			expire = "1965.1.1"
-			ideology = fascism_ideology
-			traits = {
-				dictator
-				generallissimo
-			}
-		}
 		add_stability = 0.1
+		add_war_support = 0.1
 }
 }
 
 focus = {
 	id = CHI_delay_japanese_invation
-	icon = GFX_goal_generic_forceful_treaty
+	icon = GFX_focus_generic_concessions
 
 
 	x = 3
@@ -348,17 +345,10 @@ focus = {
 	cost = 5
 
 	completion_reward = {
-		create_country_leader = {
-			name = "He Yingqin"
-			desc = "POLITICS_HE_YINGQIN_DESC"
-			picture = "GFX_portrait_chi_he_yingqin"
-			expire = "1965.1.1"
-			ideology = fascism_ideology
-			traits = {
-				dictator
-				generallissimo
-			}
-}
+
+		add_political_power = -300
+		custom_effect_tooltip = CHI_delay_japanese_invation_tt
+
 }
 }
 
@@ -386,17 +376,12 @@ focus = {
 	cost = 5
 
 	completion_reward = {
-		create_country_leader = {
-			name = "He Yingqin"
-			desc = "POLITICS_HE_YINGQIN_DESC"
-			picture = "GFX_portrait_chi_he_yingqin"
-			expire = "1965.1.1"
-			ideology = fascism_ideology
-			traits = {
-				dictator
-				generallissimo
-			}
-}
+		JAP = {transfer_state = 743}
+		diplomatic_relation = {
+			country = JAP
+			relation = non_aggression_pact
+			active = yes
+		}
 }
 }
 
@@ -416,6 +401,7 @@ focus = {
 	completion_reward = {
 
 	add_war_support = 0.1
+
 }
 }
 
@@ -1058,6 +1044,7 @@ focus = {
 		y = 1
 		relative_position_id = CHI_nationalism
 		prerequisite = { focus = CHI_nationalism }
+		mutually_exclusive = { focus = CHI_support_zhang_xueliang}
 
 		cost = 5
 
