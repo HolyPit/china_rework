@@ -54,10 +54,12 @@ focus_tree = {
 
 	focus = {
 		id = CHI_the_indirect_approach
-		icon = GFX_goal_support_fascism #icon = GFX_goal_tripartite_pact
-		mutually_exclusive = { focus = CHI_democracy }
+		icon = GFX_goal_support_fascism
+		prerequisite = { focus = CHI_three_principles_of_the_people }
+		mutually_exclusive = { focus = CHI_democracy
+			focus = CHI_nationalism }
 
-		x = -6
+		x = 0
 		y = 1
 		relative_position_id = CHI_three_principles_of_the_people
 
@@ -85,6 +87,8 @@ focus_tree = {
 
 		completion_reward = {
 
+
+
 			add_popularity = { ideology = fascism popularity = 0.30 }
 
 			set_politics = {
@@ -105,12 +109,51 @@ focus_tree = {
 }
 }
 
+
 focus = {
-	id = CHI_invite_wang_zhaoming
+	id = CHI_support_zhang_xueliang
+	icon = GFX_focus_generic_military_mission
+
+	x = 6
+	y = 1
+	relative_position_id = CHI_the_indirect_approach
+	prerequisite = { focus =  CHI_the_indirect_approach focus = CHI_nationalism }
+
+	cost = 5
+
+	completion_reward = {
+
+
+		create_country_leader = {
+			name = "Zhang Xueliang"
+			desc = "POLITICS_ZHANG_XUELIANG_DESC"
+			picture = "GFX_portrait_chi_zhang_xueliang"
+			expire = "1965.1.1"
+			ideology = despotism
+			traits = {
+				fascist_sympathies
+			}
+  }
+	create_country_leader = {
+		name = "Zhang Xueliang"
+		desc = "POLITICS_ZHANG_XUELIANG_DESC"
+		picture = "GFX_portrait_chi_zhang_xueliang"
+		expire = "1965.1.1"
+		ideology = fascism_ideology
+		traits = {fascist_sympathies}
+	}
+	set_party_name = { ideology = fascism long_name = CHI_party_fengtian_clique_long
+	name = CHI_party_fengtian_clique }
+}
+}
+
+
+focus = {
+	id = CHI_invite_wang_Jingwei
 	icon = GFX_goal_molotov_ribbentrop_pact
 	mutually_exclusive = { focus = CHI_strengthen_he_regime }
 
-	x = 1
+	x = -1
 	y = 1
 	relative_position_id = CHI_right_wing_uprising
 	prerequisite = { focus =  CHI_right_wing_uprising }
@@ -123,7 +166,7 @@ focus = {
 
 
 		create_country_leader = {
-			name = "Wang Zhaoming"
+			name = "Wang Jingwei"
 			desc = "POLITICS_HE_YINGQIN_DESC"
 			picture = "GFX_portrait_chi_wang_jingwei"
 			expire = "1965.1.1"
@@ -141,8 +184,65 @@ focus = {
 
 	x = 0
 	y = 1
-	relative_position_id = CHI_invite_wang_zhaoming
-	prerequisite = { focus =  CHI_invite_wang_zhaoming }
+	relative_position_id = CHI_invite_wang_Jingwei
+	prerequisite = { focus =  CHI_invite_wang_Jingwei }
+	mutually_exclusive = {focus = CHI_subjuagation_to_japanese }
+
+	cost = 5
+
+	available = {
+
+		NOT = { has_war_with = JAP }
+		is_subject = no
+		is_in_faction = no
+		NOT = {
+			any_other_country = {
+				is_in_faction_with = JAP
+				has_war_with = CHI
+			}
+		}
+		JAP = {
+			is_faction_leader = yes
+			has_government = fascism
+			is_subject = no
+		}
+	}
+
+	bypass = {
+		AND = {
+			is_in_faction_with = JAP
+			JAP = {
+				is_faction_leader = yes
+				has_government = fascism
+			}
+		}
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = yes
+
+	completion_reward = {
+
+		JAP = {
+			country_event = generic.2
+		}
+
+
+}
+}
+
+
+
+focus = {
+	id = CHI_subjuagation_to_japanese
+	icon = GFX_focus_CZE_german_puppet
+
+	x = -2
+	y = 1
+	relative_position_id = CHI_invite_wang_Jingwei
+	prerequisite = { focus =  CHI_invite_wang_Jingwei }
+	mutually_exclusive = {focus = CHI_cooperate_with_japan}
 
 	cost = 5
 
@@ -202,19 +302,48 @@ focus = {
 
 
 
-
-
-
-
 focus = {
 	id = CHI_strengthen_he_regime
 	icon = GFX_focus_generic_support_the_left_right
-	mutually_exclusive = { focus = CHI_invite_wang_zhaoming }
+	mutually_exclusive = { focus = CHI_invite_wang_Jingwei }
 
-	x = -1
+	x = 1
 	y = 1
 	relative_position_id = CHI_right_wing_uprising
 	prerequisite = { focus =  CHI_right_wing_uprising }
+
+	cost = 5
+
+
+
+	completion_reward = {
+		set_party_name = { ideology = fascism long_name = CHI_party_military_affairs_commission_long
+			name = CHI_party_military_affairs_commission }
+
+		create_country_leader = {
+			name = "He Yingqin"
+			desc = "POLITICS_HE_YINGQIN_DESC"
+			picture = "GFX_portrait_chi_he_yingqin"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {
+				dictator
+				generallissimo
+			}
+		}
+		add_stability = 0.1
+}
+}
+
+focus = {
+	id = CHI_delay_japanese_invation
+	icon = GFX_goal_generic_forceful_treaty
+
+
+	x = 3
+	y = 1
+	relative_position_id = CHI_right_wing_uprising
+	prerequisite = { focus =  CHI_right_wing_uprising focus = CHI_support_zhang_xueliang}
 
 	cost = 5
 
@@ -234,13 +363,70 @@ focus = {
 }
 
 
+
+
+
+
+
+
+
+
+
+focus = {
+	id = CHI_tsingtao_for_peace
+	icon = GFX_goal_generic_forceful_treaty
+
+
+	x = -1
+	y = 1
+	relative_position_id = CHI_support_zhang_xueliang
+	prerequisite = { focus =  CHI_support_zhang_xueliang }
+	mutually_exclusive = {focus = CHI_a_debt_of_blood}
+
+	cost = 5
+
+	completion_reward = {
+		create_country_leader = {
+			name = "He Yingqin"
+			desc = "POLITICS_HE_YINGQIN_DESC"
+			picture = "GFX_portrait_chi_he_yingqin"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {
+				dictator
+				generallissimo
+			}
+}
+}
+}
+
+focus = {
+	id = CHI_a_debt_of_blood
+	icon = GFX_goal_generic_attack_allies
+
+
+	x = 1
+	y = 1
+	relative_position_id = CHI_support_zhang_xueliang
+	prerequisite = { focus =  CHI_support_zhang_xueliang }
+	mutually_exclusive = {focus = CHI_tsingtao_for_peace}
+
+	cost = 5
+
+	completion_reward = {
+
+	add_war_support = 0.1
+}
+}
+
+
 	focus = {
 		id = CHI_three_principles_of_the_people
 		icon = GFX_goal_generic_national_unity
-		x = 5
+		x = 0
 		y = 0
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
@@ -534,7 +720,7 @@ focus = {
 		icon = GFX_goal_support_democracy
 		mutually_exclusive = { focus = CHI_the_indirect_approach }
 		prerequisite = { focus = CHI_three_principles_of_the_people }
-		x = 0
+		x = -6
 		y = 1
 		relative_position_id = CHI_three_principles_of_the_people
 
@@ -836,11 +1022,12 @@ focus = {
 		id = CHI_nationalism
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = CHI_three_principles_of_the_people }
-		x = 4
+		mutually_exclusive = { focus = CHI_the_indirect_approach }
+		x = 10
 		y = 1
 		relative_position_id = CHI_three_principles_of_the_people
 
-		cost = 10
+		cost = 5
 
 		ai_will_do = {
 			factor = 4
@@ -864,12 +1051,28 @@ focus = {
 	}
 
 	focus = {
+		id = CHI_support_chiang
+		icon = GFX_focus_chi_cooperation_with_the_nationalists
+
+		x = 0
+		y = 1
+		relative_position_id = CHI_nationalism
+		prerequisite = { focus = CHI_nationalism }
+
+		cost = 5
+
+		completion_reward = {
+			add_stability = 0.05
+	}
+	}
+
+	focus = {
 		id = CHI_foreign_threats
 		icon = GFX_goal_generic_territory_or_war
-		prerequisite = { focus = CHI_nationalism }
+		prerequisite = { focus = CHI_support_chiang  focus = CHI_support_zhang_xueliang }
 		mutually_exclusive = { focus = CHI_prioritize_the_interior }
 		x = -1
-		y = 1
+		y = 2
 		relative_position_id = CHI_nationalism
 
 		cost = 10
@@ -898,10 +1101,10 @@ focus = {
 	focus = {
 		id = CHI_prioritize_the_interior
 		icon = GFX_goal_generic_position_armies
-		prerequisite = { focus = CHI_nationalism }
+		prerequisite = { focus = CHI_support_chiang }
 		mutually_exclusive = { focus = CHI_foreign_threats }
 		x = 1
-		y = 1
+		y = 2
 		relative_position_id = CHI_nationalism
 
 		cost = 10
@@ -1520,7 +1723,7 @@ focus = {
 	focus = {
 		id = CHI_military_affairs_commission
 		icon = GFX_focus_secret_rearmament
-		x = 10
+		x = 15
 		y = 0
 		relative_position_id = CHI_three_principles_of_the_people
 

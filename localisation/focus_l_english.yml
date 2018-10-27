@@ -2057,14 +2057,29 @@
  CHI_the_indirect_approach_desc:0 "The Indirect Approach"
  CHI_right_wing_uprising:0 "Right Wing Uprising"
  CHI_right_wing_uprising_desc:0 "Right Wing Uprising"
- CHI_invite_wang_zhaoming:0 "Invite Wang Zhaoming"
- CHI_invite_wang_zhaoming_desc:0 "Invite Wang Zhaoming"
+ CHI_invite_wang_Jingwei:0 "Invite Wang Jingwei"
+ CHI_invite_wang_Jingwei_desc:0 "Invite Wang Jingwei"
  CHI_strengthen_he_regime:0 "Strengthen the He Yingqin Regime"
  CHI_strengthen_he_regime_desc:0 "Strengthen the He Yingqin Regime"
  CHI_cooperate_with_japan:0 "Cooperate With Japan"
  CHI_cooperate_with_japan_desc:0 "Cooperate With Japan"
+ CHI_delay_japanese_invation:0 "Delay Japanese Invation"
+ CHI_delay_japanese_invation_desc:0 "Delay Japanese Invation"
+ CHI_subjuagation_to_japanese:0 "Subjuagation to Japanese"
+ CHI_subjuagation_to_japanese_desc:0 "Subjuagation to Japanese"
+ CHI_support_zhang_xueliang:0 "Support Zhang Xueliang"
+ CHI_support_zhang_xueliang_desc:0 "Support Zhang Xueliang"
+ CHI_support_chiang:0 "Support Chiang Kai-Shek"
+ CHI_support_chiang_desc:0 "Support Chiang Kai-Shek"
+
 
 
 
  ####### ideas localisation #####
 CHI_chinese_nationalism:0 "Chinese Nationlism"
+
+ ####### party names localisation #####
+CHI_party_military_affairs_commission_long:0 "Military Affairs Commission"
+CHI_party_military_affairs_commission:0 "MAC"
+CHI_party_fengtian_clique_long:0 "Fengtian Clique"
+CHI_party_fengtian_clique:0 "FC"
