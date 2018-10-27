@@ -2077,7 +2077,10 @@
  CHI_tsingtao_for_peace_desc:0 "Tsingtao for Peace"
  CHI_delay_japanese_invation:0 "Delay Japanese Invation"
  CHI_delay_japanese_invation_desc:0 "Delay Japanese Invation"
- CHI_delay_japanese_invation_tt:0 "Japan will not stage the Marco Polo Bridge Incident until 1939"
+ CHI_delay_japanese_invation_tt:0 "Japan will not stage the Marco Polo Bridge Incident until 1939."
+ CHI_reorganise_the_northeastern_army:0 "Reorganise the Northeastern Army"
+ CHI_reorganise_the_northeastern_army_desc:0 "Reorganise the Northeastern Army"
+ CHI_reorganise_the_northeastern_army_tt:0 "Gain 10 units with 9 Infantry battalions."
 
 
 
