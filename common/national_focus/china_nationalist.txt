@@ -85,13 +85,7 @@ focus_tree = {
 		mutually_exclusive = { focus = CHI_support_zhang_xueliang }
 
 		available = {
-			ROOT = {
-				OR = {
-				has_country_leader = { name = "Chiang Kai-Shek" }
-				has_country_leader = { name = "Zhang Xueliang" }
-				has_country_leader = { name = "Wang Jingwei" }
-			}
-			}
+			WTT_is_ROOT_current_leader_of_china = yes
 		}
 
 		cost = 5
@@ -132,13 +126,7 @@ focus = {
 	mutually_exclusive = { focus = CHI_right_wing_uprising focus = CHI_support_chiang }
 
 	available = {
-		ROOT = {
-			OR = {
-			has_country_leader = { name = "Chiang Kai-Shek" }
-			has_country_leader = { name = "Zhang Xueliang" }
-			has_country_leader = { name = "Wang Jingwei" }
-		}
-		}
+		WTT_is_ROOT_current_leader_of_china = yes
 	}
 
 	cost = 5
@@ -236,14 +224,8 @@ focus = {
 	}
 
 	bypass = {
-		AND = {
 			is_in_faction_with = JAP
-			JAP = {
-				is_faction_leader = yes
-				has_government = fascism
-			}
 		}
-	}
 
 	cancel_if_invalid = yes
 	continue_if_invalid = no
@@ -291,13 +273,7 @@ focus = {
 	}
 
 	bypass = {
-		AND = {
-			is_in_faction_with = JAP
-			JAP = {
-				is_faction_leader = yes
-				has_government = fascism
-			}
-		}
+		is_subject_of = JAP
 	}
 
 	cancel_if_invalid = yes
@@ -362,6 +338,20 @@ focus = {
 	relative_position_id = CHI_right_wing_uprising
 	prerequisite = { focus =  CHI_right_wing_uprising focus = CHI_support_zhang_xueliang}
 
+	available = {
+	NOT = { has_war_with = JAP }
+	is_subject = no
+	NOT = {
+		any_other_country = {
+			is_in_faction_with = JAP
+			has_war_with = CHI
+		}
+	}
+}
+	bypass = {
+		JAP = { has_completed_focus = JAP_intervene_in_china}
+	}
+
 	cost = 5
 
 	completion_reward = {
@@ -395,6 +385,22 @@ focus = {
 
 	cost = 5
 
+	available = {
+	controls_state = 743
+	NOT = { has_war_with = JAP }
+	is_subject = no
+	NOT = {
+		any_other_country = {
+			is_in_faction_with = JAP
+			has_war_with = CHI
+		}
+	}
+}
+
+bypass = {
+	has_non_aggression_pact_with = JAP
+}
+
 	completion_reward = {
 		JAP = {transfer_state = 743}
 		diplomatic_relation = {
@@ -404,6 +410,27 @@ focus = {
 		}
 }
 }
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
 
 focus = {
 	id = CHI_a_debt_of_blood
@@ -574,7 +601,10 @@ focus = {
 	prerequisite = { focus =  CHI_recruit_spies_in_kwantung }
 
 	available = {
-		NOT = {has_global_flag = hirohito_recovered}
+		NOT = {
+			has_global_flag = hirohito_recovered
+			is_subject_of = JAP
+		}
 		JAP = {
 			has_country_leader = { name = "Hirohito" }
 		}
