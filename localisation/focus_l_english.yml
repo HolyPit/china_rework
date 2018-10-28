@@ -2069,8 +2069,8 @@
  CHI_subjuagation_to_japanese_desc:0 "Subjuagation to Japanese"
  CHI_support_zhang_xueliang:0 "Support Zhang Xueliang"
  CHI_support_zhang_xueliang_desc:0 "Support Zhang Xueliang"
- CHI_support_chiang:0 "Support Chiang Kai-Shek"
- CHI_support_chiang_desc:0 "Support Chiang Kai-Shek"
+ CHI_support_chiang:0 "Support the Government"
+ CHI_support_chiang_desc:0 "Support the Government"
  CHI_a_debt_of_blood:0 "A Debt of Blood"
  CHI_a_debt_of_blood_desc:0 "A Debt of Blood"
  CHI_tsingtao_for_peace:0 "Tsingtao for Peace"
@@ -2091,15 +2091,31 @@
 
 
  ####### ideas localisation #####
-CHI_chinese_nationalism:0 "Chinese Nationlism"
+ CHI_chinese_nationalism:0 "Chinese Nationlism"
 
  ####### party names localisation #####
-CHI_party_military_affairs_commission_long:0 "Military Affairs Commission"
-CHI_party_military_affairs_commission:0 "MAC"
-CHI_party_fengtian_clique_long:0 "Fengtian Clique"
-CHI_party_fengtian_clique:0 "FC"
+ CHI_party_military_affairs_commission_long:0 "Military Affairs Commission"
+ CHI_party_military_affairs_commission:0 "MAC"
+ CHI_party_fengtian_clique_long:0 "Fengtian Clique"
+ CHI_party_fengtian_clique:0 "FC"
 
   #### traits ####
   young_marshal:0 "Young Marshel"
   dislikes_japan:0 "Dislikes Japan"
   brilliant_strategist:0 "Brilliant Strategist"
+
+
+  #### events ####
+ hirohito_recovered:0 " Hirohito Recovered"
+
+  news.1001.t:0 "Emperor Hirohito Injured In Manchuria"
+  news.1001.desc:0 "Emperor Hirohito was invited by the Kwantung Army to a parade in Mukden which to show off their total control of Manchukuo and to celebrate the recent military successes in China. His Majesty's cruise landed in Dalin then the Emperor took the train to Mukden. The train has encountered a huge explosion and severely damanged when it just passed the Huanggutun station near Mukden. The Emperor is still alive according to the Kuantung Army, but they refuse to release more information about the Emperor's condition. This reminds us the Huanggutun incident in 1928, when Zhang Zuolin, who was the head-of-state of China and the father of the current chinese leader Zhang Xueliang, was assassinated."
+  news.1001.a:0 "What a coincidence!"
+
+  news.1002.t:0 "Emperor Hirohito Died!"
+  news.1002.desc:0 "Emperor Hirohito died this morning, after 3 months being injured from the Mukden explosion. The Emperor has remained unconscious and stayed at a army hospital in Mukden until passed away today. Japanese Chief-of-Army Tojo Hideki declared his leadership of the war-time Japan, and will return power to the new Emperor Akihito in the future, but who is too young to lead the country at the moment. The Emperor's death shaked the country's stability significantly."
+  news.1002.a:0 "Seems like Zhang had his sweet revenge for his father eventually."
+
+  news.1003.t:0 "Emperor Hirohito Returned to Tokyo"
+  news.1003.desc:0 "Emperor Hirohito showed himself in public first time after the injury in Manchuria. His Majesty seemed fully recoverd, but no one could really tell as the Emperor was surrounded by more than a hundred royal guards!"
+  news.1003.a:0 "The Emperor is well protected now."

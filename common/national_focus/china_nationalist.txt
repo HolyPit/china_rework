@@ -84,6 +84,16 @@ focus_tree = {
 		prerequisite = { focus =  CHI_the_indirect_approach }
 		mutually_exclusive = { focus = CHI_support_zhang_xueliang }
 
+		available = {
+			ROOT = {
+				OR = {
+				has_country_leader = { name = "Chiang Kai-Shek" }
+				has_country_leader = { name = "Zhang Xueliang" }
+				has_country_leader = { name = "Wang Jingwei" }
+			}
+			}
+		}
+
 		cost = 5
 
 		completion_reward = {
@@ -120,6 +130,16 @@ focus = {
 	relative_position_id = CHI_the_indirect_approach
 	prerequisite = { focus =  CHI_the_indirect_approach focus = CHI_nationalism }
 	mutually_exclusive = { focus = CHI_right_wing_uprising focus = CHI_support_chiang }
+
+	available = {
+		ROOT = {
+			OR = {
+			has_country_leader = { name = "Chiang Kai-Shek" }
+			has_country_leader = { name = "Zhang Xueliang" }
+			has_country_leader = { name = "Wang Jingwei" }
+		}
+		}
+	}
 
 	cost = 5
 
@@ -520,20 +540,25 @@ focus = {
 	prerequisite = { focus = CHI_pick_a_fight_with_japan }
 
 	available = {
-		has_political_power > 150
+		MAN = { is_puppet_of = JAP }
 	}
 
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = yes
 
-	cost = 5
+
+	cost = 10
 
 	completion_reward = {
+		news_event = news.1001
 		add_political_power = -150
 		MAN = {
 			add_stability = -0.1
 			add_war_support = -0.1
 		}
 		JAP = {
-			add_stability = -0.02
+			add_stability = -0.1
 		}
 }
 }
@@ -549,13 +574,21 @@ focus = {
 	prerequisite = { focus =  CHI_recruit_spies_in_kwantung }
 
 	available = {
-		has_political_power > 300
+		NOT = {has_global_flag = hirohito_recovered}
+		JAP = {
+			has_country_leader = { name = "Hirohito" }
+		}
 	}
 
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = yes
 
-	cost = 5
+
+	cost = 10
 
 	completion_reward = {
+		news_event = news.1002
 		add_political_power = -300
 
 		JAP = {
@@ -1348,7 +1381,7 @@ focus = {
 		icon = GFX_focus_AST_war_japan
 		prerequisite = { focus = CHI_united_front focus = CHI_anti_communism
 		focus = CHI_prepare_for_war}
-		x = 1
+		x = 0
 		y = 1
 		relative_position_id = CHI_united_front
 
