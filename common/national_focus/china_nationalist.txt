@@ -412,17 +412,40 @@ bypass = {
 }
 
 
+focus = {
+	id = CHI_shandong_for_hometown
+	icon = GFX_goal_generic_position_armies
 
 
+	x = 0
+	y = 1
+	relative_position_id = CHI_tsingtao_for_peace
+	prerequisite = { focus =  CHI_tsingtao_for_peace }
 
 
+	cost = 5
+
+	available = {
+	controls_state = 597
+	NOT = { has_war_with = JAP }
+	is_subject = no
+	NOT = {
+		any_other_country = {
+			is_in_faction_with = JAP
+			has_war_with = CHI
+		}
+	}
+}
 
 
-
-
-
-
-
+	completion_reward = {
+		JAP = {transfer_state = 597}
+		transfer_state = 610
+		transfer_state = 716
+		add_stability = -0.1
+		add_war_support = -0.1
+}
+}
 
 
 
