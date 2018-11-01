@@ -2087,9 +2087,10 @@
  CHI_recruit_spies_in_kwantung_desc:0 "Recruit Spies in Kwantung"
  CHI_nothing_personal:0 "Nothing Personal"
  CHI_nothing_personal-desc:0 "Nothing Personal"
- CHI_shandong_for_hometown:0 "Shandong for Hometown"
- CHI_shandong_for_hometown_desc:0 "Shandong for Hometown"
-
+ CHI_shandong_for_homeland:0 "Shandong for Homeland"
+ CHI_shandong_for_homeland_desc:0 "Shandong for Homeland"
+ CHI_invite_communist_china:0 "Invite Communist China"
+ CHI_invite_communist_china_desc:0 "Invite Communist China"
 
 
  ####### ideas localisation #####

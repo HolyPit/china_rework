@@ -413,7 +413,7 @@ bypass = {
 
 
 focus = {
-	id = CHI_shandong_for_hometown
+	id = CHI_shandong_for_homeland
 	icon = GFX_goal_generic_position_armies
 
 
@@ -423,10 +423,16 @@ focus = {
 	prerequisite = { focus =  CHI_tsingtao_for_peace }
 
 
-	cost = 5
+	cost = 10
 
 	available = {
 	controls_state = 597
+	OR = {
+		MAN = { controls_state = 610
+		controls_state = 716}
+		JAP = { controls_state = 610
+		controls_state = 716}
+	}
 	NOT = { has_war_with = JAP }
 	is_subject = no
 	NOT = {
@@ -448,7 +454,42 @@ focus = {
 }
 
 
+focus = {
+	id = CHI_invite_communist_china
+	icon = GFX_focus_generic_soviet_politics
 
+
+	x = 0
+	y = 1
+	relative_position_id = CHI_shandong_for_homeland
+	prerequisite = { focus =  CHI_shandong_for_homeland }
+
+
+	cost = 10
+
+	available = {
+
+		NOT = {
+			has_government = fascism
+			has_war = yes
+		}
+
+		country_exists = PRC
+
+		PRC = {
+			is_subject = no
+			has_war = no
+		}
+
+}
+
+
+	completion_reward = {
+		add_popularity = { ideology = communism popularity = 0.30 }
+		set_autonomy = { target = PRC autonomy_state = autonomy_dominion }
+
+}
+}
 
 
 

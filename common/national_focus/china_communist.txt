@@ -671,6 +671,9 @@ focus_tree = {
 		available = {
 			WTT_has_politcal_support_points_30 = yes
 			not = { is_subject_of = event_target:WTT_current_china_leader }
+			CHI = {
+				has_country_leader = { name = "Chiang Kai-Shek" }
+			}
 		}
 
 		bypass = {
