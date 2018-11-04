@@ -502,6 +502,7 @@ focus = {
 				ruling_party = communism
 				elections_allowed = no
 			}
+			set_cosmetic_tag = PRC_communism
 		}
 
 }
