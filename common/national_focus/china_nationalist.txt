@@ -417,7 +417,7 @@ focus = {
 	icon = GFX_goal_generic_position_armies
 
 
-	x = 0
+	x = -2
 	y = 1
 	relative_position_id = CHI_tsingtao_for_peace
 	prerequisite = { focus =  CHI_tsingtao_for_peace }
@@ -461,8 +461,8 @@ focus = {
 
 	x = 0
 	y = 1
-	relative_position_id = CHI_shandong_for_homeland
-	prerequisite = { focus =  CHI_shandong_for_homeland }
+	relative_position_id = CHI_tsingtao_for_peace
+	prerequisite = { focus =  CHI_tsingtao_for_peace }
 
 
 	cost = 10
@@ -497,11 +497,28 @@ focus = {
 		add_popularity = { ideology = communism popularity = 0.30 }
 		set_autonomy = { target = PRC autonomy_state = autonomy_dominion }
 		PRC = {
-		add_popularity = { ideology = communism popularity = 1.0 }
-		set_politics = {
-				ruling_party = communism
-				elections_allowed = no
-			}
+			set_politics = {
+    parties = {
+		democratic = {
+			popularity = 0
+		}
+
+		fascism = {
+			popularity = 0
+		}
+
+		communism = {
+			popularity = 100
+		}
+
+		neutrality = {
+			popularity = 0
+		}
+	}
+
+	ruling_party = communism
+	elections_allowed = no
+}
 			set_cosmetic_tag = PRC_communism
 		}
 
