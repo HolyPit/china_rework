@@ -1,7 +1,8 @@
-﻿###########################
+add_namespace = news
+
+###########################
 # Mod News Events
 ###########################
-add_namespace = news
 
 #assassinate hirohito step one
 news_event = {

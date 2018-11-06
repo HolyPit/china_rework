@@ -2091,6 +2091,7 @@
  CHI_shandong_for_homeland_desc:0 "Shandong for Homeland"
  CHI_invite_communist_china:0 "Invite Communist China"
  CHI_invite_communist_china_desc:0 "Invite Communist China"
+ CHI_invite_communist_china_tt:0 "If Communist China agrees, Communist China will become a puppet (Dominion) of China and add 40% Communism popularity in the government."
 
 
  ####### ideas localisation #####
@@ -2122,3 +2123,15 @@
   news.1003.t:0 "Emperor Hirohito Returned to Tokyo"
   news.1003.desc:0 "Emperor Hirohito showed himself in public first time after the injury in Manchuria. His Majesty seemed fully recoverd, but no one could really tell as the Emperor was surrounded by more than a hundred royal guards!"
   news.1003.a:0 "The Emperor is well protected now."
+
+
+  wtt_china.1001.t:0 "Zhang Xueliang's Invitation"
+  wtt_china.1001.desc:0 "A new central government led by Zhang Xueliang made its first step towards a peaceful solution to the communist uprising, by offering the formation of a coalition government while the communists keep their autonomy."
+  wtt_china.1001.a:0 "Together we stand!"
+  wtt_china.1001.b:0 "We cannot trust them!"
+  wtt_china.1002.t:0 "Communist China Agrees"
+  wtt_china.1002.desc:0 "Communist China has sent the messenger back with a personal note, welcoming the invitation and promising to coordinate with our government."
+  wtt_china.1002.a:0 "Finally we have an agreement."
+  wtt_china.1003.t:0 "Communist China Refuses"
+  wtt_china.1003.desc:0 "[From.GetLeader] has returned our note, claiming that the Central Government has no legal authority to replace a provincial governor. It was accompanied by a detailed report stating the combat-readiness of his troops."
+  wtt_china.1003.a:0 "We will see about that."

@@ -1,5 +1,104 @@
 ﻿add_namespace = wtt_china
 
+###########################
+# Mod News Events
+###########################
+
+# China demands PRC be puppeted
+country_event = {
+	id = wtt_china.1001
+	title = wtt_china.1001.t
+	desc = wtt_china.1001.desc
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	#Accept puppet
+	option = {
+		name = wtt_china.1001.a
+		ai_chance = {
+			base = 90
+		}
+		FROM = {
+		CHI = {
+		add_popularity = { ideology = communism popularity = 0.30 }
+		set_autonomy = { target = PRC autonomy_state = autonomy_dominion }
+		}
+		PRC = {
+			set_politics = {
+		parties = {
+		democratic = {
+			popularity = 0
+		}
+
+		fascism = {
+			popularity = 0
+		}
+
+		communism = {
+			popularity = 100
+		}
+
+		neutrality = {
+			popularity = 0
+		}
+	}
+
+	ruling_party = communism
+	elections_allowed = no
+}
+			set_cosmetic_tag = PRC_communism
+		}
+			country_event = { id = wtt_china.1002 }
+		}
+	}
+
+	#Never
+	option = {
+		name = wtt_china.1001.b
+		ai_chance = {
+			base = 10
+		}
+		FROM = {
+			country_event = { id = wtt_china.1003 }
+		}
+	}
+}
+
+# Answer from PRC.1 - Yes
+country_event = {
+	id = wtt_china.1002
+	title = wtt_china.1002.t
+	desc = wtt_china.1002.desc
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = wtt_china.1002.a
+
+	}
+}
+
+
+# Answer from PRC.1 - No
+country_event = {
+	id = wtt_china.1003
+	title = wtt_china.1003.t
+	desc = wtt_china.1003.desc
+	picture = GFX_report_event_chinese_soldiers_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = wtt_china.1003.a
+		create_wargoal = {
+				type = puppet_wargoal_focus
+				target = FROM
+		}
+	}
+}
+
 #
 
 # China demands warlord be puppeted

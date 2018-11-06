@@ -494,34 +494,12 @@ focus = {
 
 
 	completion_reward = {
-		add_popularity = { ideology = communism popularity = 0.30 }
-		set_autonomy = { target = PRC autonomy_state = autonomy_dominion }
+		
 		PRC = {
-			set_politics = {
-    parties = {
-		democratic = {
-			popularity = 0
-		}
-
-		fascism = {
-			popularity = 0
-		}
-
-		communism = {
-			popularity = 100
-		}
-
-		neutrality = {
-			popularity = 0
-		}
+		country_event = { id = wtt_china.1001 }
 	}
 
-	ruling_party = communism
-	elections_allowed = no
-}
-			set_cosmetic_tag = PRC_communism
-		}
-
+	custom_effect_tooltip = CHI_invite_communist_china_tt
 }
 }
 
