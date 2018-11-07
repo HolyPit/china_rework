@@ -59,7 +59,7 @@ focus_tree = {
 		mutually_exclusive = { focus = CHI_democracy
 			focus = CHI_nationalism }
 
-		x = 0
+		x = -1
 		y = 1
 		relative_position_id = CHI_three_principles_of_the_people
 
@@ -119,7 +119,7 @@ focus = {
 	id = CHI_support_zhang_xueliang
 	icon = GFX_focus_generic_military_mission
 
-	x = 6
+	x = 10
 	y = 1
 	relative_position_id = CHI_the_indirect_approach
 	prerequisite = { focus =  CHI_the_indirect_approach focus = CHI_nationalism }
@@ -417,7 +417,7 @@ focus = {
 	icon = GFX_goal_generic_position_armies
 
 
-	x = -2
+	x = 0
 	y = 1
 	relative_position_id = CHI_tsingtao_for_peace
 	prerequisite = { focus =  CHI_tsingtao_for_peace }
@@ -456,10 +456,10 @@ focus = {
 
 focus = {
 	id = CHI_invite_communist_china
-	icon = GFX_focus_generic_soviet_politics
+	icon = GFX_focus_chi_cooperation_with_the_communists
 
 
-	x = 0
+	x = -3
 	y = 1
 	relative_position_id = CHI_tsingtao_for_peace
 	prerequisite = { focus =  CHI_tsingtao_for_peace }
@@ -494,7 +494,7 @@ focus = {
 
 
 	completion_reward = {
-		
+
 		PRC = {
 		country_event = { id = wtt_china.1001 }
 	}
@@ -502,6 +502,268 @@ focus = {
 	custom_effect_tooltip = CHI_invite_communist_china_tt
 }
 }
+
+
+
+focus = {
+	id = CHI_split_shanxi
+	icon = GFX_goal_generic_dangerous_deal
+
+
+	x = 1
+	y = 1
+	relative_position_id = CHI_invite_communist_china
+	prerequisite = { focus =  CHI_invite_communist_china }
+
+
+	cost = 10
+
+	available = {
+
+		NOT = {
+			has_war = yes
+		}
+
+		country_exists = PRC
+
+		PRC = {
+			has_war = no
+		}
+
+		country_exists = SHX
+		SHX = {
+			is_subject = no
+			has_war = no
+		}
+
+	}
+	bypass = {
+		OR = {
+		NOT = {
+		country_exists = PRC
+		country_exists = SHX
+		}
+		SHX = { is_subject = yes }
+		}
+
+		}
+
+
+	completion_reward = {
+
+		SHX = {
+		country_event = { id = wtt_china.1004 }
+	}
+
+}
+}
+
+
+focus = {
+	id = CHI_split_xibei
+	icon = GFX_goal_generic_dangerous_deal
+
+
+	x = -1
+	y = 1
+	relative_position_id = CHI_invite_communist_china
+	prerequisite = { focus =  CHI_invite_communist_china }
+
+
+	cost = 10
+
+	available = {
+
+		NOT = {
+			has_war = yes
+		}
+
+		country_exists = PRC
+
+		PRC = {
+			has_war = no
+		}
+
+		country_exists = XSM
+		XSM = {
+			is_subject = no
+			has_war = no
+		}
+
+	}
+	bypass = {
+		OR = {
+		NOT = {
+		country_exists = PRC
+		country_exists = XSM
+		}
+		XSM = { is_subject = yes }
+		}
+
+		}
+
+
+	completion_reward = {
+
+		XSM = {
+		country_event = { id = wtt_china.1007 }
+	}
+
+}
+}
+
+
+
+focus = {
+	id = CHI_transfer_sinkiang
+	icon = GFX_goal_generic_dangerous_deal
+
+
+	x = -3
+	y = 1
+	relative_position_id = CHI_invite_communist_china
+	prerequisite = { focus =  CHI_invite_communist_china }
+
+
+	cost = 10
+
+	available = {
+
+		NOT = {
+			has_war = yes
+		}
+
+		country_exists = PRC
+
+		PRC = {
+			has_war = no
+		}
+
+		country_exists = SIK
+		SIK = {
+			is_subject = no
+			has_war = no
+		}
+
+	}
+	bypass = {
+		OR = {
+		NOT = {
+		country_exists = PRC
+		country_exists = SIK
+		}
+		SIK = { is_subject = yes }
+		}
+
+		}
+
+
+	completion_reward = {
+
+		SIK = {
+		country_event = { id = wtt_china.1008 }
+		custom_effect_tooltip = CHI_transfer_sinkiang_tt
+	}
+
+}
+}
+
+
+focus = {
+	id = CHI_second_kmt_ccp_cooperation
+	icon = GFX_focus_chi_united_front
+
+
+	x = 1
+	y = 2
+	relative_position_id = CHI_invite_communist_china
+	prerequisite = { focus =  CHI_split_xibei
+		focus = CHI_split_shanxi}
+
+
+	cost = 10
+
+	available = {
+
+		NOT = {
+			has_war = yes
+		}
+
+		country_exists = PRC
+
+		PRC = {
+			has_war = no
+		}
+
+
+	}
+	bypass = {
+
+		NOT = {
+		country_exists = PRC
+		}
+
+
+		}
+
+
+	completion_reward = {
+
+
+
+}
+}
+
+
+focus = {
+	id = CHI_second_betrayal
+	icon = GFX_goal_anti_comintern_pact
+
+
+	x = -1
+	y = 2
+	relative_position_id = CHI_invite_communist_china
+	prerequisite = { focus =  CHI_split_xibei
+		focus = CHI_split_shanxi}
+
+
+	cost = 10
+
+	available = {
+
+		NOT = {
+			has_war = yes
+		}
+
+		country_exists = PRC
+
+		PRC = {
+			has_war = no
+		}
+
+
+	}
+	bypass = {
+
+		NOT = {
+		country_exists = PRC
+		}
+
+
+		}
+
+
+	completion_reward = {
+
+
+
+}
+}
+
+
+
+
+
 
 
 
@@ -558,7 +820,8 @@ focus = {
 	x = 0
 	y = 1
 	relative_position_id = CHI_prepare_for_war
-	prerequisite = { focus =  CHI_prepare_for_war }
+	prerequisite = { focus =  CHI_prepare_for_war
+		focus = CHI_shandong_for_homeland}
 
 
 	cost = 10
@@ -644,6 +907,10 @@ focus = {
 
 	available = {
 		MAN = { is_puppet_of = JAP }
+		OR = {
+			MAN = { controls_state = 716}
+			JAP = { controls_state = 716}
+		}
 	}
 
 	cancel_if_invalid = yes
@@ -1020,8 +1287,8 @@ focus = {
 		mutually_exclusive = { focus = CHI_the_indirect_approach }
 		prerequisite = { focus = CHI_three_principles_of_the_people }
 		x = -6
-		y = 1
-		relative_position_id = CHI_three_principles_of_the_people
+		y = 0
+		relative_position_id = CHI_the_indirect_approach
 
 		cost = 10
 
@@ -1322,7 +1589,7 @@ focus = {
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = CHI_three_principles_of_the_people }
 		mutually_exclusive = { focus = CHI_the_indirect_approach }
-		x = 10
+		x = 13
 		y = 1
 		relative_position_id = CHI_three_principles_of_the_people
 
@@ -2024,7 +2291,7 @@ focus = {
 	focus = {
 		id = CHI_military_affairs_commission
 		icon = GFX_focus_secret_rearmament
-		x = 15
+		x = 17
 		y = 0
 		relative_position_id = CHI_three_principles_of_the_people
 
@@ -2458,7 +2725,7 @@ focus = {
 	focus = {
 		id = CHI_unified_industrial_planning
 		icon = GFX_goal_generic_construction
-		x = 7
+		x = 6
 		y = 0
 		relative_position_id =  CHI_military_affairs_commission
 

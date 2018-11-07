@@ -93,13 +93,224 @@ country_event = {
 	option = {
 		name = wtt_china.1003.a
 		create_wargoal = {
-				type = puppet_wargoal_focus
+				type = annex_everything
 				target = FROM
 		}
 	}
 }
 
-#
+
+##################################################################
+
+# Split Shanxi
+country_event = {
+	id = wtt_china.1004
+	title = wtt_china.1004.t
+	desc = wtt_china.1004.desc
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	#Accept puppet
+	option = {
+		name = wtt_china.1004.a
+		ai_chance = {
+			base = 90
+		}
+
+		FROM = {
+		CHI = {
+			annex_country =  {
+			target = SHX
+    	transfer_troops = yes
+		}
+		create_field_marshal = {
+			name = "Yan Xishan"
+			gfx = GFX_portrait_yan_xishan
+			traits = { career_officer } # Educated at officer schools in China and Japan
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		}
+
+		PRC = {
+		transfer_state = 746
+		transfer_state = 621
+		}
+
+
+			country_event = { id = wtt_china.1005 }
+
+		}
+	}
+
+	#Never
+	option = {
+		name = wtt_china.1.b
+		ai_chance = {
+			base = 10
+		}
+		FROM = {
+			country_event = { id = wtt_china.1006 }
+		}
+	}
+}
+
+# Split Xibei San Ma
+country_event = {
+	id = wtt_china.1007
+	title = wtt_china.1004.t
+	desc = wtt_china.1004.desc
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	#Accept puppet
+	option = {
+		name = wtt_china.1004.a
+		ai_chance = {
+			base = 90
+		}
+
+		FROM = {
+		CHI = {
+			annex_country =  {
+			target = XSM
+    	transfer_troops = yes
+		}
+		create_field_marshal = {
+			name = "Ma Bufang"
+			gfx = GFX_portrait_xsm_ma_bufang
+			traits = { cavalry_officer } # Raised 30,000 Muslim Cavalrymen
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		}
+
+		PRC = {
+		transfer_state = 283
+		transfer_state = 616
+		transfer_state = 755
+		transfer_state = 756
+		}
+
+
+			country_event = { id = wtt_china.1005 }
+
+		}
+	}
+
+	#Never
+	option = {
+		name = wtt_china.1.b
+		ai_chance = {
+			base = 10
+		}
+		FROM = {
+			country_event = { id = wtt_china.1006 }
+		}
+	}
+}
+
+# Annex Sinkiang
+country_event = {
+	id = wtt_china.1008
+	title = wtt_china.1004.t
+	desc = wtt_china.1004.desc
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	#Accept puppet
+	option = {
+		name = wtt_china.1004.a
+		ai_chance = {
+			base = 90
+		}
+
+		FROM = {
+		CHI = {
+
+		create_field_marshal = {
+			name = "Sheng Shicai"
+			gfx = GFX_portrait_sheng_shicai
+			traits = { politically_connected } # Studied political economy, played Stalin and Chiang against one another
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		}
+
+		PRC = {
+		annex_country =  {
+		target = SIK
+		transfer_troops = yes
+	}
+		}
+
+
+			country_event = { id = wtt_china.1005 }
+
+		}
+	}
+
+	#Never
+	option = {
+		name = wtt_china.1.b
+		ai_chance = {
+			base = 10
+		}
+		FROM = {
+			country_event = { id = wtt_china.1006 }
+		}
+	}
+}
+
+# Answer from shanxi - Yes
+country_event = {
+	id = wtt_china.1005
+	title = wtt_china.2.t
+	desc = wtt_china.2.desc
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = wtt_china.2.a
+	}
+}
+
+
+
+# Answer from shanxi - No
+country_event = {
+	id = wtt_china.1006
+	title = wtt_china.3.t
+	desc = wtt_china.3.desc
+	picture = GFX_report_event_chinese_soldiers_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = wtt_china.3.a
+		create_wargoal = {
+				type = annex_everything
+				target = FROM
+		}
+	}
+}
+
+
+
+##################################################################
 
 # China demands warlord be puppeted
 country_event = {

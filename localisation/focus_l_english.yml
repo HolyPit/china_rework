@@ -2092,7 +2092,17 @@
  CHI_invite_communist_china:0 "Invite Communist China"
  CHI_invite_communist_china_desc:0 "Invite Communist China"
  CHI_invite_communist_china_tt:0 "If Communist China agrees, Communist China will become a puppet (Dominion) of China and add 40% Communism popularity in the government."
-
+ CHI_split_shanxi:0 "Split Shanxi"
+ CHI_split_shanxi_desc:0 "Split Shanxi"
+ CHI_split_xibei:0 "Split Xibei"
+ CHI_split_xibei_desc:0 "Split Xibei"
+ CHI_transfer_sinkiang:0 "Transfer Sinkiang"
+ CHI_transfer_sinkiang_desc:0 "Transfer Sinkiang"
+ CHI_transfer_sinkiang_tt:0 "Communist China will annex Sinkiang if they agree to."
+ CHI_second_kmt_ccp_cooperation:0 "Second KMT-CCP Cooperation"
+ CHI_second_kmt_ccp_cooperation_desc:0 "Second KMT-CCP Cooperation"
+ CHI_second_betrayal:0 "The Second Betrayal"
+ CHI_second_betrayal_desc:0 "The Second Betrayal"
 
  ####### ideas localisation #####
  CHI_chinese_nationalism:0 "Chinese Nationlism"
@@ -2129,9 +2139,15 @@
   wtt_china.1001.desc:0 "A new central government led by Zhang Xueliang made its first step towards a peaceful solution to the communist uprising, by offering the formation of a coalition government while the communists keep their autonomy."
   wtt_china.1001.a:0 "Together we stand!"
   wtt_china.1001.b:0 "We cannot trust them!"
+
   wtt_china.1002.t:0 "Communist China Agrees"
   wtt_china.1002.desc:0 "Communist China has sent the messenger back with a personal note, welcoming the invitation and promising to coordinate with our government."
   wtt_china.1002.a:0 "Finally we have an agreement."
+
   wtt_china.1003.t:0 "Communist China Refuses"
   wtt_china.1003.desc:0 "[From.GetLeader] has returned our note, claiming that the Central Government has no legal authority to replace a provincial governor. It was accompanied by a detailed report stating the combat-readiness of his troops."
   wtt_china.1003.a:0 "We will see about that."
+
+  wtt_china.1004.t:0 "Zhang Xueliang Demands Unification"
+  wtt_china.1004.desc:0 "As the communists show their obedience to the central government, Zhang Xueliang feels safe to give them more territory, but definitely not from his own. Zhang demands us to join the central government and transfer the northern part to the communists. In return, we have been promised the marshal rank in the central army."
+  wtt_china.1004.a:0 "There is no other option."
