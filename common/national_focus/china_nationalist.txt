@@ -685,6 +685,11 @@ focus = {
 
 	available = {
 
+		PRC = {
+			is_subject_of = CHI
+			compare_autonomy_state > autonomy_puppet
+		}
+
 		NOT = {
 			has_war = yes
 		}
@@ -693,6 +698,7 @@ focus = {
 
 		PRC = {
 			has_war = no
+
 		}
 
 
@@ -709,7 +715,7 @@ focus = {
 
 	completion_reward = {
 
-
+		set_autonomy = { target = PRC autonomy_state = autonomy_dominion }
 
 }
 }
@@ -731,6 +737,7 @@ focus = {
 
 	available = {
 
+
 		NOT = {
 			has_war = yes
 		}
@@ -755,7 +762,20 @@ focus = {
 
 	completion_reward = {
 
+		set_autonomy = { target = PRC autonomy_state = autonomy_free }
+		if = {
+			limit = {
+				PRC = {
+				is_in_faction_with = CHI}
+			}
+		PRC = {leave_faction = yes}
 
+	}
+
+		declare_war_on = {
+		    target = PRC
+		    type = annex_everything
+		}
 
 }
 }
@@ -799,9 +819,9 @@ focus = {
 	y = 1
 	relative_position_id = CHI_a_debt_of_blood
 	prerequisite = { focus =  CHI_a_debt_of_blood }
-	mutually_exclusive = {focus = CHI_tsingtao_for_peace}
 
-	cost = 5
+
+	cost = 10
 
 	completion_reward = {
 
@@ -906,7 +926,7 @@ focus = {
 	prerequisite = { focus = CHI_pick_a_fight_with_japan }
 
 	available = {
-		MAN = { is_puppet_of = JAP }
+		MAN = { is_subject_of = JAP }
 		OR = {
 			MAN = { controls_state = 716}
 			JAP = { controls_state = 716}
@@ -1795,7 +1815,7 @@ focus = {
 					MAN = {
 						OR = {
 							is_in_faction_with = JAP
-							is_puppet_of = JAP
+							is_subject_of = JAP
 						}
 					}
 				}
