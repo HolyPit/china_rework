@@ -2077,7 +2077,7 @@
  CHI_tsingtao_for_peace_desc:0 "Tsingtao for Peace"
  CHI_delay_japanese_invation:0 "Delay Japanese Invation"
  CHI_delay_japanese_invation_desc:0 "Delay Japanese Invation"
- CHI_delay_japanese_invation_tt:0 "Japan will not stage the Marco Polo Bridge Incident until 1939."
+ CHI_delay_japanese_invation_tt:0 "Japan cannot stage the Marco Polo Bridge Incident before 1939."
  CHI_reorganise_the_northeastern_army:0 "Reorganise the Northeastern Army"
  CHI_reorganise_the_northeastern_army_desc:0 "Reorganise the Northeastern Army"
  CHI_reorganise_the_northeastern_army_tt:0 "Gain 10 units with 9 Infantry battalions."
@@ -2103,6 +2103,13 @@
  CHI_second_kmt_ccp_cooperation_desc:0 "Second KMT-CCP Cooperation"
  CHI_second_betrayal:0 "The Second Betrayal"
  CHI_second_betrayal_desc:0 "The Second Betrayal"
+ CHI_secure_internal_support:0 "Ssecure Internal Support"
+ CHI_secure_internal_support_desc:0 "Ssecure Internal Support"
+ CHI_national_Southwestern_associated_university:0 "National Southwestern Associated University"
+ CHI_national_Southwestern_associated_university_desc:0 "National Southwestern Associated University"
+ CHI_seek_german_support:0 "Seek German Support"
+ CHI_seek_german_support_desc:0 "Seek German Support"
+ CHI_seek_german_support_tt:0 "Gain 3 German-Equipment Divisions and the basic artillery technology."
 
  CHI_restore_beiyang_government:0 "Restore the Beiyang Government"
  CHI_restore_beiyang_government_desc:0 "Restore the Beiyang Government"
@@ -2117,6 +2124,8 @@
  CHI_party_military_affairs_commission:0 "MAC"
  CHI_party_fengtian_clique_long:0 "Fengtian Clique"
  CHI_party_fengtian_clique:0 "FC"
+ CHI_party_beiyang_long:0 "Beiyang Clique"
+ CHI_party_beiyang:0 "Beiyang Clique"
 
  #### cosmetic tag ####
  BYG_communism:0 "Beiyang Union"

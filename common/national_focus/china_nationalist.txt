@@ -73,6 +73,176 @@ focus_tree = {
 		}
 	}
 
+	focus = {
+		id = CHI_delay_japanese_invation
+		icon = GFX_focus_generic_concessions
+
+
+		x = 5
+		y = 1
+		relative_position_id = CHI_right_wing_uprising
+		prerequisite = { focus =  CHI_right_wing_uprising focus = CHI_support_zhang_xueliang}
+
+		available = {
+		NOT = { has_war_with = JAP }
+		is_subject = no
+		NOT = {
+			any_other_country = {
+				is_in_faction_with = JAP
+				has_war_with = CHI
+			}
+		}
+	}
+		bypass = {
+			JAP = { has_completed_focus = JAP_intervene_in_china}
+		}
+
+		cost = 5
+
+		completion_reward = {
+
+			add_political_power = -300
+			custom_effect_tooltip = CHI_delay_japanese_invation_tt
+
+	}
+	}
+
+	focus = {
+		id = CHI_national_Southwestern_associated_university
+		icon = GFX_goal_tfv_generic_tech_sharing
+
+
+		x = 7
+		y = 1
+		relative_position_id = CHI_right_wing_uprising
+		prerequisite = { focus =  CHI_right_wing_uprising focus = CHI_support_zhang_xueliang}
+
+		available = {
+	}
+		bypass = {
+
+		}
+
+		cost = 10
+
+		completion_reward = {
+
+			add_research_slot = 1
+
+	}
+	}
+
+	focus = {
+		id = CHI_seek_german_support
+		icon = GFX_focus_chi_mission_to_germany
+
+
+		x = 3
+		y = 1
+		relative_position_id = CHI_right_wing_uprising
+		prerequisite = { focus =  CHI_right_wing_uprising focus = CHI_support_zhang_xueliang}
+
+		available = {
+			country_exists = GER
+			GER = {
+			OR = {
+			has_government = neutrality
+ 			has_government = fascism
+			}
+		}
+			NOT = {
+				has_war_with = GER
+			}
+			NOT = { has_global_flag = falkenhausen_recalled }
+	}
+		bypass = {
+
+		}
+
+		cost = 10
+
+		completion_reward = {
+
+
+
+			GER = {
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = CHI_mission_to_germany
+				}
+				add_ai_strategy = {
+					type = alliance
+					id = "ROOT"
+					value = 100
+				}
+				add_ai_strategy = {
+					type = protect
+					id = "ROOT"
+					value = 100
+				}
+				add_ai_strategy = {
+					type = send_volunteers_desire
+					id = "ROOT"
+					value = 100
+				}
+				add_ai_strategy = {
+					type = support
+					id = "ROOT"
+					value = 100
+				}
+			}
+
+			hidden_effect = {
+
+			set_technology = {
+				gw_artillery = 1
+			}
+
+			division_template = {
+				name = "German-Equipment Division"
+				priority = 2
+				division_names_group = CHI_INF_01
+				regiments = {
+					infantry = { x = 0 y = 0 }
+					infantry = { x = 0 y = 1 }
+					infantry = { x = 0 y = 2 }
+					infantry = { x = 1 y = 0 }
+					infantry = { x = 1 y = 1 }
+					infantry = { x = 1 y = 2 }
+					infantry = { x = 2 y = 0 }
+					infantry = { x = 2 y = 1 }
+					infantry = { x = 2 y = 2 }
+
+				}
+				support = {
+						artillery = { x = 0 y = 0}
+					}
+			}
+
+			random_owned_controlled_state = {
+				limit = { ROOT = { has_full_control_of_state = PREV } }
+				prioritize = { 613 }
+				create_unit = {
+					division = "name = \"1. German-Equipment Division\" division_template = \"German-Equipment Division\" start_experience_factor = 0.5"
+					owner = CHI
+				}
+				create_unit = {
+					division = "name = \"2. German-Equipment Division\" division_template = \"German-Equipment Division\" start_experience_factor = 0.5"
+					owner = CHI
+				}
+				create_unit = {
+					division = "name = \"3. German-Equipment Division\" division_template = \"German-Equipment Division\" start_experience_factor = 0.5"
+					owner = CHI
+				}
+
+			}
+
+		}
+
+		custom_effect_tooltip = CHI_seek_german_support_tt
+	}
+	}
+
 
 	focus = {
 		id = CHI_right_wing_uprising
@@ -284,7 +454,7 @@ focus = {
 
 
 		JAP = {
-			set_autonomy = { target = CHI autonomy_state = autonomy_wtt_imperial_subject }
+			set_autonomy = { target = CHI autonomy_state = autonomy_wtt_imperial_associate }
 		}
 
 
@@ -328,39 +498,7 @@ focus = {
 }
 }
 
-focus = {
-	id = CHI_delay_japanese_invation
-	icon = GFX_focus_generic_concessions
 
-
-	x = 3
-	y = 1
-	relative_position_id = CHI_right_wing_uprising
-	prerequisite = { focus =  CHI_right_wing_uprising focus = CHI_support_zhang_xueliang}
-
-	available = {
-	NOT = { has_war_with = JAP }
-	is_subject = no
-	NOT = {
-		any_other_country = {
-			is_in_faction_with = JAP
-			has_war_with = CHI
-		}
-	}
-}
-	bypass = {
-		JAP = { has_completed_focus = JAP_intervene_in_china}
-	}
-
-	cost = 5
-
-	completion_reward = {
-
-		add_political_power = -300
-		custom_effect_tooltip = CHI_delay_japanese_invation_tt
-
-}
-}
 
 
 
@@ -411,6 +549,28 @@ bypass = {
 }
 }
 
+focus = {
+	id = CHI_secure_internal_support
+	icon = GFX_goal_generic_demand_territory
+
+
+	x = 0
+	y = 1
+	relative_position_id = CHI_tsingtao_for_peace
+	prerequisite = { focus =  CHI_tsingtao_for_peace }
+
+
+	cost = 10
+
+	available = {
+
+}
+
+	completion_reward = {
+		add_political_power = 120
+		add_stability = 0.1
+	}
+}
 
 focus = {
 	id = CHI_shandong_for_homeland
@@ -419,8 +579,8 @@ focus = {
 
 	x = 0
 	y = 1
-	relative_position_id = CHI_tsingtao_for_peace
-	prerequisite = { focus =  CHI_tsingtao_for_peace }
+	relative_position_id = CHI_secure_internal_support
+	prerequisite = { focus =  CHI_secure_internal_support }
 
 
 	cost = 10
@@ -459,10 +619,13 @@ focus = {
 
 
 	x = 0
-	y = 2
+	y = 1
 	relative_position_id = CHI_shandong_for_homeland
 	prerequisite = { focus =  CHI_shandong_for_homeland
 	focus = CHI_reorganise_the_northeastern_army}
+	mutually_exclusive = {
+		focus = CHI_second_kmt_ccp_cooperation
+	}
 
 
 	cost = 10
@@ -476,9 +639,10 @@ controls_state = 610
 	completion_reward = {
 
 		CHI = {
-			add_political_power = 150
 			add_war_support = 0.1
 			set_cosmetic_tag = BYG
+			set_party_name = { ideology = neutrality long_name = CHI_party_beiyang_long
+			name = CHI_party_beiyang }
 		}
 
 }
@@ -651,9 +815,9 @@ focus = {
 
 
 	x = -3
-	y = 1
+	y = 2
 	relative_position_id = CHI_invite_communist_china
-	prerequisite = { focus =  CHI_invite_communist_china }
+	prerequisite = { focus =  CHI_split_xibei }
 
 
 	cost = 10
@@ -710,6 +874,8 @@ focus = {
 	relative_position_id = CHI_invite_communist_china
 	prerequisite = { focus =  CHI_split_xibei
 		focus = CHI_split_shanxi}
+	mutually_exclusive = {focus = CHI_restore_beiyang_government
+	focus = CHI_second_betrayal}
 
 
 	cost = 10
@@ -768,6 +934,7 @@ focus = {
 	relative_position_id = CHI_invite_communist_china
 	prerequisite = { focus =  CHI_split_xibei
 		focus = CHI_split_shanxi}
+	mutually_exclusive = {focus = CHI_second_kmt_ccp_cooperation}
 
 
 	cost = 10
@@ -883,7 +1050,7 @@ focus = {
 	y = 1
 	relative_position_id = CHI_prepare_for_war
 	prerequisite = { focus =  CHI_prepare_for_war
-		focus = CHI_shandong_for_homeland}
+		focus = CHI_secure_internal_support}
 
 
 	cost = 10
