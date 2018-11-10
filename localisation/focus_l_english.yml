@@ -2106,12 +2106,24 @@
 
  ####### ideas localisation #####
  CHI_chinese_nationalism:0 "Chinese Nationlism"
+ PRC_puppet_government:0 "Puppet Government"
+ PRC_illegal_government:0 "Illegal Government"
 
  ####### party names localisation #####
  CHI_party_military_affairs_commission_long:0 "Military Affairs Commission"
  CHI_party_military_affairs_commission:0 "MAC"
  CHI_party_fengtian_clique_long:0 "Fengtian Clique"
  CHI_party_fengtian_clique:0 "FC"
+
+ #### cosmetic tag ####
+ BYG_communism:0 "Beiyang Union"
+ BYG_communism_DEF:0 "the Beiyang Union"
+ BYG_fascism:0 "Fengtian Clique"
+ BYG_fascism_DEF:0 "the Fengtian Clique"
+ BYG_democratic:0 "Republic of China"
+ BYG_democratic:0 "the Republic of China"
+ BYG_neutrality:0 "Beiyang Government"
+ BYG_neutrality_DEF:0 "the Beiyang Government"
 
   #### traits ####
   young_marshal:0 "Young Marshel"
