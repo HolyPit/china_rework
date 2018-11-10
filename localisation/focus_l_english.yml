@@ -2104,6 +2104,9 @@
  CHI_second_betrayal:0 "The Second Betrayal"
  CHI_second_betrayal_desc:0 "The Second Betrayal"
 
+ CHI_restore_beiyang_government:0 "Restore the Beiyang Government"
+ CHI_restore_beiyang_government_desc:0 "Restore the Beiyang Government"
+
  ####### ideas localisation #####
  CHI_chinese_nationalism:0 "Chinese Nationlism"
  PRC_puppet_government:0 "Puppet Government"
