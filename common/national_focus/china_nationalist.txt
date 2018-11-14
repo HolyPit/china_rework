@@ -159,7 +159,7 @@ focus_tree = {
 
 		}
 
-		cost = 10
+		cost = 5
 
 		completion_reward = {
 
@@ -490,11 +490,162 @@ focus = {
 
 
 	completion_reward = {
-		set_party_name = { ideology = fascism long_name = CHI_party_military_affairs_commission_long
-			name = CHI_party_military_affairs_commission }
+
 
 		add_stability = 0.1
 		add_war_support = 0.1
+}
+}
+
+
+focus = {
+	id = CHI_formalise_alliance_with_germany
+	icon = GFX_goal_generic_major_alliance
+
+
+	x = 0
+	y = 1
+	relative_position_id = CHI_strengthen_he_regime
+	prerequisite = { focus =  CHI_strengthen_he_regime}
+	prerequisite = {focus = CHI_seek_german_support}
+
+	cost = 5
+
+	available = {
+
+		NOT = { has_war_with = GER }
+		is_subject = no
+		is_in_faction = no
+		NOT = {
+			any_other_country = {
+				is_in_faction_with = GER
+				has_war_with = CHI
+			}
+		}
+		GER = {
+			is_faction_leader = yes
+			has_government = fascism
+			is_subject = no
+		}
+	}
+
+	bypass = {
+			is_in_faction_with = GER
+		}
+
+
+
+	completion_reward = {
+
+
+		GER = {
+			country_event = generic.2
+		}
+}
+}
+
+
+focus = {
+	id = CHI_renounce_nine_power_treaty
+	icon = GFX_focus_renounce_the_treaty_of_trianon
+
+
+	x = -1
+	y = 1
+	relative_position_id = CHI_formalise_alliance_with_germany
+	prerequisite = { focus =  CHI_formalise_alliance_with_germany
+		focus = CHI_cooperate_with_japan}
+
+	cost = 10
+
+	available = {
+
+		OR ={
+			is_in_faction_with = GER
+			is_in_faction_with = JAP
+		}
+
+	}
+
+	bypass = {
+			NOT = {has_idea = CHI_nine_power_treaty}
+		}
+
+
+
+	completion_reward = {
+
+
+		remove_ideas = CHI_nine_power_treaty
+		add_ideas = limited_exports
+
+}
+}
+
+
+focus = {
+	id = CHI_join_anti_comintern_pact
+	icon = GFX_goal_anti_comintern_pact
+
+
+	x = 2
+	y = 1
+	relative_position_id = CHI_formalise_alliance_with_germany
+	prerequisite = { focus =  CHI_formalise_alliance_with_germany}
+
+	cost = 10
+
+	available = {
+
+
+			is_in_faction_with = GER
+			GER = {has_completed_focus = GER_anti_comitern_pact}
+
+	}
+
+	bypass = {
+
+		}
+
+
+
+	completion_reward = {
+
+		country_event = germany.5
+
+}
+}
+
+
+
+focus = {
+	id = CHI_german_military_advisory
+	icon = GFX_focus_chi_army_reform
+
+
+	x = 0
+	y = 2
+	relative_position_id = CHI_formalise_alliance_with_germany
+	prerequisite = { focus =  CHI_formalise_alliance_with_germany}
+
+	cost = 10
+
+	available = {
+
+			is_in_faction_with = GER
+
+	}
+
+	bypass = {
+
+		}
+
+
+
+	completion_reward = {
+
+		remove_ideas = CHI_incompetent_officers
+
 }
 }
 
@@ -814,10 +965,10 @@ focus = {
 	icon = GFX_goal_generic_dangerous_deal
 
 
-	x = -3
-	y = 2
-	relative_position_id = CHI_invite_communist_china
-	prerequisite = { focus =  CHI_split_xibei }
+	x = 0
+	y = 1
+	relative_position_id = CHI_second_kmt_ccp_cooperation
+	prerequisite = { focus =  CHI_second_kmt_ccp_cooperation }
 
 
 	cost = 10
@@ -933,7 +1084,8 @@ focus = {
 	y = 2
 	relative_position_id = CHI_invite_communist_china
 	prerequisite = { focus =  CHI_split_xibei
-		focus = CHI_split_shanxi}
+		focus = CHI_split_shanxi
+		focus = CHI_join_anti_comintern_pact}
 	mutually_exclusive = {focus = CHI_second_kmt_ccp_cooperation}
 
 

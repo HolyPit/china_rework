@@ -2114,6 +2114,16 @@
  CHI_restore_beiyang_government:0 "Restore the Beiyang Government"
  CHI_restore_beiyang_government_desc:0 "Restore the Beiyang Government"
 
+ CHI_formalise_alliance_with_germany:0 "Formalise Alliance with Germany"
+ CHI_formalise_alliance_with_germany_desc:0 "Formalise Alliance with Germany"
+ CHI_renounce_nine_power_treaty:0 "Renounce the Nine Power Treaty"
+ CHI_renounce_nine_power_treaty_desc:0 "Renounce the Nine Power Treaty"
+ CHI_join_anti_comintern_pact:0 "Join the Anti-Comintern Pact"
+ CHI_join_anti_comintern_pact_desc:0 "Join the Anti-Comintern Pact"
+ CHI_german_military_advisory:0 " German Military Advisory"
+ CHI_german_military_advisory_desc:0 " German Military Advisory"
+
+
  ####### ideas localisation #####
  CHI_chinese_nationalism:0 "Chinese Nationlism"
  PRC_puppet_government:0 "Puppet Government"
