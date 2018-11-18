@@ -245,6 +245,52 @@ focus_tree = {
 
 
 	focus = {
+		id = CHI_purchase_german_weapons
+		icon = GFX_goal_generic_army_artillery2
+
+
+		x = 0
+		y = 1
+		relative_position_id = CHI_seek_german_support
+		prerequisite = { focus =  CHI_seek_german_support}
+
+		available = {
+			country_exists = GER
+			GER = {
+			OR = {
+			has_government = neutrality
+			has_government = fascism
+			}
+		}
+			NOT = {
+				has_war_with = GER
+			}
+			NOT = { has_global_flag = falkenhausen_recalled }
+	}
+		bypass = {
+
+		}
+
+		cost = 10
+
+		completion_reward = {
+			add_equipment_to_stockpile = {
+    type = infantry_equipment
+    amount = 10000
+    producer = GER
+			}
+
+			add_equipment_to_stockpile = {
+    type = artillery_equipment
+    amount = 1000
+    producer = GER
+			}
+
+		}
+	}
+
+
+	focus = {
 		id = CHI_right_wing_uprising
 		icon = GFX_focus_prc_remove_chiang_kai_shek
 
@@ -645,6 +691,25 @@ focus = {
 	completion_reward = {
 
 		remove_ideas = CHI_incompetent_officers
+
+		if = {
+			limit = { has_idea = CHI_army_corruption_1 }
+			swap_ideas = {
+				remove_idea = CHI_army_corruption_1
+				add_idea = CHI_army_corruption_2
+			}
+		}
+		else_if = {
+			limit = { has_idea = CHI_army_corruption_2 }
+			swap_ideas = {
+				remove_idea = CHI_army_corruption_2
+				add_idea = CHI_army_corruption_3
+			}
+		}
+		else_if = {
+			limit = { has_idea = CHI_army_corruption_3 }
+			remove_ideas = CHI_army_corruption_3
+		}
 
 }
 }
@@ -1370,8 +1435,9 @@ focus = {
 	focus = {
 		id = CHI_three_principles_of_the_people
 		icon = GFX_goal_generic_national_unity
-		x = 0
+		x = -50
 		y = 0
+		relative_position_id = CHI_invite_foreign_investors
 
 		cost = 5
 
@@ -1667,7 +1733,7 @@ focus = {
 		icon = GFX_goal_support_democracy
 		mutually_exclusive = { focus = CHI_the_indirect_approach }
 		prerequisite = { focus = CHI_three_principles_of_the_people }
-		x = -6
+		x = -7
 		y = 0
 		relative_position_id = CHI_the_indirect_approach
 
@@ -1757,6 +1823,15 @@ focus = {
 
 
 		completion_reward = {
+			set_party_name = { ideology = democratic long_name = CHI_neutrality_party
+			name = CHI_neutrality_party }
+			create_country_leader = {
+				name = "Lin Sen"
+				desc = "Lin_Sen"
+				picture = "gfx/leaders/CHI/Portrait_China_Lin_Sen_new.dds"
+				expire = "1965.1.1"
+				ideology = socialism
+			}
 			every_country = {
 				limit = {
 					is_major = yes

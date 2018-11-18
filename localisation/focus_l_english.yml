@@ -2110,6 +2110,8 @@
  CHI_seek_german_support:0 "Seek German Support"
  CHI_seek_german_support_desc:0 "Seek German Support"
  CHI_seek_german_support_tt:0 "Gain 3 German-Equipment Divisions and the basic artillery technology."
+ CHI_purchase_german_weapons:0 "Purchase German Weapons"
+ CHI_purchase_german_weapons_desc:0 "Purchase German Weapons"
 
  CHI_restore_beiyang_government:0 "Restore the Beiyang Government"
  CHI_restore_beiyang_government_desc:0 "Restore the Beiyang Government"
@@ -2140,8 +2142,8 @@
  #### cosmetic tag ####
  BYG_communism:0 "Beiyang Union"
  BYG_communism_DEF:0 "the Beiyang Union"
- BYG_fascism:0 "Fengtian Clique"
- BYG_fascism_DEF:0 "the Fengtian Clique"
+ BYG_fascism:0 "Empire of China"
+ BYG_fascism_DEF:0 "the Empire of China"
  BYG_democratic:0 "Republic of China"
  BYG_democratic:0 "the Republic of China"
  BYG_neutrality:0 "Beiyang Government"
