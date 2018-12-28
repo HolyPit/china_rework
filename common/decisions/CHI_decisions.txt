@@ -4826,7 +4826,11 @@ CHI_integrate_the_warlords = {
 		cost = 150
 
 		target_trigger = {
-			has_completed_focus = CHI_subjugate_the_warlords
+
+			OR ={
+		  	has_completed_focus = CHI_united_command
+				has_completed_focus = CHI_subjugate_the_warlords
+			}
 			FROM = {
 				is_subject_of = ROOT
 				OR = {

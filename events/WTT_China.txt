@@ -93,7 +93,7 @@ country_event = {
 	option = {
 		name = wtt_china.1003.a
 		create_wargoal = {
-				type = annex_everything
+				type = take_core_state
 				target = FROM
 		}
 	}
@@ -301,9 +301,73 @@ country_event = {
 
 	option = {
 		name = wtt_china.3.a
+		FROM = {
+			add_ideas = PRC_illegal_government
+		}
 		create_wargoal = {
-				type = annex_everything
+				type = take_core_state
 				target = FROM
+		}
+	}
+}
+
+
+##################################################################
+
+country_event = {
+	id = wtt_china.1009
+	title = wtt_china.1009.t
+	desc = wtt_china.1009.desc
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	#Accept annex
+	option = {
+		name = wtt_china.1009.a
+		ai_chance = {
+			base = 80
+		}
+
+		FROM = {
+		CHI = {
+			annex_country =  {
+			target = ROOT
+    	transfer_troops = yes
+		}
+		}
+
+			country_event = { id = wtt_china.1005 }
+
+		}
+	}
+
+	#Accept puppet
+	option = {
+		name = wtt_china.1009.b
+		ai_chance = {
+			base = 15
+		}
+
+		FROM = {
+		CHI = {
+			set_autonomy = { target = ROOT autonomy_state = autonomy_integrated_puppet }
+		}
+
+			country_event = { id = wtt_china.1005 }
+
+		}
+	}
+
+
+	#Never
+	option = {
+		name = wtt_china.1009.c
+		ai_chance = {
+			base = 5
+		}
+		FROM = {
+			country_event = { id = wtt_china.1006 }
 		}
 	}
 }

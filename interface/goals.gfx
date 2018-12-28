@@ -7,6 +7,21 @@ spriteTypes = {
 	texturefile = "gfx/interface/goals/focus_chi_beiyang.dds"
 	}
 
+	SpriteType = {
+	name = "GFX_focus_chi_showa"
+	texturefile = "gfx/interface/goals/focus_chi_showa.dds"
+	}
+
+	SpriteType = {
+	name = "GFX_focus_chi_china_first"
+	texturefile = "gfx/interface/goals/focus_chi_china_first.dds"
+	}
+
+	SpriteType = {
+	name = "GFX_focus_chi_japanese_ruler"
+	texturefile = "gfx/interface/goals/focus_chi_japanese_ruler.dds"
+	}
+
 
 	#### Generic continuous goal icons
 

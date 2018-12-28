@@ -5,7 +5,7 @@
 #		mutually_exclusive = { focus =  }
 #		x = -3
 #		y = 0
-#		relative_position_id = 
+#		relative_position_id =
 #
 #		cost = 10
 #
@@ -16,7 +16,7 @@
 #		available = {
 #
 #		}
-#		
+#
 #		bypass = {
 #
 #		}
@@ -36,7 +36,7 @@
 
 
 shared_focus = {
-	id = CHI_invite_foreign_investors 
+	id = CHI_invite_foreign_investors
 	icon = GFX_focus_generic_concessions
 	x = 40
 	y = 0
@@ -51,7 +51,7 @@ shared_focus = {
 		x = -16
 		y = 0
 		trigger = {
-			 tag = MAN 
+			 tag = MAN
 		}
 	}
 
@@ -70,7 +70,7 @@ shared_focus = {
 	}
 
 	bypass = {
-		
+
 	}
 
 	cancel_if_invalid = yes
@@ -176,13 +176,13 @@ shared_focus = {
 	}
 
 	bypass = {
-		custom_trigger_tooltip = { 
+		custom_trigger_tooltip = {
 			tooltip = falkenhausen_tt
 			any_other_country = {
 				any_army_leader = {
 					has_id = 603
 				}
-			}	
+			}
 		}
 	}
 
@@ -581,14 +581,14 @@ shared_focus = {
 					regiments = {
 						light_armor = { x = 0 y = 0 }
 						light_armor = { x = 0 y = 1 }
-			
+
 						motorized = { x = 1 y = 0 }
 						motorized = { x = 1 y = 1 }
 						motorized = { x = 1 y = 2 }
 						motorized = { x = 1 y = 3 }
 					}
 					support = {
-						
+
 					}
 				}
 			}
@@ -603,14 +603,14 @@ shared_focus = {
 					regiments = {
 						light_armor = { x = 0 y = 0 }
 						light_armor = { x = 0 y = 1 }
-			
+
 						motorized = { x = 1 y = 0 }
 						motorized = { x = 1 y = 1 }
 						motorized = { x = 1 y = 2 }
 						motorized = { x = 1 y = 3 }
 					}
 					support = {
-						
+
 					}
 				}
 			}
@@ -625,14 +625,14 @@ shared_focus = {
 					regiments = {
 						light_armor = { x = 0 y = 0 }
 						light_armor = { x = 0 y = 1 }
-			
+
 						motorized = { x = 1 y = 0 }
 						motorized = { x = 1 y = 1 }
 						motorized = { x = 1 y = 2 }
 						motorized = { x = 1 y = 3 }
 					}
 					support = {
-						
+
 					}
 				}
 			}
@@ -647,14 +647,14 @@ shared_focus = {
 					regiments = {
 						light_armor = { x = 0 y = 0 }
 						light_armor = { x = 0 y = 1 }
-			
+
 						motorized = { x = 1 y = 0 }
 						motorized = { x = 1 y = 1 }
 						motorized = { x = 1 y = 2 }
 						motorized = { x = 1 y = 3 }
 					}
 					support = {
-						
+
 					}
 				}
 			}
@@ -669,14 +669,14 @@ shared_focus = {
 					regiments = {
 						light_armor = { x = 0 y = 0 }
 						light_armor = { x = 0 y = 1 }
-			
+
 						motorized = { x = 1 y = 0 }
 						motorized = { x = 1 y = 1 }
 						motorized = { x = 1 y = 2 }
 						motorized = { x = 1 y = 3 }
 					}
 					support = {
-						
+
 					}
 				}
 			}
@@ -691,14 +691,14 @@ shared_focus = {
 					regiments = {
 						light_armor = { x = 0 y = 0 }
 						light_armor = { x = 0 y = 1 }
-			
+
 						motorized = { x = 1 y = 0 }
 						motorized = { x = 1 y = 1 }
 						motorized = { x = 1 y = 2 }
 						motorized = { x = 1 y = 3 }
 					}
 					support = {
-						
+
 					}
 				}
 			}
@@ -713,14 +713,14 @@ shared_focus = {
 					regiments = {
 						light_armor = { x = 0 y = 0 }
 						light_armor = { x = 0 y = 1 }
-			
+
 						motorized = { x = 1 y = 0 }
 						motorized = { x = 1 y = 1 }
 						motorized = { x = 1 y = 2 }
 						motorized = { x = 1 y = 3 }
 					}
 					support = {
-						
+
 					}
 				}
 			}
@@ -735,23 +735,23 @@ shared_focus = {
 					regiments = {
 						light_armor = { x = 0 y = 0 }
 						light_armor = { x = 0 y = 1 }
-			
+
 						motorized = { x = 1 y = 0 }
 						motorized = { x = 1 y = 1 }
 						motorized = { x = 1 y = 2 }
 						motorized = { x = 1 y = 3 }
 					}
 					support = {
-						
+
 					}
 				}
 			}
 			capital_scope = {
 				create_unit = {
-					division = "name = \"200. Mechanised Division\" division_template = \"Experimental Mechanised Division\" start_experience_factor = 1.0" 
+					division = "name = \"200. Mechanised Division\" division_template = \"Experimental Mechanised Division\" start_experience_factor = 1.0"
 					owner = ROOT
 				}
-			}			
+			}
 		}
 	}
 }
@@ -1031,7 +1031,7 @@ shared_focus = {
 	}
 
 	available = {
-		SOV_will_support = yes	
+		SOV_will_support = yes
 	}
 
 	bypass = {
@@ -1056,7 +1056,7 @@ shared_focus = {
 	completion_reward = {
 		create_corps_commander = {
 			name = "Aleksandr Cherepanov"
-			gfx = GFX_portrait_sov_aleksandr_cherepanov 
+			gfx = GFX_portrait_sov_aleksandr_cherepanov
 			skill = 3
 			attack_skill = 3
 			defense_skill = 3
@@ -1135,7 +1135,7 @@ shared_focus = {
 	}
 
 	bypass = {
-		
+
 	}
 
 	cancel_if_invalid = yes
@@ -1247,7 +1247,7 @@ shared_focus = {
 	continue_if_invalid = no
 	available_if_capitulated = yes
 
-	completion_reward = {		
+	completion_reward = {
 		add_ideas = CHI_elite_mountaineers
 		add_tech_bonus = {
 			name = CHI_elite_mountaineers
@@ -1267,11 +1267,11 @@ shared_focus = {
 					mountaineers = { x = 0 y = 0 }
 					mountaineers = { x = 0 y = 1 }
 					mountaineers = { x = 0 y = 2 }
-		
+
 					mountaineers = { x = 1 y = 0 }
 					mountaineers = { x = 1 y = 1 }
 					mountaineers = { x = 1 y = 2 }
-		
+
 					mountaineers = { x = 2 y = 0 }
 					artillery_brigade = { x = 2 y = 1 }
 					artillery_brigade = { x = 2 y = 2 }
@@ -1291,7 +1291,7 @@ shared_focus = {
 	x = 0
 	y = 2
 	relative_position_id = CHI_small_arms_expertise
-	
+
 	cost = 10
 
 	ai_will_do = {
@@ -1385,7 +1385,7 @@ shared_focus = {
 		}
 		325 = { #Yunnan
 			set_state_flag = CHI_needed_for_hanoi_route
-		}	
+		}
 		set_variable = { CHI_hanoi_route_current_level = 3 }
 		add_offsite_building = { type = arms_factory level = 3 }
 	}
@@ -1564,7 +1564,7 @@ shared_focus = {
 		every_army_leader = {
 			add_defense = 1
 		}
-		add_ideas = CHI_french_drill		
+		add_ideas = CHI_french_drill
 	}
 }
 
@@ -1629,7 +1629,7 @@ shared_focus = {
 shared_focus = {
 	id = CHI_renegotiate_the_unequal_treaties
 	icon = GFX_focus_renounce_the_treaty_of_trianon
-	prerequisite = { focus = CHI_modern_logistics focus = CHI_combined_arms_warfare focus = CHI_naval_aviation } 
+	prerequisite = { focus = CHI_modern_logistics focus = CHI_combined_arms_warfare focus = CHI_naval_aviation }
 	x = 0
 	y = 1
 	relative_position_id = CHI_modern_logistics
@@ -1640,7 +1640,7 @@ shared_focus = {
 		factor = 1
 		modifier = {
 			factor = 4
-			tag = PRC			
+			tag = PRC
 		}
 	}
 
@@ -1781,8 +1781,8 @@ shared_focus = {
 				any_other_country = {
 					is_literally_china = yes
 					is_in_faction_with = ROOT
-				} 
-			} 
+				}
+			}
 			remove_from_faction = ROOT
 		}
 		hidden_effect = {
@@ -1870,7 +1870,7 @@ shared_focus = {
 
 	bypass = {
 		OR = {
-			NOT = { country_exists = TIB }	
+			NOT = { country_exists = TIB }
 			has_war_with = TIB
 			has_wargoal_against = TIB
 		}
@@ -1900,7 +1900,7 @@ shared_focus = {
 		else = {
 			create_wargoal = {
 				type = annex_everything
-				target = TIB				
+				target = TIB
 			}
 		}
 	}
@@ -2001,7 +2001,7 @@ shared_focus = {
 		else = {
 			create_wargoal = {
 				type = annex_everything
-				target = MON				
+				target = MON
 			}
 		}
 	}
@@ -2210,7 +2210,7 @@ shared_focus = {
 			is_faction_leader = yes
 			RAJ = { is_subject = yes }
 		}
-		RAJ = { NOT = { has_war_with = ROOT } }		
+		RAJ = { NOT = { has_war_with = ROOT } }
 	}
 
 	bypass = {
@@ -2258,7 +2258,7 @@ shared_focus = {
 			is_faction_leader = yes
 			MON = { is_subject = yes }
 		}
-		MON = { NOT = { has_war_with = ROOT } }	
+		MON = { NOT = { has_war_with = ROOT } }
 	}
 
 	bypass = {
@@ -2483,7 +2483,7 @@ shared_focus = {
 						CONTROLLER = {
 							OR = {
 								controls_state = 527
-								tag = ROOT								
+								tag = ROOT
 							}
 						}
 					}
@@ -2587,7 +2587,7 @@ shared_focus = {
 	cost = 10
 
 	ai_will_do = {
-		factor = 1		
+		factor = 1
 		modifier = {
 			factor = 4
 			tag = CHI
@@ -2625,7 +2625,7 @@ shared_focus = {
 				OR = {
 					original_tag = ENG
 					is_subject_of = ENG
-				}				
+				}
 			}
 		}
 		640 = { #Mandalay
@@ -2634,7 +2634,7 @@ shared_focus = {
 				OR = {
 					original_tag = ENG
 					is_subject_of = ENG
-				}				
+				}
 			}
 		}
 	}
@@ -2716,7 +2716,7 @@ shared_focus = {
 				OR = {
 					original_tag = ENG
 					is_subject_of = ENG
-				}				
+				}
 			}
 		}
 		640 = { #Mandalay
@@ -2725,7 +2725,7 @@ shared_focus = {
 				OR = {
 					original_tag = ENG
 					is_subject_of = ENG
-				}				
+				}
 			}
 		}
 	}
@@ -3011,7 +3011,7 @@ shared_focus = {
 				OR = {
 					original_tag = ENG
 					is_subject_of = ENG
-				}				
+				}
 			}
 		}
 	}
@@ -3028,13 +3028,13 @@ shared_focus = {
 
 	}
 
-	completion_reward = {		
+	completion_reward = {
 		434 = { #Arunachal Pradesh
 			set_state_flag = CHI_needed_for_the_hump
 		}
 		601 = { #Xikang
 			set_state_flag = CHI_needed_for_the_hump
-		}	
+		}
 		set_variable = { CHI_the_hump_current_level = 1 }
 		add_offsite_building = { type = arms_factory level = 1 }
 	}
@@ -3123,7 +3123,7 @@ shared_focus = {
 		add_tech_bonus = {
 			name = CHI_the_chu_x_po
 			ahead_reduction = 1
-			technology = fighter3				
+			technology = fighter3
 		}
 	}
 }

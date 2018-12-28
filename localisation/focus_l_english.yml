@@ -2053,6 +2053,9 @@
  continuous_restrict_freedom:0 "Suppress Subjects"
  continuous_restrict_freedom_desc:0 "Our colonial subjects have gotten rather silly ideas about things like "self-determination" or "national independence". It is time to disabuse them of these notions."
  unlocks_decision:0 "Unlocks Decision: "
+
+ CHI_united_command:"United Command"
+ CHI_united_command_desc:"United Command"
  CHI_the_indirect_approach:0 "The Indirect Approach"
  CHI_the_indirect_approach_desc:0 "The Indirect Approach"
  CHI_right_wing_uprising:0 "Right Wing Uprising"
@@ -2116,20 +2119,46 @@
  CHI_restore_beiyang_government:0 "Restore the Beiyang Government"
  CHI_restore_beiyang_government_desc:0 "Restore the Beiyang Government"
 
+ CHI_centralise_power:0 "Centralise Power"
+ CHI_centralise_power_desc:0 "Centralise Power"
+ CHI_pressure_ma_bufang:0 "Pressure Ma Bufang"
+ CHI_pressure_ma_bufang_desc:0 "Pressure Ma Bufang"
+ CHI_pressure_long_yun:0 "Pressure Long Yun"
+ CHI_pressure_long_yun_desc:0 "Pressure Long Yun"
+ CHI_pressure_li_zongren:0 "Pressure Li Zongren"
+ CHI_pressure_li_zongren_desc:0 "Pressure Li Zongren"
+ CHI_pressure_sheng_shicai:0 "Pressure Sheng Shicai"
+ CHI_pressure_sheng_shicai_desc:0 "Pressure Sheng Shicai"
+
  CHI_formalise_alliance_with_germany:0 "Formalise Alliance with Germany"
  CHI_formalise_alliance_with_germany_desc:0 "Formalise Alliance with Germany"
  CHI_renounce_nine_power_treaty:0 "Renounce the Nine Power Treaty"
  CHI_renounce_nine_power_treaty_desc:0 "Renounce the Nine Power Treaty"
  CHI_join_anti_comintern_pact:0 "Join the Anti-Comintern Pact"
  CHI_join_anti_comintern_pact_desc:0 "Join the Anti-Comintern Pact"
- CHI_german_military_advisory:0 " German Military Advisory"
- CHI_german_military_advisory_desc:0 " German Military Advisory"
+ CHI_pressure_yan_xishan:0 "Pressure Yan Xishan"
+ CHI_pressure_yan_xishan_desc:0 "Pressure Yan Xishan"
+ CHI_war_against_ussr:0 "War With the USSR"
+ CHI_war_against_ussr_desc:0 "War With USSR"
+ CHI_german_military_advisory:0 "German Military Advisory"
+ CHI_german_military_advisory_desc:0 "German Military Advisory"
+
+ CHI_kwantung_army_collaboration:0 "Kwantung Army Collaboration"
+ CHI_kwantung_army_collaboration_desc:0 "Kwantung Army Collaboration"
+
+
+ CHI_wartime_industrialisation:0 "Wartime Industrialisation"
+ CHI_wartime_industrialisation_desc:0 "Wartime Industrialisation"
 
 
  ####### ideas localisation #####
  CHI_chinese_nationalism:0 "Chinese Nationlism"
+ CHI_wartime_economy:0 "Wartime Industry"
  PRC_puppet_government:0 "Puppet Government"
  PRC_illegal_government:0 "Illegal Government"
+ CHI_low_legitimacy:0 "Low Legitimacy"
+ CHI_infantry_focus:0 "Infantry Armament"
+ CHI_army_training:0 "Secret Training"
 
  ####### party names localisation #####
  CHI_party_military_affairs_commission_long:0 "Military Affairs Commission"
@@ -2138,6 +2167,8 @@
  CHI_party_fengtian_clique:0 "FC"
  CHI_party_beiyang_long:0 "Beiyang Clique"
  CHI_party_beiyang:0 "Beiyang Clique"
+
+ CHI_party_ccb_long:0 "Chichibu-no"
 
  #### cosmetic tag ####
  BYG_communism:0 "Beiyang Union"
@@ -2149,10 +2180,37 @@
  BYG_neutrality:0 "Beiyang Government"
  BYG_neutrality_DEF:0 "the Beiyang Government"
 
+ CCB_fascism:0 "Principality of China"
+ CCB_fascism_DEF:0 "the Principality of China"
+ CCB_democratic:0 "Principality of China"
+ CCB_democratic:0 "the Principality of China"
+ CCB_neutrality:0 "Principality of China"
+ CCB_neutrality_DEF:0 "the Principality of China"
+
+ EOC_fascism:0 "Empire of China"
+ EOC_fascism_DEF:0 "the Empire of China"
+ EOC_democratic:0 "Empire of China"
+ EOC_democratic:0 "the Empire of China"
+ EOC_neutrality:0 "Empire of China"
+ EOC_neutrality_DEF:0 "the Empire of China"
+
+ EOM_fascism:0 "Empire of Manchu"
+ EOM_fascism_DEF:0 "the Empire of Manchu"
+ #EOM_democratic:0 "Empire of Manchu"
+ #EOM_democratic:0 "the Empire of Manchu"
+ EOM_neutrality:0 "Empire of Manchu"
+ EOM_neutrality_DEF:0 "the Empire of Manchu"
+
+ EOJ_fascism:0 "Empire of Japan"
+ EOJ_fascism_DEF:0 "the Empire of Japan"
+
+
   #### traits ####
   young_marshal:0 "Young Marshel"
   dislikes_japan:0 "Dislikes Japan"
   brilliant_strategist:0 "Brilliant Strategist"
+  hirohitos_brother:0 "Emperor's Brother"
+  prince_chichibu:0 "Prince Chichibu"
 
 
   #### events ####
@@ -2185,5 +2243,11 @@
   wtt_china.1003.a:0 "We will see about that."
 
   wtt_china.1004.t:0 "Zhang Xueliang Demands Unification"
-  wtt_china.1004.desc:0 "As the communists show their obedience to the central government, Zhang Xueliang feels safe to give them more territory, but definitely not from his own. Zhang demands us to join the central government and transfer the northern part to the communists. In return, we have been promised the marshal rank in the central army."
+  wtt_china.1004.desc:0 "As the communists show their obedience to the central government, Zhang Xueliang feels safe to give them more territory, but definitely not from his own part. Zhang demands us to join the central government and transfer the northern part to the communists. In return, we have been promised the marshal rank in the central army."
   wtt_china.1004.a:0 "There is no other option."
+
+  wtt_china.1009.t:0 "Central Government Demands Unification"
+  wtt_china.1009.desc:0 "The central government now believes that they are powerful enough to force us joining their lead, whether peacefully or through military actions. How shall we respond?"
+  wtt_china.1009.a:0 "There is no other option."
+  wtt_china.1009.b:0 "We need to negotiate the terms."
+  wtt_china.1009.c:0 "We will never give in!"

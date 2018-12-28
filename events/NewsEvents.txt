@@ -1,4 +1,4 @@
-add_namespace = news
+﻿add_namespace = news
 
 ###########################
 # Mod News Events
@@ -38,6 +38,11 @@ news_event = {
 	major = yes
 
 	is_triggered_only = yes
+
+	immediate = {
+		set_global_flag = hirohito_died
+		}
+
 
 	fire_only_once = yes
 
@@ -80,6 +85,7 @@ news_event = {
 	fire_only_once = yes
 
 	trigger = {
+		NOT = { has_global_flag = hirohito_died}
 		country_exists = JAP
 		has_global_flag = {
 			flag = hirohito_injured
