@@ -22,6 +22,11 @@ spriteTypes = {
 	texturefile = "gfx/interface/goals/focus_chi_japanese_ruler.dds"
 	}
 
+	SpriteType = {
+	name = "GFX_focus_chi_bigger_china"
+	texturefile = "gfx/interface/goals/focus_chi_bigger_china.dds"
+	}
+
 
 	#### Generic continuous goal icons
 

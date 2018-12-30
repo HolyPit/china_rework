@@ -52,6 +52,406 @@ focus_tree = {
 #	}
 	shared_focus = CHI_invite_foreign_investors
 
+
+	focus = {
+		id = CHI_conquer_warlords
+		icon = GFX_goal_generic_political_pressure
+		prerequisite = { focus = CHI_kwantung_army_collaboration }
+		x = 0
+		y = 1
+		relative_position_id = CHI_kwantung_army_collaboration
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				num_of_factories < 50
+				factor = 0
+			}
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+			if = {
+				limit = { NOT = { original_tag = CHI } }
+				CHI = {
+					OR = {
+						exists = no
+						has_war_with = ROOT
+						is_subject_of = ROOT
+						ROOT = { has_wargoal_against = PREV }
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { original_tag = PRC } }
+				PRC = {
+					OR = {
+						exists = no
+						has_war_with = ROOT
+						is_subject_of = ROOT
+						ROOT = { has_wargoal_against = PREV }
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { original_tag = GXC } }
+				GXC = {
+					OR = {
+						exists = no
+						has_war_with = ROOT
+						is_subject_of = ROOT
+						ROOT = { has_wargoal_against = PREV }
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { original_tag = YUN } }
+				YUN = {
+					OR = {
+						exists = no
+						has_war_with = ROOT
+						is_subject_of = ROOT
+						ROOT = { has_wargoal_against = PREV }
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { original_tag = SHX } }
+				SHX = {
+					OR = {
+						exists = no
+						has_war_with = ROOT
+						is_subject_of = ROOT
+						ROOT = { has_wargoal_against = PREV }
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { original_tag = XSM } }
+				XSM = {
+					OR = {
+						exists = no
+						has_war_with = ROOT
+						is_subject_of = ROOT
+						ROOT = { has_wargoal_against = PREV }
+					}
+				}
+			}
+			if = {
+				limit = { NOT = { original_tag = SIK } }
+				SIK = {
+					OR = {
+						exists = no
+						has_war_with = ROOT
+						is_subject_of = ROOT
+						ROOT = { has_wargoal_against = PREV }
+					}
+				}
+			}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					any_other_country = {
+						is_literally_china = yes
+						is_in_faction_with = ROOT
+					}
+				}
+				remove_from_faction = ROOT
+			}
+
+			every_other_country = {
+				limit = {
+					is_literally_china = yes
+					NOT = { has_war_with = ROOT }
+					NOT = { is_subject_of = ROOT }
+					NOT = { ROOT = { has_wargoal_against = PREV } }
+					NOT = { tag = ROOT }
+				}
+				ROOT = {
+					create_wargoal = {
+						type = take_core_state
+						target = PREV
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_chinese_aggression
+		icon = GFX_focus_chi_china_first
+
+
+		x = -3
+		y = 0
+		relative_position_id = CHI_pressure_sheng_shicai
+		prerequisite = { focus = CHI_conquer_warlords
+			focus = CHI_centralise_power}
+
+		cost = 10
+
+		available = {
+
+			AND = {
+				PRC = {
+					OR = {
+					exists = no
+					is_subject_of = CHI
+					}
+				}
+				XSM = {
+					OR = {
+					exists = no
+					is_subject_of = CHI
+					}
+				}
+				GXC = {
+					OR = {
+					exists = no
+					is_subject_of = CHI
+					}
+				}
+				YUN = {
+					OR = {
+					exists = no
+					is_subject_of = CHI
+					}
+				}
+				SIK = {
+					OR = {
+					exists = no
+					is_subject_of = CHI
+					}
+				}
+				SHX = {
+					OR = {
+					exists = no
+					is_subject_of = CHI
+					}
+				}
+			}
+
+
+		}
+
+		bypass = {
+			has_war_with = SOV
+			}
+
+
+
+		completion_reward = {
+
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_political_power = 120
+
+	}
+	}
+
+
+	focus = {
+		id = CHI_defeat_the_japanese
+		icon = GFX_focus_AST_war_japan
+
+
+		x = 3
+		y = 0
+		relative_position_id = CHI_pressure_ma_bufang
+		prerequisite = { focus =  CHI_nothing_personal
+			focus = CHI_war_of_anti_imperialism}
+
+		cost = 10
+
+		available = {
+
+							controls_state = 525
+							controls_state = 527
+
+						NOT = {
+							any_state = {
+								is_core_of = CHI
+								NOT = {
+									state = 524
+								}
+								OR = {
+									is_controlled_by = JAP
+									AND = {
+										is_controlled_by = MEN
+										MEN = { is_subject_of = JAP }
+									}
+									AND = {
+										is_controlled_by = MAN
+										MAN = { is_subject_of = JAP }
+									}
+								}
+							}
+						}
+						MAN = {
+							OR = {
+								exists = no
+								NOT = {
+									is_subject_of = JAP
+								}
+								has_capitulated = yes
+							}
+						}
+
+
+		}
+
+		bypass = {
+			NOT = {has_war_with =JAP }
+			}
+
+
+
+		completion_reward = {
+
+			add_stability = 0.1
+			add_war_support = 0.1
+			add_political_power = 120
+
+	}
+	}
+
+	focus = {
+		id = CHI_reclaim_lost_territories
+		icon = GFX_focus_chi_bigger_china
+
+
+		x = 0
+		y = 1
+		relative_position_id = CHI_pressure_yan_xishan
+		prerequisite = { focus =  CHI_chinese_aggression
+			focus = CHI_defeat_the_japanese}
+
+		cost = 10
+
+		available = {
+
+
+		}
+
+		bypass = {
+
+			}
+
+
+
+		completion_reward = {
+			561 = { add_core_of = ROOT }
+			560 = { add_core_of = ROOT }
+			657 = { add_core_of = ROOT }
+			561 = { add_core_of = ROOT }
+			409 = { add_core_of = ROOT }
+			408 = { add_core_of = ROOT }
+			655 = { add_core_of = ROOT }
+			537 = { add_core_of = ROOT }
+			330 = { add_core_of = ROOT }
+			329 = { add_core_of = ROOT }
+			322 = { add_core_of = ROOT }
+			758 = { add_core_of = ROOT }
+			757 = { add_core_of = ROOT }
+			434 = { add_core_of = ROOT }
+
+	}
+	}
+
+	focus = {
+		id = CHI_retake_outer_manchuria
+		icon = GFX_focus_ger_strike_at_the_source
+
+
+		x = 1
+		y = 1
+		relative_position_id = CHI_reclaim_lost_territories
+		prerequisite = { focus =  CHI_reclaim_lost_territories}
+
+		cost = 10
+
+		available = {
+
+			has_army_manpower = { size > 850000 }
+
+
+		}
+
+		bypass = {
+			has_war_with = SOV
+			}
+
+
+
+		completion_reward = {
+
+			create_wargoal = {
+				type = take_core_state
+				target = SOV
+			}
+
+	}
+	}
+
+	focus = {
+		id = CHI_retake_south_tibet
+		icon = GFX_focus_AST_never_gallipoli
+
+
+		x = -1
+		y = 1
+		relative_position_id = CHI_reclaim_lost_territories
+		prerequisite = { focus =  CHI_reclaim_lost_territories}
+
+		cost = 10
+
+		available = {
+
+
+
+
+		}
+
+		bypass = {
+			OR = {
+			controls_state = 434
+			has_war_with = RAJ
+			}
+		}
+
+
+
+		completion_reward = {
+
+			create_wargoal = {
+				type = take_core_state
+				target = RAJ
+			}
+
+	}
+	}
+
+
+
+
+
+
+
 	focus = {
 		id = CHI_united_command
 		icon = GFX_goal_generic_demand_territory
@@ -941,7 +1341,7 @@ focus = {
 
 focus = {
 	id = CHI_the_one_true_ruler_of_china
-	icon = GFX_focus_chi_one_china_policy
+	icon = GFX_goal_generic_air_doctrine
 
 	x = 2
 	y = 1
@@ -1412,40 +1812,7 @@ focus = {
 
 
 
-focus = {
-	id = CHI_war_against_ussr
-	icon = GFX_goal_generic_war_with_comintern
 
-
-	x = 0
-	y = 10
-	relative_position_id = CHI_second_betrayal
-	#prerequisite = { focus =  CHI_second_betrayal}
-
-	cost = 10
-
-	available = {
-
-		has_army_manpower = { size > 850000 }
-
-
-	}
-
-	bypass = {
-		has_war_with = SOV
-		}
-
-
-
-	completion_reward = {
-
-		create_wargoal = {
-			type = annex_everything
-			target = SOV
-		}
-
-}
-}
 
 
 
@@ -2484,12 +2851,7 @@ focus = {
 	}
 
 	bypass = {
-		OR = {
-		NOT = {
-			country_exists = SIK
-		}
-		has_war_with = SIK
-		}
+
 		}
 
 
@@ -2500,6 +2862,431 @@ focus = {
 
 }
 }
+
+
+
+focus = {
+	id = CHI_develop_the_hanyan_arsenal
+	icon = GFX_goal_generic_construct_mil_factory
+	prerequisite = { focus = CHI_wartime_industrialisation }
+	x = 0
+	y = 1
+	relative_position_id = CHI_wartime_industrialisation
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		NOT = {
+			has_idea = CHI_hyper_inflation_5
+		}
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+		CHI_hyper_inflation_level_up = yes
+		random_state = {
+			limit = {
+				has_state_flag = CHI_develop_the_hanyan_arsenal_AF
+			}
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 3
+				instant_build = yes
+			}
+		}
+	}
+
+	completion_reward = {
+		add_ideas = CHI_hanyang_arsenal
+		CHI_hyper_inflation_level_up = yes
+		random_owned_controlled_state = {
+			prioritize = { 620 }
+			limit = {
+				free_building_slots = {
+					building = arms_factory
+					size > 1
+					include_locked = yes
+				}
+			}
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 3
+				instant_build = yes
+			}
+			set_state_flag = CHI_develop_the_hanyan_arsenal_AF
+		}
+	}
+}
+
+focus = {
+	id = CHI_taiyuan_arsenal
+	icon = GFX_goal_generic_construct_mil_factory
+	prerequisite = { focus = CHI_develop_the_hanyan_arsenal }
+	x = 0
+	y = 1
+	relative_position_id = CHI_develop_the_hanyan_arsenal
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		controls_state = 615
+		NOT = {
+			has_idea = CHI_hyper_inflation_5
+		}
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		add_ideas = CHI_taiyuan_arsenal_idea
+		CHI_hyper_inflation_level_up = yes
+
+		615 = {
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = arms_factory
+				level = 3
+				instant_build = yes
+			}
+		}
+	}
+}
+
+
+focus = {
+	id = CHI_develop_the_longhai_railway
+	icon = GFX_goal_generic_construct_infrastructure
+	prerequisite = { focus = CHI_mining_commission }
+	x = 0
+	y = 1
+	relative_position_id = CHI_mining_commission
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 4
+	}
+
+	available = {
+		has_full_control_of_state = 598
+		has_full_control_of_state = 607
+		has_full_control_of_state = 744
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		598 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		607 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		744 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+
+	}
+}
+
+focus = {
+	id = CHI_develop_the_yuehan_railway
+	icon = GFX_goal_generic_construct_infrastructure
+	prerequisite = { focus = CHI_develop_the_longhai_railway }
+	x = 0
+	y = 1
+	relative_position_id = CHI_develop_the_longhai_railway
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 4
+	}
+
+	available = {
+		has_full_control_of_state = 593
+		has_full_control_of_state = 600
+		has_full_control_of_state = 620
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		593 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		600 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+		620 = {
+			add_building_construction = {
+				type = infrastructure
+				level = 2
+				instant_build = yes
+			}
+		}
+
+	}
+}
+
+focus = {
+	id = CHI_establish_department_of_transportation
+	icon = GFX_goal_generic_construct_infrastructure
+
+
+	x = 0
+	y = 1
+	relative_position_id = CHI_develop_the_yuehan_railway
+	prerequisite = { focus =  CHI_develop_the_yuehan_railway }
+
+	cost = 10
+
+	cancel_if_invalid = no
+	continue_if_invalid = yes
+	available_if_capitulated = yes
+
+	available = {
+
+
+
+	}
+
+	bypass = {
+
+		}
+
+
+
+	completion_reward = {
+
+		add_ideas = CHI_department_of_transportation
+
+}
+}
+
+
+
+
+
+
+
+
+
+
+
+
+focus = {
+	id = CHI_hanyang_steel_company
+	icon = GFX_goal_generic_construction2
+	prerequisite = { focus = CHI_mining_commission }
+	x = -2
+	y = 1
+	relative_position_id = CHI_mining_commission
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 80
+	}
+
+	available = {
+		ROOT = { has_full_control_of_state = 620 }
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		620 = {
+			add_resource = {
+				type = steel
+				amount = 70
+			}
+		}
+	}
+}
+
+
+focus = {
+	id = CHI_chongqing_iron_and_steel_company
+	icon = GFX_goal_generic_construction2
+	prerequisite = { focus = CHI_hanyang_steel_company }
+	x = 0
+	y = 1
+	relative_position_id = CHI_hanyang_steel_company
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 80
+	}
+
+	available = {
+		ROOT = { has_full_control_of_state = 605 }
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		605 = {
+			add_resource = {
+				type = steel
+				amount = 50
+			}
+		}
+	}
+}
+
+
+focus = {
+	id = CHI_develop_taoxikeng_tungsten_mine
+	icon = GFX_goal_generic_construction2
+	prerequisite = { focus = CHI_chongqing_iron_and_steel_company }
+	x = 0
+	y = 1
+	relative_position_id = CHI_chongqing_iron_and_steel_company
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 80
+	}
+
+	available = {
+		ROOT = { has_full_control_of_state = 600 }
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		600 = {
+			add_resource = {
+				type = tungsten
+				amount = 64
+			}
+		}
+	}
+}
+
+
+
+focus = {
+	id = CHI_wartime_resources_policy
+	icon = GFX_goal_generic_positive_trade_relations
+	prerequisite = { focus = CHI_develop_taoxikeng_tungsten_mine }
+	x = 0
+	y = 1
+	relative_position_id = CHI_develop_taoxikeng_tungsten_mine
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 80
+	}
+
+	available = {
+		has_war = yes
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+
+
+	completion_reward = {
+		add_ideas = limited_exports
+	}
+}
+
 
 
 
@@ -2582,6 +3369,98 @@ focus = {
 			#Only time to throw up some emergency stuff
 			else = {
 				608 = {
+					add_building_construction = {
+						type = bunker
+						province = {
+							all_provinces = yes
+							limit_to_border = yes
+						}
+						level = 1
+						instant_build = yes
+					}
+				}
+
+			}
+		}
+	}
+}
+
+focus = {
+	id = CHI_defend_yellow_river
+	icon = GFX_goal_generic_construct_military
+	prerequisite = { focus = CHI_fortify_beijing }
+	x = 0
+	y = 1
+	relative_position_id = CHI_fortify_beijing
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		NOT = {
+			any_enemy_country = {
+				has_full_control_of_state = 597
+			}
+		}
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		if = {
+			limit = { has_full_control_of_state = 597 }
+			597 = { # beijing
+				set_building_level = {
+					type = bunker
+					province = {
+						id = 1069
+						id = 4089
+						id = 10102
+						id = 10072
+						id = 12069
+					}
+					level = 2
+					instant_build = yes
+				}
+
+				if = {
+					limit = {
+						any_province_building_level = {
+							province = {
+								id = 1069
+							}
+							level < 3
+							building = bunker
+						}
+					}
+					set_building_level = {
+						type = bunker
+						province = {
+							id = 1069
+						}
+						level = 3
+						instant_build = yes
+					}
+				}
+			}
+
+			#If not full control, only add forts in provinces bordering the enemy
+			#Only time to throw up some emergency stuff
+			else = {
+				597 = {
 					add_building_construction = {
 						type = bunker
 						province = {
@@ -2999,6 +3878,7 @@ focus = {
 		completion_reward = {
 			set_party_name = { ideology = democratic long_name = CHI_neutrality_party
 			name = CHI_neutrality_party }
+			add_popularity = {ideology = democratic popularity = 0.15}
 			create_country_leader = {
 				name = "Lin Sen"
 				desc = "Lin_Sen"
@@ -4542,112 +5422,7 @@ focus = {
 		}
 	}
 
-	focus = {
-		id = CHI_taiyuan_arsenal
-		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = CHI_mining_commission }
-		x = -2
-		y = 1
-		relative_position_id = CHI_mining_commission
 
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			controls_state = 615
-			NOT = {
-				has_idea = CHI_hyper_inflation_5
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			CHI_hyper_inflation_level_up = yes
-			615 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-			}
-		}
-	}
-
-	focus = {
-		id = CHI_develop_the_hanyan_arsenal
-		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = CHI_mining_commission }
-		x = 0
-		y = 1
-		relative_position_id = CHI_mining_commission
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			NOT = {
-				has_idea = CHI_hyper_inflation_5
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-			CHI_hyper_inflation_level_up = yes
-			random_state = {
-				limit = {
-					has_state_flag = CHI_develop_the_hanyan_arsenal_AF
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-			}
-		}
-
-		completion_reward = {
-			CHI_hyper_inflation_level_up = yes
-			random_owned_controlled_state = {
-				prioritize = { 620 }
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-				set_state_flag = CHI_develop_the_hanyan_arsenal_AF
-			}
-		}
-	}
 
 	focus = {
 		id = CHI_financial_policy

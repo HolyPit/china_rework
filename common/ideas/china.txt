@@ -49,7 +49,7 @@ ideas = {
 
 		CHI_wartime_economy = {
 			allowed = {
-				original_tag = GER
+				original_tag = CHI
 				always = no
 			}
 
@@ -64,6 +64,25 @@ ideas = {
 			modifier = {
 				production_speed_industrial_complex_factor = 0.1
 				production_speed_arms_factory_factor = 0.1
+			}
+		}
+
+		CHI_department_of_transportation = {
+			allowed = {
+				original_tag = CHI
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			removal_cost = -1
+
+			picture = generic_build_infrastructure
+
+			modifier = {
+				production_speed_infrastructure_factor = 0.1
 			}
 		}
 
@@ -87,6 +106,53 @@ ideas = {
 			modifier = {
 				stability_factor = -0.1
 				war_support_factor = -0.1
+			}
+		}
+
+
+		CHI_hanyang_arsenal = {
+
+			name = CHI_hanyang_arsenal
+
+			allowed = {
+				always = no
+			}
+
+			allowed_civil_war = {
+				original_tag = CHI
+			}
+
+			removal_cost = -1
+
+			picture = generic_infantry_equipment_manufacturer_2
+
+
+			research_bonus = {
+				infantry_weapons = 0.10
+			}
+
+		}
+
+
+		CHI_taiyuan_arsenal_idea = {
+
+			allowed = {
+				original_tag = CHI
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_infantry_equipment_manufacturer_3
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				infantry_equipment = {
+					build_cost_ic = -0.1 instant = yes
+				}
 			}
 		}
 
