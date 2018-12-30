@@ -1112,7 +1112,7 @@ focus_tree = {
 			is_puppet = no
 			if = {
 			OR = {
-			Not = {CHI ={has_completed_focus = CHI_delay_japanese_invation}}
+			Not = {CHI ={has_completed_focus = CHI_delay_japanese_Invasion}}
 			date > 1939.01.01
 			}
 			}

@@ -539,7 +539,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = CHI_delay_japanese_invation
+		id = CHI_delay_japanese_Invasion
 		icon = GFX_focus_generic_concessions
 
 
@@ -567,7 +567,7 @@ focus_tree = {
 		completion_reward = {
 
 			add_political_power = -300
-			custom_effect_tooltip = CHI_delay_japanese_invation_tt
+			custom_effect_tooltip = CHI_delay_japanese_Invasion_tt
 
 	}
 	}
@@ -885,7 +885,7 @@ focus = {
 	y = 1
 	relative_position_id = CHI_invite_wang_Jingwei
 	prerequisite = { focus =  CHI_invite_wang_Jingwei }
-	mutually_exclusive = {focus = CHI_subjuagation_to_japanese }
+	mutually_exclusive = {focus = CHI_subjugation_to_japanese }
 
 	cost = 5
 
@@ -963,7 +963,7 @@ focus = {
 ###############################################################################
 
 focus = {
-	id = CHI_subjuagation_to_japanese
+	id = CHI_subjugation_to_japanese
 	icon = GFX_focus_CZE_german_puppet
 
 	x = -2
@@ -1018,8 +1018,8 @@ focus = {
 
 	x = 0
 	y = 1
-	relative_position_id = CHI_subjuagation_to_japanese
-	prerequisite = { focus =  CHI_subjuagation_to_japanese }
+	relative_position_id = CHI_subjugation_to_japanese
+	prerequisite = { focus =  CHI_subjugation_to_japanese }
 	mutually_exclusive = {focus = CHI_chinese_dignity}
 
 	cost = 10
@@ -1398,8 +1398,8 @@ focus = {
 
 	x = -2
 	y = 1
-	relative_position_id = CHI_subjuagation_to_japanese
-	prerequisite = { focus =  CHI_subjuagation_to_japanese }
+	relative_position_id = CHI_subjugation_to_japanese
+	prerequisite = { focus =  CHI_subjugation_to_japanese }
 	mutually_exclusive = {focus = CHI_loyal_subject}
 
 	cost = 10
@@ -2801,20 +2801,20 @@ focus = {
 			kill_country_leader = yes
 			hidden_effect = { remove_ideas = JAP_hirohito }
 			#add_stability = -0.6
-			#create_country_leader = {
-			#	name = "Hideki Tojo"
-			#	desc = "hideki_tojo"
-			#	picture = "gfx/leaders/JAP/Portrait_Japan_Generic_land_2.dds"
-			#	expire = "1965.1.1"
-			#	ideology = fascism_ideology
-			#}
 			create_country_leader = {
-				name = "Yasuhito"
-				desc = "Yasuhito"
-				picture = "gfx/leaders/JAP/Portrait_Japan_Yasuhito.dds"
+				name = "Hideki Tojo"
+				desc = "hideki_tojo"
+				picture = "gfx/leaders/JAP/Portrait_Japan_Generic_land_2.dds"
 				expire = "1965.1.1"
 				ideology = fascism_ideology
 			}
+			#create_country_leader = {
+			#	name = "Yasuhito"
+			#	desc = "Yasuhito"
+			#	picture = "gfx/leaders/JAP/Portrait_Japan_Yasuhito.dds"
+			#	expire = "1965.1.1"
+			#	ideology = fascism_ideology
+			#}
 		}
 
 }
@@ -3879,13 +3879,6 @@ focus = {
 			set_party_name = { ideology = democratic long_name = CHI_neutrality_party
 			name = CHI_neutrality_party }
 			add_popularity = {ideology = democratic popularity = 0.15}
-			create_country_leader = {
-				name = "Lin Sen"
-				desc = "Lin_Sen"
-				picture = "gfx/leaders/CHI/Portrait_China_Lin_Sen_new.dds"
-				expire = "1965.1.1"
-				ideology = socialism
-			}
 			every_country = {
 				limit = {
 					is_major = yes
