@@ -471,23 +471,23 @@ focus_tree = {
 			OR = {
 				SHX = {
 					is_in_faction_with = ROOT
-					is_free_or_subject_of_root = yes
+					is_subject = no
 				}
 				XSM = {
 					is_in_faction_with = ROOT
-					is_free_or_subject_of_root = yes
+					is_subject = no
 				}
 				YUN = {
 					is_in_faction_with = ROOT
-					is_free_or_subject_of_root = yes
+					is_subject = no
 				}
 				SIK = {
 					is_in_faction_with = ROOT
-					is_free_or_subject_of_root = yes
+					is_subject = no
 				}
 				GXC = {
 					is_in_faction_with = ROOT
-					is_free_or_subject_of_root = yes
+					is_subject = no
 				}
 			}
 
@@ -2228,8 +2228,9 @@ focus = {
 	cost = 10
 
 	available = {
-controls_state = 610
-		controls_state = 716}
+		 controls_state = 610
+		 controls_state = 716
+	}
 
 
 
