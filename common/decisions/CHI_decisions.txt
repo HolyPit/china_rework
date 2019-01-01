@@ -6449,9 +6449,6 @@ CHI_xian_incident = {
 					has_war_with = PRC
 				}
 				NOT = {
-					has_government = fascism
-				}
-				NOT = {
 					OR = {
 						has_completed_focus = CHI_foreign_threats
 						has_completed_focus = CHI_prioritize_the_interior
@@ -6476,6 +6473,7 @@ CHI_xian_incident = {
 		}
 
 		visible = {
+			CHI = {has_country_leader = {name = "Chiang Kai-Shek"}}
 			NOT = {
 				has_global_flag = CHI_xian_fired
 			}

@@ -1296,8 +1296,18 @@ focus = {
 	available = {
 
 		AND = {
-			CHI = {is_in_faction_with = JAP}
-			MAN = {is_in_faction_with = JAP}
+			CHI = {
+				has_capitulated = no
+				OR ={
+					is_in_faction_with = JAP
+					is_subject_of = JAP
+				}
+			}
+			MAN = {
+				exists = yes
+				has_capitulated = no
+				NOT = {has_war_with = JAP}
+			}
 		}
 
 	}
@@ -1323,10 +1333,13 @@ focus = {
 
 		MAN = {
 			set_cosmetic_tag = EOM
-			annex_country =  {
-			target = MEN
-    	transfer_troops = yes
-		}
+			if = {
+				limit = {country_exists = MEN}
+				annex_country =  {
+				target = MEN
+				transfer_troops = yes
+				}
+			}
 		}
 
 		JAP = {
@@ -1355,8 +1368,22 @@ focus = {
 	available = {
 
 		AND = {
-			CHI = {is_in_faction_with = JAP}
-			MAN = {is_in_faction_with = JAP}
+			CHI = {
+				compare_autonomy_progress_ratio > 0.75
+				has_capitulated = no
+				OR ={
+					is_in_faction_with = JAP
+					is_subject_of = JAP
+				}
+			}
+			MAN = {
+				exists = yes
+				has_capitulated = no
+				OR ={
+					is_in_faction_with = JAP
+					is_subject_of = JAP
+				}
+			}
 		}
 
 	}
@@ -1371,19 +1398,22 @@ focus = {
 	available_if_capitulated = yes
 
 	completion_reward = {
-
-		CHI = {
-			set_cosmetic_tag = EOC
+		JAP = {
+			set_autonomy = { target = CHI autonomy_state = autonomy_free }
 		}
 
 		CHI = {
+			set_cosmetic_tag = EOC
 			annex_country =  {
 			target = MAN
     	transfer_troops = yes
 		}
+		if = {
+			limit = {country_exists = MEN}
 			annex_country =  {
-				target = MEN
-				transfer_troops = yes
+			target = MEN
+			transfer_troops = yes
+			}
 		}
 		}
 
