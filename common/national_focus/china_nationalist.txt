@@ -986,7 +986,7 @@ focus = {
 			}
 		}
 		JAP = {
-			has_government = fascism
+			has_country_leader = {name = "Hirohito"}
 			is_subject = no
 		}
 	}
