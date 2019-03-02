@@ -49,6 +49,16 @@ young_marshal = {
 		}
 	}
 
+	brilliant_strategist = {
+	random = no
+	political_power_factor = 0.15
+	defensive_war_stability_factor = 0.4
+
+	ai_will_do = {
+		factor = 1
+	 }
+  }
+
 	dictator = {
 		random = no
 		political_power_factor = 0.25
