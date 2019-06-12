@@ -1,0 +1,28 @@
+spriteTypes = {
+
+  SpriteType = {
+  name = "GFX_focus_chi_beiyang"
+  texturefile = "gfx/interface/goals/focus_chi_beiyang.dds"
+  }
+
+  SpriteType = {
+  name = "GFX_focus_chi_showa"
+  texturefile = "gfx/interface/goals/focus_chi_showa.dds"
+  }
+
+  SpriteType = {
+  name = "GFX_focus_chi_china_first"
+  texturefile = "gfx/interface/goals/focus_chi_china_first.dds"
+  }
+
+  SpriteType = {
+  name = "GFX_focus_chi_japanese_ruler"
+  texturefile = "gfx/interface/goals/focus_chi_japanese_ruler.dds"
+  }
+
+  SpriteType = {
+  name = "GFX_focus_chi_bigger_china"
+  texturefile = "gfx/interface/goals/focus_chi_bigger_china.dds"
+  }
+
+}
