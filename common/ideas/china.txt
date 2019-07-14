@@ -2,6 +2,147 @@ ideas = {
 	country = {
 
 		####### MOD #############
+
+		CHI_sunwen = {
+
+			allowed = {
+				original_tag = CHI
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_sunwen
+
+			removal_cost = -1
+
+			modifier = {
+				democratic_drift = 0.1
+			}
+		}
+
+
+
+		CHI_kuomintang2 = {
+
+			allowed = {
+				original_tag = CHI
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_kuomintang
+
+			removal_cost = -1
+
+			modifier = {
+				democratic_drift = 0.1
+				consumer_goods_factor = -0.1
+			}
+		}
+
+		CHI_kuomintang3 = {
+
+			allowed = {
+				original_tag = CHI
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_kuomintang
+
+			removal_cost = -1
+
+			modifier = {
+				democratic_drift = 0.1
+				political_power_gain = 0.2
+				consumer_goods_factor = -0.1
+			}
+		}
+
+		CHI_kuomintang4 = {
+
+			allowed = {
+				original_tag = CHI
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_kuomintang
+
+			removal_cost = -1
+
+			modifier = {
+				democratic_drift = 0.1
+				political_power_gain = 0.2
+				consumer_goods_factor = -0.1
+				research_speed_factor = 0.10
+
+			}
+		}
+
+		CHI_kuomintang5 = {
+
+			allowed = {
+				original_tag = CHI
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_kuomintang
+
+			removal_cost = -1
+
+			modifier = {
+				democratic_drift = 0.1
+				political_power_gain = 0.2
+				consumer_goods_factor = -0.1
+				research_speed_factor = 0.10
+				political_advisor_cost_factor = -0.1
+			}
+		}
+
+		CHI_kuomintang6 = {
+
+			allowed = {
+				original_tag = CHI
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_kuomintang
+
+			removal_cost = -1
+
+			modifier = {
+				democratic_drift = 0.1
+				political_power_gain = 0.2
+				consumer_goods_factor = -0.1
+				political_advisor_cost_factor = -0.1
+				research_speed_factor = 0.10
+				military_leader_cost_factor = -0.1
+			}
+		}
+
+
+
 		CHI_infantry_focus = {
 
 			allowed = {

@@ -8,6 +8,7 @@ bookmarks = {
 		default = yes
 
 		"FRA"={
+			minor = yes
 			history = "FRA_GATHERING_STORM_DESC"
 			ideology = democratic
 			ideas = {
@@ -133,6 +134,22 @@ bookmarks = {
 				SOV_great_purge
 				SOV_claims_on_baltic
 				SOV_war_with_uk
+			}
+		}
+
+		"CHI"={
+			#minor = yes
+			history = "CHI_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				CHI_army_corruption_1
+				CHI_hyper_inflation_1
+				CHI_nine_power_treaty
+			}
+			focuses = {
+			CHI_restore_beiyang_government
+			CHI_nothing_personal
+			CHI_brother_nation_of_japan
 			}
 		}
 
@@ -282,21 +299,7 @@ bookmarks = {
 				YUG_establish_the_banovina_of_croatia
 			}
 		}
-		"CHI"={
-			minor = yes
-			history = "CHI_GATHERING_STORM_DESC"
-			ideology = neutrality
-			ideas = {
-				CHI_army_corruption_1
-				CHI_hyper_inflation_1
-				CHI_nine_power_treaty
-			}
-			focuses = {
-			CHI_restore_beiyang_government
-			CHI_nothing_personal
-			CHI_brother_nation_of_japan
-			}
-		}
+
 		"PRC"={
 			minor = yes
 			history = "PRC_GATHERING_STORM_DESC"

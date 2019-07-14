@@ -54,8 +54,8 @@
   CHI_nodlc_organise_the_jianguo_army_desc:0 "Organise the Jianguo Army"
   CHI_nodlc_unite_the_people:0 "Unite the People"
   CHI_nodlc_unite_the_people_desc:0 "Unite the People"
-  CHI_nodlc_independence_war:0 "Independent War"
-  CHI_nodlc_independence_war_desc:0 "Independent War"
+  CHI_nodlc_independence_war:0 "Independence War"
+  CHI_nodlc_independence_war_desc:0 "Independence War"
 
 
   CHI_nodlc_support_zhang_xueliang:0 "Support Zhang Xueliang"
@@ -170,6 +170,24 @@
   CHI_nodlc_defend_yellow_river_desc:0 "Defend Yellow River"
 
 
+
+
+  CHI_nodlc_sun_legacy:0 "Dr. Sun Yat-Sen's Legacy"
+  CHI_nodlc_sun_legacy_desc:0 "Dr. Sun Yat-Sen's Legacy"
+  CHI_nodlc_five_power_constitution:0 "Five-Power Constitution"
+  CHI_nodlc_five_power_constitution_desc:0 "Five-Power Constitution"
+  CHI_nodlc_executive_yuan:0 "Executive Yuan"
+  CHI_nodlc_executive_yuan_desc:0 "Executive Yuan"
+  CHI_nodlc_judicial_yuan:0 "Judicial Yuan"
+  CHI_nodlc_judicial_yuan_desc:0 "Judicial Yuan"
+  CHI_nodlc_examination_yuan:0 "Examination Yuan"
+  CHI_nodlc_examination_yuan_desc:0 "Examination Yuan"
+  CHI_nodlc_legislative_yuan:0 "Legislative Yuan"
+  CHI_nodlc_legislative_yuan_desc:0 "Legislative Yuan"
+  CHI_nodlc_control_yuan:0 "Control Yuan"
+  CHI_nodlc_control_yuan_desc:0 "Control Yuan"
+
+
   ####### ideas localisation #####
   CHI_chinese_nationalism:0 "Chinese Nationalism"
   CHI_wartime_economy:0 "Wartime Industry"
@@ -181,6 +199,12 @@
   CHI_hanyang_arsenal:0 "Hanyang Arsenal"
   CHI_taiyuan_arsenal_idea:0 "Taiyuan Arsenal"
   CHI_department_of_transportation:0 "Department of Transportation"
+  CHI_sunwen:0 "Dr. Sun's Legacy"
+  CHI_kuomintang2:0 "Five-Power Constitution"
+  CHI_kuomintang3:0 "Five-Power Constitution"
+  CHI_kuomintang4:0 "Five-Power Constitution"
+  CHI_kuomintang5:0 "Five-Power Constitution"
+  CHI_kuomintang6:0 "Five-Power Constitution"
 
   ####### party names localisation #####
   CHI_party_military_affairs_commission_long:0 "Military Affairs Commission"

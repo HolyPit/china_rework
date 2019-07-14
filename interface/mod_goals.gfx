@@ -25,4 +25,24 @@ spriteTypes = {
   texturefile = "gfx/interface/goals/focus_chi_bigger_china.dds"
   }
 
+  SpriteType = {
+  name = "GFX_focus_chi_sun_legacy"
+  texturefile = "gfx/interface/goals/focus_chi_sun_legacy.dds"
+  }
+
+  SpriteType = {
+  name = "GFX_focus_chi_judicial_yuan"
+  texturefile = "gfx/interface/goals/focus_chi_judicial_yuan.dds"
+  }
+
+  SpriteType = {
+  name = "GFX_focus_chi_control_yuan"
+  texturefile = "gfx/interface/goals/focus_chi_control_yuan.dds"
+  }
+
+  SpriteType = {
+  name = "GFX_focus_chi_new_executive_yuan"
+  texturefile = "gfx/interface/goals/focus_chi_new_executive_yuan.dds"
+  }
+
 }

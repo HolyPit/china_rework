@@ -1,6 +1,8 @@
 [h1]China National Focus Rework: Refined Focus Tree After “Waking the Tiger”[/h1]
 
-You need all current DLCs (Together for Victory, Death or Dishonor and Waking the Tiger) to make this mod work perfectly.
+[h1]Now compatible with vanilla game! Works with no DLC. Please report any bug, thanks![/h1]
+
+Still need DLCs (Together for Victory, Death or Dishonor and Waking the Tiger) to make this mod work perfectly.
 
 [b]Current version: 0.9[/b] (work-in-progress, testing needed, please report any bug or imbalance)
 
@@ -25,6 +27,10 @@ Prince Yasuhito – Fascist – [i]“Brother Nation of Japan”[/i] – form a 
 
 [h1]WIP To-do list:[/h1]
 
+Develop the Democracy and Nationalism branches for vanilla game
 All focus descriptions
 More rework on industry, navy and technology
 To expand the focus tree even more, suggestions are extremely welcome!
+
+[h1]If you like this mod, please support me on Patreon for future development! Thanks![/h1]
+[url=https://www.patreon.com/holypit]https://www.patreon.com/holypit[/url]

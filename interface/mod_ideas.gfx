@@ -1,0 +1,13 @@
+spriteTypes = {
+
+	spriteType = {
+		name = "GFX_idea_chi_kuomintang"
+		texturefile = "gfx/interface/ideas/idea_chi_kuomintang.dds"
+	}
+
+	spriteType = {
+		name = "GFX_idea_chi_sunwen"
+		texturefile = "gfx/interface/ideas/idea_chi_sunwen.dds"
+	}
+
+}
