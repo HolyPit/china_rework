@@ -156,6 +156,24 @@
   CHI_defend_yellow_river_desc:0 "Defend Yellow River"
 
 
+
+
+
+
+  CHI_sun_legacy:0 "Dr. Sun Yat-Sen's Legacy"
+  CHI_sun_legacy_desc:0 "Dr. Sun Yat-Sen's Legacy"
+  CHI_five_power_constitution:0 "Five-Power Constitution"
+  CHI_five_power_constitution_desc:0 "Five-Power Constitution"
+  CHI_the_true_democracy:0 "The True Democracy"
+  CHI_the_true_democracy_desc:0 "The True Democracy"
+  CHI_first_national_assembly:0 "First National Assembly"
+  CHI_first_national_assembly_desc:0 "First National Assembly"
+  CHI_secure_kmt_majority:0 "Secure KMT Majority"
+  CHI_secure_kmt_majority_desc:0 "Secure KMT Majority"
+  CHI_first_election:0 "First Election"
+  CHI_first_election_desc:0 "First Election"
+
+
   ####### ideas localisation #####
   CHI_chinese_nationalism:0 "Chinese Nationalism"
   CHI_wartime_economy:0 "Wartime Industry"
@@ -167,6 +185,13 @@
   CHI_hanyang_arsenal:0 "Hanyang Arsenal"
   CHI_taiyuan_arsenal_idea:0 "Taiyuan Arsenal"
   CHI_department_of_transportation:0 "Department of Transportation"
+  CHI_sunwen:0 "Dr. Sun's Legacy"
+  CHI_sunwen2:0 "Dr. Sun's Legacy"
+  CHI_kuomintang2:0 "Five-Power Constitution"
+  CHI_kuomintang3:0 "Five-Power Constitution"
+  CHI_kuomintang4:0 "Five-Power Constitution"
+  CHI_kuomintang5:0 "Five-Power Constitution"
+  CHI_kuomintang6:0 "Five-Power Constitution"
 
   ####### party names localisation #####
   CHI_party_military_affairs_commission_long:0 "Military Affairs Commission"
@@ -233,7 +258,7 @@
   news.1002.a:0 "Seems like Zhang had his sweet revenge for his father eventually."
 
   news.1003.t:0 "Emperor Hirohito Returned to Tokyo"
-  news.1003.desc:0 "Emperor Hirohito showed himself in public first time after the injury in Manchuria. His Majesty seemed fully recovered, but no one could really tell as the Emperor was surrounded by more than a hundred royal guards!"
+  news.1003.desc:0 "Emperor Hirohito showed himself in public for first time after the injury in Manchuria. His Majesty seemed fully recovered, but no one could really tell as the Emperor was surrounded by more than a hundred royal guards!"
   news.1003.a:0 "The Emperor is well protected now."
 
 
@@ -259,3 +284,11 @@
   wtt_china.1009.a:0 "There is no other option."
   wtt_china.1009.b:0 "We need to negotiate the terms."
   wtt_china.1009.c:0 "We will never give in!"
+
+
+  wtt_china.1010.t:0 "Chinese Election!"
+  wtt_china.1010.desc:0 "Time to vote for a leader who is strong, wise, and most importantly, having the true democratic sprit. Lin Sen has fought alongside Dr. Sun Yat-Sen, he is the right leader for a true democratic China. Zhang Xueliang is well-accepted by all parties, and he is eager to serve the country. Li Zongren has full support for southern China, he can bring in strong economy power to build up our country. Yan Xishan is a mature politician and a senior member of Kuomintang, he knows how to run the country."
+  wtt_china.1010.a:0 "Lin Sen is a true democratic leader."
+  wtt_china.1010.b:0 "Zhang Xueliang deserves a chance."
+  wtt_china.1010.c:0 "Li Zongren is the right one."
+  wtt_china.1010.d:0 "Yan Xishan is a mature politician."

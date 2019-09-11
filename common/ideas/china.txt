@@ -19,6 +19,27 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
+				democratic_drift = 0.05
+			}
+		}
+
+
+		CHI_sunwen2 = {
+
+			allowed = {
+				original_tag = CHI
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_sunwen
+
+			removal_cost = -1
+
+			modifier = {
 				democratic_drift = 0.1
 			}
 		}
@@ -41,7 +62,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				democratic_drift = 0.1
+				democratic_drift = 0.01
 				consumer_goods_factor = -0.1
 			}
 		}
@@ -62,7 +83,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				democratic_drift = 0.1
+				democratic_drift = 0.01
 				political_power_gain = 0.2
 				consumer_goods_factor = -0.1
 			}
@@ -84,7 +105,7 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				democratic_drift = 0.1
+				democratic_drift = 0.01
 				political_power_gain = 0.2
 				consumer_goods_factor = -0.1
 				research_speed_factor = 0.10
@@ -108,11 +129,11 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				democratic_drift = 0.1
+				democratic_drift = 0.01
 				political_power_gain = 0.2
 				consumer_goods_factor = -0.1
 				research_speed_factor = 0.10
-				political_advisor_cost_factor = -0.1
+				political_advisor_cost_factor = -0.25
 			}
 		}
 
@@ -132,12 +153,12 @@ ideas = {
 			removal_cost = -1
 
 			modifier = {
-				democratic_drift = 0.1
+				democratic_drift = 0.01
 				political_power_gain = 0.2
 				consumer_goods_factor = -0.1
-				political_advisor_cost_factor = -0.1
+				political_advisor_cost_factor = -0.25
 				research_speed_factor = 0.10
-				military_leader_cost_factor = -0.1
+				military_leader_cost_factor = -0.25
 			}
 		}
 

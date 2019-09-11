@@ -2,6 +2,11 @@ spriteTypes = {
 
 	### MOD!!!
 	spriteType = {
+		name = "GFX_portrait_chiang_kai_shek"
+		texturefile = "gfx/leaders/CHI/Portrait_China_Chiang_Kai_Shek.dds"
+	}
+
+	spriteType = {
 		name = "GFX_portrait_chi_chan_chak"
 		texturefile = "gfx/leaders/CHI/Portrait_China_Chan_Chak.dds"
 	}

@@ -2943,7 +2943,9 @@ focus = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_war_support = 0.1
+
+			add_popularity =  { ideology = democratic popularity = 0.05 }
+			add_political_power = 120
 
 		}
 	}
@@ -2963,7 +2965,7 @@ focus = {
 		}
 
 		available = {
-
+			democratic > 0.1
 		}
 
 		bypass = {
@@ -2999,7 +3001,7 @@ focus = {
 		}
 
 		available = {
-
+			democratic > 0.2
 		}
 
 		bypass = {
@@ -3037,7 +3039,7 @@ focus = {
 		}
 
 		available = {
-
+			democratic > 0.3
 		}
 
 		bypass = {
@@ -3074,7 +3076,7 @@ focus = {
 		}
 
 		available = {
-
+			democratic > 0.4
 		}
 
 		bypass = {
@@ -3111,7 +3113,7 @@ focus = {
 		}
 
 		available = {
-
+			democratic > 0.5
 		}
 
 		bypass = {
@@ -3127,6 +3129,7 @@ focus = {
 			remove_idea = CHI_kuomintang5
 			add_idea = CHI_kuomintang6
 		}
+		remove_ideas = CHI_ineffective_bureaucracy
 		}
 	}
 
@@ -3165,7 +3168,11 @@ focus = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = CHI_sunwen
+		swap_ideas = {
+			remove_idea = CHI_sunwen
+			add_idea = CHI_sunwen2
+		}
+		add_popularity =  { ideology = democratic popularity = 0.05 }
 		}
 	}
 
@@ -3201,7 +3208,8 @@ focus = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = CHI_sunwen
+			add_political_power = 120
+			add_popularity =  { ideology = democratic popularity = 0.1 }
 		}
 	}
 
@@ -3233,7 +3241,10 @@ focus = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = CHI_sunwen
+			add_political_power = 120
+			add_popularity =  { ideology = democratic popularity = 0.1 }
+			set_party_name = {ideology = democratic long_name = CHI_neutrality_party
+			name = CHI_neutrality_party}
 		}
 	}
 
@@ -3243,6 +3254,7 @@ focus = {
 		id = CHI_first_election
 		icon = GFX_goal_support_democracy
 		prerequisite = { focus = CHI_secure_kmt_majority }
+		prerequisite = { focus = CHI_legislative_yuan }
 		x = 0
 		y = 1
 		relative_position_id = CHI_secure_kmt_majority
@@ -3254,7 +3266,7 @@ focus = {
 		}
 
 		available = {
-
+			democratic > 0.4
 		}
 
 		bypass = {
@@ -3266,7 +3278,7 @@ focus = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = CHI_sunwen
+			CHI = {country_event = wtt_china.1010}
 		}
 	}
 
@@ -3274,7 +3286,7 @@ focus = {
 
 	focus = {
 		id = CHI_coalition_goverment
-		icon = GFX_focus_chi_proclaim_rival_government
+		icon = GFX_focus_prc_social_democracy
 		prerequisite = { focus = CHI_first_election }
 		mutually_exclusive = { focus =  CHI_suppress_the_communists}
 		x = 0

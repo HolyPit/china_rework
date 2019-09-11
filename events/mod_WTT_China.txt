@@ -1,0 +1,579 @@
+add_namespace = wtt_china
+
+###########################
+# Mod News Events
+###########################
+
+# China demands PRC be puppeted
+country_event = {
+	id = wtt_china.1001
+	title = wtt_china.1001.t
+	desc = wtt_china.1001.desc
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	#Accept puppet
+	option = {
+		name = wtt_china.1001.a
+		ai_chance = {
+			base = 90
+		}
+		FROM = {
+		CHI = {
+		add_popularity = { ideology = communism popularity = 0.30 }
+		set_autonomy = { target = PRC autonomy_state = autonomy_dominion }
+		}
+		PRC = {
+			set_politics = {
+		parties = {
+		democratic = {
+			popularity = 0
+		}
+
+		fascism = {
+			popularity = 0
+		}
+
+		communism = {
+			popularity = 100
+		}
+
+		neutrality = {
+			popularity = 0
+		}
+	}
+
+	ruling_party = communism
+	elections_allowed = no
+}
+			set_cosmetic_tag = PRC_communism
+		}
+			country_event = { id = wtt_china.1002 }
+		}
+	}
+
+	#Never
+	option = {
+		name = wtt_china.1001.b
+		ai_chance = {
+			base = 10
+		}
+		FROM = {
+			country_event = { id = wtt_china.1003 }
+		}
+	}
+}
+
+# Answer from PRC.1 - Yes
+country_event = {
+	id = wtt_china.1002
+	title = wtt_china.1002.t
+	desc = wtt_china.1002.desc
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = wtt_china.1002.a
+
+	}
+}
+
+
+# Answer from PRC.1 - No
+country_event = {
+	id = wtt_china.1003
+	title = wtt_china.1003.t
+	desc = wtt_china.1003.desc
+	picture = GFX_report_event_chinese_soldiers_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = wtt_china.1003.a
+		create_wargoal = {
+				type = take_core_state
+				target = FROM
+		}
+	}
+}
+
+
+##################################################################
+
+# Split Shanxi
+country_event = {
+	id = wtt_china.1004
+	title = wtt_china.1004.t
+	desc = wtt_china.1004.desc
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	#Accept puppet
+	option = {
+		name = wtt_china.1004.a
+		ai_chance = {
+			base = 90
+		}
+
+		FROM = {
+		CHI = {
+			annex_country =  {
+			target = SHX
+    	transfer_troops = yes
+		}
+		create_field_marshal = {
+			name = "Yan Xishan"
+			gfx = GFX_portrait_yan_xishan
+			traits = { career_officer } # Educated at officer schools in China and Japan
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		}
+
+		PRC = {
+		transfer_state = 746
+		transfer_state = 621
+		}
+
+
+			country_event = { id = wtt_china.1005 }
+
+		}
+	}
+
+	#Never
+	option = {
+		name = wtt_china.1.b
+		ai_chance = {
+			base = 10
+		}
+		FROM = {
+			country_event = { id = wtt_china.1006 }
+		}
+	}
+}
+
+# Split Xibei San Ma
+country_event = {
+	id = wtt_china.1007
+	title = wtt_china.1004.t
+	desc = wtt_china.1004.desc
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	#Accept puppet
+	option = {
+		name = wtt_china.1004.a
+		ai_chance = {
+			base = 90
+		}
+
+		FROM = {
+		CHI = {
+			annex_country =  {
+			target = XSM
+    	transfer_troops = yes
+		}
+		create_field_marshal = {
+			name = "Ma Bufang"
+			gfx = GFX_portrait_xsm_ma_bufang
+			traits = { cavalry_officer } # Raised 30,000 Muslim Cavalrymen
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		}
+
+		PRC = {
+		transfer_state = 283
+		transfer_state = 616
+		transfer_state = 755
+		transfer_state = 756
+		}
+
+
+			country_event = { id = wtt_china.1005 }
+
+		}
+	}
+
+	#Never
+	option = {
+		name = wtt_china.1.b
+		ai_chance = {
+			base = 10
+		}
+		FROM = {
+			country_event = { id = wtt_china.1006 }
+		}
+	}
+}
+
+# Annex Sinkiang
+country_event = {
+	id = wtt_china.1008
+	title = wtt_china.1004.t
+	desc = wtt_china.1004.desc
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	#Accept puppet
+	option = {
+		name = wtt_china.1004.a
+		ai_chance = {
+			base = 90
+		}
+
+		FROM = {
+		CHI = {
+
+		create_field_marshal = {
+			name = "Sheng Shicai"
+			gfx = GFX_portrait_sheng_shicai
+			traits = { politically_connected } # Studied political economy, played Stalin and Chiang against one another
+			skill = 3
+			attack_skill = 4
+			defense_skill = 3
+			planning_skill = 2
+			logistics_skill = 2
+		}
+		}
+
+		PRC = {
+		annex_country =  {
+		target = SIK
+		transfer_troops = yes
+	}
+		}
+
+
+			country_event = { id = wtt_china.1005 }
+
+		}
+	}
+
+	#Never
+	option = {
+		name = wtt_china.1.b
+		ai_chance = {
+			base = 10
+		}
+		FROM = {
+			country_event = { id = wtt_china.1006 }
+		}
+	}
+}
+
+# Answer from shanxi - Yes
+country_event = {
+	id = wtt_china.1005
+	title = wtt_china.2.t
+	desc = wtt_china.2.desc
+	picture = GFX_report_event_chinese_japanese_handshake
+
+	is_triggered_only = yes
+
+	option = {
+		name = wtt_china.2.a
+	}
+}
+
+
+
+# Answer from shanxi - No
+country_event = {
+	id = wtt_china.1006
+	title = wtt_china.3.t
+	desc = wtt_china.3.desc
+	picture = GFX_report_event_chinese_soldiers_01
+
+	is_triggered_only = yes
+
+	option = {
+		name = wtt_china.3.a
+		FROM = {
+			add_ideas = PRC_illegal_government
+		}
+		create_wargoal = {
+				type = take_core_state
+				target = FROM
+		}
+	}
+}
+
+
+##################################################################
+
+country_event = {
+	id = wtt_china.1009
+	title = wtt_china.1009.t
+	desc = wtt_china.1009.desc
+	picture = GFX_report_event_chinese_officers
+
+	is_triggered_only = yes
+
+	#Accept annex
+	option = {
+		name = wtt_china.1009.a
+		ai_chance = {
+			base = 80
+		}
+
+		FROM = {
+		CHI = {
+			annex_country =  {
+			target = ROOT
+    	transfer_troops = yes
+		}
+		}
+
+			country_event = { id = wtt_china.1005 }
+
+		}
+	}
+
+	#Accept puppet
+	option = {
+		name = wtt_china.1009.b
+		ai_chance = {
+			base = 15
+		}
+
+		FROM = {
+		CHI = {
+			set_autonomy = { target = ROOT autonomy_state = autonomy_integrated_puppet }
+		}
+
+			country_event = { id = wtt_china.1005 }
+
+		}
+	}
+
+
+	#Never
+	option = {
+		name = wtt_china.1009.c
+		ai_chance = {
+			base = 5
+		}
+		FROM = {
+			country_event = { id = wtt_china.1006 }
+		}
+	}
+}
+
+
+
+
+##################################################################
+
+country_event = {
+	id = wtt_china.1010
+	title = wtt_china.1010.t
+	desc = wtt_china.1010.desc
+	picture = GFX_report_event_long_march
+
+	is_triggered_only = yes
+
+	#Lin Sen
+	option = {
+		name = wtt_china.1010.a
+		ai_chance = {
+			base = 80
+		}
+
+		FROM = {
+		CHI = {
+    set_politics = {
+      ruling_party = democratic
+      election_frequency = 60
+      elections_allowed = yes
+    }
+		}
+    add_stability = 0.2
+		}
+	}
+
+
+  #Zhang Xueliang
+  option = {
+    name = wtt_china.1010.b
+    ai_chance = {
+      base = 80
+    }
+
+    FROM = {
+    CHI = {
+    set_politics = {
+      ruling_party = democratic
+      elections_allowed = yes
+    }
+
+
+    create_country_leader = {
+      name = "Zhang Xueliang"
+      desc = "POLITICS_ZHANG_XUELIANG_DESC"
+      picture = "GFX_portrait_chi_zhang_xueliang"
+      expire = "1965.1.1"
+      ideology = socialism
+      traits = {
+        fascist_sympathies
+        young_marshal
+        dislikes_japan
+      }
+      }
+      add_war_support = 0.2
+    }
+    }
+  }
+
+
+
+
+  #Li Zongren
+  option = {
+    name = wtt_china.1010.c
+    ai_chance = {
+      base = 10
+    }
+
+    FROM = {
+    CHI = {
+      if = {
+        limit = {
+        GXC = {
+        exists = yes
+        OR = {
+        is_subject = no
+        is_subject_of = CHI
+        }
+        }
+        }
+      annex_country =  {
+      target = GXC
+        transfer_troops = yes
+      }
+      }
+
+
+    set_politics = {
+      ruling_party = democratic
+      elections_allowed = yes
+    }
+
+    create_country_leader = {
+      name = "Li Zongren"
+      desc = "POLITICS_LI_ZONGREN_DESC"
+      picture = "GFX_portrait_li_zongren"
+      expire = "1965.1.1"
+      ideology = socialism
+      traits = {
+        brilliant_strategist
+      }
+      }
+      add_stability = 0.05
+      add_war_support = 0.05
+    }
+
+    }
+  }
+
+
+
+  #Yan Xishan
+  option = {
+    name = wtt_china.1010.d
+    ai_chance = {
+      base = 10
+    }
+
+    FROM = {
+    CHI = {
+      if = {
+        limit = {
+        SHX = {
+        exists = yes
+        OR = {
+        is_subject = no
+        is_subject_of = CHI
+        }
+        }
+        }
+      annex_country =  {
+      target = SHX
+        transfer_troops = yes
+      }
+      }
+
+
+    set_politics = {
+      ruling_party = democratic
+      elections_allowed = yes
+    }
+
+    create_country_leader = {
+      name = "Yan Xishan"
+      desc = "POLITICS_YAN_XISHAN_DESC"
+      picture = "GFX_portrait_yan_xishan"
+      expire = "1965.1.1"
+      ideology = socialism
+      traits = {
+        cornered_fox
+      }
+      }
+    }
+    add_stability = 0.1
+    add_war_support = 0.1
+    }
+  }
+
+
+}
+
+
+
+##################################################################
+
+country_event = {
+	id = wtt_china.1011
+	title = wtt_china.1011.t
+	desc = wtt_china.1011.desc
+	picture = GFX_report_event_long_march
+
+	is_triggered_only = yes
+
+	option = {
+		name = wtt_china.1011.a
+		ai_chance = {
+			base = 80
+		}
+
+		FROM = {
+		CHI = {
+		create_field_marshal = {
+			name = "Chiang Kai-Shek"
+			gfx = "GFX_portrait_chiang_kai_shek"
+			traits = { politically_connected media_personality thorough_planner skilled_staffer}
+			skill = 5
+			attack_skill = 1
+			defense_skill = 1
+			planning_skill = 6
+			logistics_skill = 1
+		}
+		}
+		}
+	}
+	}
+
+
+##################################################################
