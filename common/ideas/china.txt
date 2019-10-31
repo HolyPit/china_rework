@@ -44,6 +44,27 @@ ideas = {
 			}
 		}
 
+		CHI_sunwen3 = {
+
+			allowed = {
+				original_tag = CHI
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = chi_sunwen
+
+			removal_cost = -1
+
+			modifier = {
+				democratic_drift = 0.05
+				neutrality_drift = -0.1
+			}
+		}
+
 
 
 		CHI_kuomintang2 = {

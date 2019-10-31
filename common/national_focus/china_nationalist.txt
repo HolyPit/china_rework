@@ -410,7 +410,7 @@ focus = {
 
 	completion_reward = {
 
-
+	hidden_effect = {
 		create_country_leader = {
 			name = "Zhang Xueliang"
 			desc = "POLITICS_ZHANG_XUELIANG_DESC"
@@ -423,6 +423,7 @@ focus = {
 				dislikes_japan
 			}
   }
+	}
 	create_country_leader = {
 		name = "Zhang Xueliang"
 		desc = "POLITICS_ZHANG_XUELIANG_DESC"
@@ -3146,7 +3147,7 @@ focus = {
 		prerequisite = { focus = CHI_sun_legacy }
 		x = 0
 		y = 1
-		mutually_exclusive = {focus = CHI_supervised_demovracy}
+		mutually_exclusive = {focus = CHI_supervised_democracy}
 		relative_position_id = CHI_sun_legacy
 
 		cost = 10
@@ -3209,7 +3210,9 @@ focus = {
 
 		completion_reward = {
 			add_political_power = 120
-			add_popularity =  { ideology = democratic popularity = 0.1 }
+			add_popularity =  { ideology = democratic popularity = 0.05 }
+			add_popularity =  { ideology = fascism popularity = 0.05 }
+			add_popularity =  { ideology = communism popularity = 0.05 }
 		}
 	}
 
@@ -3322,7 +3325,7 @@ focus = {
 #######################################################
 
 	focus = {
-		id = CHI_supervised_demovracy
+		id = CHI_supervised_democracy
 		icon = GFX_focus_generic_self_management
 		prerequisite = { focus = CHI_sun_legacy }
 		mutually_exclusive = {focus = CHI_the_true_democracy}
@@ -3349,7 +3352,11 @@ focus = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = CHI_sunwen
+		swap_ideas = {
+			remove_idea = CHI_sunwen
+			add_idea = CHI_sunwen3
+		}
+		add_popularity =  { ideology = democratic popularity = 0.05 }
 		}
 	}
 
@@ -3359,10 +3366,10 @@ focus = {
 	focus = {
 		id = CHI_empower_the_army
 		icon = GFX_focus_generic_military_mission
-		prerequisite = { focus = CHI_supervised_demovracy }
+		prerequisite = { focus = CHI_supervised_democracy }
 		x = 0
 		y = 1
-		relative_position_id = CHI_supervised_demovracy
+		relative_position_id = CHI_supervised_democracy
 
 		cost = 10
 
@@ -3383,7 +3390,8 @@ focus = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = CHI_sunwen
+			army_experience = 50
+			add_popularity =  { ideology = fascism popularity = 0.05 }
 		}
 	}
 
@@ -3417,7 +3425,8 @@ focus = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = CHI_sunwen
+			add_war_support = 0.1
+			add_political_power = 120
 		}
 	}
 
@@ -3449,7 +3458,18 @@ focus = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = CHI_sunwen
+		create_country_leader = {
+			name = "Chiang Kai-Shek"
+			desc = "POLITICS_CHIANG_KAI-SHEK_DESC"
+			picture = "Portrait_China_Chiang_Kai_Shek.dds"
+			expire = "1965.1.1"
+			ideology = socialism
+			traits = {
+				generallissimo
+			}
+		}
+		set_party_name = {ideology = democratic long_name = CHI_neutrality_party
+		name = CHI_neutrality_party}
 		}
 	}
 
@@ -3483,7 +3503,6 @@ focus = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			add_ideas = CHI_sunwen
 		}
 	}
 
