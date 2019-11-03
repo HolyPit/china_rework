@@ -246,6 +246,10 @@
   hirohitos_brother:0 "Emperor's Brother"
   prince_chichibu:0 "Prince Chichibu"
 
+  ### decisions ###
+  CHI_educate_the_soliders:0 "Educate the Soliders"
+  CHI_educate_the_soliders_desc:0 "Educate the Soliders"
+
 
   #### events ####
   hirohito_recovered:0 " Hirohito Recovered"

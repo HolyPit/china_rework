@@ -1,0 +1,204 @@
+
+
+#Category only allowed for CHI
+	CHI_army_support = {
+
+
+	CHI_educate_the_soliders = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+
+
+		}
+
+		cost = 25
+
+		fire_only_once = no
+
+		days_remove = 90
+
+		modifier = {
+			democratic_drift = 0.01
+		}
+		activation = {
+
+		}
+
+		visible = {
+
+		}
+		complete_effect = {
+			army_experience = 5
+		}
+		timeout_effect = {
+
+		}
+	}
+
+	CHI_educate_the_officers = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+
+
+		}
+
+		cost = 50
+
+		days_remove = 90
+
+		fire_only_once = no
+
+		modifier = {
+			democratic_drift = 0.03
+		}
+
+		activation = {
+
+		}
+
+		visible = {
+
+		}
+		complete_effect = {
+			army_experience = 10
+		}
+		timeout_effect = {
+
+		}
+	}
+
+
+
+	CHI_war_support = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+
+
+		}
+
+		cost = 75
+
+		days_remove = 90
+
+		fire_only_once = no
+
+		activation = {
+
+		}
+
+		visible = {
+
+		}
+		complete_effect = {
+			add_war_support = 0.05
+		}
+		timeout_effect = {
+
+		}
+	}
+
+
+
+
+	CHI_army_training_new = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+
+
+		}
+
+		cost = 100
+
+		days_remove = 90
+
+		fire_only_once = no
+
+		activation = {
+
+		}
+
+		visible = {
+
+		}
+		complete_effect = {
+			army_experience = 50
+		}
+		timeout_effect = {
+
+		}
+	}
+
+
+	CHI_integrate_local_militia_into_army = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+
+
+		}
+
+		cost = 150
+
+		days_remove = 90
+
+		fire_only_once = no
+
+		activation = {
+
+		}
+
+		visible = {
+
+		}
+		complete_effect = {
+		if = {
+		limit = {
+					not = { has_template = "Militia Division" }
+				}
+				division_template = {
+					name = "Militia Division"
+					priority = 0
+					division_names_group = CHI_INF_01
+					regiments = {
+						infantry = { x = 0 y = 0 }
+						infantry = { x = 0 y = 1 }
+						infantry = { x = 0 y = 2 }
+						infantry = { x = 1 y = 0 }
+						infantry = { x = 1 y = 1 }
+						infantry = { x = 1 y = 2 }
+					}
+				}
+		}
+
+		random_owned_controlled_state = {
+			create_unit = {
+				division = "name = \"Militia Division\" division_template = \"Militia Division\" start_experience_factor = 0.1"
+				owner = CHI
+			}
+			}
+
+			random_owned_controlled_state = {
+			create_unit = {
+				division = "name = \"Militia Division\" division_template = \"Militia Division\" start_experience_factor = 0.1"
+				owner = CHI
+			}
+			}
+		}
+		timeout_effect = {
+
+		}
+	}
+
+
+
+
+}

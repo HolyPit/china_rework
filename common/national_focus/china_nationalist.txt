@@ -406,6 +406,10 @@ focus = {
 
 	cost = 5
 
+	bypass = {
+		has_country_leader =  {name = "Zhang Xueliang"}
+	}
+
 
 
 	completion_reward = {
@@ -2695,7 +2699,7 @@ focus = {
 			}
 			random_owned_controlled_state = {
 				limit = { ROOT = { has_full_control_of_state = PREV } }
-				prioritize = { 613 }
+				prioritize = { 744 }
 				create_unit = {
 					division = "name = \"1. Northeastern Army Division\" division_template = \"Northeastern Army Division\" start_experience_factor = 1.0"
 					owner = CHI
