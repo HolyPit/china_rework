@@ -866,6 +866,7 @@ focus = {
 			}
 		}
 
+		hidden_effect = {
 		create_country_leader = {
 			name = "Yasuhito"
 			desc = "Yasuhito"
@@ -892,6 +893,7 @@ focus = {
 				prince_chichibu
 				warrior_code
 			}
+		}
 		}
 
 		set_capital = 608
@@ -1662,214 +1664,216 @@ focus = {
 		add_stability = 0.1
 		add_war_support = 0.1
 
-}
-}
-
-focus = {
-	id = CHI_pressure_yan_xishan
-	icon = GFX_goal_generic_occupy_states_ongoing_war
-
-
-	x = 0
-	y = 2
-	relative_position_id = CHI_centralise_power
-	prerequisite = { focus =  CHI_centralise_power}
-
-	cost = 10
-
-	available = {
-
-		SHX = {
-			NOT = {has_war_with = ROOT}
-			is_subject = no
-		}
-
-	}
-
-	bypass = {
-		OR = {
-		NOT = {
-			country_exists = SHX
-		}
-		has_war_with = SHX
-		}
-	}
-
-
-
-	completion_reward = {
-
-		SHX = {country_event = wtt_china.1009}
+		unlock_decision_category_tooltip = CHI_pressure_the_warlords
 
 }
 }
 
-focus = {
-	id = CHI_pressure_ma_bufang
-	icon = GFX_goal_generic_occupy_states_ongoing_war
-
-
-	x = 2
-	y = 2
-	relative_position_id = CHI_centralise_power
-	prerequisite = { focus =  CHI_centralise_power}
-
-	cost = 10
-
-	available = {
-
-		XSM = {
-			NOT = {has_war_with = ROOT}
-			is_subject = no
-		}
-
-	}
-
-	bypass = {
-		OR = {
-		NOT = {
-			country_exists = XSM
-		}
-		has_war_with = XSM
-		}
-		}
-
-
-
-	completion_reward = {
-
-		XSM = {country_event = wtt_china.1009}
-
-}
-}
-
-focus = {
-	id = CHI_pressure_long_yun
-	icon = GFX_goal_generic_occupy_states_ongoing_war
-
-
-	x = 1
-	y = 1
-	relative_position_id = CHI_centralise_power
-	prerequisite = { focus =  CHI_centralise_power}
-
-	cost = 10
-
-	available = {
-
-		YUN = {
-			NOT = {has_war_with = ROOT}
-			is_subject = no
-		}
-
-	}
-
-	bypass = {
-		OR = {
-		NOT = {
-			country_exists = YUN
-		}
-		has_war_with = YUN
-		}
-		}
-
-
-
-	completion_reward = {
-
-		YUN = {country_event = wtt_china.1009}
-
-}
-}
-
-
-focus = {
-	id = CHI_pressure_li_zongren
-	icon = GFX_goal_generic_occupy_states_ongoing_war
-
-
-	x = -1
-	y = 1
-	relative_position_id = CHI_centralise_power
-	prerequisite = { focus =  CHI_centralise_power}
-
-	cost = 10
-
-	available = {
-
-		GXC = {
-			NOT = {has_war_with = ROOT}
-			is_subject = no
-		}
-
-	}
-
-	bypass = {
-		OR = {
-		NOT = {
-			country_exists = GXC
-		}
-		has_war_with = GXC
-		}
-		}
-
-
-
-	completion_reward = {
-
-		GXC = {country_event = wtt_china.1009}
-
-}
-}
-
-
-focus = {
-	id = CHI_pressure_sheng_shicai
-	icon = GFX_goal_generic_occupy_states_ongoing_war
-
-
-	x = -2
-	y = 2
-	relative_position_id = CHI_centralise_power
-	prerequisite = { focus =  CHI_centralise_power}
-
-	cost = 10
-
-	available = {
-
-		SIK = {
-			NOT = {has_war_with = ROOT}
-			is_subject = no
-		}
-
-	}
-
-	bypass = {
-		OR = {
-		NOT = {
-			country_exists = SIK
-		}
-		has_war_with = SIK
-		}
-		}
-
-
-
-	completion_reward = {
-
-		SIK = {country_event = wtt_china.1009}
-
-}
-}
+# focus = {
+# 	id = CHI_pressure_yan_xishan
+# 	icon = GFX_goal_generic_occupy_states_ongoing_war
+#
+#
+# 	x = 0
+# 	y = 2
+# 	relative_position_id = CHI_centralise_power
+# 	prerequisite = { focus =  CHI_centralise_power}
+#
+# 	cost = 10
+#
+# 	available = {
+#
+# 		SHX = {
+# 			NOT = {has_war_with = ROOT}
+# 			is_subject = no
+# 		}
+#
+# 	}
+#
+# 	bypass = {
+# 		OR = {
+# 		NOT = {
+# 			country_exists = SHX
+# 		}
+# 		has_war_with = SHX
+# 		}
+# 	}
+#
+#
+#
+# 	completion_reward = {
+#
+# 		SHX = {country_event = wtt_china.1009}
+#
+# }
+# }
+#
+# focus = {
+# 	id = CHI_pressure_ma_bufang
+# 	icon = GFX_goal_generic_occupy_states_ongoing_war
+#
+#
+# 	x = 2
+# 	y = 2
+# 	relative_position_id = CHI_centralise_power
+# 	prerequisite = { focus =  CHI_centralise_power}
+#
+# 	cost = 10
+#
+# 	available = {
+#
+# 		XSM = {
+# 			NOT = {has_war_with = ROOT}
+# 			is_subject = no
+# 		}
+#
+# 	}
+#
+# 	bypass = {
+# 		OR = {
+# 		NOT = {
+# 			country_exists = XSM
+# 		}
+# 		has_war_with = XSM
+# 		}
+# 		}
+#
+#
+#
+# 	completion_reward = {
+#
+# 		XSM = {country_event = wtt_china.1009}
+#
+# }
+# }
+#
+# focus = {
+# 	id = CHI_pressure_long_yun
+# 	icon = GFX_goal_generic_occupy_states_ongoing_war
+#
+#
+# 	x = 1
+# 	y = 1
+# 	relative_position_id = CHI_centralise_power
+# 	prerequisite = { focus =  CHI_centralise_power}
+#
+# 	cost = 10
+#
+# 	available = {
+#
+# 		YUN = {
+# 			NOT = {has_war_with = ROOT}
+# 			is_subject = no
+# 		}
+#
+# 	}
+#
+# 	bypass = {
+# 		OR = {
+# 		NOT = {
+# 			country_exists = YUN
+# 		}
+# 		has_war_with = YUN
+# 		}
+# 		}
+#
+#
+#
+# 	completion_reward = {
+#
+# 		YUN = {country_event = wtt_china.1009}
+#
+# }
+# }
+#
+#
+# focus = {
+# 	id = CHI_pressure_li_zongren
+# 	icon = GFX_goal_generic_occupy_states_ongoing_war
+#
+#
+# 	x = -1
+# 	y = 1
+# 	relative_position_id = CHI_centralise_power
+# 	prerequisite = { focus =  CHI_centralise_power}
+#
+# 	cost = 10
+#
+# 	available = {
+#
+# 		GXC = {
+# 			NOT = {has_war_with = ROOT}
+# 			is_subject = no
+# 		}
+#
+# 	}
+#
+# 	bypass = {
+# 		OR = {
+# 		NOT = {
+# 			country_exists = GXC
+# 		}
+# 		has_war_with = GXC
+# 		}
+# 		}
+#
+#
+#
+# 	completion_reward = {
+#
+# 		GXC = {country_event = wtt_china.1009}
+#
+# }
+# }
+#
+#
+# focus = {
+# 	id = CHI_pressure_sheng_shicai
+# 	icon = GFX_goal_generic_occupy_states_ongoing_war
+#
+#
+# 	x = -2
+# 	y = 2
+# 	relative_position_id = CHI_centralise_power
+# 	prerequisite = { focus =  CHI_centralise_power}
+#
+# 	cost = 10
+#
+# 	available = {
+#
+# 		SIK = {
+# 			NOT = {has_war_with = ROOT}
+# 			is_subject = no
+# 		}
+#
+# 	}
+#
+# 	bypass = {
+# 		OR = {
+# 		NOT = {
+# 			country_exists = SIK
+# 		}
+# 		has_war_with = SIK
+# 		}
+# 		}
+#
+#
+#
+# 	completion_reward = {
+#
+# 		SIK = {country_event = wtt_china.1009}
+#
+# }
+# }
 
 focus = {
 	id = CHI_defeat_the_japanese
 	icon = GFX_focus_AST_war_japan
 
 
-	x = 3
-	y = 0
-	relative_position_id = CHI_pressure_ma_bufang
+	x = 4
+	y = 2
+	relative_position_id = CHI_centralise_power
 	prerequisite = { focus =  CHI_nothing_personal
 		focus = CHI_war_of_anti_imperialism}
 
@@ -1933,9 +1937,9 @@ focus = {
 	icon = GFX_focus_chi_china_first
 
 
-	x = -3
-	y = 0
-	relative_position_id = CHI_pressure_sheng_shicai
+	x = -4
+	y = 2
+	relative_position_id = CHI_centralise_power
 	prerequisite = { focus = CHI_conquer_warlords
 		focus = CHI_centralise_power}
 
@@ -2006,8 +2010,8 @@ focus = {
 
 
 	x = 0
-	y = 1
-	relative_position_id = CHI_pressure_yan_xishan
+	y = 3
+	relative_position_id = CHI_centralise_power
 	prerequisite = { focus =  CHI_chinese_aggression
 		focus = CHI_defeat_the_japanese}
 
@@ -3135,6 +3139,7 @@ focus = {
 			add_idea = CHI_kuomintang6
 		}
 		remove_ideas = CHI_ineffective_bureaucracy
+		unlock_decision_category_tooltip = CHI_pressure_the_warlords
 		}
 	}
 

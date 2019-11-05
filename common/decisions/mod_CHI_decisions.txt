@@ -202,3 +202,121 @@
 
 
 }
+
+
+#Category only allowed for CHI
+	CHI_pressure_the_warlords = {
+
+
+	pressure_yan_xishan = {
+
+		icon = generic_prepare_civil_war
+
+	 	available = {
+	 		SHX = {
+	 			NOT = {has_war_with = ROOT}
+	 			is_subject = no
+	 			}
+	 	}
+
+		cost = 150
+
+		fire_only_once = yes
+
+		complete_effect = {
+		SHX = {country_event = wtt_china.1009}
+		}
+
+	}
+
+
+	pressure_ma_bufang = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			XSM = {
+				NOT = {has_war_with = ROOT}
+				is_subject = no
+				}
+		}
+
+		cost = 150
+
+		fire_only_once = yes
+
+		complete_effect = {
+		XSM = {country_event = wtt_china.1009}
+		}
+
+	}
+
+
+	pressure_long_yun = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			YUN = {
+				NOT = {has_war_with = ROOT}
+				is_subject = no
+				}
+		}
+
+		cost = 150
+
+		fire_only_once = yes
+
+		complete_effect = {
+		YUN = {country_event = wtt_china.1009}
+		}
+
+	}
+
+
+	pressure_li_zongren = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			GXC = {
+				NOT = {has_war_with = ROOT}
+				is_subject = no
+				}
+		}
+
+		cost = 150
+
+		fire_only_once = yes
+
+		complete_effect = {
+		GXC = {country_event = wtt_china.1009}
+		}
+
+	}
+
+
+	pressure_sheng_shicai = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			SIK = {
+				NOT = {has_war_with = ROOT}
+				is_subject = no
+				}
+		}
+
+		cost = 150
+
+		fire_only_once = yes
+
+		complete_effect = {
+		SIK = {country_event = wtt_china.1009}
+		}
+
+	}
+
+
+
+	}
