@@ -68,7 +68,7 @@
   CHI_shandong_for_homeland_desc:0 "Shandong for Homeland"
   CHI_invite_communist_china:0 "Invite Communist China"
   CHI_invite_communist_china_desc:0 "Invite Communist China"
-  CHI_invite_communist_china_tt:0 "If Communist China agrees, Communist China will become a puppet (Dominion) of China and add 40% Communism popularity in the government."
+  CHI_invite_communist_china_tt:0 "If Communist China agrees, Communist China will become a puppet (Dominion) of China and add 30% Communism popularity in the government."
   CHI_split_shanxi:0 "Split Shanxi"
   CHI_split_shanxi_desc:0 "Split Shanxi"
   CHI_split_xibei:0 "Split Xibei"
@@ -76,8 +76,8 @@
   CHI_transfer_sinkiang:0 "Transfer Sinkiang"
   CHI_transfer_sinkiang_desc:0 "Transfer Sinkiang"
   CHI_transfer_sinkiang_tt:0 "Communist China will annex Sinkiang if they agree to."
-  CHI_second_kmt_ccp_cooperation:0 "Second KMT-CCP Cooperation"
-  CHI_second_kmt_ccp_cooperation_desc:0 "Second KMT-CCP Cooperation"
+  CHI_second_kmt_ccp_cooperation:0 "Second KMT-CPC Cooperation"
+  CHI_second_kmt_ccp_cooperation_desc:0 "Second KMT-CPC Cooperation"
   CHI_second_betrayal:0 "The Second Betrayal"
   CHI_second_betrayal_desc:0 "The Second Betrayal"
   CHI_secure_internal_support:0 "Secure Internal Support"
@@ -193,6 +193,15 @@
   CHI_kuomintang4:0 "Five-Power Constitution"
   CHI_kuomintang5:0 "Five-Power Constitution"
   CHI_kuomintang6:0 "Five-Power Constitution"
+  CHI_mao_zedong:0 "Mao Zedong"
+  CHI_ccp_up_tt:0 "Increase the CPC support in the government"
+  CHI_ccp_down_tt:0 "Decrease the CPC support in the government"
+  CHI_ccp_kmt_1:0 "Strong support for KMT"
+  CHI_ccp_kmt_2:0 "Weak support for KMT"
+  CHI_ccp_kmt_3:0 "Balance between KMT and CPC"
+  CHI_ccp_kmt_4:0 "Weak support for CPC"
+  CHI_ccp_kmt_5:0 "Strong support for CPC"
+  CHI_ccp_kmt_5_desc:0 "Strong support for CPC"
 
   ####### party names localisation #####
   CHI_party_military_affairs_commission_long:0 "Military Affairs Commission"
@@ -245,6 +254,7 @@
   brilliant_strategist:0 "Brilliant Strategist"
   hirohitos_brother:0 "Emperor's Brother"
   prince_chichibu:0 "Prince Chichibu"
+  great_mentor_to_the_revolution:0 "Great Mentor to the Revolution"
 
   ### decisions ###
   CHI_educate_the_soliders:0 "Educate the Soliders"
@@ -267,8 +277,8 @@
   news.1003.a:0 "The Emperor is well protected now."
 
 
-  wtt_china.1001.t:0 "Zhang Xueliang's Invitation"
-  wtt_china.1001.desc:0 "A new central government led by Zhang Xueliang made its first step towards a peaceful solution to the communist uprising, by offering the formation of a coalition government while the communists keep their autonomy."
+  wtt_china.1001.t:0 "[From.GetLeader]'s Invitation"
+  wtt_china.1001.desc:0 "The government led by [From.GetLeader] made its first step towards a peaceful solution to the communist uprising, by offering the formation of a coalition government while the communists keep their autonomy."
   wtt_china.1001.a:0 "Together we stand!"
   wtt_china.1001.b:0 "We cannot trust them!"
 
@@ -280,8 +290,8 @@
   wtt_china.1003.desc:0 "[From.GetLeader] has returned our note, claiming that the Central Government has no legal authority to replace a provincial governor. It was accompanied by a detailed report stating the combat-readiness of his troops."
   wtt_china.1003.a:0 "We will see about that."
 
-  wtt_china.1004.t:0 "Zhang Xueliang Demands Unification"
-  wtt_china.1004.desc:0 "As the communists show their obedience to the central government, Zhang Xueliang feels safe to give them more territory, but definitely not from his own part. Zhang demands us to join the central government and transfer the northern part to the communists. In return, we have been promised the marshal rank in the central army."
+  wtt_china.1004.t:0 "[From.GetLeader] Demands Unification"
+  wtt_china.1004.desc:0 "As the communists show their obedience to the central government, [From.GetLeader] feels safe to give them more territory, but definitely not from his own part. [From.GetLeader] demands us to join the central government and transfer the northern part to the communists. In return, we have been promised the marshal rank in the central army."
   wtt_china.1004.a:0 "There is no other option."
 
   wtt_china.1009.t:0 "Central Government Demands Unification"

@@ -318,5 +318,55 @@
 	}
 
 
+	}
+
+
+
+
+	CHI_ccp_kmt_support = {
+
+
+	add_ccp_support = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+			NOT = {has_idea = CHI_ccp_kmt_5}
+		}
+
+		cost = 0
+
+		fire_only_once = no
+
+		complete_effect = {
+			CHI_ccp_kmt_level_up = yes
+		}
+
+	}
+
+
+	reduce_ccp_support = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+		OR = {
+			has_idea = CHI_ccp_kmt_2
+			has_idea = CHI_ccp_kmt_3
+			has_idea = CHI_ccp_kmt_4
+			has_idea = CHI_ccp_kmt_5}
+		}
+
+		cost = 0
+
+		fire_only_once = no
+
+		complete_effect = {
+			CHI_ccp_kmt_level_down = yes
+		}
+
+	}
+
+
 
 	}

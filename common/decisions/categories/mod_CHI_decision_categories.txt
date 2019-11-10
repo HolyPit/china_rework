@@ -27,3 +27,14 @@ CHI_pressure_the_warlords = {
 		}
 
 }
+
+CHI_ccp_kmt_support = {
+	icon = generic_political_discourse
+	allowed = {
+		is_literally_china = yes
+	}
+
+	visible = {
+
+	}
+}
