@@ -577,3 +577,85 @@ country_event = {
 
 
 ##################################################################
+
+
+country_event = {
+	id = wtt_china.1032
+	title = wtt_china.1032.t # USA is asked to join faction
+	desc = wtt_china.1032.d
+	picture = GFX_report_event_generic_usa_treaty
+
+	is_triggered_only = yes
+
+	option = {
+		name = wtt_china.1032.a
+
+		ai_chance = {
+			base = 100
+		}
+
+
+			CHI = {
+				if = {
+				limit = {CHI = {is_in_faction = no}}
+				create_faction = "trans_pacific_cooperation_organisation"
+				}
+
+				add_to_faction = ROOT
+
+			}
+		}
+
+
+	option = {
+		name = wtt_china.1032.b
+
+		ai_chance = {
+			base = 0
+		}
+
+		CHI = {
+			#country_event = { id = wtt_china.1034 }
+		}
+	}
+}
+
+country_event = {
+	id = wtt_china.1033
+	title = wtt_china.1033.t # USA joins faction
+	desc = wtt_china.1033.d
+	picture = GFX_report_event_generic_sign_treaty1
+
+	is_triggered_only = yes
+
+	option = {
+		name = wtt_china.1033.a
+
+		create_faction = "trans_pacific_cooperation_organisation"
+		add_to_faction = ROOT
+
+
+		#news_event = { id = news.245 hours = 6 }
+	}
+}
+
+country_event = {
+	id = wtt_china.1034
+	title = wtt_china.1034.t # USA refused to join faction
+	desc = wtt_china.1034.d
+	picture = GFX_report_event_FDR_speech
+
+	is_triggered_only = yes
+
+	option = {
+		name = wtt_china.1034.a # Form a faction anyway
+
+		create_faction = "trans_pacific_cooperation_organisation"
+
+		#news_event = { id = news.244 hours = 6 }
+	}
+
+	option = {
+		name = wtt_china.1034.b
+	}
+}

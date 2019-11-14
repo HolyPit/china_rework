@@ -3888,6 +3888,319 @@ focus = {
 		}
 	}
 
+	focus = {
+		id = CHI_trans_pacific_cooperation_organisation
+		icon = GFX_focus_chi_mission_to_the_us
+		prerequisite = { focus = CHI_bastion_of_democracy_in_asia }
+		x = 0
+		y = 1
+		relative_position_id = CHI_bastion_of_democracy_in_asia
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			set_rule = { can_create_factions = yes }
+			create_faction = trans_pacific_cooperation_organisation
+			if = {
+				limit = {
+					USA = {
+						is_puppet = no
+						OR = {
+							is_in_faction = no
+							has_war = no
+						}
+					}
+				}
+				USA = {
+					country_event = { id = wtt_china.1032 } #Ask USA to join faction
+				}
+			}
+		}
+	}
+
+
+	focus = {
+		id = CHI_invite_australia
+		icon = GFX_focus_chi_mission_to_the_us
+		prerequisite = { focus = CHI_trans_pacific_cooperation_organisation }
+		x = 0
+		y = 1
+		relative_position_id = CHI_trans_pacific_cooperation_organisation
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+
+		completion_reward = {
+			if = {
+				limit = {
+					AST = {
+						is_subject_of = ENG
+						OR = {
+							is_in_faction = no
+							has_war = no
+						}
+					}
+				}
+				ENG = {set_autonomy = { target = AST autonomy_state = autonomy_free }}
+				AST = {
+					country_event = { id = wtt_china.1032 } #Ask USA to join faction
+				}
+			}
+			else_if = {
+				limit = {
+					AST = {
+						is_subject = no
+						OR = {
+							is_in_faction = no
+							has_war = no
+						}
+					}
+				}
+				AST = {
+					country_event = { id = wtt_china.1032 } #Ask USA to join faction
+				}
+			}
+		}
+	}
+
+
+
+	focus = {
+		id = CHI_invite_new_zealand
+		icon = GFX_focus_chi_mission_to_the_us
+		prerequisite = { focus = CHI_trans_pacific_cooperation_organisation }
+		x = -2
+		y = 1
+		relative_position_id = CHI_trans_pacific_cooperation_organisation
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 2
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+		}
+
+		completion_reward = {
+		if = {
+			limit = {
+				NZL = {
+					is_subject_of = ENG
+					OR = {
+						is_in_faction = no
+						has_war = no
+					}
+				}
+			}
+			ENG = {set_autonomy = { target = NZL autonomy_state = autonomy_free }}
+			NZL = {
+				country_event = { id = wtt_china.1032 } #Ask USA to join faction
+			}
+		}
+		else_if = {
+			limit = {
+				NZL = {
+					is_subject = no
+					OR = {
+						is_in_faction = no
+						has_war = no
+					}
+				}
+			}
+			NZL = {
+				country_event = { id = wtt_china.1032 } #Ask USA to join faction
+			}
+		}
+		}
+
+
+	}
+
+	focus = {
+		id = CHI_go_with_britain
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = {focus = CHI_legalise_communist_party focus = CHI_suppress_the_communists}
+		#prerequisite = {focus = CHI_suppress_the_communists }
+
+		x = 1
+		y = 1
+		relative_position_id = CHI_suppress_the_communists
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+
+
+		available = {
+			ENG = {
+				NOT = {has_government = fascism}
+				NOT = { has_war_with = ROOT }
+				has_capitulated = no
+				is_faction_leader = yes
+			}
+			NOT = {
+				any_other_country = {
+					is_in_faction_with = ENG
+					has_war_with = CHI
+				}
+			}
+		}
+
+
+		bypass = {
+			is_in_faction_with = ENG
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+
+					ENG = { country_event = generic.2 }
+		}
+	}
+
+
+	focus = {
+		id = CHI_form_cni
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = {focus = CHI_go_with_britain }
+
+
+		x = 0
+		y = 1
+		relative_position_id = CHI_go_with_britain
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+
+
+		available = {
+		RAJ = {
+		is_in_faction_with = CHI
+				AND = {
+					has_full_control_of_state = 640
+					has_full_control_of_state = 288
+				}
+				}
+		}
+
+
+		bypass = {
+		CHI = {
+			has_full_control_of_state = 640
+			has_full_control_of_state = 288
+		}
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		RAJ = {
+		release = BRM
+		CHI = { set_autonomy = { target = BRM autonomy_state = autonomy_colony } }
+		}
+		}
+	}
+
+	focus = {
+		id = CHI_singapore_strategy
+		icon = GFX_focus_chi_british_cooperation
+		prerequisite = {focus = CHI_form_cni }
+
+
+		x = 0
+		y = 1
+		relative_position_id = CHI_form_cni
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+
+
+		available = {
+
+		}
+
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		CHI = {set_autonomy = { target = MAL autonomy_state = autonomy_integrated_puppet }}
+		}
+	}
+
 
 
 
