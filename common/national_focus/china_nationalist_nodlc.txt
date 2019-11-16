@@ -405,6 +405,10 @@ focus = {
 
 	cost = 5
 
+	bypass = {
+	has_country_leader =  {ruling_only = yes name = "Zhang Xueliang"}
+	}
+
 
 
 	completion_reward = {
@@ -2845,289 +2849,296 @@ focus = {
 
 
 
-	focus = {
-		id = CHI_nodlc_democracy
-		icon = GFX_goal_support_democracy
-		mutually_exclusive = { focus = CHI_nodlc_the_indirect_approach }
-		prerequisite = { focus = CHI_nodlc_three_principles_of_the_people }
-		x = -8
-		y = 0
-		relative_position_id = CHI_nodlc_the_indirect_approach
+focus = {
+	id = CHI_nodlc_democracy
+	icon = GFX_goal_support_democracy
+	mutually_exclusive = { focus = CHI_nodlc_the_indirect_approach }
+	prerequisite = { focus = CHI_nodlc_three_principles_of_the_people }
+	x = -9
+	y = 0
+	relative_position_id = CHI_nodlc_the_indirect_approach
 
-		cost = 5
+	cost = 5
 
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_stability = 0.1
-		}
+	ai_will_do = {
+		factor = 1
 	}
 
+	available = {
 
-	focus = {
-		id = CHI_nodlc_sun_legacy
-		icon = GFX_focus_chi_sun_legacy
-		prerequisite = { focus = CHI_nodlc_democracy }
-		x = 1
-		y = 1
-		relative_position_id = CHI_nodlc_democracy
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_ideas = CHI_sunwen
-		}
 	}
 
+	bypass = {
 
-	focus = {
-		id = CHI_nodlc_five_power_constitution
-		icon = GFX_focus_generic_treaty
-		prerequisite = { focus = CHI_nodlc_sun_legacy }
-		x = 0
-		y = 1
-		relative_position_id = CHI_nodlc_sun_legacy
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_war_support = 0.1
-
-		}
 	}
 
-	focus = {
-		id = CHI_nodlc_executive_yuan
-		icon = GFX_focus_chi_new_executive_yuan
-		prerequisite = { focus = CHI_nodlc_five_power_constitution }
-		x = 0
-		y = 1
-		relative_position_id = CHI_nodlc_five_power_constitution
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
 
-		cost = 10
+	complete_tooltip = {
 
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-
-			add_ideas = CHI_kuomintang2
-
-		}
 	}
 
+	completion_reward = {
+		add_stability = 0.1
+	}
+}
 
 
-	focus = {
-		id = CHI_nodlc_legislative_yuan
-		icon = GFX_focus_chi_legislative_yuan
-		#prerequisite = { focus = CHI_nodlc_five_power_constitution }
-		prerequisite = { focus = CHI_nodlc_executive_yuan }
-		x = 0
-		y = 1
-		relative_position_id = CHI_nodlc_executive_yuan
+focus = {
+	id = CHI_nodlc_sun_legacy
+	icon = GFX_focus_chi_sun_legacy
+	prerequisite = { focus = CHI_nodlc_democracy }
+	x = 0
+	y = 1
+	relative_position_id = CHI_nodlc_democracy
 
-		cost = 10
+	cost = 10
 
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-		swap_ideas = {
-			remove_idea = CHI_kuomintang2
-			add_idea = CHI_kuomintang3
-		}
-			custom_effect_tooltip = available_political_advisor
-			show_ideas_tooltip = CHI_kwong_jiang
-		}
+	ai_will_do = {
+		factor = 1
 	}
 
+	available = {
 
-	focus = {
-		id = CHI_nodlc_examination_yuan
-		icon = GFX_focus_chi_examination_yuan
-
-		prerequisite = { focus = CHI_nodlc_legislative_yuan }
-		x = 0
-		y = 1
-		relative_position_id = CHI_nodlc_legislative_yuan
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-		swap_ideas = {
-			remove_idea = CHI_kuomintang3
-			add_idea = CHI_kuomintang4
-		}
-		}
 	}
 
+	bypass = {
 
-
-	focus = {
-		id = CHI_nodlc_judicial_yuan
-		icon = GFX_focus_chi_judicial_yuan
-
-		prerequisite = { focus = CHI_nodlc_examination_yuan }
-		x = 0
-		y = 1
-		relative_position_id = CHI_nodlc_examination_yuan
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-		swap_ideas = {
-			remove_idea = CHI_kuomintang4
-			add_idea = CHI_kuomintang5
-		}
-
-		}
 	}
 
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		add_ideas = CHI_sunwen
+	}
+}
 
 
-	focus = {
-		id = CHI_nodlc_control_yuan
-		icon = GFX_focus_chi_control_yuan
-		prerequisite = { focus = CHI_nodlc_judicial_yuan }
-		x = 0
-		y = 1
-		relative_position_id = CHI_nodlc_judicial_yuan
+# focus = {
+# 	id = CHI_nodlc_five_power_constitution
+# 	icon = GFX_focus_generic_treaty
+# 	prerequisite = { focus = CHI_nodlc_sun_legacy }
+# 	x = 2
+# 	y = 1
+# 	relative_position_id = CHI_nodlc_sun_legacy
+#
+# 	cost = 10
+#
+# 	ai_will_do = {
+# 		factor = 1
+# 	}
+#
+# 	available = {
+#
+# 	}
+#
+# 	bypass = {
+#
+# 	}
+#
+# 	cancel_if_invalid = yes
+# 	continue_if_invalid = no
+# 	available_if_capitulated = no
+#
+# 	completion_reward = {
+#
+# 		add_popularity =  { ideology = democratic popularity = 0.05 }
+# 		add_political_power = 120
+#
+# 	}
+# }
 
-		cost = 10
+focus = {
+	id = CHI_nodlc_executive_yuan
+	icon = GFX_focus_chi_new_executive_yuan
+	prerequisite = { focus = CHI_nodlc_sun_legacy }
+	x = 2
+	y = 1
+	relative_position_id = CHI_nodlc_sun_legacy
 
-		ai_will_do = {
-			factor = 1
-		}
+	cost = 10
 
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-		swap_ideas = {
-			remove_idea = CHI_kuomintang5
-			add_idea = CHI_kuomintang6
-		}
-		}
+	ai_will_do = {
+		factor = 1
 	}
 
+	available = {
+		democratic > 0.1
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+
+	add_political_power = 120
+
+		add_ideas = CHI_kuomintang2
+
+	}
+}
+
+
+
+focus = {
+	id = CHI_nodlc_legislative_yuan
+	icon = GFX_focus_chi_legislative_yuan
+	#prerequisite = { focus = CHI_nodlc_five_power_constitution }
+	prerequisite = { focus = CHI_nodlc_executive_yuan }
+	x = 0
+	y = 1
+	relative_position_id = CHI_nodlc_executive_yuan
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		democratic > 0.2
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+	swap_ideas = {
+		remove_idea = CHI_kuomintang2
+		add_idea = CHI_kuomintang3
+	}
+		custom_effect_tooltip = available_political_advisor
+		show_ideas_tooltip = CHI_kwong_jiang
+	}
+}
+
+focus = {
+	id = CHI_nodlc_judicial_yuan
+	icon = GFX_focus_chi_judicial_yuan
+
+	prerequisite = { focus = CHI_nodlc_legislative_yuan }
+	x = 0
+	y = 1
+	relative_position_id = CHI_nodlc_legislative_yuan
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		democratic > 0.3
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+	swap_ideas = {
+		remove_idea = CHI_kuomintang3
+		add_idea = CHI_kuomintang4
+	}
+
+	}
+}
+
+
+focus = {
+	id = CHI_nodlc_examination_yuan
+	icon = GFX_focus_chi_examination_yuan
+
+	prerequisite = { focus = CHI_nodlc_judicial_yuan }
+	x = 0
+	y = 1
+	relative_position_id = CHI_nodlc_judicial_yuan
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		democratic > 0.4
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+	swap_ideas = {
+		remove_idea = CHI_kuomintang4
+		add_idea = CHI_kuomintang5
+	}
+	}
+}
+
+
+
+
+
+
+
+focus = {
+	id = CHI_nodlc_control_yuan
+	icon = GFX_focus_chi_control_yuan
+	prerequisite = { focus = CHI_nodlc_examination_yuan }
+	x = 0
+	y = 1
+	relative_position_id = CHI_nodlc_examination_yuan
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		democratic > 0.5
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+	swap_ideas = {
+		remove_idea = CHI_kuomintang5
+		add_idea = CHI_kuomintang6
+	}
+	remove_ideas = CHI_ineffective_bureaucracy
+	unlock_decision_category_tooltip = CHI_pressure_the_warlords
+	}
+}
 
 
 
@@ -3135,254 +3146,1574 @@ focus = {
 #######################################################
 
 
-	focus = {
-		id = CHI_nodlc_the_true_democracy
-		icon = GFX_focus_generic_the_giant_wakes
-		prerequisite = { focus = CHI_nodlc_democracy }
-		x = -1
-		y = 1
-		mutually_exclusive = {focus = CHI_nodlc_supervised_demovracy}
-		relative_position_id = CHI_nodlc_democracy
 
-		cost = 10
+focus = {
+	id = CHI_nodlc_the_true_democracy
+	icon = GFX_focus_generic_the_giant_wakes
+	prerequisite = { focus = CHI_nodlc_sun_legacy }
+	x = 0
+	y = 1
+	mutually_exclusive = {focus = CHI_nodlc_supervised_democracy}
+	relative_position_id = CHI_nodlc_sun_legacy
 
-		ai_will_do = {
-			factor = 1
-		}
+	cost = 10
 
-		available = {
+	ai_will_do = {
+		factor = 1
+	}
 
-		}
+	available = {
 
-		bypass = {
+	}
 
-		}
+	bypass = {
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+	}
 
-		completion_reward = {
-			add_ideas = CHI_sunwen
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+	swap_ideas = {
+		remove_idea = CHI_sunwen
+		add_idea = CHI_sunwen2
+	}
+	add_popularity =  { ideology = democratic popularity = 0.05 }
+	}
+}
+
+
+
+
+
+
+focus = {
+	id = CHI_nodlc_first_national_assembly
+	icon = GFX_goal_generic_propaganda
+	prerequisite = { focus = CHI_nodlc_the_true_democracy }
+	x = 0
+	y = 1
+	relative_position_id = CHI_nodlc_the_true_democracy
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		add_political_power = 120
+		add_popularity =  { ideology = democratic popularity = 0.05 }
+		add_popularity =  { ideology = fascism popularity = 0.05 }
+		add_popularity =  { ideology = communism popularity = 0.05 }
+	}
+}
+
+
+focus = {
+	id = CHI_nodlc_secure_kmt_majority
+	icon = GFX_goal_generic_intelligence_exchange
+	prerequisite = { focus = CHI_nodlc_first_national_assembly }
+	x = 0
+	y = 1
+	relative_position_id = CHI_nodlc_first_national_assembly
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		add_political_power = 120
+		add_popularity =  { ideology = democratic popularity = 0.1 }
+		set_party_name = {ideology = democratic long_name = CHI_neutrality_party
+		name = CHI_neutrality_party}
+	}
+}
+
+
+
+focus = {
+	id = CHI_nodlc_first_election
+	icon = GFX_goal_support_democracy
+	prerequisite = { focus = CHI_nodlc_secure_kmt_majority }
+	prerequisite = { focus = CHI_nodlc_judicial_yuan }
+	x = 0
+	y = 1
+	relative_position_id = CHI_nodlc_secure_kmt_majority
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		democratic > 0.4
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		CHI = {country_event = wtt_china.1010}
+	}
+}
+
+
+
+
+
+
+focus = {
+	id = CHI_nodlc_legalise_communist_party
+	icon = GFX_focus_chi_cooperation_with_the_communists
+	prerequisite = { focus = CHI_nodlc_first_election }
+	mutually_exclusive = { focus =  CHI_suppress_the_communists}
+	x = 0
+	y = 1
+	relative_position_id = CHI_nodlc_first_election
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+
+	NOT = {
+		has_government = fascism
+		has_war = yes
+	}
+
+	country_exists = PRC
+
+	PRC = {
+		is_subject = no
+		has_war = no
+	}
+
+	}
+
+	bypass = {
+
+	OR = {
+	NOT = {
+	country_exists = PRC
+	}
+	PRC = { is_subject = yes }
+	}
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+
+	remove_ideas = CHI_communist_uprisings
+
+	create_country_leader = {
+name = "Mao Zedong"
+desc = "POLITICS_MAO_ZEDONG_DESC"
+picture = "GFX_portrait_prc_mao_zedong"
+expire = "1965.1.1"
+ideology = marxism
+traits = {
+	cornered_fox
+}
+}
+
+		add_ideas = CHI_ccp_kmt_3
+		unlock_decision_category_tooltip = CHI_ccp_kmt_support
+
+	}
+}
+
+
+focus = {
+	id = CHI_nodlc_coalition_goverment
+	icon = GFX_focus_prc_social_democracy
+	prerequisite = { focus = CHI_nodlc_legalise_communist_party }
+	#mutually_exclusive = { focus =  CHI_suppress_the_communists}
+	x = 1
+	y = 1
+	relative_position_id = CHI_nodlc_legalise_communist_party
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+
+	NOT = {
+		has_government = fascism
+		has_war = yes
+	}
+
+	country_exists = PRC
+
+	PRC = {
+		is_subject = no
+		has_war = no
+	}
+
+	}
+
+	bypass = {
+
+	OR = {
+	NOT = {
+	country_exists = PRC
+	}
+	PRC = { is_subject = yes }
+	}
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+	PRC = {
+	country_event = { id = wtt_china.1001 }
+	}
+
+	custom_effect_tooltip = CHI_invite_communist_china_tt
+	}
+}
+
+
+
+focus = {
+	id = CHI_nodlc_summit_with_mao
+	icon = GFX_focus_prc_maoism
+	prerequisite = { focus = CHI_nodlc_coalition_goverment }
+	# mutually_exclusive = { focus =  CHI_suppress_the_communists}
+	x = 0
+	y = 1
+	relative_position_id = CHI_nodlc_coalition_goverment
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+
+
+
+	PRC = {
+	OR = {
+		is_subject_of = CHI
+		exists = no
+	}
+	}
+
+	}
+
+	bypass = {
+
+
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+
+		CHI_ccp_kmt_level_up = yes
+
+		show_ideas_tooltip = CHI_mao_zedong
+
+	}
+}
+
+
+focus = {
+	id = CHI_nodlc_new_three_principles
+	icon = GFX_goal_generic_soviet_construction
+	prerequisite = { focus = CHI_nodlc_summit_with_mao }
+	# mutually_exclusive = { focus =  CHI_suppress_the_communists}
+	x = 0
+	y = 1
+	relative_position_id = CHI_nodlc_summit_with_mao
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+
+
+
+	PRC = {
+	OR = {
+		is_subject_of = CHI
+		exists = no
+	}
+	}
+
+	}
+
+	bypass = {
+
+
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+
+		remove_ideas = CHI_sunwen
+		add_popularity = {ideology = communism popularity = 0.1}
+	}
+}
+
+
+focus = {
+	id = CHI_nodlc_join_comintern
+	icon = GFX_focus_generic_join_comintern
+	prerequisite = { focus = CHI_nodlc_summit_with_mao }
+	x = 1
+	y = 2
+	relative_position_id = CHI_nodlc_summit_with_mao
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+		modifier = {
+			factor = 0
+			SOV = {
+				has_capitulated = yes
+			}
 		}
 	}
 
-
-
-
-
-
-	focus = {
-		id = CHI_nodlc_first_national_assembly
-		icon = GFX_goal_generic_propaganda
-		prerequisite = { focus = CHI_nodlc_the_true_democracy }
-		x = 0
-		y = 1
-		relative_position_id = CHI_nodlc_the_true_democracy
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_ideas = CHI_sunwen
+	available = {
+		communism > 0.5
+		SOV = { is_faction_leader = yes }
+		is_in_faction = no
+		NOT = { has_war_with = SOV }
+		is_subject = no
+		NOT = {
+			any_other_country = {
+				is_in_faction_with = SOV
+				has_war_with = CHI
+			}
 		}
 	}
 
+	bypass = {
+		is_in_faction_with = SOV
+	}
 
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = yes
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		SOV = { country_event = generic.2 }
+	}
+}
 
 
 
 
 #######################################################
 
+focus = {
+	id = CHI_nodlc_supervised_democracy
+	icon = GFX_focus_generic_self_management
+	prerequisite = { focus = CHI_nodlc_sun_legacy }
+	mutually_exclusive = {focus = CHI_nodlc_the_true_democracy}
+	x = -2
+	y = 1
+	relative_position_id = CHI_nodlc_sun_legacy
 
-	focus = {
-		id = CHI_nodlc_supervised_demovracy
-		icon = GFX_focus_generic_self_management
-		prerequisite = { focus = CHI_nodlc_democracy }
-		mutually_exclusive = {focus = CHI_nodlc_the_true_democracy}
-		x = -3
-		y = 1
-		relative_position_id = CHI_nodlc_democracy
+	cost = 10
 
-		cost = 10
+	ai_will_do = {
+		factor = 1
+	}
 
-		ai_will_do = {
-			factor = 1
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+	swap_ideas = {
+		remove_idea = CHI_sunwen
+		add_idea = CHI_sunwen3
+	}
+	add_popularity =  { ideology = democratic popularity = 0.05 }
+	}
+}
+
+
+
+
+focus = {
+	id = CHI_nodlc_empower_the_army
+	icon = GFX_focus_generic_military_mission
+	prerequisite = { focus = CHI_nodlc_supervised_democracy }
+	x = 0
+	y = 1
+	relative_position_id = CHI_nodlc_supervised_democracy
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		army_experience = 50
+		add_popularity =  { ideology = fascism popularity = 0.05 }
+	}
+}
+
+
+
+
+focus = {
+	id = CHI_nodlc_secure_army_support
+	icon = GFX_goal_generic_political_pressure
+	prerequisite = { focus = CHI_nodlc_empower_the_army }
+	x = 0
+	y = 1
+	relative_position_id = CHI_nodlc_empower_the_army
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+		add_war_support = 0.1
+		add_political_power = 120
+		unlock_decision_category_tooltip = CHI_army_support
+	}
+}
+
+
+focus = {
+	id = CHI_nodlc_military_guided_goverment
+	icon = GFX_focus_usa_voter_registration_act
+	prerequisite = { focus = CHI_nodlc_secure_army_support }
+	x = 0
+	y = 1
+	relative_position_id = CHI_secure_army_support
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+	create_country_leader = {
+		name = "Chiang Kai-Shek"
+		desc = "POLITICS_CHIANG_KAI-SHEK_DESC"
+		picture = "Portrait_China_Chiang_Kai_Shek.dds"
+		expire = "1965.1.1"
+		ideology = socialism
+		traits = {
+			generallissimo
 		}
+	}
+	set_party_name = {ideology = democratic long_name = CHI_neutrality_party
+	name = CHI_neutrality_party}
+	}
+}
 
-		available = {
 
-		}
 
-		bypass = {
+focus = {
+	id = CHI_nodlc_suppress_the_communists
+	icon = GFX_goal_anti_comintern_pact
+	prerequisite = { focus = CHI_nodlc_first_election focus = CHI_nodlc_military_guided_goverment }
+	mutually_exclusive = { focus =  CHI_legalise_communist_party}
+	x = 0
+	y = 1
+	relative_position_id = CHI_nodlc_military_guided_goverment
 
-		}
+	cost = 10
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
+	ai_will_do = {
+		factor = 1
+	}
 
-		completion_reward = {
-			add_ideas = CHI_sunwen
+	available = {
+		NOT = { has_government = communism }
+		any_country = {
+			OR = {
+				tag = YUN
+				tag = SIK
+				tag = GXC
+				tag = SHX
+				tag = XSM
+				tag = TIB
+				tag = PRC
+			}
+			has_government = communism
 		}
 	}
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-	focus = {
-		id = CHI_nodlc_constitutional_reform
-		icon = GFX_goal_generic_forceful_treaty
-		prerequisite = { focus = CHI_nodlc_democracy }
-		x = -1
-		y = 8
-		relative_position_id = CHI_nodlc_democracy
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			add_war_support = 0.1
-		}
-	}
-
-	focus = {
-		id = CHI_nodlc_republicanism
-		icon = GFX_goal_generic_propaganda
-		prerequisite = { focus = CHI_nodlc_constitutional_reform }
-		x = -1
-		y = 1
-		relative_position_id = CHI_nodlc_constitutional_reform
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-
-		completion_reward = {
-			set_party_name = { ideology = democratic long_name = CHI_neutrality_party
-			name = CHI_neutrality_party }
-			add_popularity = {ideology = democratic popularity = 0.15}
-			every_country = {
-				limit = {
-					is_major = yes
-					has_government = democratic
-				}
-				add_opinion_modifier = {
-					target = ROOT
-					modifier = CHI_republicanism
+	bypass = {
+		OR = {
+			is_in_faction_with = PRC
+			NOT = {
+				any_country = {
+					OR = {
+						tag = YUN
+						tag = SIK
+						tag = GXC
+						tag = SHX
+						tag = XSM
+						tag = TIB
+						tag = PRC
+					}
+					has_government = communism
 				}
 			}
 		}
 	}
 
-	focus = {
-		id = CHI_nodlc_inter_party_coordination_council
-		icon = GFX_goal_generic_major_alliance
-		prerequisite = { focus = CHI_nodlc_constitutional_reform }
-		#prerequisite = { focus = CHI_nodlc_executive_yuan }
-		x = 1
-		y = 1
-		relative_position_id = CHI_nodlc_constitutional_reform
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
 
-		cost = 10
+	complete_tooltip = {
 
-		ai_will_do = {
-			factor = 1
+	}
+
+	completion_reward = {
+		if = {
+			limit = {
+				SIK = {
+					has_government = communism
+				}
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = SIK
+			}
+		}
+		if = {
+			limit = {
+				TIB = {
+					has_government = communism
+				}
+			}
+			create_wargoal = {
+				type = annex_everything
+				target = TIB
+			}
+		}
+		if = {
+			limit = {
+				PRC = {
+					has_government = communism
+				}
+			}
+			ROOT = {
+				create_wargoal = {
+					type = annex_everything
+					target = PRC
+				}
+			}
+		}
+		if = {
+			limit = {
+				YUN = {
+					has_government = communism
+				}
+			}
+			ROOT = {
+				create_wargoal = {
+					type = annex_everything
+					target = YUN
+				}
+			}
+		}
+		if = {
+			limit = {
+				SHX = {
+					has_government = communism
+				}
+			}
+			ROOT = {
+				create_wargoal = {
+					type = annex_everything
+					target = SHX
+				}
+			}
+		}
+		if = {
+			limit = {
+				GXC = {
+					has_government = communism
+				}
+			}
+			ROOT = {
+				create_wargoal = {
+					type = annex_everything
+					target = GXC
+				}
+			}
+		}
+		if = {
+			limit = {
+				XSM = {
+					has_government = communism
+				}
+			}
+			ROOT = {
+				create_wargoal = {
+					type = annex_everything
+					target = XSM
+				}
+			}
+		}
+	}
+}
+
+
+focus = {
+	id = CHI_nodlc_return_power_to_people
+	icon = GFX_focus_rom_parties_end
+	prerequisite = {focus = CHI_nodlc_military_guided_goverment }
+	x = -2
+	y = 1
+	relative_position_id = CHI_nodlc_military_guided_goverment
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+		democratic > 0.5
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+	CHI = {country_event = wtt_china.1010}
+	}
+}
+
+
+
+focus = {
+	id = CHI_nodlc_bastion_of_democracy_in_asia
+	icon = GFX_focus_generic_the_giant_wakes
+	prerequisite = {focus = CHI_nodlc_return_power_to_people}
+	prerequisite = {focus = CHI_nodlc_suppress_the_communists }
+	mutually_exclusive = {focus = CHI_nodlc_go_with_britain}
+
+	x = 1
+	y = 1
+	relative_position_id = CHI_nodlc_return_power_to_people
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+	every_country = {
+		limit = {
+			is_major = yes
+			has_government = democratic
+		}
+		add_opinion_modifier = {
+			target = ROOT
+			modifier = CHI_republicanism
+		}
+	}
+	}
+}
+
+focus = {
+	id = CHI_nodlc_trans_pacific_cooperation_organisation
+	icon = GFX_focus_chi_mission_to_the_us
+	prerequisite = { focus = CHI_nodlc_bastion_of_democracy_in_asia }
+	x = 0
+	y = 1
+	relative_position_id = CHI_nodlc_bastion_of_democracy_in_asia
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 2
+	}
+
+	available = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+		set_rule = { can_create_factions = yes }
+		create_faction = trans_pacific_cooperation_organisation
+		if = {
+			limit = {
+				USA = {
+					is_puppet = no
+					OR = {
+						is_in_faction = no
+						has_war = no
+					}
+				}
+			}
+			USA = {
+				country_event = { id = wtt_china.1032 } #Ask USA to join faction
+			}
+		}
+	}
+}
+
+
+focus = {
+	id = CHI_nodlc_invite_australia
+	icon = GFX_focus_AST_rats_tobruk
+	prerequisite = { focus = CHI_nodlc_trans_pacific_cooperation_organisation }
+	x = 0
+	y = 1
+	relative_position_id = CHI_nodlc_trans_pacific_cooperation_organisation
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 2
+	}
+
+	available = {
+		AST = {
+		AND = {
+		NOT = {has_war_with = CHI}
+		NOT = {
+			any_other_country = {
+				is_in_faction_with = CHI
+				has_war_with = AST
+			}
+		}
+		}
 		}
 
-		available = {
+		OR = {
+
+		AND = {
+		AST = {
+			is_subject_of = ENG
+			OR = {
+				is_in_faction = no
+				has_war = no
+			}
+		}
+		}
+
+		AND = {
+		AST = {
+			is_subject = no
+			OR = {
+				is_in_faction = no
+				has_war = no
+			}
+		}
+		}
 
 		}
 
-		bypass = {
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+
+	}
+
+	completion_reward = {
+
+			AST = {
+				country_event = { id = wtt_china.1032 } #Ask USA to join faction
+			}
+		}
+		}
+
+
+
+focus = {
+	id = CHI_nodlc_invite_new_zealand
+	icon = GFX_goal_tfv_sever_ties_with_uk
+	prerequisite = { focus = CHI_nodlc_trans_pacific_cooperation_organisation }
+	x = -2
+	y = 1
+	relative_position_id = CHI_nodlc_trans_pacific_cooperation_organisation
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 2
+	}
+
+	available = {
+		NZL = {
+		AND = {
+		NOT = {has_war_with = CHI}
+		NOT = {
+			any_other_country = {
+				is_in_faction_with = CHI
+				has_war_with = NZL
+			}
+		}
+		}
+		}
+
+		OR = {
+
+		AND = {
+		NZL = {
+			is_subject_of = ENG
+			OR = {
+				is_in_faction = no
+				has_war = no
+			}
+		}
+		}
+
+		AND = {
+		NZL = {
+			is_subject = no
+			OR = {
+				is_in_faction = no
+				has_war = no
+			}
+		}
+		}
 
 		}
 
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
 
-		completion_reward = {
-			add_ideas = CHI_inter_party_coordination_council
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+	}
+
+	completion_reward = {
+
+			NZL = {
+				country_event = { id = wtt_china.1032 } #Ask USA to join faction
+			}
 		}
+
+}
+
+
+focus = {
+	id = CHI_nodlc_invite_indonesia
+	icon = GFX_focus_hol_continue_the_war_in_batavia
+	prerequisite = { focus = CHI_nodlc_trans_pacific_cooperation_organisation }
+	x = 1
+	y = 2
+	relative_position_id = CHI_nodlc_trans_pacific_cooperation_organisation
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 2
+	}
+
+	available = {
+		INS = {
+		AND = {
+		NOT = {has_war_with = CHI}
+		NOT = {
+			any_other_country = {
+				is_in_faction_with = CHI
+				has_war_with = INS
+			}
+		}
+		}
+		}
+
+		OR = {
+
+		AND = {
+		INS = {
+			is_subject_of = HOL
+			OR = {
+				is_in_faction = no
+				has_war = no
+			}
+		}
+		}
+
+		AND = {
+		INS = {
+			is_subject = no
+			OR = {
+				is_in_faction = no
+				has_war = no
+			}
+		}
+		}
+
+		}
+
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+	}
+
+	completion_reward = {
+
+			INS = {
+				country_event = { id = wtt_china.1032 } #Ask USA to join faction
+			}
+		}
+
+}
+
+focus = {
+	id = CHI_nodlc_invite_canada
+	icon = GFX_goal_tfv_can_compromise_with_quebec
+	prerequisite = { focus = CHI_nodlc_trans_pacific_cooperation_organisation }
+	x = -4
+	y = 1
+	relative_position_id = CHI_nodlc_trans_pacific_cooperation_organisation
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 2
+	}
+
+	available = {
+		CAN = {
+		AND = {
+		NOT = {has_war_with = CHI}
+		NOT = {
+			any_other_country = {
+				is_in_faction_with = CHI
+				has_war_with = CAN
+			}
+		}
+		}
+		}
+
+		OR = {
+
+		AND = {
+		CAN = {
+			is_subject_of = ENG
+			OR = {
+				is_in_faction = no
+				has_war = no
+			}
+		}
+		}
+
+		AND = {
+		CAN = {
+			is_subject = no
+			OR = {
+				is_in_faction = no
+				has_war = no
+			}
+		}
+		}
+
+		}
+
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+	}
+
+	completion_reward = {
+
+			CAN = {
+				country_event = { id = wtt_china.1032 } #Ask USA to join faction
+			}
+		}
+
+}
+
+
+
+focus = {
+	id = CHI_nodlc_invite_raj
+	icon = GFX_focus_RAJ_british_investors
+	prerequisite = { focus = CHI_nodlc_trans_pacific_cooperation_organisation }
+	x = -3
+	y = 2
+	relative_position_id = CHI_nodlc_trans_pacific_cooperation_organisation
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 2
+	}
+
+	available = {
+		RAJ = {
+		AND = {
+		NOT = {has_war_with = CHI}
+		NOT = {
+			any_other_country = {
+				is_in_faction_with = CHI
+				has_war_with = RAJ
+			}
+		}
+		}
+		}
+
+		OR = {
+
+		AND = {
+		RAJ = {
+			is_subject_of = ENG
+			OR = {
+				is_in_faction = no
+				has_war = no
+			}
+		}
+		}
+
+		AND = {
+		RAJ = {
+			is_subject = no
+			OR = {
+				is_in_faction = no
+				has_war = no
+			}
+		}
+		}
+
+		}
+
+
+	}
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+	}
+
+	completion_reward = {
+
+			RAJ = {
+				country_event = { id = wtt_china.1032 } #Ask USA to join faction
+			}
+		}
+
+}
+
+
+
+focus = {
+	id = CHI_nodlc_invite_asian
+	icon = GFX_focus_usa_focus_on_asia
+	prerequisite = { focus = CHI_nodlc_trans_pacific_cooperation_organisation }
+	x = -1
+	y = 2
+	relative_position_id = CHI_nodlc_trans_pacific_cooperation_organisation
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 2
+	}
+
+	available = {
+	any_country = {
+		OR = {
+			tag = SIA
+			tag = BHU
+			tag = NEP
+		}
+		NOT = {has_war_with = CHI}
+		NOT = {
+			any_other_country = {
+				is_in_faction_with = CHI
+				has_war_with = ROOT
+			}
+		}
+	}
+	}
+
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+	}
+
+	completion_reward = {
+
+	every_other_country = {
+		limit = {
+			OR = {
+			tag = SIA
+			tag = BHU
+			tag = NEP
+			}
+			}
+			country_event = { id = wtt_china.1032 } #Ask USA to join faction
+		}
+
+}
+}
+
+
+
+focus = {
+	id = CHI_nodlc_invite_latin
+	icon = GFX_focus_mex_redeem_aztlan
+	prerequisite = { focus = CHI_nodlc_trans_pacific_cooperation_organisation }
+	x = -5
+	y = 2
+	relative_position_id = CHI_nodlc_trans_pacific_cooperation_organisation
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 2
+	}
+
+	available = {
+	any_country = {
+		OR = {
+			tag = MEX
+			tag = CHL
+		}
+		NOT = {has_war_with = CHI}
+		NOT = {
+			any_other_country = {
+				is_in_faction_with = CHI
+				has_war_with = ROOT
+			}
+		}
+	}
+	}
+
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	complete_tooltip = {
+	}
+
+	completion_reward = {
+
+	every_other_country = {
+		limit = {
+			OR = {
+			tag = MEX
+			tag = CHL
+			}
+			}
+			country_event = { id = wtt_china.1032 } #Ask USA to join faction
+		}
+
+}
+}
+
+
+
+
+
+focus = {
+	id = CHI_nodlc_go_with_britain
+	icon = GFX_focus_chi_british_cooperation
+	prerequisite = {focus = CHI_nodlc_legalise_communist_party focus = CHI_nodlc_suppress_the_communists}
+	mutually_exclusive = {focus = CHI_nodlc_bastion_of_democracy_in_asia}
+
+	x = 1
+	y = 1
+	relative_position_id = CHI_nodlc_suppress_the_communists
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
 	}
 
 
 
+	available = {
+		ENG = {
+			NOT = {has_government = fascism}
+			NOT = { has_war_with = ROOT }
+			has_capitulated = no
+			is_faction_leader = yes
+		}
+		democratic > 0.5
+		is_in_faction = no
+		NOT = { has_war_with = ENG }
+		is_subject = no
+		NOT = {
+			any_other_country = {
+				is_in_faction_with = SOV
+				has_war_with = CHI
+			}
+		}
+	}
 
+
+	bypass = {
+		is_in_faction_with = ENG
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+	ENG = {
+		add_opinion_modifier = {
+			target = ROOT
+			modifier = CHI_british_cooperation
+		}
+		add_ai_strategy = {
+			type = alliance
+			id = "ROOT"
+			value = 100
+		}
+		add_ai_strategy = {
+			type = protect
+			id = "ROOT"
+			value = 100
+		}
+		add_ai_strategy = {
+			type = send_volunteers_desire
+			id = "ROOT"
+			value = 100
+		}
+		add_ai_strategy = {
+			type = support
+			id = "ROOT"
+			value = 100
+		}
+	}
+
+				ENG = { country_event = generic.2 }
+	}
+}
+
+
+focus = {
+	id = CHI_nodlc_form_cni
+	icon = GFX_focus_RAJ_two_nation_theory
+	prerequisite = {focus = CHI_nodlc_go_with_britain }
+
+
+	x = 0
+	y = 1
+	relative_position_id = CHI_nodlc_go_with_britain
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+
+
+	available = {
+	RAJ = {
+	is_in_faction_with = CHI
+			AND = {
+				has_full_control_of_state = 640
+				has_full_control_of_state = 288
+			}
+			}
+	}
+
+
+	bypass = {
+	CHI = {
+		has_full_control_of_state = 640
+		has_full_control_of_state = 288
+	}
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+	RAJ = {
+	release = BRM
+	CHI = { set_autonomy = { target = BRM autonomy_state = autonomy_colony } }
+	}
+	}
+}
+
+focus = {
+	id = CHI_nodlc_singapore_strategy
+	icon = GFX_goal_generic_position_armies
+	prerequisite = {focus = CHI_nodlc_form_cni }
+
+
+	x = 0
+	y = 1
+	relative_position_id = CHI_nodlc_form_cni
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+
+
+	available = {
+
+	}
+
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+	ENG = {country_event = wtt_china.1035}
+}
+}
+
+
+focus = {
+	id = CHI_nodlc_french_indochina
+	icon = GFX_focus_chi_reach_out_to_france
+	prerequisite = {focus = CHI_nodlc_form_cni }
+
+
+	x = 1
+	y = 2
+	relative_position_id = CHI_nodlc_form_cni
+
+	cost = 10
+
+	ai_will_do = {
+		factor = 1
+	}
+
+
+
+	available = {
+	FRA = {
+	is_in_faction_with = CHI
+			AND = {
+				has_full_control_of_state = 670
+				has_full_control_of_state = 671
+				has_full_control_of_state = 286
+				has_full_control_of_state = 741
+			}
+			}
+	}
+
+
+	bypass = {
+
+	}
+
+	cancel_if_invalid = yes
+	continue_if_invalid = no
+	available_if_capitulated = no
+
+	completion_reward = {
+	FRA = {
+	release = CAM
+	CHI = { set_autonomy = { target = CAM autonomy_state = autonomy_colony } }
+	release = LAO
+	CHI = { set_autonomy = { target = LAO autonomy_state = autonomy_colony } }
+	release = VIN
+	CHI = { set_autonomy = { target = VIN autonomy_state = autonomy_colony } }
+	}
+	}
+}
 
 
 

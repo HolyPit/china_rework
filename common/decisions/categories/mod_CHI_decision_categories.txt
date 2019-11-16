@@ -7,7 +7,10 @@ CHI_army_support = {
 	}
 
 	visible = {
+	OR = {
 	has_completed_focus = CHI_secure_army_support
+	has_completed_focus = CHI_nodlc_secure_army_support
+	}
 	}
 }
 
@@ -23,6 +26,8 @@ CHI_pressure_the_warlords = {
 		OR = {
 		has_completed_focus = CHI_centralise_power
 		has_completed_focus = CHI_control_yuan
+		has_completed_focus = CHI_nodlc_centralise_power
+		has_completed_focus = CHI_nodlc_control_yuan
 		}
 		}
 
@@ -35,6 +40,9 @@ CHI_ccp_kmt_support = {
 	}
 
 	visible = {
+	OR = {
 	has_completed_focus = CHI_legalise_communist_party
+	has_completed_focus = CHI_nodlc_legalise_communist_party
+	}
 	}
 }

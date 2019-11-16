@@ -324,6 +324,7 @@
   CHI_army_training_new:0 "Army Training Project"
   CHI_integrate_local_militia_into_army:0 "Integrate Local Militia into the Army"
 
+  CHI_pressure_the_warlords:0 "Pressure the Warlords"
 
   #### events ####
   trans_pacific_cooperation_organisation:0 "Asia-Pacific Cooperation Organisation"

@@ -321,7 +321,138 @@ country_event = {
 			target = ROOT
     	transfer_troops = yes
 		}
+		if = {
+			limit = { ROOT = { tag = GXC } }
+			if = {
+				limit = {
+					ROOT = {
+						not = {
+							has_completed_focus = CHI_personal_leadership
+						}
+					}
+				}
+				create_corps_commander = {
+					name = "Li Zongren"
+					gfx = GFX_portrait_li_zongren
+					skill = 3
+					attack_skill = 3
+					defense_skill = 3
+					planning_skill = 2
+					logistics_skill = 2
+				}
+			}
+			ROOT = {
+				every_unit_leader = {
+					set_nationality = FROM
+				}
+			}
 		}
+		else_if = {
+			limit = { ROOT = { tag = YUN } }
+			if = {
+				limit = {
+					ROOT = {
+						not = {
+							has_completed_focus = CHI_personal_leadership
+						}
+					}
+				}
+				create_corps_commander = {
+					name = "Long Yun"
+					gfx = GFX_portrait_yun_long_yun
+					skill = 3
+					attack_skill = 2
+					defense_skill = 3
+					planning_skill = 3
+					logistics_skill = 2
+				}
+			}
+			ROOT = {
+				every_unit_leader = {
+					set_nationality = FROM
+				}
+			}
+		}
+		else_if = {
+			limit = { ROOT = { tag = SHX } }
+			if = {
+				limit = {
+					ROOT = {
+						not = {
+							has_completed_focus = CHI_personal_leadership
+						}
+					}
+				}
+				create_corps_commander = {
+					name = "Yan Xishan"
+					gfx = GFX_portrait_yan_xishan
+					skill = 3
+					attack_skill = 2
+					defense_skill = 3
+					planning_skill = 3
+					logistics_skill = 2
+				}
+			}
+			ROOT = {
+				every_unit_leader = {
+					set_nationality = FROM
+				}
+			}
+		}
+		else_if = {
+			limit = { ROOT = { tag = XSM } }
+			if = {
+				limit = {
+					ROOT = {
+						not = {
+							has_completed_focus = CHI_personal_leadership
+						}
+					}
+				}
+				create_corps_commander = {
+					name = "Ma Bufang"
+					gfx = GFX_portrait_xsm_ma_bufang
+					skill = 3
+					attack_skill = 4
+					defense_skill = 2
+					planning_skill = 2
+					logistics_skill = 2
+				}
+			}
+			ROOT = {
+				every_unit_leader = {
+					set_nationality = FROM
+				}
+			}
+		}
+		else_if = {
+			limit = { ROOT = { tag = SIK } }
+			if = {
+				limit = {
+					ROOT = {
+						not = {
+							has_completed_focus = CHI_personal_leadership
+						}
+					}
+				}
+				create_corps_commander = {
+					name = "Sheng Shicai"
+					gfx = GFX_portrait_sheng_shicai
+					skill = 3
+					attack_skill = 2
+					defense_skill = 4
+					planning_skill = 2
+					logistics_skill = 2
+				}
+			}
+			ROOT = {
+				every_unit_leader = {
+					set_nationality = FROM
+				}
+			}
+		}
+	}
+
 
 			country_event = { id = wtt_china.1005 }
 

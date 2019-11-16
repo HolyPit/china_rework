@@ -214,6 +214,7 @@
 
 	 	available = {
 	 		SHX = {
+				exists = yes
 	 			NOT = {has_war_with = ROOT}
 	 			is_subject = no
 	 			}
@@ -236,6 +237,7 @@
 
 		available = {
 			XSM = {
+				exists = yes
 				NOT = {has_war_with = ROOT}
 				is_subject = no
 				}
@@ -258,6 +260,7 @@
 
 		available = {
 			YUN = {
+				exists = yes
 				NOT = {has_war_with = ROOT}
 				is_subject = no
 				}
@@ -280,6 +283,7 @@
 
 		available = {
 			GXC = {
+				exists = yes
 				NOT = {has_war_with = ROOT}
 				is_subject = no
 				}
@@ -302,6 +306,7 @@
 
 		available = {
 			SIK = {
+				exists = yes
 				NOT = {has_war_with = ROOT}
 				is_subject = no
 				}
