@@ -332,14 +332,36 @@
 
 		available = {
 			NOT = {has_idea = CHI_ccp_kmt_5}
+			communism > 0.4
 		}
 
-		cost = 0
+		cost = 150
 
 		fire_only_once = no
 
 		complete_effect = {
 			CHI_ccp_kmt_level_up = yes
+		}
+
+	}
+
+	add_ccp_pop = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+
+			communism < 0.4
+		}
+
+		cost = 100
+
+		fire_only_once = no
+
+		days_remove = 90
+
+		modifier = {
+			communism_drift = 0.1
 		}
 
 	}
@@ -350,6 +372,7 @@
 		icon = generic_prepare_civil_war
 
 		available = {
+		democratic > 0.4
 		OR = {
 			has_idea = CHI_ccp_kmt_2
 			has_idea = CHI_ccp_kmt_3
@@ -357,12 +380,97 @@
 			has_idea = CHI_ccp_kmt_5}
 		}
 
-		cost = 0
+		cost = 150
 
 		fire_only_once = no
 
 		complete_effect = {
 			CHI_ccp_kmt_level_down = yes
+		}
+
+	}
+
+
+	add_kmt_pop = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+
+			democratic < 0.4
+		}
+
+		cost = 100
+
+		fire_only_once = no
+
+		days_remove = 90
+
+		modifier = {
+			democratic_drift = 0.1
+		}
+
+	}
+
+	annex_prc = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+
+		PRC = {
+			is_subject_of = CHI
+		}
+
+			has_idea = CHI_ccp_kmt_1
+		}
+
+		cost = 200
+
+		fire_only_once = yes
+
+		days_remove = 90
+
+		complete_effect = {
+		CHI = {
+			annex_country =  {
+			target = PRC
+			transfer_troops = yes
+		}
+		}
+
+	}
+
+
+
+	}
+
+
+	change_to_prc = {
+
+		icon = generic_prepare_civil_war
+
+		available = {
+
+		PRC = {
+			is_subject_of = CHI
+		}
+
+			has_idea = CHI_ccp_kmt_5
+		}
+
+		cost = 200
+
+		fire_only_once = yes
+
+		days_remove = 90
+
+		complete_effect = {
+		CHI = {
+		set_politics = {
+			ruling_party = communism
+			elections_allowed = no
+		}
 		}
 
 	}

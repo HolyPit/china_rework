@@ -174,6 +174,57 @@
   CHI_first_election_desc:0 "First Election"
 
 
+  CHI_supervised_democracy:0 "Supervised Democracy"
+  CHI_supervised_democracy_desc:0 "Supervised Democracy"
+  CHI_empower_the_army:0 "Empower the Army"
+  CHI_empower_the_army_desc:0 "Empower the Army"
+  CHI_secure_army_support:0 "Secure Army's Support to Democracy"
+  CHI_secure_army_support_desc:0 "Secure Army's Support to Democracy"
+  CHI_military_guided_goverment:0 "Military Tutelage"
+  CHI_military_guided_goverment_desc:0 "Military Tutelage"
+  CHI_return_power_to_people:0 "Return Power to the People"
+  CHI_return_power_to_people_desc:0 "Return Power to the People"
+  CHI_suppress_the_communists:0 "Suppress the Communist"
+  CHI_suppress_the_communists_desc:0 "Suppress the Communist"
+  CHI_legalise_communist_party:0 "Legalise the Communist Party"
+  CHI_legalise_communist_party_desc:0 "Legalise the Communist Party"
+  CHI_coalition_goverment:0 "Coalition Government"
+  CHI_coalition_goverment_desc:0 "Coalition Government"
+  CHI_summit_with_mao:0 "Summit with Mao"
+  CHI_summit_with_mao_desc:0 "Summit with Mao"
+  CHI_new_three_principles:0 "The New Three Principles of People"
+  CHI_new_three_principles_desc:0 "The New Three Principles of People"
+  CHI_join_comintern:0 "Join Comintern"
+  CHI_join_comintern_desc:0 "Join Comintern"
+  CHI_bastion_of_democracy_in_asia:0 "The Asian Bastion of Democracy"
+  CHI_bastion_of_democracy_in_asia_desc:0 "The Asian Bastion of Democracy"
+  CHI_trans_pacific_cooperation_organisation:0 "Form the APCO"
+  CHI_trans_pacific_cooperation_organisation_desc:0 "Asia-Pacific Cooperation Organisation"
+  CHI_invite_australia:0 "Invite Australia"
+  CHI_invite_australia_desc:0 "Invite Australia"
+  CHI_invite_new_zealand:0 "Invite New Zealand"
+  CHI_invite_new_zealand_desc:0 "Invite New Zealand"
+  CHI_invite_canada:0 "Invite Canada"
+  CHI_invite_canada_desc:0 "Invite Canada"
+  CHI_invite_indonesia:0 "Invite Indonesia"
+  CHI_invite_indonesia_desc:0 "Invite Indonesia"
+  CHI_invite_raj:0 "Invite India"
+  CHI_invite_raj_desc:0 "Invite India"
+  CHI_invite_asian:0 "Asian Memberships"
+  CHI_invite_asian_desc:0 "Asian Memberships"
+  CHI_invite_latin:0 "Latin American Memberships"
+  CHI_invite_latin_desc:0 "Latin American Memberships"
+  CHI_go_with_britain: "Go with Britain"
+  CHI_go_with_britain_desc: "Go with Britain"
+  CHI_form_cni:0 "Form the CBI Theater"
+  CHI_form_cni_desc:0 "Form the China-Burma-India Theater"
+  CHI_singapore_strategy:0 "The Singapore Strategy"
+  CHI_singapore_strategy_desc:0 "The Singapore Strategy"
+  CHI_french_indochina:0 "Protect French Indochina"
+  CHI_french_indochina_desc:0 "Protect French Indochina"
+
+
+
   ####### ideas localisation #####
   CHI_chinese_nationalism:0 "Chinese Nationalism"
   CHI_wartime_economy:0 "Wartime Industry"
@@ -257,12 +308,25 @@
   great_mentor_to_the_revolution:0 "Great Mentor to the Revolution"
 
   ### decisions ###
-  CHI_educate_the_soliders:0 "Educate the Soliders"
-  CHI_educate_the_soliders_desc:0 "Educate the Soliders"
+
+  CHI_ccp_kmt_support:0 "Political Campaign Between Parties  "
+  add_ccp_support:0 "Increase Communist support in National Assembly"
+  reduce_ccp_support:0 "Increase Kuomintang support in National Assembly"
+  add_ccp_pop:0 "Communist Propaganda"
+  add_kmt_pop:0 "Democratic Propaganda"
+  annex_prc:0 "Annex Communist China"
+  change_to_prc:0 "Communists Demand Re-Election"
+
+  CHI_army_support:0 "Gathering Army Support"
+  CHI_educate_the_soliders:0 "Democratic Education in Soldiers"
+  CHI_educate_the_officers:0 "Democratic Education in Officers"
+  CHI_war_support:0 "Gathering War Support"
+  CHI_army_training_new:0 "Army Training Project"
+  CHI_integrate_local_militia_into_army:0 "Integrate Local Militia into the Army"
 
 
   #### events ####
-  trans_pacific_cooperation_organisation:0 "Trans-Pacific Cooperation Organisation"
+  trans_pacific_cooperation_organisation:0 "Asia-Pacific Cooperation Organisation"
   hirohito_recovered:0 " Hirohito Recovered"
 
   news.1001.t:0 "Emperor Hirohito Injured In Manchuria"
@@ -308,3 +372,22 @@
   wtt_china.1010.b:0 "Zhang Xueliang deserves a chance."
   wtt_china.1010.c:0 "Li Zongren is the right one."
   wtt_china.1010.d:0 "Yan Xishan is a mature politician."
+
+
+  wtt_china.1032.t:0 "Invitation From [CHI.GetName]"
+  wtt_china.1032.desc:0 "[CHI.GetName] invites us to join the [CHI.GetFactionName] faction."
+  wtt_china.1032.a:0 "Sounds like a good idea!"
+  wtt_china.1032.b:0 "They should mind their own business."
+
+  wtt_china.1033.t:0 "[From.GetName] Accepts Our Invitation"
+  wtt_china.1033.desc:0 "[From.GetName] accepts our invitation to join our faction."
+  wtt_china.1033.a:0 "Wonderful!"
+
+  wtt_china.1034.t:0 "[From.GetName] Rejects Our Invitation"
+  wtt_china.1034.desc:0 "[From.GetName] rejects our invitation to join our faction."
+  wtt_china.1034.a:0 "They shall regret!"
+
+  wtt_china.1035.t:0 "[CHI.GetName] Requests Revision of Singapore Strategy"
+  wtt_china.1035.desc:0 "[CHI.GetName] Requests Revision of Singapore Strategy"
+  wtt_china.1035.a:0 "Sounds reasonable."
+  wtt_china.1035.b:0 "We must not trust them."
