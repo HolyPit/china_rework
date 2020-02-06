@@ -6,6 +6,16 @@
 
 This mod gives you more choices where you can lead the Nationalist China to, regarding solving the communist civil war, suppressing warlords and dealing with Japanese.
 
+[h1]Most Recent Updates:[/h1]
+[b]In this section you are seeing the most recent changes in this mod:[/b]
+
+[list]
+    [*] New Chinese names for generic leaders, no more awkward "Ma Ma" etc.
+    [*] New decision categories :[i]Gathering Army Support[/i], [i]Political Campaign Between Parties[/i].
+    [*] New Chinese election events.
+    [*] Modified the focus [i]Support Zhang Xueliang[/i], now you can go down this path when Zhang leads the democratic China.
+[/list]
+
 [h1]Brief Guide:[/h1]
 
 [b]Choose your desired ideology with many different paths:[/b]
@@ -24,7 +34,7 @@ This mod gives you more choices where you can lead the Nationalist China to, reg
     Key focuses: [i]Cooperate With Japan[/i].
 
     [*] [b]Fascism - subjugate to Japan:[/b]
-    Possible leaders: Wang Jing-Wei, Prince Yasuhito; 
+    Possible leaders: Wang Jing-Wei, Prince Yasuhito;
     Key focuses: [i]Subjugation to Japanese[/i]
 
     [*] [b]Democracy - go with the Allies:[/b]
