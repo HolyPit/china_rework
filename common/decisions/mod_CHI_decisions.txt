@@ -346,6 +346,7 @@
 
 		complete_effect = {
 			CHI_ccp_kmt_level_up = yes
+			add_popularity = { ideology = communism popularity = 0.1}
 		}
 
 	}
@@ -356,7 +357,7 @@
 
 		available = {
 
-			communism < 0.4
+			communism < 0.8
 		}
 
 		cost = 100
@@ -391,6 +392,7 @@
 
 		complete_effect = {
 			CHI_ccp_kmt_level_down = yes
+			add_popularity = { ideology = communism popularity = -0.1}
 		}
 
 	}
@@ -402,7 +404,7 @@
 
 		available = {
 
-			democratic < 0.4
+			democratic < 0.8
 		}
 
 		cost = 100
@@ -458,7 +460,10 @@
 		available = {
 
 		PRC = {
-			is_subject_of = CHI
+			OR = {
+				is_subject_of = CHI
+				exists = no
+			}
 		}
 
 			has_idea = CHI_ccp_kmt_5
@@ -472,6 +477,18 @@
 
 		complete_effect = {
 		CHI = {
+		if = {
+			limit = {
+				PRC = {
+				is_subject_of = CHI
+				}
+			}
+			annex_country =  {
+				target = PRC
+				transfer_troops = yes
+			}
+		}
+
 		set_politics = {
 			ruling_party = communism
 			elections_allowed = no

@@ -400,20 +400,26 @@ focus = {
 
 	available = {
 		WTT_is_ROOT_current_leader_of_china = yes
-		has_country_leader =  {name = "Chiang Kai-Shek"}
+
+		any_other_country = {
+		NOT = {
+		has_country_leader =  {ruling_only = yes name = "Zhang Xueliang"}
+		}
+		}
 	}
 
 	cost = 5
 
 	bypass = {
-	has_country_leader =  {ruling_only = yes name = "Zhang Xueliang"}
+		has_country_leader =  {ruling_only = yes name = "Zhang Xueliang"}
 	}
 
 
 
 	completion_reward = {
 
-
+	if = {
+	limit = {has_government = neutrality}
 		create_country_leader = {
 			name = "Zhang Xueliang"
 			desc = "POLITICS_ZHANG_XUELIANG_DESC"
@@ -425,21 +431,58 @@ focus = {
 				young_marshal
 				dislikes_japan
 			}
-  }
-	create_country_leader = {
-		name = "Zhang Xueliang"
-		desc = "POLITICS_ZHANG_XUELIANG_DESC"
-		picture = "GFX_portrait_chi_zhang_xueliang"
-		expire = "1965.1.1"
-		ideology = fascism_ideology
-		traits = {fascist_sympathies
-			young_marshal
-			dislikes_japan
+  	}
+		hidden_effect = {
+		create_country_leader = {
+			name = "Zhang Xueliang"
+			desc = "POLITICS_ZHANG_XUELIANG_DESC"
+			picture = "GFX_portrait_chi_zhang_xueliang"
+			expire = "1965.1.1"
+			ideology = fascism_ideology
+			traits = {fascist_sympathies
+				young_marshal
+				dislikes_japan
+			}
 		}
+		set_party_name = { ideology = fascism long_name = CHI_party_fengtian_clique_long
+		name = CHI_party_fengtian_clique }
+
+		}
+		}
+
+		if = {
+		limit = {has_government = fascism}
+			create_country_leader = {
+				name = "Zhang Xueliang"
+				desc = "POLITICS_ZHANG_XUELIANG_DESC"
+				picture = "GFX_portrait_chi_zhang_xueliang"
+				expire = "1965.1.1"
+				ideology = fascism_ideology
+				traits = {
+					fascist_sympathies
+					young_marshal
+					dislikes_japan
+				}
+			}
+			hidden_effect = {
+			create_country_leader = {
+				name = "Zhang Xueliang"
+				desc = "POLITICS_ZHANG_XUELIANG_DESC"
+				picture = "GFX_portrait_chi_zhang_xueliang"
+				expire = "1965.1.1"
+				ideology = despotism
+				traits = {fascist_sympathies
+					young_marshal
+					dislikes_japan
+				}
+			}
+			set_party_name = { ideology = fascism long_name = CHI_party_fengtian_clique_long
+			name = CHI_party_fengtian_clique }
+
+			}
+			}
+
 	}
-	set_party_name = { ideology = fascism long_name = CHI_party_fengtian_clique_long
-	name = CHI_party_fengtian_clique }
-}
 }
 
 
@@ -1879,8 +1922,8 @@ focus = {
 
 	available = {
 
-						controls_state = 525
-						controls_state = 527
+					#	controls_state = 525
+					#	controls_state = 527
 
 					NOT = {
 						any_state = {
@@ -2152,7 +2195,10 @@ focus = {
 }
 
 bypass = {
+	OR = {
 	has_non_aggression_pact_with = JAP
+	has_war_with = JAP
+	}
 }
 
 	completion_reward = {
@@ -3299,7 +3345,7 @@ focus = {
 focus = {
 	id = CHI_nodlc_legalise_communist_party
 	icon = GFX_focus_chi_cooperation_with_the_communists
-	prerequisite = { focus = CHI_nodlc_first_election }
+	prerequisite = { focus = CHI_first_election focus = CHI_military_guided_goverment }
 	mutually_exclusive = { focus =  CHI_suppress_the_communists}
 	x = 0
 	y = 1
@@ -3315,26 +3361,19 @@ focus = {
 
 	NOT = {
 		has_government = fascism
-		has_war = yes
+		#has_war = yes
 	}
 
-	country_exists = PRC
+	# country_exists = PRC
 
-	PRC = {
-		is_subject = no
-		has_war = no
-	}
+	# PRC = {
+		# is_subject = no
+		# has_war = no
+	# }
 
 	}
 
 	bypass = {
-
-	OR = {
-	NOT = {
-	country_exists = PRC
-	}
-	PRC = { is_subject = yes }
-	}
 
 	}
 
@@ -3347,14 +3386,14 @@ focus = {
 	remove_ideas = CHI_communist_uprisings
 
 	create_country_leader = {
-name = "Mao Zedong"
-desc = "POLITICS_MAO_ZEDONG_DESC"
-picture = "GFX_portrait_prc_mao_zedong"
-expire = "1965.1.1"
-ideology = marxism
-traits = {
-	cornered_fox
-}
+		name = "Mao Zedong"
+		desc = "POLITICS_MAO_ZEDONG_DESC"
+		picture = "GFX_portrait_prc_mao_zedong"
+		expire = "1965.1.1"
+		ideology = marxism
+		traits = {
+			cornered_fox
+		}
 }
 
 		add_ideas = CHI_ccp_kmt_3
@@ -3383,8 +3422,15 @@ focus = {
 
 	NOT = {
 		has_government = fascism
-		has_war = yes
 	}
+
+	PRC = {
+	OR = {
+	has_war = no
+	has_war_with = JAP
+	}
+	}
+
 
 	country_exists = PRC
 
@@ -3402,9 +3448,11 @@ focus = {
 	country_exists = PRC
 	}
 	PRC = { is_subject = yes }
+	PRC = { has_capitulated = yes}
 	}
 
 	}
+
 
 	cancel_if_invalid = yes
 	continue_if_invalid = no
@@ -3438,20 +3486,17 @@ focus = {
 
 	available = {
 
-
-
 	PRC = {
 	OR = {
 		is_subject_of = CHI
 		exists = no
+		has_capitulated = yes
 	}
 	}
 
 	}
 
 	bypass = {
-
-
 
 	}
 
@@ -3462,7 +3507,7 @@ focus = {
 	completion_reward = {
 
 		CHI_ccp_kmt_level_up = yes
-
+		custom_effect_tooltip = available_political_advisor
 		show_ideas_tooltip = CHI_mao_zedong
 
 	}
@@ -4525,13 +4570,13 @@ focus = {
 			has_capitulated = no
 			is_faction_leader = yes
 		}
-		democratic > 0.5
+		#democratic > 0.5
 		is_in_faction = no
 		NOT = { has_war_with = ENG }
 		is_subject = no
 		NOT = {
 			any_other_country = {
-				is_in_faction_with = SOV
+				is_in_faction_with = ENG
 				has_war_with = CHI
 			}
 		}

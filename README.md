@@ -1,24 +1,44 @@
-[h1]China National Focus Rework: Refined Focus Tree After “Waking the Tiger”[/h1]
+[h1]China National Focus Rework[/h1]
 
-[h1]Now compatible with vanilla game! Works with no DLC. Please report any bug, thanks![/h1]
-
-Still need DLCs (Together for Victory, Death or Dishonor and Waking the Tiger) to make this mod work perfectly.
+[h1]Works with no DLC, but best with "Waking the Tiger".[/h1]
 
 [b]Current version: 0.9[/b] (work-in-progress, testing needed, please report any bug or imbalance)
 
 This mod gives you more choices where you can lead the Nationalist China to, regarding solving the communist civil war, suppressing warlords and dealing with Japanese.
 
-[h1]Mean Features:[/h1]
+[h1]Brief Guide:[/h1]
 
-[b]Six unique leaders with eight different paths you can lead China to:[/b]
-Chiang Kai-Shek – Non-aligned – [i]“Nationalism”[/i] – the WTT vanilla pathway
-Lin Sen – Democratic – [i]“Democracy”[/i] – the enhanced WTT pathway to a democratic government
-Zhang Xue-Liang – Non-aligned/Fascist – [i]“A Debt of Blood”[/i] – fight Japanese
-Zhang Xue-Liang – Non-aligned/Fascist – [i]“Tsingtao for Peace”[/i] – make peace with Japan by selling your own territories
-He Ying-Qin – Fascist – [i]“Strengthen He Regime”[/i] – try to ally Germany and fight Japan/Soviet Union
-Wang Jing-Wei – Fascist – [i]“Cooperate With Japan”[/i] – try to ally Japan
-Wang Jing-Wei – Fascist – [i]“Subjugation to Japanese”[/i] – become a Japanese subject willing and try to gain independence later (or not)
-Prince Yasuhito – Fascist – [i]“Brother Nation of Japan”[/i] – form a union with Japan by inviting a Japanese imperial ruler
+[b]Choose your desired ideology with many different paths:[/b]
+
+[list]
+    [*] [b]Non-Aligned:[/b]
+    Possible leaders: Chiang Kai-Shek, Zhang Xueliang;
+    Key focuses: The [i]Nationalism[/i] branch.
+
+    [*] [b]Fascism - go with Germany:[/b]
+    Possible leader: He Yingqin;
+    Key focuses: [i]Strengthen He Regime[/i].
+
+    [*] [b]Fascism - aligning with Japan:[/b]
+    Possible leaders: Wang Jingwei;
+    Key focuses: [i]Cooperate With Japan[/i].
+
+    [*] [b]Fascism - subjugate to Japan:[/b]
+    Possible leaders: Wang Jing-Wei, Prince Yasuhito; 
+    Key focuses: [i]Subjugation to Japanese[/i]
+
+    [*] [b]Democracy - go with the Allies:[/b]
+    Possible leaders: Lin Sen, Zhang Xueliang, Li Zongren, Yan Xishan;
+    Key focuses: [i]Democracy[/i] and [i]Go with Britain[/i].
+
+    [*] [b]Democracy - form your own faction:[/b]
+    Possible leaders: Lin Sen, Zhang Xueliang, Li Zongren, Yan Xishan;
+    Key focuses: [i]Democracy[/i] and [i]Form the APCO[/i].
+
+    [*] [b]Communism:[/b]
+    Possible leader: Mao Zedong;
+    Key focuses: [i]Legalise the Communist Party[/i] (with some Decisions).
+[/list]
 
 [b]Add two new admirals: Chen Shao-Kuan and Chan Chak[/b]
 
@@ -27,10 +47,12 @@ Prince Yasuhito – Fascist – [i]“Brother Nation of Japan”[/i] – form a 
 
 [h1]WIP To-do list:[/h1]
 
-Develop the Democracy and Nationalism branches for vanilla game
-All focus descriptions
-More rework on industry, navy and technology
-To expand the focus tree even more, suggestions are extremely welcome!
+[list]
+[*]Develop the Nationalism branches for vanilla game
+[*]All focus descriptions
+[*]More rework on industry, navy and technology
+[*]To expand the focus tree even more, suggestions are extremely welcome!
+[/list]
 
 [h1]If you like this mod, please support me on Patreon for future development! Thanks![/h1]
 [url=https://www.patreon.com/holypit]https://www.patreon.com/holypit[/url]

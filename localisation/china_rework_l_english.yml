@@ -247,11 +247,11 @@
   CHI_mao_zedong:0 "Mao Zedong"
   CHI_ccp_up_tt:0 "Increase the CPC support in the government"
   CHI_ccp_down_tt:0 "Decrease the CPC support in the government"
-  CHI_ccp_kmt_1:0 "Strong support for KMT"
-  CHI_ccp_kmt_2:0 "Weak support for KMT"
+  CHI_ccp_kmt_1:0 "KMT Domination"
+  CHI_ccp_kmt_2:0 "KMT Majority"
   CHI_ccp_kmt_3:0 "Balance between KMT and CPC"
-  CHI_ccp_kmt_4:0 "Weak support for CPC"
-  CHI_ccp_kmt_5:0 "Strong support for CPC"
+  CHI_ccp_kmt_4:0 "CPC Majority"
+  CHI_ccp_kmt_5:0 "CPC Domination"
   CHI_ccp_kmt_5_desc:0 "Strong support for CPC"
 
   ####### party names localisation #####
