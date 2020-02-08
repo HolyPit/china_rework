@@ -10,6 +10,7 @@ This mod gives you more choices where you can lead the Nationalist China to, reg
 [b]In this section you are seeing the most recent changes in this mod:[/b]
 
 [list]
+    [*] Fix errors that can occur when you play as a worlord then switch to the CHI focus tree.
     [*] New Chinese names for generic leaders, no more awkward "Ma Ma" etc.
     [*] New decision categories :[i]Gathering Army Support[/i], [i]Political Campaign Between Parties[/i].
     [*] New Chinese election events.
