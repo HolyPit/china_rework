@@ -208,7 +208,7 @@
 	CHI_pressure_the_warlords = {
 
 
-	pressure_yan_xishan = {
+	CHI_pressure_yan_xishan = {
 
 		icon = generic_prepare_civil_war
 
@@ -217,6 +217,7 @@
 				exists = yes
 	 			NOT = {has_war_with = ROOT}
 	 			is_subject = no
+				NOT = {original_tag = ROOT}
 	 			}
 	 	}
 
@@ -231,7 +232,7 @@
 	}
 
 
-	pressure_ma_bufang = {
+	CHI_pressure_ma_bufang = {
 
 		icon = generic_prepare_civil_war
 
@@ -240,6 +241,7 @@
 				exists = yes
 				NOT = {has_war_with = ROOT}
 				is_subject = no
+				NOT = {original_tag = ROOT}
 				}
 		}
 
@@ -254,7 +256,7 @@
 	}
 
 
-	pressure_long_yun = {
+	CHI_pressure_long_yun = {
 
 		icon = generic_prepare_civil_war
 
@@ -263,6 +265,7 @@
 				exists = yes
 				NOT = {has_war_with = ROOT}
 				is_subject = no
+				NOT = {original_tag = ROOT}
 				}
 		}
 
@@ -277,7 +280,7 @@
 	}
 
 
-	pressure_li_zongren = {
+	CHI_pressure_li_zongren = {
 
 		icon = generic_prepare_civil_war
 
@@ -286,6 +289,7 @@
 				exists = yes
 				NOT = {has_war_with = ROOT}
 				is_subject = no
+				NOT = {original_tag = ROOT}
 				}
 		}
 
@@ -300,7 +304,7 @@
 	}
 
 
-	pressure_sheng_shicai = {
+	CHI_pressure_sheng_shicai = {
 
 		icon = generic_prepare_civil_war
 
@@ -309,6 +313,7 @@
 				exists = yes
 				NOT = {has_war_with = ROOT}
 				is_subject = no
+				NOT = {original_tag = ROOT}
 				}
 		}
 

@@ -801,7 +801,7 @@ focus = {
 
 
 		JAP = {
-			set_autonomy = { target = CHI autonomy_state = autonomy_wtt_imperial_associate }
+			set_autonomy = { target = ROOT autonomy_state = autonomy_wtt_imperial_associate }
 		}
 
 
@@ -903,7 +903,7 @@ focus = {
 
 	completion_reward = {
 
-		CHI = {
+		ROOT = {
 			remove_ideas = CHI_ineffective_bureaucracy
 			add_ideas = CHI_low_legitimacy
 			set_cosmetic_tag = CCB
@@ -998,7 +998,7 @@ focus = {
 
 
 
-		CHI = {transfer_state = 609}
+		ROOT = {transfer_state = 609}
 
 
 }
@@ -1037,7 +1037,7 @@ focus = {
 
 
 
-		CHI = {transfer_state = 524}
+		ROOT = {transfer_state = 524}
 
 
 }
@@ -1096,7 +1096,7 @@ focus = {
 	available = {
 
 		AND = {
-			CHI = {
+			ROOT = {
 				has_capitulated = no
 				OR ={
 					is_in_faction_with = JAP
@@ -1123,11 +1123,11 @@ focus = {
 
 	completion_reward = {
 		JAP = {
-			set_autonomy = { target = CHI autonomy_state = autonomy_free }
+			set_autonomy = { target = ROOT autonomy_state = autonomy_free }
 			set_autonomy = { target = MAN autonomy_state = autonomy_free }
 		}
 
-		CHI = {
+		ROOT = {
 			set_cosmetic_tag = EOC
 		}
 
@@ -1168,7 +1168,7 @@ focus = {
 	available = {
 
 		AND = {
-			CHI = {
+			ROOT = {
 				compare_autonomy_progress_ratio > 0.75
 				has_capitulated = no
 				OR ={
@@ -1199,10 +1199,10 @@ focus = {
 
 	completion_reward = {
 		JAP = {
-			set_autonomy = { target = CHI autonomy_state = autonomy_free }
+			set_autonomy = { target = ROOT autonomy_state = autonomy_free }
 		}
 
-		CHI = {
+		ROOT = {
 			set_cosmetic_tag = EOC
 			annex_country =  {
 			target = MAN
@@ -2012,37 +2012,49 @@ focus = {
 			PRC = {
 				OR = {
 				exists = no
-				is_subject_of = CHI
+				has_capitulated = yes
+				is_subject_of = ROOT
+				original_tag = ROOT
 				}
 			}
 			XSM = {
 				OR = {
 				exists = no
-				is_subject_of = CHI
+				has_capitulated = yes
+				is_subject_of = ROOT
+				original_tag = ROOT
 				}
 			}
 			GXC = {
 				OR = {
 				exists = no
-				is_subject_of = CHI
+				has_capitulated = yes
+				is_subject_of = ROOT
+				original_tag = ROOT
 				}
 			}
 			YUN = {
 				OR = {
 				exists = no
-				is_subject_of = CHI
+				has_capitulated = yes
+				is_subject_of = ROOT
+				original_tag = ROOT
 				}
 			}
 			SIK = {
 				OR = {
 				exists = no
-				is_subject_of = CHI
+				has_capitulated = yes
+				is_subject_of = ROOT
+				original_tag = ROOT
 				}
 			}
 			SHX = {
 				OR = {
 				exists = no
-				is_subject_of = CHI
+				has_capitulated = yes
+				is_subject_of = ROOT
+				original_tag = ROOT
 				}
 			}
 		}
@@ -2209,7 +2221,7 @@ focus = {
 	NOT = {
 		any_other_country = {
 			is_in_faction_with = JAP
-			has_war_with = CHI
+			has_war_with = ROOT
 		}
 	}
 }
@@ -2280,7 +2292,7 @@ focus = {
 	NOT = {
 		any_other_country = {
 			is_in_faction_with = JAP
-			has_war_with = CHI
+			has_war_with = ROOT
 		}
 	}
 }
@@ -2321,7 +2333,7 @@ focus = {
 
 	completion_reward = {
 
-		CHI = {
+		ROOT = {
 			remove_ideas = CHI_ineffective_bureaucracy
 			set_cosmetic_tag = BYG
 			set_party_name = { ideology = neutrality long_name = CHI_party_beiyang_long
@@ -2367,7 +2379,7 @@ focus = {
 	}
 	bypass = {
 		OR = {
-		PRC = { is_subject_of = CHI }
+		PRC = { is_subject_of = ROOT }
 		NOT = {
 		country_exists = PRC
 		}
@@ -2572,7 +2584,7 @@ focus = {
 	available = {
 
 		PRC = {
-			is_subject_of = CHI
+			is_subject_of = ROOT
 			compare_autonomy_state > autonomy_puppet
 		}
 
@@ -2632,14 +2644,14 @@ focus = {
 	available = {
 
 
-		NOT = {
-			has_war = yes
-		}
+		#NOT = {
+		#	 has_war = yes
+		#}
 
 		country_exists = PRC
 
 		PRC = {
-			has_war = no
+			has_war_together_with = ROOT
 		}
 
 
@@ -2660,7 +2672,7 @@ focus = {
 		if = {
 			limit = {
 				PRC = {
-				is_in_faction_with = CHI}
+				is_in_faction_with = ROOT}
 			}
 		PRC = {leave_faction = yes}
 
@@ -3347,6 +3359,7 @@ focus = {
 		}
 
 		available = {
+			WTT_is_ROOT_current_leader_of_china = yes
 			democratic > 0.4
 		}
 
@@ -3359,7 +3372,7 @@ focus = {
 		available_if_capitulated = no
 
 		completion_reward = {
-			CHI = {country_event = wtt_china.1010}
+			ROOT = {country_event = wtt_china.1010}
 		}
 	}
 
@@ -3460,7 +3473,7 @@ focus = {
 
 		PRC = {
 			is_subject = no
-			has_war = no
+			#has_war = no
 		}
 
 		}
@@ -3511,7 +3524,7 @@ focus = {
 
 		PRC = {
 		OR = {
-			is_subject_of = CHI
+			is_subject_of = ROOT
 			exists = no
 			has_capitulated = yes
 		}
@@ -3520,7 +3533,7 @@ focus = {
 		}
 
 		bypass = {
-		
+
 		}
 
 		cancel_if_invalid = yes
@@ -3558,7 +3571,7 @@ focus = {
 
 		PRC = {
 		OR = {
-			is_subject_of = CHI
+			is_subject_of = ROOT
 			exists = no
 		}
 		}
@@ -3957,6 +3970,7 @@ focus = {
 		}
 
 		available = {
+			WTT_is_ROOT_current_leader_of_china = yes
 			democratic > 0.5
 		}
 
@@ -3969,7 +3983,7 @@ focus = {
 		available_if_capitulated = no
 
 		completion_reward = {
-		CHI = {country_event = wtt_china.1010}
+		ROOT = {country_event = wtt_china.1010}
 		}
 	}
 
@@ -4086,10 +4100,10 @@ focus = {
 		available = {
 			AST = {
 			AND = {
-			NOT = {has_war_with = CHI}
+			NOT = {has_war_with = ROOT}
 			NOT = {
 				any_other_country = {
-					is_in_faction_with = CHI
+					is_in_faction_with = ROOT
 					has_war_with = AST
 				}
 			}
@@ -4162,10 +4176,10 @@ focus = {
 		available = {
 			NZL = {
 			AND = {
-			NOT = {has_war_with = CHI}
+			NOT = {has_war_with = ROOT}
 			NOT = {
 				any_other_country = {
-					is_in_faction_with = CHI
+					is_in_faction_with = ROOT
 					has_war_with = NZL
 				}
 			}
@@ -4237,10 +4251,10 @@ focus = {
 		available = {
 			INS = {
 			AND = {
-			NOT = {has_war_with = CHI}
+			NOT = {has_war_with = ROOT}
 			NOT = {
 				any_other_country = {
-					is_in_faction_with = CHI
+					is_in_faction_with = ROOT
 					has_war_with = INS
 				}
 			}
@@ -4311,10 +4325,10 @@ focus = {
 		available = {
 			CAN = {
 			AND = {
-			NOT = {has_war_with = CHI}
+			NOT = {has_war_with = ROOT}
 			NOT = {
 				any_other_country = {
-					is_in_faction_with = CHI
+					is_in_faction_with = ROOT
 					has_war_with = CAN
 				}
 			}
@@ -4387,10 +4401,10 @@ focus = {
 		available = {
 			RAJ = {
 			AND = {
-			NOT = {has_war_with = CHI}
+			NOT = {has_war_with = ROOT}
 			NOT = {
 				any_other_country = {
-					is_in_faction_with = CHI
+					is_in_faction_with = ROOT
 					has_war_with = RAJ
 				}
 			}
@@ -4467,11 +4481,11 @@ focus = {
 				tag = BHU
 				tag = NEP
 			}
-			NOT = {has_war_with = CHI}
+			NOT = {has_war_with = ROOT}
 			NOT = {
 				any_other_country = {
-					is_in_faction_with = CHI
-					has_war_with = ROOT
+					is_in_faction_with = ROOT
+					has_war_with = THIS
 				}
 			}
 		}
@@ -4497,6 +4511,13 @@ focus = {
 				tag = SIA
 				tag = BHU
 				tag = NEP
+				}
+				NOT = {has_war_with = ROOT}
+				NOT = {
+					any_other_country = {
+						is_in_faction_with = ROOT
+						has_war_with = THIS
+					}
 				}
 				}
 				country_event = { id = wtt_china.1032 } #Ask USA to join faction
@@ -4527,11 +4548,11 @@ focus = {
 				tag = MEX
 				tag = CHL
 			}
-			NOT = {has_war_with = CHI}
+			NOT = {has_war_with = ROOT}
 			NOT = {
 				any_other_country = {
-					is_in_faction_with = CHI
-					has_war_with = ROOT
+					is_in_faction_with = ROOT
+					has_war_with = THIS
 				}
 			}
 		}
@@ -4556,6 +4577,13 @@ focus = {
 				OR = {
 				tag = MEX
 				tag = CHL
+				}
+				NOT = {has_war_with = ROOT}
+				NOT = {
+					any_other_country = {
+						is_in_faction_with = ROOT
+						has_war_with = THIS
+					}
 				}
 				}
 				country_event = { id = wtt_china.1032 } #Ask USA to join faction
@@ -4600,7 +4628,7 @@ focus = {
 			NOT = {
 				any_other_country = {
 					is_in_faction_with = ENG
-					has_war_with = CHI
+					has_war_with = ROOT
 				}
 			}
 		}
@@ -4667,7 +4695,7 @@ focus = {
 
 		available = {
 		RAJ = {
-		is_in_faction_with = CHI
+		is_in_faction_with = ROOT
 				AND = {
 					has_full_control_of_state = 640
 					has_full_control_of_state = 288
@@ -4677,7 +4705,7 @@ focus = {
 
 
 		bypass = {
-		CHI = {
+		ROOT = {
 			has_full_control_of_state = 640
 			has_full_control_of_state = 288
 		}
@@ -4690,7 +4718,7 @@ focus = {
 		completion_reward = {
 		RAJ = {
 		release = BRM
-		CHI = { set_autonomy = { target = BRM autonomy_state = autonomy_colony } }
+		ROOT = { set_autonomy = { target = BRM autonomy_state = autonomy_colony } }
 		}
 		}
 	}
@@ -4752,7 +4780,7 @@ focus = {
 
 		available = {
 		FRA = {
-		is_in_faction_with = CHI
+		is_in_faction_with = ROOT
 				AND = {
 					has_full_control_of_state = 670
 					has_full_control_of_state = 671
@@ -4774,11 +4802,11 @@ focus = {
 		completion_reward = {
 		FRA = {
 		release = CAM
-		CHI = { set_autonomy = { target = CAM autonomy_state = autonomy_colony } }
+		ROOT = { set_autonomy = { target = CAM autonomy_state = autonomy_colony } }
 		release = LAO
-		CHI = { set_autonomy = { target = LAO autonomy_state = autonomy_colony } }
+		ROOT = { set_autonomy = { target = LAO autonomy_state = autonomy_colony } }
 		release = VIN
-		CHI = { set_autonomy = { target = VIN autonomy_state = autonomy_colony } }
+		ROOT = { set_autonomy = { target = VIN autonomy_state = autonomy_colony } }
 		}
 		}
 	}
