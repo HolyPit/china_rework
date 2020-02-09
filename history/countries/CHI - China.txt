@@ -43,6 +43,11 @@ if = {
 
 add_ideas = {
 	german_advisors
+	CHI_end_of_golden_decade3
+	CHI_factory_strikes3
+	CHI_risk_of_famine2
+	CHI_lack_of_labor3
+	CHI_research_behind3
 }
 
 if = {

@@ -38,17 +38,17 @@
 shared_focus = {
 	id = CHI_invite_foreign_investors
 	icon = GFX_focus_generic_concessions
-	x = 40
+	x = 50
 	y = 0
 	offset = {
-		x = -6
+		x = -16
 		y = 0
 		trigger = {
 			tag = PRC
 		}
 	}
 	offset = {
-		x = -16
+		x = -26
 		y = 0
 		trigger = {
 			 tag = MAN

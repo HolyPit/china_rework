@@ -6,6 +6,7 @@ focus_tree = {
 		modifier = {
 			add = 10
 			tag = CHI
+			#has_dlc = "Waking the Tiger"
 		}
 	}
 
@@ -4815,6 +4816,14 @@ focus = {
 		}
 	}
 
+
+
+
+	#################################
+	##### Chinese Nationalism  ######
+	#################################
+
+
 	focus = {
 		id = CHI_nodlc_support_chiang
 		icon = GFX_focus_chi_cooperation_with_the_nationalists
@@ -4897,12 +4906,771 @@ focus = {
 
 
 
+
+
+
+
+	#################################
+	##### Chinese Welfare ###########
+	#################################
+
+
+
+	focus = {
+		id = CHI_nodlc_chinese_welfare
+		icon = GFX_focus_generic_self_management
+		x = 5
+		y = 0
+		relative_position_id = CHI_nodlc_nationalism
+		prerequisite = { focus = CHI_nodlc_three_principles_of_the_people}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			swap_ideas = {
+				remove_idea = CHI_risk_of_famine2
+				add_idea = CHI_risk_of_famine1
+			}
+		}
+	}
+
+##################################################################################
+
+	focus = {
+		id = CHI_nodlc_chinese_livelihood
+		icon = GFX_goal_generic_consumer_goods
+		x = -2
+		y = 1
+		relative_position_id = CHI_nodlc_chinese_welfare
+		prerequisite = { focus = CHI_nodlc_chinese_welfare}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = CHI_nodlc_land_reform
+		icon = GFX_goal_generic_neutrality_focus
+		x = -2
+		y = 2
+		relative_position_id = CHI_nodlc_chinese_welfare
+		prerequisite = { focus = CHI_nodlc_chinese_livelihood}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CHI_lack_of_labor3
+				add_idea = CHI_lack_of_labor2
+			}
+		}
+	}
+
+
+
+
+	focus = {
+		id = CHI_nodlc_agriculture_reform
+		icon = GFX_goal_generic_construction
+		x = -2
+		y = 3
+		relative_position_id = CHI_nodlc_chinese_welfare
+		prerequisite = { focus = CHI_nodlc_land_reform}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = CHI_risk_of_famine1
+		}
+	}
+
+
+
+	focus = {
+		id = CHI_nodlc_employment_reform
+		icon = GFX_goal_generic_production
+		x = -2
+		y = 4
+		relative_position_id = CHI_nodlc_chinese_welfare
+		prerequisite = { focus = CHI_nodlc_agriculture_reform}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		swap_ideas = {
+			remove_idea = CHI_lack_of_labor2
+			add_idea = CHI_lack_of_labor1
+		}
+		}
+	}
+
+
+
+	focus = {
+		id = CHI_nodlc_union_reform
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = -2
+		y = 5
+		relative_position_id = CHI_nodlc_chinese_welfare
+		prerequisite = { focus = CHI_nodlc_employment_reform}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		remove_ideas = CHI_lack_of_labor1
+		}
+	}
+
+##################################################################################
+
+	focus = {
+		id = CHI_nodlc_chinese_education
+		icon = GFX_focus_generic_military_academy
+		x = 0
+		y = 1
+		relative_position_id = CHI_nodlc_chinese_welfare
+		prerequisite = { focus = CHI_nodlc_chinese_welfare}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+			remove_idea = CHI_research_behind3
+			add_idea = CHI_research_behind2
+			}
+		}
+	}
+
+
+	focus = {
+		id = CHI_nodlc_new_culture_movement
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 2
+		relative_position_id = CHI_nodlc_chinese_welfare
+		prerequisite = { focus = CHI_nodlc_chinese_education}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			CHI_end_of_golden_decade_level_down = yes
+		}
+	}
+
+
+	focus = {
+		id = CHI_nodlc_womens_liberation
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		x = 0
+		y = 3
+		relative_position_id = CHI_nodlc_chinese_welfare
+		prerequisite = { focus = CHI_nodlc_new_culture_movement}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			CHI_factory_strikes_level_down = yes
+		}
+	}
+
+
+	focus = {
+		id = CHI_nodlc_education_act
+		icon = GFX_focus_research
+		x = 0
+		y = 4
+		relative_position_id = CHI_nodlc_chinese_welfare
+		prerequisite = { focus = CHI_nodlc_womens_liberation}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+			swap_ideas = {
+			remove_idea = CHI_research_behind2
+			add_idea = CHI_research_behind1
+			}
+		}
+	}
+
+
+	focus = {
+		id = CHI_nodlc_standardise_chinese
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 0
+		y = 5
+		relative_position_id = CHI_nodlc_chinese_welfare
+		prerequisite = { focus = CHI_nodlc_education_act}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = CHI_research_behind1
+		}
+	}
+
+
+
+##################################################################################
+
+	focus = {
+		id = CHI_nodlc_chinese_economy
+		icon = GFX_focus_generic_industry_3
+		x = 3
+		y = 1
+		relative_position_id = CHI_nodlc_chinese_welfare
+		prerequisite = { focus = CHI_nodlc_chinese_welfare}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 120
+		}
+	}
+
+
+	focus = {
+		id = CHI_nodlc_new_currency
+		icon = GFX_focus_mex_privatisation
+		x = 2
+		y = 2
+		relative_position_id = CHI_nodlc_chinese_welfare
+		prerequisite = { focus = CHI_nodlc_chinese_economy}
+		mutually_exclusive = { focus = CHI_nodlc_silver_standard}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			CHI_end_of_golden_decade_level_down = yes
+		}
+	}
+
+
+
+	focus = {
+		id = CHI_nodlc_central_bank
+		icon = GFX_focus_generic_self_management
+		x = 2
+		y = 3
+		relative_position_id = CHI_nodlc_chinese_welfare
+		prerequisite = { focus = CHI_nodlc_new_currency}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+		}
+	}
+
+
+	focus = {
+		id = CHI_nodlc_nationalisation
+		icon = GFX_focus_rom_parties_end
+		x = 2
+		y = 4
+		relative_position_id = CHI_nodlc_chinese_welfare
+		prerequisite = { focus = CHI_nodlc_central_bank focus = CHI_nodlc_treasury}
+		mutually_exclusive = {focus = CHI_nodlc_privatisation}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			CHI_end_of_golden_decade_level_down = yes
+		}
+	}
+
+
+	focus = {
+		id = CHI_nodlc_repay_debt
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 2
+		y = 5
+		relative_position_id = CHI_nodlc_chinese_welfare
+		prerequisite = { focus = CHI_nodlc_nationalisation}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			CHI_end_of_golden_decade_level_down = yes
+		}
+	}
+
+
+
+	##################################################################################
+
+
+
+		focus = {
+			id = CHI_nodlc_silver_standard
+			icon = GFX_focus_chi_silver_standard
+			x = 4
+			y = 2
+			relative_position_id = CHI_nodlc_chinese_welfare
+			prerequisite = { focus = CHI_nodlc_chinese_economy}
+			mutually_exclusive = {focus = CHI_nodlc_new_currency}
+
+			cost = 4
+
+			ai_will_do = {
+				factor = 4
+			}
+
+			available = {
+
+			}
+
+			bypass = {
+
+			}
+
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = no
+
+			completion_reward = {
+				add_stability = 0.05
+				CHI_factory_strikes_level_down = yes
+			}
+		}
+
+		focus = {
+			id = CHI_nodlc_treasury
+			icon = GFX_goal_generic_intelligence_exchange
+			x = 4
+			y = 3
+			relative_position_id = CHI_nodlc_chinese_welfare
+			prerequisite = { focus = CHI_nodlc_silver_standard}
+
+			cost = 4
+
+			ai_will_do = {
+				factor = 4
+			}
+
+			available = {
+
+			}
+
+			bypass = {
+
+			}
+
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = no
+
+			completion_reward = {
+				CHI_factory_strikes_level_down = yes
+			}
+		}
+
+
+		focus = {
+			id = CHI_nodlc_privatisation
+			icon = GFX_focus_generic_concessions
+			x = 4
+			y = 4
+			relative_position_id = CHI_nodlc_chinese_welfare
+			prerequisite = { focus = CHI_nodlc_central_bank focus = CHI_nodlc_treasury }
+			mutually_exclusive = {focus = CHI_nodlc_nationalisation}
+
+			cost = 4
+
+			ai_will_do = {
+				factor = 4
+			}
+
+			available = {
+
+			}
+
+			bypass = {
+
+			}
+
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = no
+
+			completion_reward = {
+				CHI_factory_strikes_level_down = yes
+			}
+		}
+
+
+		focus = {
+			id = CHI_nodlc_control_inflation
+			icon = GFX_focus_chi_abandon_silver_standard
+			x = 4
+			y = 5
+			relative_position_id = CHI_nodlc_chinese_welfare
+			prerequisite = { focus = CHI_nodlc_privatisation}
+
+			cost = 4
+
+			ai_will_do = {
+				factor = 4
+			}
+
+			available = {
+
+			}
+
+			bypass = {
+
+			}
+
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = no
+
+			completion_reward = {
+				add_stability = 0.05
+				CHI_factory_strikes_level_down = yes
+			}
+		}
+
+
+
+		#################################################################
+		focus = {
+			id = CHI_nodlc_second_golden_decade
+			icon = GFX_focus_usa_reestablish_the_gold_standard
+			x = 0
+			y = 6
+			relative_position_id = CHI_nodlc_chinese_welfare
+			prerequisite = { focus = CHI_nodlc_union_reform}
+			prerequisite = { focus = CHI_nodlc_standardise_chinese}
+			prerequisite = { focus = CHI_nodlc_repay_debt focus = CHI_nodlc_control_inflation}
+
+			cost = 10
+
+			ai_will_do = {
+				factor = 4
+			}
+
+			available = {
+
+			}
+
+			bypass = {
+
+			}
+
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = no
+
+			completion_reward = {
+				add_timed_idea = { idea = CHI_second_golden_decade days=3650}
+			}
+		}
+
+
+	#########################################
+	##### Military Affairs Commission  ######
+	#########################################
+
+
+	focus = {
+		id = CHI_nodlc_government_reform
+		icon = GFX_goal_generic_forceful_treaty
+		x = 28
+		y = 0
+		relative_position_id = CHI_nodlc_three_principles_of_the_people
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_ideas = partial_economic_mobilisation
+		}
+	}
+
 	focus = {
 		id = CHI_nodlc_military_affairs_commission
 		icon = GFX_focus_secret_rearmament
-		x = 20
-		y = 0
-		relative_position_id = CHI_nodlc_three_principles_of_the_people
+		x = 2
+		y = 1
+		relative_position_id = CHI_nodlc_government_reform
+		prerequisite = {focus = CHI_nodlc_government_reform}
 
 		cost = 10
 

@@ -1,6 +1,16 @@
 spriteTypes = {
 
   SpriteType = {
+  name = "GFX_focus_chi_silver_standard"
+  texturefile = "gfx/interface/goals/focus_chi_silver_standard.dds"
+  }
+
+  SpriteType = {
+  name = "GFX_focus_chi_abandon_silver_standard"
+  texturefile = "gfx/interface/goals/focus_chi_abandon_silver_standard.dds"
+  }
+
+  SpriteType = {
   name = "GFX_focus_chi_beiyang"
   texturefile = "gfx/interface/goals/focus_chi_beiyang.dds"
   }

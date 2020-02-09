@@ -254,6 +254,35 @@
   CHI_ccp_kmt_5:0 "CPC Domination"
   CHI_ccp_kmt_5_desc:0 "Strong support for CPC"
 
+  CHI_end_of_golden_decade1:0 "End of the Golden Decade"
+  CHI_end_of_golden_decade2:0 "End of the Golden Decade"
+  CHI_end_of_golden_decade3:0 "End of the Golden Decade"
+  CHI_end_of_golden_decade0:0 "End of the Golden Decade"
+  CHI_new_golden_decade:0 "A New Golden Decade?"
+
+  CHI_second_golden_decade:0 "The Second Golden Decade"
+
+  CHI_factory_strikes3:0 "Inefficient Production"
+  CHI_factory_strikes2:0 "Inefficient Production"
+  CHI_factory_strikes1:0 "Inefficient Production"
+  CHI_factory_strikes0:0 "Normal Production"
+  CHI_factory_boost1:0 "Made in China!"
+  CHI_factory_boost2:0 "Made in China!"
+  CHI_factory_boost3:0 "Made in China!"
+
+  CHI_risk_of_famine2:0 "Food Crisis"
+  CHI_risk_of_famine1:0 "Food Crisis"
+
+  CHI_lack_of_labor3:0 "Forced Labor"
+  CHI_lack_of_labor2:0 "Forced Labor"
+  CHI_lack_of_labor1:0 "Forced Labor"
+
+  CHI_research_behind3:0 "Uneducated Citizens"
+  CHI_research_behind2:0 "Uneducated Citizens"
+  CHI_research_behind1:0 "Uneducated Citizens"
+
+
+
   ####### party names localisation #####
   CHI_party_military_affairs_commission_long:0 "Military Affairs Commission"
   CHI_party_military_affairs_commission:0 "MAC"

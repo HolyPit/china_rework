@@ -2,6 +2,343 @@ ideas = {
 	country = {
 
 		####### MOD #############
+		CHI_second_golden_decade = {
+
+		allowed = {
+			original_tag = CHI
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		picture = generic_political_support
+		removal_cost = -1
+		modifier = {
+			stability_factor = +0.05
+			political_power_factor = +0.05
+			industrial_capacity_factory = +0.05
+			research_speed_factor = +0.05
+			production_speed_buildings_factor = +0.05
+		}
+		}
+
+		CHI_end_of_golden_decade3 = {
+
+		allowed = {
+			original_tag = CHI
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		picture = great_depression
+		removal_cost = -1
+		modifier = {
+			consumer_goods_factor = +0.15
+		}
+		}
+
+		CHI_end_of_golden_decade2 = {
+		allowed = {
+			original_tag = CHI
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		picture = great_depression
+		removal_cost = -1
+		modifier = {
+			consumer_goods_factor = +0.1
+		}
+		}
+
+
+		CHI_end_of_golden_decade1 = {
+		allowed = {
+			original_tag = CHI
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		picture = great_depression
+		removal_cost = -1
+		modifier = {
+			consumer_goods_factor = +0.05
+		}
+		}
+
+		CHI_end_of_golden_decade0 = {
+		allowed = {
+			original_tag = CHI
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		picture = great_depression
+		removal_cost = -1
+		modifier = {
+		}
+		}
+
+		CHI_new_golden_decade = {
+		allowed = {
+			original_tag = CHI
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		picture = generic_agrarian_reform
+		removal_cost = -1
+		modifier = {
+			consumer_goods_factor = -0.05
+		}
+		}
+
+
+		###################################################
+
+				CHI_factory_strikes3 = {
+				allowed = {
+					original_tag = CHI
+					always = no
+				}
+				allowed_civil_war = {
+					always = yes
+				}
+				picture = FRA_factory_strikes
+				removal_cost = -1
+				modifier = {
+					industrial_capacity_factory = -0.15
+				}
+				}
+
+				CHI_factory_strikes2 = {
+				allowed = {
+					original_tag = CHI
+					always = no
+				}
+				allowed_civil_war = {
+					always = yes
+				}
+				picture = FRA_factory_strikes
+				removal_cost = -1
+				modifier = {
+					industrial_capacity_factory = -0.1
+				}
+				}
+
+				CHI_factory_strikes1 = {
+				allowed = {
+					original_tag = CHI
+					always = no
+				}
+				allowed_civil_war = {
+					always = yes
+				}
+				picture = FRA_factory_strikes
+				removal_cost = -1
+				modifier = {
+					industrial_capacity_factory = -0.05
+				}
+				}
+
+				CHI_factory_strikes0 = {
+				allowed = {
+					original_tag = CHI
+					always = no
+				}
+				allowed_civil_war = {
+					always = yes
+				}
+				picture = generic_production_bonus
+				removal_cost = -1
+				modifier = {
+
+				}
+				}
+
+
+				CHI_factory_boost1 = {
+				allowed = {
+					original_tag = CHI
+					always = no
+				}
+				allowed_civil_war = {
+					always = yes
+				}
+				picture = generic_production_bonus
+				removal_cost = -1
+				modifier = {
+					industrial_capacity_factory = 0.05
+				}
+				}
+
+
+				CHI_factory_boost2 = {
+				allowed = {
+					original_tag = CHI
+					always = no
+				}
+				allowed_civil_war = {
+					always = yes
+				}
+				picture = generic_production_bonus
+				removal_cost = -1
+				modifier = {
+					industrial_capacity_factory = 0.1
+				}
+				}
+
+
+				CHI_factory_boost3 = {
+				allowed = {
+					original_tag = CHI
+					always = no
+				}
+				allowed_civil_war = {
+					always = yes
+				}
+				picture = generic_production_bonus
+				removal_cost = -1
+				modifier = {
+					industrial_capacity_factory = 0.15
+				}
+				}
+
+		###################################################
+
+		CHI_risk_of_famine2 = {
+		allowed = {
+			original_tag = CHI
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		picture = raj_risk_of_famine
+		removal_cost = -1
+		modifier = {
+			conscription_factor = -0.15
+		}
+		}
+
+		CHI_risk_of_famine1 = {
+		allowed = {
+			original_tag = CHI
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		picture = raj_risk_of_famine
+		removal_cost = -1
+		modifier = {
+			conscription_factor = -0.1
+		}
+		}
+
+
+		###################################################
+
+		CHI_lack_of_labor3 = {
+		allowed = {
+			original_tag = CHI
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		picture = generic_exploit_mines
+		removal_cost = -1
+		modifier = {
+			production_speed_buildings_factor = -0.15
+		}
+		}
+
+		CHI_lack_of_labor2 = {
+		allowed = {
+			original_tag = CHI
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		picture = generic_exploit_mines
+		removal_cost = -1
+		modifier = {
+			production_speed_buildings_factor = -0.1
+		}
+		}
+
+		CHI_lack_of_labor1 = {
+		allowed = {
+			original_tag = CHI
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		picture = generic_exploit_mines
+		removal_cost = -1
+		modifier = {
+			production_speed_buildings_factor = -0.05
+		}
+		}
+
+
+
+		###################################################
+		CHI_research_behind3 = {
+		allowed = {
+			original_tag = CHI
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		picture = jap_duplicate_research
+		removal_cost = -1
+		modifier = {
+			research_speed_factor = -0.15
+		}
+		}
+
+		CHI_research_behind2 = {
+		allowed = {
+			original_tag = CHI
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		picture = jap_duplicate_research
+		removal_cost = -1
+		modifier = {
+			research_speed_factor = -0.1
+		}
+		}
+
+		CHI_research_behind1 = {
+		allowed = {
+			original_tag = CHI
+			always = no
+		}
+		allowed_civil_war = {
+			always = yes
+		}
+		picture = jap_duplicate_research
+		removal_cost = -1
+		modifier = {
+			research_speed_factor = -0.05
+		}
+		}
+
+
+		###################################################
 
 		CHI_ccp_kmt_1 = {
 

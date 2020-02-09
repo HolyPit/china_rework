@@ -4812,7 +4812,724 @@ focus = {
 	}
 
 
+	#################################
+	##### Chinese Welfare ###########
+	#################################
 
+
+
+	focus = {
+		id = CHI_chinese_welfare
+		icon = GFX_focus_generic_self_management
+		x = 19
+		y = 1
+		relative_position_id = CHI_three_principles_of_the_people
+		prerequisite = { focus = CHI_three_principles_of_the_people}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+			swap_ideas = {
+				remove_idea = CHI_risk_of_famine2
+				add_idea = CHI_risk_of_famine1
+			}
+		}
+	}
+
+##################################################################################
+
+	focus = {
+		id = CHI_chinese_livelihood
+		icon = GFX_goal_generic_consumer_goods
+		x = -2
+		y = 1
+		relative_position_id = CHI_chinese_welfare
+		prerequisite = { focus = CHI_chinese_welfare}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_stability = 0.05
+		}
+	}
+
+	focus = {
+		id = CHI_reform_land
+		icon = GFX_goal_generic_neutrality_focus
+		x = -2
+		y = 2
+		relative_position_id = CHI_chinese_welfare
+		prerequisite = { focus = CHI_chinese_livelihood}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+				remove_idea = CHI_lack_of_labor3
+				add_idea = CHI_lack_of_labor2
+			}
+		}
+	}
+
+
+
+
+	focus = {
+		id = CHI_agriculture_reform
+		icon = GFX_goal_generic_construction
+		x = -2
+		y = 3
+		relative_position_id = CHI_chinese_welfare
+		prerequisite = { focus = CHI_reform_land}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = CHI_risk_of_famine1
+		}
+	}
+
+
+
+	focus = {
+		id = CHI_employment_reform
+		icon = GFX_goal_generic_production
+		x = -2
+		y = 4
+		relative_position_id = CHI_chinese_welfare
+		prerequisite = { focus = CHI_agriculture_reform}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		swap_ideas = {
+			remove_idea = CHI_lack_of_labor2
+			add_idea = CHI_lack_of_labor1
+		}
+		}
+	}
+
+
+
+	focus = {
+		id = CHI_union_reform
+		icon = GFX_focus_eng_concessions_to_the_trade_unions
+		x = -2
+		y = 5
+		relative_position_id = CHI_chinese_welfare
+		prerequisite = { focus = CHI_employment_reform}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+		remove_ideas = CHI_lack_of_labor1
+		}
+	}
+
+##################################################################################
+
+	focus = {
+		id = CHI_chinese_education
+		icon = GFX_focus_generic_military_academy
+		x = 0
+		y = 1
+		relative_position_id = CHI_chinese_welfare
+		prerequisite = { focus = CHI_chinese_welfare}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			swap_ideas = {
+			remove_idea = CHI_research_behind3
+			add_idea = CHI_research_behind2
+			}
+		}
+	}
+
+
+	focus = {
+		id = CHI_new_culture_movement
+		icon = GFX_goal_generic_propaganda
+		x = 0
+		y = 2
+		relative_position_id = CHI_chinese_welfare
+		prerequisite = { focus = CHI_chinese_education}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			CHI_end_of_golden_decade_level_down = yes
+		}
+	}
+
+
+	focus = {
+		id = CHI_womens_liberation
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		x = 0
+		y = 3
+		relative_position_id = CHI_chinese_welfare
+		prerequisite = { focus = CHI_new_culture_movement}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			CHI_factory_strikes_level_down = yes
+		}
+	}
+
+
+	focus = {
+		id = CHI_education_act
+		icon = GFX_focus_research
+		x = 0
+		y = 4
+		relative_position_id = CHI_chinese_welfare
+		prerequisite = { focus = CHI_womens_liberation}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_research_slot = 1
+			swap_ideas = {
+			remove_idea = CHI_research_behind2
+			add_idea = CHI_research_behind1
+			}
+		}
+	}
+
+
+	focus = {
+		id = CHI_standardise_chinese
+		icon = GFX_goal_generic_intelligence_exchange
+		x = 0
+		y = 5
+		relative_position_id = CHI_chinese_welfare
+		prerequisite = { focus = CHI_education_act}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			remove_ideas = CHI_research_behind1
+		}
+	}
+
+
+
+##################################################################################
+
+	focus = {
+		id = CHI_chinese_economy
+		icon = GFX_focus_generic_industry_3
+		x = 3
+		y = 1
+		relative_position_id = CHI_chinese_welfare
+		prerequisite = { focus = CHI_chinese_welfare}
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 120
+			CHI_factory_strikes_level_down = yes
+		}
+	}
+
+
+	focus = {
+		id = CHI_new_currency
+		icon = GFX_focus_mex_privatisation
+		x = 2
+		y = 2
+		relative_position_id = CHI_chinese_welfare
+		prerequisite = { focus = CHI_chinese_economy}
+		mutually_exclusive = { focus = CHI_silver_standard}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			CHI_end_of_golden_decade_level_down = yes
+		}
+	}
+
+
+
+	focus = {
+		id = CHI_central_bank
+		icon = GFX_focus_generic_self_management
+		x = 2
+		y = 3
+		relative_position_id = CHI_chinese_welfare
+		prerequisite = { focus = CHI_new_currency}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			add_political_power = 100
+			add_stability = 0.05
+		}
+	}
+
+
+	focus = {
+		id = CHI_nationalisation
+		icon = GFX_focus_rom_parties_end
+		x = 2
+		y = 4
+		relative_position_id = CHI_chinese_welfare
+		prerequisite = { focus = CHI_central_bank focus = CHI_treasury}
+		mutually_exclusive = {focus = CHI_privatisation}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			CHI_end_of_golden_decade_level_down = yes
+		}
+	}
+
+
+	focus = {
+		id = CHI_repay_debt
+		icon = GFX_goal_generic_positive_trade_relations
+		x = 2
+		y = 5
+		relative_position_id = CHI_chinese_welfare
+		prerequisite = { focus = CHI_nationalisation}
+
+		cost = 4
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			CHI_end_of_golden_decade_level_down = yes
+		}
+	}
+
+
+
+	##################################################################################
+
+
+
+		focus = {
+			id = CHI_silver_standard
+			icon = GFX_focus_chi_silver_standard
+			x = 4
+			y = 2
+			relative_position_id = CHI_chinese_welfare
+			prerequisite = { focus = CHI_chinese_economy}
+			mutually_exclusive = {focus = CHI_new_currency}
+
+			cost = 4
+
+			ai_will_do = {
+				factor = 4
+			}
+
+			available = {
+
+			}
+
+			bypass = {
+
+			}
+
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = no
+
+			completion_reward = {
+				add_stability = 0.05
+				CHI_factory_strikes_level_down = yes
+			}
+		}
+
+		focus = {
+			id = CHI_treasury
+			icon = GFX_goal_generic_intelligence_exchange
+			x = 4
+			y = 3
+			relative_position_id = CHI_chinese_welfare
+			prerequisite = { focus = CHI_silver_standard}
+
+			cost = 4
+
+			ai_will_do = {
+				factor = 4
+			}
+
+			available = {
+
+			}
+
+			bypass = {
+
+			}
+
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = no
+
+			completion_reward = {
+				CHI_factory_strikes_level_down = yes
+			}
+		}
+
+
+		focus = {
+			id = CHI_privatisation
+			icon = GFX_focus_generic_concessions
+			x = 4
+			y = 4
+			relative_position_id = CHI_chinese_welfare
+			prerequisite = { focus = CHI_central_bank focus = CHI_treasury }
+			mutually_exclusive = {focus = CHI_nationalisation}
+
+			cost = 4
+
+			ai_will_do = {
+				factor = 4
+			}
+
+			available = {
+
+			}
+
+			bypass = {
+
+			}
+
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = no
+
+			completion_reward = {
+				CHI_factory_strikes_level_down = yes
+			}
+		}
+
+
+		focus = {
+			id = CHI_control_inflation
+			icon = GFX_focus_chi_abandon_silver_standard
+			x = 4
+			y = 5
+			relative_position_id = CHI_chinese_welfare
+			prerequisite = { focus = CHI_privatisation}
+
+			cost = 4
+
+			ai_will_do = {
+				factor = 4
+			}
+
+			available = {
+
+			}
+
+			bypass = {
+
+			}
+
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = no
+
+			completion_reward = {
+				add_stability = 0.05
+				CHI_factory_strikes_level_down = yes
+			}
+		}
+
+
+
+		#################################################################
+		focus = {
+			id = CHI_second_golden_decade
+			icon = GFX_focus_usa_reestablish_the_gold_standard
+			x = 0
+			y = 6
+			relative_position_id = CHI_chinese_welfare
+			prerequisite = { focus = CHI_union_reform}
+			prerequisite = { focus = CHI_standardise_chinese}
+			prerequisite = { focus = CHI_repay_debt focus = CHI_control_inflation}
+
+			cost = 10
+
+			ai_will_do = {
+				factor = 4
+			}
+
+			available = {
+
+			}
+
+			bypass = {
+
+			}
+
+			cancel_if_invalid = yes
+			continue_if_invalid = no
+			available_if_capitulated = no
+
+			completion_reward = {
+				add_timed_idea = { idea = CHI_second_golden_decade days=3650}
+			}
+		}
 
 
 
@@ -4822,274 +5539,274 @@ focus = {
 #######################################################
 
 
-
-	focus = {
-		id = CHI_welfare
-		icon = GFX_goal_generic_consumer_goods
-		prerequisite = { focus = CHI_three_principles_of_the_people }
-		x = 17
-		y = 1
-		relative_position_id = CHI_three_principles_of_the_people
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 4
-		}
-
-		available = {
-			NOT = {
-				has_idea = CHI_hyper_inflation_5
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_war_support = 0.1
-			CHI_hyper_inflation_level_up = yes
-		}
-	}
-
-	focus = {
-		id = CHI_refugee_relief_agency
-		icon = GFX_focus_generic_self_management
-		prerequisite = { focus = CHI_welfare }
-		x = -1
-		y = 1
-		relative_position_id = CHI_welfare
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 4
-		}
-
-		available = {
-			NOT = {
-				has_idea = CHI_hyper_inflation_5
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_war_support = 0.1
-			CHI_hyper_inflation_level_up = yes
-		}
-	}
-
-	focus = {
-		id = CHI_land_tax_reform
-		icon = GFX_goal_generic_intelligence_exchange
-		prerequisite = { focus = CHI_welfare }
-		x = 1
-		y = 1
-		relative_position_id = CHI_welfare
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 4
-		}
-
-		available = {
-			has_hyper_inflation = yes
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			CHI_hyper_inflation_level_down = yes
-		}
-	}
-
-	focus = {
-		id = CHI_new_life_movement
-		icon = GFX_goal_generic_propaganda
-		prerequisite = { focus = CHI_refugee_relief_agency }
-		x = -1
-		y = 2
-		relative_position_id = CHI_welfare
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 4
-		}
-
-		available = {
-
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_stability = 0.1
-		}
-	}
-
-	focus = {
-		id = CHI_unemployment_assistance
-		icon = GFX_goal_generic_production
-		prerequisite = { focus = CHI_land_tax_reform }
-		x = 1
-		y = 2
-		relative_position_id = CHI_welfare
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			NOT = {
-				has_idea = CHI_hyper_inflation_5
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_war_support = 0.1
-			CHI_hyper_inflation_level_up = yes
-		}
-	}
-
-	focus = {
-		id = CHI_free_hospitals
-		icon = GFX_goal_generic_improve_relations
-		prerequisite = { focus = CHI_new_life_movement }
-		prerequisite = { focus = CHI_unemployment_assistance }
-		x = 0
-		y = 3
-		relative_position_id = CHI_welfare
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			NOT = {
-				has_idea = CHI_hyper_inflation_5
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_war_support = 0.1
-			CHI_hyper_inflation_level_up = yes
-		}
-	}
-
-	focus = {
-		id = CHI_rural_schooling
-		icon = GFX_goal_generic_scientific_exchange
-		prerequisite = { focus = CHI_free_hospitals }
-		x = 0
-		y = 4
-		relative_position_id = CHI_welfare
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			amount_research_slots < 5
-			NOT = {
-				has_idea = CHI_hyper_inflation_5
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		complete_tooltip = {
-
-		}
-
-		completion_reward = {
-			add_research_slot = 1
-			CHI_hyper_inflation_level_up = yes
-		}
-	}
-
-
-
-
-
-
+	#
+	# focus = {
+	# 	id = CHI_welfare
+	# 	icon = GFX_goal_generic_consumer_goods
+	# 	prerequisite = { focus = CHI_three_principles_of_the_people }
+	# 	x = 17
+	# 	y = 1
+	# 	relative_position_id = CHI_three_principles_of_the_people
+	#
+	# 	cost = 10
+	#
+	# 	ai_will_do = {
+	# 		factor = 4
+	# 	}
+	#
+	# 	available = {
+	# 		NOT = {
+	# 			has_idea = CHI_hyper_inflation_5
+	# 		}
+	# 	}
+	#
+	# 	bypass = {
+	#
+	# 	}
+	#
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	#
+	# 	complete_tooltip = {
+	#
+	# 	}
+	#
+	# 	completion_reward = {
+	# 		add_war_support = 0.1
+	# 		CHI_hyper_inflation_level_up = yes
+	# 	}
+	# }
+	#
+	# focus = {
+	# 	id = CHI_refugee_relief_agency
+	# 	icon = GFX_focus_generic_self_management
+	# 	prerequisite = { focus = CHI_welfare }
+	# 	x = -1
+	# 	y = 1
+	# 	relative_position_id = CHI_welfare
+	#
+	# 	cost = 10
+	#
+	# 	ai_will_do = {
+	# 		factor = 4
+	# 	}
+	#
+	# 	available = {
+	# 		NOT = {
+	# 			has_idea = CHI_hyper_inflation_5
+	# 		}
+	# 	}
+	#
+	# 	bypass = {
+	#
+	# 	}
+	#
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	#
+	# 	complete_tooltip = {
+	#
+	# 	}
+	#
+	# 	completion_reward = {
+	# 		add_war_support = 0.1
+	# 		CHI_hyper_inflation_level_up = yes
+	# 	}
+	# }
+	#
+	# focus = {
+	# 	id = CHI_land_tax_reform
+	# 	icon = GFX_goal_generic_intelligence_exchange
+	# 	prerequisite = { focus = CHI_welfare }
+	# 	x = 1
+	# 	y = 1
+	# 	relative_position_id = CHI_welfare
+	#
+	# 	cost = 10
+	#
+	# 	ai_will_do = {
+	# 		factor = 4
+	# 	}
+	#
+	# 	available = {
+	# 		has_hyper_inflation = yes
+	# 	}
+	#
+	# 	bypass = {
+	#
+	# 	}
+	#
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	#
+	# 	complete_tooltip = {
+	#
+	# 	}
+	#
+	# 	completion_reward = {
+	# 		CHI_hyper_inflation_level_down = yes
+	# 	}
+	# }
+	#
+	# focus = {
+	# 	id = CHI_new_life_movement
+	# 	icon = GFX_goal_generic_propaganda
+	# 	prerequisite = { focus = CHI_refugee_relief_agency }
+	# 	x = -1
+	# 	y = 2
+	# 	relative_position_id = CHI_welfare
+	#
+	# 	cost = 10
+	#
+	# 	ai_will_do = {
+	# 		factor = 4
+	# 	}
+	#
+	# 	available = {
+	#
+	# 	}
+	#
+	# 	bypass = {
+	#
+	# 	}
+	#
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	#
+	# 	complete_tooltip = {
+	#
+	# 	}
+	#
+	# 	completion_reward = {
+	# 		add_stability = 0.1
+	# 	}
+	# }
+	#
+	# focus = {
+	# 	id = CHI_unemployment_assistance
+	# 	icon = GFX_goal_generic_production
+	# 	prerequisite = { focus = CHI_land_tax_reform }
+	# 	x = 1
+	# 	y = 2
+	# 	relative_position_id = CHI_welfare
+	#
+	# 	cost = 10
+	#
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	#
+	# 	available = {
+	# 		NOT = {
+	# 			has_idea = CHI_hyper_inflation_5
+	# 		}
+	# 	}
+	#
+	# 	bypass = {
+	#
+	# 	}
+	#
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	#
+	# 	complete_tooltip = {
+	#
+	# 	}
+	#
+	# 	completion_reward = {
+	# 		add_war_support = 0.1
+	# 		CHI_hyper_inflation_level_up = yes
+	# 	}
+	# }
+	#
+	# focus = {
+	# 	id = CHI_free_hospitals
+	# 	icon = GFX_goal_generic_improve_relations
+	# 	prerequisite = { focus = CHI_new_life_movement }
+	# 	prerequisite = { focus = CHI_unemployment_assistance }
+	# 	x = 0
+	# 	y = 3
+	# 	relative_position_id = CHI_welfare
+	#
+	# 	cost = 10
+	#
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	#
+	# 	available = {
+	# 		NOT = {
+	# 			has_idea = CHI_hyper_inflation_5
+	# 		}
+	# 	}
+	#
+	# 	bypass = {
+	#
+	# 	}
+	#
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	#
+	# 	complete_tooltip = {
+	#
+	# 	}
+	#
+	# 	completion_reward = {
+	# 		add_war_support = 0.1
+	# 		CHI_hyper_inflation_level_up = yes
+	# 	}
+	# }
+	#
+	# focus = {
+	# 	id = CHI_rural_schooling
+	# 	icon = GFX_goal_generic_scientific_exchange
+	# 	prerequisite = { focus = CHI_free_hospitals }
+	# 	x = 0
+	# 	y = 4
+	# 	relative_position_id = CHI_welfare
+	#
+	# 	cost = 10
+	#
+	# 	ai_will_do = {
+	# 		factor = 1
+	# 	}
+	#
+	# 	available = {
+	# 		amount_research_slots < 5
+	# 		NOT = {
+	# 			has_idea = CHI_hyper_inflation_5
+	# 		}
+	# 	}
+	#
+	# 	bypass = {
+	#
+	# 	}
+	#
+	# 	cancel_if_invalid = yes
+	# 	continue_if_invalid = no
+	# 	available_if_capitulated = no
+	#
+	# 	complete_tooltip = {
+	#
+	# 	}
+	#
+	# 	completion_reward = {
+	# 		add_research_slot = 1
+	# 		CHI_hyper_inflation_level_up = yes
+	# 	}
+	# }
+	#
+	#
+	#
+	#
+	#
+	#
 
 
 
@@ -5862,7 +6579,7 @@ focus = {
 	focus = {
 		id = CHI_military_affairs_commission
 		icon = GFX_focus_secret_rearmament
-		x = 32
+		x = 40
 		y = 0
 		relative_position_id = CHI_three_principles_of_the_people
 
