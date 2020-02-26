@@ -8,4 +8,4 @@ tags={
 }
 picture="china_rework_new.png"
 remote_file_id="1607661347"
-supported_version="1.8.*"
+supported_version="1.9.*"

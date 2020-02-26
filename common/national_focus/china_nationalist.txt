@@ -13,7 +13,7 @@ focus_tree = {
 
 	default = no
 
-	continuous_focus_position = { x = 20 y = 1500 }
+	continuous_focus_position = { x = 20 y = 1700 }
 
 #	focus = {
 #		id = CHI_
@@ -278,22 +278,22 @@ focus_tree = {
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "ROOT"
+					id = ROOT
 					value = 100
 				}
 				add_ai_strategy = {
 					type = protect
-					id = "ROOT"
+					id = ROOT
 					value = 100
 				}
 				add_ai_strategy = {
 					type = send_volunteers_desire
-					id = "ROOT"
+					id = ROOT
 					value = 100
 				}
 				add_ai_strategy = {
 					type = support
-					id = "ROOT"
+					id = ROOT
 					value = 100
 				}
 			}
@@ -847,22 +847,22 @@ focus = {
 			}
 			add_ai_strategy = {
 				type = alliance
-				id = "ROOT"
+				id = ROOT
 				value = 100
 			}
 			add_ai_strategy = {
 				type = protect
-				id = "ROOT"
+				id = ROOT
 				value = 100
 			}
 			add_ai_strategy = {
 				type = send_volunteers_desire
-				id = "ROOT"
+				id = ROOT
 				value = 100
 			}
 			add_ai_strategy = {
 				type = support
-				id = "ROOT"
+				id = ROOT
 				value = 100
 			}
 		}
@@ -4650,22 +4650,22 @@ focus = {
 			}
 			add_ai_strategy = {
 				type = alliance
-				id = "ROOT"
+				id = ROOT
 				value = 100
 			}
 			add_ai_strategy = {
 				type = protect
-				id = "ROOT"
+				id = ROOT
 				value = 100
 			}
 			add_ai_strategy = {
 				type = send_volunteers_desire
-				id = "ROOT"
+				id = ROOT
 				value = 100
 			}
 			add_ai_strategy = {
 				type = support
-				id = "ROOT"
+				id = ROOT
 				value = 100
 			}
 		}
@@ -7111,67 +7111,15 @@ focus = {
 		}
 	}
 
-	focus = {
-		id = CHI_rural_reconstruction_movement
-		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = CHI_unified_industrial_planning }
-		x = -2
-		y = 1
-		relative_position_id = CHI_unified_industrial_planning
 
-		cost = 10
-
-		ai_will_do = {
-			factor = 4
-		}
-
-		available = {
-			has_full_control_of_state = 607
-			has_full_control_of_state = 602
-			has_full_control_of_state = 605
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-
-		completion_reward = {
-			607 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			602 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-			605 = {
-				add_building_construction = {
-					type = infrastructure
-					level = 1
-					instant_build = yes
-				}
-			}
-
-		}
-	}
 
 	focus = {
 		id = CHI_mining_commission
 		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = CHI_rural_reconstruction_movement }
+		prerequisite = { focus = CHI_unified_industrial_planning }
 		x = 0
 		y = 1
-		relative_position_id = CHI_rural_reconstruction_movement
+		relative_position_id = CHI_unified_industrial_planning
 
 		cost = 10
 
@@ -7516,14 +7464,102 @@ focus = {
 		}
 	}
 
+	focus = {
+		id = CHI_establish_department_of_transportation
+		icon = GFX_goal_generic_construct_infrastructure
+
+
+		x = -2
+		y = 1
+		relative_position_id = CHI_unified_industrial_planning
+		prerequisite = { focus =  CHI_unified_industrial_planning }
+
+		cost = 10
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+
+		available = {
+
+
+
+		}
+
+		bypass = {
+
+			}
+
+
+
+		completion_reward = {
+
+			add_ideas = CHI_department_of_transportation
+
+	}
+	}
+
+	focus = {
+		id = CHI_rural_reconstruction_movement
+		icon = GFX_goal_generic_construct_infrastructure
+		prerequisite = { focus = CHI_establish_department_of_transportation }
+		x = 0
+		y = 1
+		relative_position_id = CHI_establish_department_of_transportation
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+			has_full_control_of_state = 607
+			has_full_control_of_state = 602
+			has_full_control_of_state = 605
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		completion_reward = {
+			607 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			602 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+			605 = {
+				add_building_construction = {
+					type = infrastructure
+					level = 1
+					instant_build = yes
+				}
+			}
+
+		}
+	}
 
 	focus = {
 		id = CHI_develop_the_longhai_railway
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = CHI_mining_commission }
+		prerequisite = { focus = CHI_rural_reconstruction_movement }
 		x = 0
 		y = 1
-		relative_position_id = CHI_mining_commission
+		relative_position_id = CHI_rural_reconstruction_movement
 
 		cost = 10
 
@@ -7625,40 +7661,7 @@ focus = {
 		}
 	}
 
-	focus = {
-		id = CHI_establish_department_of_transportation
-		icon = GFX_goal_generic_construct_infrastructure
 
-
-		x = 0
-		y = 1
-		relative_position_id = CHI_develop_the_yuehan_railway
-		prerequisite = { focus =  CHI_develop_the_yuehan_railway }
-
-		cost = 10
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = yes
-
-		available = {
-
-
-
-		}
-
-		bypass = {
-
-			}
-
-
-
-		completion_reward = {
-
-			add_ideas = CHI_department_of_transportation
-
-	}
-	}
 
 
 
@@ -7672,7 +7675,7 @@ focus = {
 		id = CHI_hanyang_steel_company
 		icon = GFX_goal_generic_construction2
 		prerequisite = { focus = CHI_mining_commission }
-		x = -2
+		x = 0
 		y = 1
 		relative_position_id = CHI_mining_commission
 

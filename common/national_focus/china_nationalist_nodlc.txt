@@ -6,14 +6,14 @@ focus_tree = {
 		modifier = {
 			add = 10
 			tag = CHI
-			#has_dlc = "Waking the Tiger"
+			NOT = {has_dlc = "Waking the Tiger"}
 		}
 	}
 
 
-	default = yes
+	default = no
 
-	continuous_focus_position = { x = 20 y = 1500 }
+	continuous_focus_position = { x = 20 y = 1700 }
 
 #	focus = {
 #		id = CHI_nodlc_
@@ -268,22 +268,22 @@ focus_tree = {
 				}
 				add_ai_strategy = {
 					type = alliance
-					id = "ROOT"
+					id = ROOT
 					value = 100
 				}
 				add_ai_strategy = {
 					type = protect
-					id = "ROOT"
+					id = ROOT
 					value = 100
 				}
 				add_ai_strategy = {
 					type = send_volunteers_desire
-					id = "ROOT"
+					id = ROOT
 					value = 100
 				}
 				add_ai_strategy = {
 					type = support
-					id = "ROOT"
+					id = ROOT
 					value = 100
 				}
 			}
@@ -828,22 +828,22 @@ focus = {
 			}
 			add_ai_strategy = {
 				type = alliance
-				id = "ROOT"
+				id = ROOT
 				value = 100
 			}
 			add_ai_strategy = {
 				type = protect
-				id = "ROOT"
+				id = ROOT
 				value = 100
 			}
 			add_ai_strategy = {
 				type = send_volunteers_desire
-				id = "ROOT"
+				id = ROOT
 				value = 100
 			}
 			add_ai_strategy = {
 				type = support
-				id = "ROOT"
+				id = ROOT
 				value = 100
 			}
 		}
@@ -3347,7 +3347,7 @@ focus = {
 	id = CHI_nodlc_legalise_communist_party
 	icon = GFX_focus_chi_cooperation_with_the_communists
 	prerequisite = { focus = CHI_first_election focus = CHI_military_guided_goverment }
-	mutually_exclusive = { focus =  CHI_suppress_the_communists}
+	mutually_exclusive = { focus =  CHI_nodlc_suppress_the_communists}
 	x = 0
 	y = 1
 	relative_position_id = CHI_nodlc_first_election
@@ -3773,7 +3773,7 @@ focus = {
 	id = CHI_nodlc_suppress_the_communists
 	icon = GFX_goal_anti_comintern_pact
 	prerequisite = { focus = CHI_nodlc_first_election focus = CHI_nodlc_military_guided_goverment }
-	mutually_exclusive = { focus =  CHI_legalise_communist_party}
+	mutually_exclusive = { focus =  CHI_nodlc_legalise_communist_party}
 	x = 0
 	y = 1
 	relative_position_id = CHI_nodlc_military_guided_goverment
@@ -4600,22 +4600,22 @@ focus = {
 		}
 		add_ai_strategy = {
 			type = alliance
-			id = "ROOT"
+			id = ROOT
 			value = 100
 		}
 		add_ai_strategy = {
 			type = protect
-			id = "ROOT"
+			id = ROOT
 			value = 100
 		}
 		add_ai_strategy = {
 			type = send_volunteers_desire
-			id = "ROOT"
+			id = ROOT
 			value = 100
 		}
 		add_ai_strategy = {
 			type = support
-			id = "ROOT"
+			id = ROOT
 			value = 100
 		}
 	}
@@ -4837,11 +4837,45 @@ focus = {
 		cost = 5
 
 		completion_reward = {
-			remove_ideas = CHI_communist_uprisings
+			#remove_ideas = CHI_communist_uprisings
+			add_stability = 0.1
+	}
+	}
+
+
+	focus = {
+		id = CHI_nodlc_union_of_five_races
+		icon = GFX_focus_chi_beiyang
+
+		x = -1
+		y = 2
+		relative_position_id = CHI_nodlc_nationalism
+		prerequisite = { focus = CHI_nodlc_support_chiang }
+
+
+		cost = 5
+
+		completion_reward = {
 			add_stability = 0.05
 	}
 	}
 
+	focus = {
+		id = CHI_nodlc_union_of_five_races_lol
+		icon = GFX_focus_chi_beiyang
+
+		x = -1
+		y = 2
+		relative_position_id = CHI_nodlc_nationalism
+		prerequisite = { focus = CHI_nodlc_support_chiang }
+
+
+		cost = 5
+
+		completion_reward = {
+			add_stability = 0.05
+	}
+	}
 
 	focus = {
 		id = CHI_nodlc_united_command
@@ -4919,7 +4953,7 @@ focus = {
 	focus = {
 		id = CHI_nodlc_chinese_welfare
 		icon = GFX_focus_generic_self_management
-		x = 5
+		x = 7
 		y = 0
 		relative_position_id = CHI_nodlc_nationalism
 		prerequisite = { focus = CHI_nodlc_three_principles_of_the_people}
