@@ -2,6 +2,26 @@ ideas = {
 	country = {
 
 		####### MOD #############
+
+		CHI_chinese_nationalism = {
+
+			picture = generic_fascism_drift_2
+
+			allowed = {
+				always = no
+			}
+
+
+
+			removal_cost = -1
+
+
+			modifier = {
+				fascism_drift = 0.2
+			}
+
+		}
+
 		CHI_second_golden_decade = {
 
 		allowed = {
@@ -828,7 +848,7 @@ ideas = {
 			removal_cost = -1
 
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.10
 			}
 		}
 
@@ -879,28 +899,7 @@ ideas = {
 
 		}
 
-		#####################
-		##### WTT IDEAS #####
-		#####################
 
-		CHI_chinese_nationalism = {
-
-			picture = generic_fascism_drift_2
-
-			allowed = {
-				always = no
-			}
-
-
-
-			removal_cost = -1
-
-
-			modifier = {
-				fascism_drift = 0.2
-			}
-
-		}
 
 		CHI_nine_power_treaty = {
 
@@ -1636,6 +1635,10 @@ ideas = {
 
 			available = {
 				has_completed_focus = CHI_legislative_yuan
+				if = {
+					limit = { has_dlc = "Man the Guns" }
+					NOT = { has_autonomy_state = autonomy_supervised_state }
+				}
 			}
 
 			allowed = {
@@ -1650,6 +1653,25 @@ ideas = {
 			picture = GFX_idea_chi_dai_li
 
 			available = {
+				has_intelligence_agency = yes
+			}
+
+			allowed = {
+				OR = {
+					original_tag = CHI
+					is_chinese_warlord = yes
+				}
+				has_dlc = "La Resistance"
+			}
+
+			traits = { head_of_intelligence }
+		}
+
+		CHI_dai_li_wtt = {
+
+			picture = GFX_idea_chi_dai_li
+			name = CHI_dai_li
+			available = {
 				has_completed_focus = CHI_bureau_of_investigation_and_statistics
 			}
 
@@ -1658,6 +1680,27 @@ ideas = {
 					original_tag = CHI
 					is_chinese_warlord = yes
 				}
+				NOT = { has_dlc = "La Resistance" }
+				has_dlc = "Waking the Tiger"
+			}
+
+			traits = { prince_of_terror }
+		}
+
+		CHI_random_prince_of_terror = {
+
+			picture = generic_political_advisor_asia_2
+
+			available = {
+				has_completed_focus = CHI_bureau_of_investigation_and_statistics
+			}
+
+			allowed = {
+				OR = {
+					original_tag = CHI
+					is_chinese_warlord = yes
+				}
+				has_dlc = "La Resistance"
 				has_dlc = "Waking the Tiger"
 			}
 
@@ -1912,7 +1955,7 @@ ideas = {
 			}
 
 			research_bonus = {
-				air_equipment = 0.10
+				air_equipment = 0.15
 			}
 
 			traits = { medium_aircraft_manufacturer }
@@ -1928,6 +1971,7 @@ ideas = {
 
 	theorist = {
 		CHI_bo_yibo = {
+			ledger = army
 
 			picture = generic_army_asia_2
 
@@ -1936,13 +1980,14 @@ ideas = {
 			}
 
 			research_bonus = {
-				land_doctrine = 0.07
+				land_doctrine = 0.10
 			}
 
 			traits = { military_theorist }
 		}
 
 		CHI_fang_zeyi = {
+			ledger = air
 
 			picture = generic_air_asia_2
 
@@ -1951,13 +1996,14 @@ ideas = {
 			}
 
 			research_bonus = {
-				air_doctrine = 0.07
+				air_doctrine = 0.10
 			}
 
 			traits = { air_warfare_theorist }
 		}
 
 		CHI_huang_shen = {
+			ledger = navy
 
 			picture = generic_navy_asia_2
 
@@ -1966,7 +2012,7 @@ ideas = {
 			}
 
 			research_bonus = {
-				naval_doctrine = 0.07
+				naval_doctrine = 0.10
 			}
 
 			traits = { naval_theorist }
@@ -1978,6 +2024,7 @@ ideas = {
 	high_command = {
 
 		CHI_gao_zhihang = {
+			ledger = air
 
 			picture = CHI_gao_zihang
 
@@ -1993,6 +2040,7 @@ ideas = {
 		}
 
 		CHI_xiao_yisu = {
+			ledger = army
 
 			picture = generic_army_asia_2
 
@@ -2008,6 +2056,7 @@ ideas = {
 		}
 
 		CHI_chen_cheng = {
+			ledger = army
 
 			picture = generic_army_asia_3
 
@@ -2023,6 +2072,7 @@ ideas = {
 		}
 
 		CHI_yu_hanmou = {
+			ledger = army
 
 			picture = generic_army_asia_1
 
