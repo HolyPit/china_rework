@@ -5520,7 +5520,7 @@ focus_tree = {
 		complete_tooltip = {
 
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_CHI_INFLATION }
 		completion_reward = {
 			add_war_support = 0.1
 			CHI_hyper_inflation_level_up = yes
@@ -5667,7 +5667,7 @@ focus_tree = {
 		complete_tooltip = {
 
 		}
-		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT FOCUS_FILTER_CHI_INFLATION }
 		completion_reward = {
 			add_war_support = 0.1
 			CHI_hyper_inflation_level_up = yes
@@ -5706,7 +5706,7 @@ focus_tree = {
 		complete_tooltip = {
 
 		}
-		search_filters = { FOCUS_FILTER_RESEARCH }
+		search_filters = { FOCUS_FILTER_RESEARCH FOCUS_FILTER_CHI_INFLATION }
 		completion_reward = {
 			add_research_slot = 1
 			CHI_hyper_inflation_level_up = yes
@@ -7050,7 +7050,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
+		search_filters = { FOCUS_FILTER_CHI_INFLATION }
 		completion_reward = {
 			CHI_hyper_inflation_level_up = yes
 			custom_effect_tooltip = available_industrial_concern
@@ -7118,7 +7118,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
+		search_filters = { FOCUS_FILTER_CHI_INFLATION }
 		completion_reward = {
 			CHI_hyper_inflation_level_down = yes
 		}
@@ -7151,7 +7151,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
+		search_filters = { FOCUS_FILTER_CHI_INFLATION }
 		completion_reward = {
 			CHI_hyper_inflation_level_down = yes
 		}
@@ -7182,7 +7182,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-
+		search_filters = { FOCUS_FILTER_CHI_INFLATION }
 		completion_reward = {
 			unlock_decision_tooltip = CHI_forced_loans
 		}
@@ -7306,7 +7306,7 @@ focus_tree = {
 				}
 			}
 		}
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_CHI_INFLATION }
 		completion_reward = {
 			add_ideas = CHI_hanyang_arsenal
 			CHI_hyper_inflation_level_up = yes
@@ -7358,7 +7358,7 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY FOCUS_FILTER_CHI_INFLATION }
 		completion_reward = {
 			add_ideas = CHI_taiyuan_arsenal_idea
 			CHI_hyper_inflation_level_up = yes

@@ -75,7 +75,7 @@ if = {
 		CHI_hyper_inflation_1
 	}
 	add_timed_idea = {
-		idea = CHI_calm_before_the_storm days = 365
+		idea = CHI_calm_before_the_storm days = 500
 	}
 }
 save_global_event_target_as = WTT_current_china_leader
