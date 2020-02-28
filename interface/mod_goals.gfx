@@ -1,6 +1,26 @@
 spriteTypes = {
 
   SpriteType = {
+  name = "GFX_focus_chi_tibet_question"
+  texturefile = "gfx/interface/goals/focus_chi_tibet_question.dds"
+  }
+
+  SpriteType = {
+  name = "GFX_focus_chi_manchu_question"
+  texturefile = "gfx/interface/goals/focus_chi_manchu_question.dds"
+  }
+
+  SpriteType = {
+  name = "GFX_focus_chi_korea_question"
+  texturefile = "gfx/interface/goals/focus_chi_korea_question.dds"
+  }
+
+  SpriteType = {
+  name = "GFX_focus_chi_mongolia_question"
+  texturefile = "gfx/interface/goals/focus_chi_mongolia_question.dds"
+  }
+
+  SpriteType = {
   name = "GFX_focus_chi_silver_standard"
   texturefile = "gfx/interface/goals/focus_chi_silver_standard.dds"
   }

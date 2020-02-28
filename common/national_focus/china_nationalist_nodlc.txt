@@ -92,8 +92,7 @@ focus_tree = {
 		id = CHI_nodlc_the_indirect_approach
 		icon = GFX_goal_support_fascism
 		prerequisite = { focus = CHI_nodlc_three_principles_of_the_people }
-		mutually_exclusive = { focus = CHI_nodlc_democracy
-			focus = CHI_nodlc_nationalism }
+		mutually_exclusive = { focus = CHI_nodlc_democracy }
 
 		x = -1
 		y = 1
@@ -379,7 +378,7 @@ focus_tree = {
 		y = 1
 		relative_position_id = CHI_nodlc_the_indirect_approach
 		prerequisite = { focus = CHI_nodlc_the_indirect_approach focus = CHI_nodlc_nationalism }
-		mutually_exclusive = { focus = CHI_nodlc_right_wing_uprising focus = CHI_nodlc_support_chiang }
+		mutually_exclusive = { focus = CHI_nodlc_right_wing_uprising }
 
 		available = {
 			WTT_is_ROOT_current_leader_of_china = yes
@@ -1900,7 +1899,7 @@ focus_tree = {
 		x = 3
 		y = 0
 		relative_position_id = CHI_nodlc_pressure_ma_bufang
-		prerequisite = { focus = CHI_nodlc_nothing_personal}
+		prerequisite = { focus = CHI_nodlc_nothing_personal focus = CHI_nodlc_korea_question}
 			#focus = CHI_nodlc_war_of_anti_imperialism}
 
 		cost = 10
@@ -2290,7 +2289,7 @@ focus_tree = {
 		completion_reward = {
 
 			CHI = {
-				remove_ideas = CHI_ineffective_bureaucracy
+				# remove_ideas = CHI_ineffective_bureaucracy
 				set_cosmetic_tag = BYG
 				set_party_name = { ideology = neutrality long_name = CHI_party_beiyang_long
 				name = CHI_party_beiyang }
@@ -2690,9 +2689,9 @@ focus_tree = {
 
 
 		cost = 10
-		search_filters = { FOCUS_FILTER_MANPOWER FOCUS_FILTER_INDUSTRY }
+		search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-		remove_ideas = CHI_ineffective_bureaucracy
+		# remove_ideas = CHI_ineffective_bureaucracy
 
 		add_ideas = war_economy
 
@@ -3172,7 +3171,7 @@ focus_tree = {
 			remove_idea = CHI_kuomintang5
 			add_idea = CHI_kuomintang6
 		}
-		remove_ideas = CHI_ineffective_bureaucracy
+		# remove_ideas = CHI_ineffective_bureaucracy
 		unlock_decision_category_tooltip = CHI_pressure_the_warlords
 		}
 	}
@@ -4777,7 +4776,7 @@ focus_tree = {
 		id = CHI_nodlc_nationalism
 		icon = GFX_goal_generic_propaganda
 		prerequisite = { focus = CHI_nodlc_three_principles_of_the_people }
-		mutually_exclusive = { focus = CHI_nodlc_the_indirect_approach }
+		# mutually_exclusive = { focus = CHI_nodlc_the_indirect_approach }
 		x = 13
 		y = 1
 		relative_position_id = CHI_nodlc_three_principles_of_the_people
@@ -4822,19 +4821,19 @@ focus_tree = {
 		y = 1
 		relative_position_id = CHI_nodlc_nationalism
 		prerequisite = { focus = CHI_nodlc_nationalism }
-		mutually_exclusive = { focus = CHI_nodlc_support_zhang_xueliang}
+		# mutually_exclusive = { focus = CHI_nodlc_support_zhang_xueliang}
 
 		cost = 5
-		search_filters = { FOCUS_FILTER_STABILITY }
+		search_filters = { FOCUS_FILTER_WAR_SUPPORT }
 		completion_reward = {
 			#remove_ideas = CHI_communist_uprisings
-			add_stability = 0.1
+			add_war_support = 0.1
 		}
 	}
 
 
 	focus = {
-		id = CHI_nodlc_union_of_five_races
+		id = CHI_nodlc_union_of_all_races
 		icon = GFX_focus_chi_beiyang
 
 		x = -1
@@ -4843,27 +4842,358 @@ focus_tree = {
 		prerequisite = { focus = CHI_nodlc_support_chiang }
 
 
-		cost = 5
-
-		completion_reward = {
-			add_stability = 0.05
-	}
-	}
-
-	focus = {
-		id = CHI_nodlc_union_of_five_races_lol
-		icon = GFX_focus_chi_beiyang
-
-		x = -1
-		y = 2
-		relative_position_id = CHI_nodlc_nationalism
-		prerequisite = { focus = CHI_nodlc_support_chiang }
-
-
-		cost = 5
+		cost = 10
 		search_filters = { FOCUS_FILTER_STABILITY }
 		completion_reward = {
 			add_stability = 0.05
+		}
+	}
+
+
+	focus = {
+		id = CHI_nodlc_anti_communism
+		icon = GFX_focus_attack_soviet
+
+		x = 0
+		y = 3
+		relative_position_id = CHI_nodlc_nationalism
+		prerequisite = { focus = CHI_nodlc_support_chiang }
+
+		available = {
+			SOV = {has_government = communism}
+		}
+
+		bypass = {
+			OR = {
+				has_war_with = SOV
+				SOV = {exists = no}
+				SOV = {NOT = {has_government = communism}}
+			}
+		}
+
+
+		cost = 10
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = SOV
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_nodlc_mongolia_question
+		icon = GFX_focus_chi_mongolia_question
+
+		x = 0
+		y = 2
+		relative_position_id = CHI_nodlc_anti_communism
+		prerequisite = { focus = CHI_nodlc_anti_communism }
+
+
+		available = {
+			country_exists = MON
+			#MON = { is_subject = no }
+		}
+	
+		bypass = {
+			NOT = { country_exists = MON }
+			MON = { is_subject_of = ROOT }
+		}
+
+		cost = 10
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			MON = { country_event = wtt_china.10 }
+		}
+	}
+
+	focus = {
+		id = CHI_nodlc_anti_imperialism
+		icon = GFX_focus_AST_war_japan
+
+		x = 1
+		y = 2
+		relative_position_id = CHI_nodlc_nationalism
+		prerequisite = { focus = CHI_nodlc_support_chiang }
+
+		available = {
+			JAP = {
+				exists = yes
+				NOT = {has_government = democratic}
+			}
+		}
+
+
+		cost = 10
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = JAP
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_nodlc_manchu_question
+		icon = GFX_focus_chi_manchu_question
+
+		x = 0
+		y = 2
+		relative_position_id = CHI_nodlc_anti_imperialism
+		prerequisite = { focus = CHI_nodlc_anti_imperialism }
+
+		bypass = {
+			NOT = { country_exists = MAN }
+			MAN = { is_subject_of = ROOT }
+		}
+
+
+		cost = 10
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			create_wargoal = {
+				type = annex_everything
+				target = MAN
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_nodlc_korea_question
+		icon = GFX_focus_chi_korea_question
+
+		x = 0
+		y = 2
+		relative_position_id = CHI_nodlc_manchu_question
+		prerequisite = { focus = CHI_nodlc_manchu_question }
+
+
+		bypass = {
+			OR = { 
+				AND ={
+				527 = { is_owned_and_controlled_by = ROOT }
+				525 = { is_owned_and_controlled_by = ROOT }
+				}
+				KOR = { is_subject_of = ROOT }
+			}
+			
+		}
+
+
+		cost = 10
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			527 = {
+				CONTROLLER = {
+					ROOT = {
+						create_wargoal = {
+							type = take_state_focus
+							target = PREV
+							generator = { 527 }
+						}
+					}
+				}
+			}
+			#Don't give wargoal on same country twice
+			if = {
+				limit = {
+					NOT = { 525 = { CONTROLLER = { controls_state = 527 } } }
+				}
+				525 = {
+					CONTROLLER = {
+						ROOT = {
+							create_wargoal = {
+								type = take_state_focus
+								target = PREV
+								generator = { 525 }
+							}
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_nodlc_anti_colonialism
+		icon = GFX_focus_eng_decolonization
+
+		x = 3
+		y = 2
+		relative_position_id = CHI_nodlc_nationalism
+		prerequisite = { focus = CHI_nodlc_support_chiang }
+
+
+		cost = 10
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			every_country = {
+				limit = {
+					OR = {
+						tag = ENG
+						tag = FRA
+						tag = JAP
+						tag = POR
+					}
+				}
+				add_opinion_modifier = {
+					target = ROOT
+					modifier = CHI_anticolonialism
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_nodlc_macau_question
+		icon = GFX_focus_generic_attack_portugal
+
+		x = -1
+		y = 1
+		relative_position_id = CHI_nodlc_anti_colonialism
+		prerequisite = { focus = CHI_nodlc_anti_colonialism }
+
+		bypass = {
+			729 = { is_owned_and_controlled_by = ROOT }
+		}
+
+
+		cost = 10
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			729 = {
+				CONTROLLER = {
+					ROOT = {
+						create_wargoal = {
+							type = take_state_focus
+							target = PREV
+							generator = { 729 }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_nodlc_taiwan_question
+		icon = GFX_focus_attack_japan
+
+		x = 0
+		y = 2
+		relative_position_id = CHI_nodlc_macau_question
+		prerequisite = { focus = CHI_nodlc_macau_question }
+
+		bypass = {
+			524 = { is_owned_and_controlled_by = ROOT }
+		}
+
+
+		cost = 10
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			524 = {
+				CONTROLLER = {
+					ROOT = {
+						create_wargoal = {
+							type = take_state_focus
+							target = PREV
+							generator = { 524 }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_nodlc_hong_kong_question
+		icon = GFX_focus_attack_britain
+
+		x = 0
+		y = 2
+		relative_position_id = CHI_nodlc_anti_colonialism
+		prerequisite = { focus = CHI_nodlc_anti_colonialism }
+
+		bypass = {
+			326 = { is_owned_and_controlled_by = ROOT }
+		}
+
+
+		cost = 10
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			326 = {
+				CONTROLLER = {
+					ROOT = {
+						create_wargoal = {
+							type = take_state_focus
+							target = PREV
+							generator = { 326 }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_nodlc_guangzhouwan
+		icon = GFX_focus_attack_france
+
+		x = 0
+		y = 4
+		relative_position_id = CHI_nodlc_anti_colonialism
+		prerequisite = { focus = CHI_nodlc_hong_kong_question }
+
+		bypass = {
+			728 = { is_owned_and_controlled_by = ROOT }
+		}
+
+
+		cost = 10
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			728 = {
+				CONTROLLER = {
+					ROOT = {
+						create_wargoal = {
+							type = take_state_focus
+							target = PREV
+							generator = { 728 }
+						}
+					}
+				}
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_nodlc_tibet_question
+		icon = GFX_focus_chi_tibet_question
+
+		x = 0
+		y = 2
+		relative_position_id = CHI_nodlc_union_of_all_races
+		prerequisite = { focus = CHI_nodlc_union_of_all_races }
+
+		available = {
+			country_exists = TIB
+			TIB = { is_subject = no }
+		}
+	
+		bypass = {
+			NOT = { country_exists = TIB }
+			TIB = { is_subject_of = ROOT }
+		}
+
+		cost = 10
+		search_filters = { FOCUS_FILTER_ANNEXATION }
+		completion_reward = {
+			TIB = { country_event = wtt_china.10 }
 		}
 	}
 
@@ -4873,9 +5203,9 @@ focus_tree = {
 
 
 		x = 0
-		y = 1
-		relative_position_id = CHI_nodlc_support_chiang
-		prerequisite = { focus = CHI_nodlc_support_chiang}
+		y = 2
+		relative_position_id = CHI_nodlc_tibet_question
+		prerequisite = { focus = CHI_nodlc_tibet_question}
 
 		cost = 10
 
