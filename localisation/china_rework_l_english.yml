@@ -326,6 +326,10 @@
   CHI_research_behind2:0 "Uneducated Citizens"
   CHI_research_behind1:0 "Uneducated Citizens"
 
+  CHI_foreign_fighter_idea:0 "Rely on Foreign Fighters"
+
+  CHI_wu_ta_you:0 "Wu Ta-You"
+
 
 
   ####### party names localisation #####
@@ -399,6 +403,16 @@
   CHI_integrate_local_militia_into_army:0 "Integrate Local Militia into the Army"
 
   CHI_pressure_the_warlords:0 "Pressure the Warlords"
+
+  CHI_fighter_order:0 "Foreign Fighter Purchase"
+  CHI_fighter_order_desc:0 "There is no time for us to develop our own aircrafts. We have to order foreign fighters for the immediate need."
+
+  CHI_add_fighter1_FROM:0 "Purchase [From.GetAdjective] Fighters"
+  CHI_add_fighter1_FROM_desc:0 "§GHigher opinion from the [From.GetName] will result in better purchase outcome, more fighters (up to 150) will be received once the order is complete.§!"
+  CHI_add_fighter2_FROM:0 "Purchase Improved [From.GetAdjective] Fighters"
+  CHI_add_fighter2_FROM_desc:0 "§GHigher opinion from the [From.GetName] will result in better purchase outcome, more fighters (up to 150) will be received once the order is complete.§!"
+  CHI_add_fighter3_FROM:0 "Purchase Advanced [From.GetAdjective] Fighters"
+  CHI_add_fighter3_FROM_desc:0 "§GHigher opinion from the [From.GetName] will result in better purchase outcome, more fighters (up to 150) will be received once the order is complete.§!"
 
   #### events ####
   trans_pacific_cooperation_organisation:0 "Asia-Pacific Cooperation Organisation"

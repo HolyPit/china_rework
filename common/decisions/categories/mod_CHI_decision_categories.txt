@@ -1,34 +1,31 @@
-
-
 CHI_army_support = {
 	icon = army_reform
 	allowed = {
-		is_literally_china = yes
+		WTT_is_ROOT_current_leader_of_china = yes
 	}
 
 	visible = {
-	OR = {
-	has_completed_focus = CHI_secure_army_support
-	has_completed_focus = CHI_nodlc_secure_army_support
-	}
+		OR = {
+			has_completed_focus = CHI_secure_army_support
+			has_completed_focus = CHI_nodlc_secure_army_support
+		}
 	}
 }
 
 CHI_pressure_the_warlords = {
 
 	allowed = {
-		is_literally_china = yes
+		WTT_is_ROOT_current_leader_of_china = yes
 	}
 	icon = generic_political_actions
 	visible = {
 		tag = event_target:WTT_current_china_leader
-
-		OR = {
-		has_completed_focus = CHI_centralise_power
-		has_completed_focus = CHI_control_yuan
-		has_completed_focus = CHI_nodlc_centralise_power
-		has_completed_focus = CHI_nodlc_control_yuan
-		}
+			OR = {
+				has_completed_focus = CHI_centralise_power
+				has_completed_focus = CHI_control_yuan
+				has_completed_focus = CHI_nodlc_centralise_power
+				has_completed_focus = CHI_nodlc_control_yuan
+			}
 		}
 
 }
@@ -36,13 +33,27 @@ CHI_pressure_the_warlords = {
 CHI_ccp_kmt_support = {
 	icon = generic_political_discourse
 	allowed = {
-		is_literally_china = yes
+		WTT_is_ROOT_current_leader_of_china = yes
 	}
 
 	visible = {
-	OR = {
-	has_completed_focus = CHI_legalise_communist_party
-	has_completed_focus = CHI_nodlc_legalise_communist_party
+		OR = {
+			has_completed_focus = CHI_legalise_communist_party
+			has_completed_focus = CHI_nodlc_legalise_communist_party
+		}
 	}
+}
+
+CHI_fighter_order = {
+	icon = generic_air
+	allowed = {
+		WTT_is_ROOT_current_leader_of_china = yes
+	}
+
+	visible = {
+		OR = {
+			has_completed_focus = CHI_fighter_order
+			has_completed_focus = CHI_nodlc_fighter_order
+		}
 	}
 }

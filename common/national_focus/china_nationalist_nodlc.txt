@@ -5,8 +5,8 @@ focus_tree = {
 		factor = 0
 		modifier = {
 			add = 10
-			tag = CHI
-			NOT = {has_dlc = "Waking the Tiger"}
+			tag = GXC
+			#NOT = {has_dlc = "Waking the Tiger"}
 		}
 	}
 
@@ -7152,7 +7152,7 @@ focus_tree = {
 		id = CHI_nodlc_fighter_focus
 		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = CHI_nodlc_aviation_effort }
-		mutually_exclusive = { focus = CHI_nodlc_bomber_focus }
+		mutually_exclusive = { focus = CHI_nodlc_fighter_order }
 		x = -1
 		y = 1
 		relative_position_id = CHI_nodlc_aviation_effort
@@ -7179,7 +7179,7 @@ focus_tree = {
 	}
 
 	focus = {
-		id = CHI_nodlc_bomber_focus
+		id = CHI_nodlc_fighter_order
 		icon = GFX_goal_generic_air_bomber
 		prerequisite = { focus = CHI_nodlc_aviation_effort }
 		mutually_exclusive = { focus = CHI_nodlc_fighter_focus }
@@ -7188,30 +7188,34 @@ focus_tree = {
 		relative_position_id = CHI_nodlc_aviation_effort
 		cost = 10
 
-		search_filters = {  FOCUS_FILTER_RESEARCH }
+		#search_filters = {  FOCUS_FILTER_RESEARCH }
 		
 		available_if_capitulated = yes
 
 		completion_reward = {
-			add_tech_bonus = {
-				name = bomber_bonus
-				bonus = 1.0
-				uses = 2
-				technology = strategic_bomber1
-				technology = strategic_bomber2
-				technology = strategic_bomber3
-				category = tactical_bomber
+			unlock_decision_category_tooltip = CHI_fighter_order
+			add_ideas = {
+				CHI_foreign_fighter_idea
 			}
+			# add_tech_bonus = {
+			# 	name = bomber_bonus
+			# 	bonus = 1.0
+			# 	uses = 2
+			# 	technology = strategic_bomber1
+			# 	technology = strategic_bomber2
+			# 	technology = strategic_bomber3
+			# 	category = tactical_bomber
+			# }
 		}
 	}
 
 	focus = {
 		id = CHI_nodlc_aviation_effort_2
 		icon = GFX_goal_generic_air_doctrine
-		prerequisite = { focus = CHI_nodlc_bomber_focus focus = CHI_nodlc_fighter_focus }
+		prerequisite = { focus = CHI_nodlc_fighter_order focus = CHI_nodlc_fighter_focus }
 		x = -1
 		y = 1
-		relative_position_id = CHI_nodlc_bomber_focus
+		relative_position_id = CHI_nodlc_fighter_order
 		cost = 10
 
 		search_filters = {   FOCUS_FILTER_RESEARCH }

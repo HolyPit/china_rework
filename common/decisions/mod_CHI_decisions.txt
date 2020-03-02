@@ -1,7 +1,5 @@
-
-
 #Category only allowed for CHI
-	CHI_army_support = {
+CHI_army_support = {
 
 
 	CHI_educate_the_soliders = {
@@ -500,8 +498,6 @@
 		}
 		}
 
+		}
 	}
-
-
-
-	}
+}

@@ -837,6 +837,29 @@ ideas = {
 		}
 
 
+		CHI_foreign_fighter_idea = { 
+
+			allowed = {
+				original_tag = CHI
+				always = no
+			}
+
+			allowed_civil_war = {
+				always = yes
+			}
+
+			picture = generic_fighter_production_diverted
+
+			removal_cost = -1
+
+			equipment_bonus = {
+				fighter = {
+					build_cost_ic = 1 instant = yes
+				}
+			}
+		}
+
+
 
 
 
@@ -1986,6 +2009,22 @@ ideas = {
 
 
 	theorist = {
+		CHI_wu_ta_you = {
+
+			picture = generic_political_advisor_asia_1
+
+			
+			allowed = {
+				original_tag = CHI
+			}
+		
+			research_bonus = {
+				nuclear = 0.15
+			}
+			
+			traits = { nuclear_scientist }
+		}
+
 		CHI_bo_yibo = {
 			ledger = army
 
