@@ -1,0 +1,43 @@
+ideas = {
+	political_advisor = {
+
+		CHI_mao_zedong = {
+
+			picture = chi_mao
+
+			available = {
+				has_completed_focus = CHI_summit_with_mao
+				OR = {
+				has_idea = CHI_ccp_kmt_4
+				has_idea = CHI_ccp_kmt_5
+				}
+			}
+
+			allowed = {
+				original_tag = CHI
+			}
+
+			traits = { great_mentor_to_the_revolution }
+		}
+	}
+
+
+	theorist = {
+		CHI_wu_ta_you = {
+			ledger = army
+
+			picture = generic_political_advisor_asia_1
+
+			
+			allowed = {
+				original_tag = CHI
+			}
+		
+			research_bonus = {
+				nuclear = 0.15
+			}
+			
+			traits = { nuclear_scientist }
+		}
+	}
+}

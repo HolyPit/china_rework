@@ -1,0 +1,45 @@
+ideas = {
+	aircraft_manufacturer = { #
+			
+		designer = yes		
+
+		CHI_aftb = { # Air Force Technical Bureau
+
+			picture = generic_air_manufacturer_1
+
+			available = {
+				OR = {
+					has_completed_focus = CHI_fighter_focus
+					has_completed_focus = CHI_nodlc_fighter_focus
+				}
+			}
+
+			allowed = {
+				# has_DLC = "Waking the Tiger"
+				OR = {
+					is_literally_china = yes
+					tag = MAN
+				}
+			}
+
+			equipment_bonus = {
+				fighter = {
+					build_cost_ic = -0.1 instant = yes
+					reliability_factor = -0.1 instant = yes
+				}
+			}
+			
+			research_bonus = {
+				air_equipment = 0.05
+			}
+			
+			#traits = { light_aircraft_manufacturer }
+			
+			# assembled hawk II and hawk III fighter bombers as well as the Vultee V-11 ground attackers
+						
+			ai_will_do = {
+				factor = 1
+			}
+		}
+	}
+}
