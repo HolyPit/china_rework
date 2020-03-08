@@ -1,8 +1,8 @@
 [h1]China National Focus Rework[/h1]
 
-[h1]Works with no DLC, but best with "Waking the Tiger".[/h1]
+[h1]A complete new focus tree for vanilla China, and a heavily rework for "Waking the Tiger". All DLC compatible.[/h1]
 
-[b]Current version: 0.9[/b] (work-in-progress, testing needed, please report any bug or imbalance)
+[b]Current version: 1.0[/b] (Testing needed, please report any bug or imbalance, thanks!)
 
 This mod gives you more choices where you can lead the Nationalist China to, regarding solving the communist civil war, suppressing warlords and dealing with Japanese.
 
@@ -10,9 +10,11 @@ This mod gives you more choices where you can lead the Nationalist China to, reg
 [b]In this section you are seeing the most recent changes in this mod:[/b]
 
 [list]
-    [*] Fix errors that can occur when you play as a worlord then switch to the CHI focus tree.
-    [*] New Chinese names for generic leaders, no more awkward "Ma Ma" etc.
-    [*] New decision categories :[i]Gathering Army Support[/i], [i]Political Campaign Between Parties[/i].
+    [*] New focus tree branch for researches.
+    [*] New aircraft, ship and tank designers.
+    [*] New focus tree branch for fixing your collapsing economy.
+    [*] Add nuclear scientist Wu Ta-You.
+    [*] Fix errors that can occur when you play as a warlord (WTT version) then switch to the CHI focus tree.
     [*] New Chinese election events.
     [*] Modified the focus [i]Support Zhang Xueliang[/i], now you can go down this path when Zhang leads the democratic China.
 [/list]
@@ -59,11 +61,10 @@ This mod gives you more choices where you can lead the Nationalist China to, reg
 [h1]WIP To-do list:[/h1]
 
 [list]
-[*]Develop the Nationalism branches for vanilla game
+[*]Develop the Nationalism branches for vanilla game (Done!)
 [*]All focus descriptions
 [*]More rework on industry, navy and technology
 [*]To expand the focus tree even more, suggestions are extremely welcome!
 [/list]
 
-[h1]If you like this mod, please support me on Patreon for future development! Thanks![/h1]
-[url=https://www.patreon.com/holypit]https://www.patreon.com/holypit[/url]
+

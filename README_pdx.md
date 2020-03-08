@@ -1,8 +1,8 @@
 China National Focus Rework
 
-Works with no DLC, but best with "Waking the Tiger".
+A complete new focus tree for vanilla China, and a heavily rework for "Waking the Tiger". All DLC compatible.
 
-Current version: 0.9 (work-in-progress, testing needed, please report any bug or imbalance)
+Current version: 1.0 (Testing needed, please report any bug or imbalance)
 
 This mod gives you more choices where you can lead the Nationalist China to, regarding solving the communist civil war, suppressing warlords and dealing with Japanese.
 
@@ -58,11 +58,7 @@ Add lots of new national spirits and new events
 WIP To-do list:
 
 
-Develop the Nationalism branches for vanilla game
+Develop the Nationalism branches for vanilla game (Done!)
 All focus descriptions
 More rework on industry, navy and technology
 To expand the focus tree even more, suggestions are extremely welcome!
-
-
-If you like this mod, please support me on Patreon for future development! Thanks!
-https://www.patreon.com/holypit

@@ -3125,8 +3125,9 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_POLITICAL }
+		search_filters = { FOCUS_FILTER_POLITICAL FOCUS_FILTER_RESEARCH }
 		completion_reward = {
+			add_research_slot = 1
 		swap_ideas = {
 			remove_idea = CHI_kuomintang4
 			add_idea = CHI_kuomintang5
@@ -5539,9 +5540,11 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_RESEARCH }
 
 		completion_reward = {
 			CHI_end_of_golden_decade_level_down = yes
+			add_research_slot = 1
 		}
 	}
 
