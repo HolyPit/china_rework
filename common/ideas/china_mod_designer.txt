@@ -5,11 +5,17 @@ ideas = {
 
 		CHI_aftb = { # Air Force Technical Bureau
 
-			picture = generic_air_manufacturer_1
+			picture = generic_air_payment
 
 			available = {
-				OR = {
+				if = {
+					limit = {
+						has_DLC = "Waking the Tiger"
+					}
 					has_completed_focus = CHI_fighter_focus
+				}
+				else = {
+					#has_completed_focus = CHI_fighter_focus
 					has_completed_focus = CHI_nodlc_fighter_focus
 				}
 			}
@@ -23,17 +29,158 @@ ideas = {
 			}
 
 			equipment_bonus = {
-				fighter = {
-					build_cost_ic = -0.1 instant = yes
-					reliability_factor = -0.1 instant = yes
+				fighter_equipment = {
+					build_cost_ic = -0.5 instant = yes
+					reliability_factor = -0.1
+					air_agility = -0.1
+					air_attack = -0.1
+					air_defence = -0.1
+					air_range = -0.1
 				}
 			}
 			
 			research_bonus = {
-				air_equipment = 0.05
+				air_equipment = 0.15
 			}
 			
-			#traits = { light_aircraft_manufacturer }
+			traits = { aircraft_manufacturer }
+			
+			# assembled hawk II and hawk III fighter bombers as well as the Vultee V-11 ground attackers
+						
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+
+		CHI_aftb2 = { # Air Force Technical Bureau
+
+			picture = generic_air_research
+
+			available = {
+				if = {
+					limit = {
+						has_DLC = "Waking the Tiger"
+					}
+					has_completed_focus = CHI_aviation_effort_2
+				}
+				else = {
+					#has_completed_focus = CHI_fighter_focus
+					has_completed_focus = CHI_nodlc_aviation_effort_2
+				}
+			}
+
+			allowed = {
+				# has_DLC = "Waking the Tiger"
+				OR = {
+					is_literally_china = yes
+					tag = MAN
+				}
+			}
+
+			equipment_bonus = {
+				fighter_equipment = {
+					build_cost_ic = 0.5 instant = yes
+					reliability_factor = 0.1
+					air_agility = 0.1
+					air_attack = 0.1
+					air_defence = 0.1
+					air_range = 0.1
+				}
+			}
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { aircraft_manufacturer }
+			
+			# assembled hawk II and hawk III fighter bombers as well as the Vultee V-11 ground attackers
+						
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+
+		CHI_aftb3 = { # Air Force Technical Bureau
+
+			picture = generic_air_manufacturer_1
+
+
+			allowed = {
+				# has_DLC = "Waking the Tiger"
+				OR = {
+					is_literally_china = yes
+					#original_tag = CHI
+					tag = MAN
+				}
+			}
+
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { light_aircraft_manufacturer }
+			
+			# assembled hawk II and hawk III fighter bombers as well as the Vultee V-11 ground attackers
+						
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+
+		CHI_aftb4 = { # Air Force Technical Bureau
+
+			picture = generic_naval_manufacturer_1
+
+
+			allowed = {
+				# has_DLC = "Waking the Tiger"
+				OR = {
+					is_literally_china = yes
+					#original_tag = CHI
+					tag = MAN
+				}
+			}
+
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { naval_aircraft_manufacturer }
+			
+			# assembled hawk II and hawk III fighter bombers as well as the Vultee V-11 ground attackers
+						
+			ai_will_do = {
+				factor = 1
+			}
+		}
+
+
+		CHI_aftb5 = { # Air Force Technical Bureau
+
+			picture = generic_air_manufacturer_2
+
+
+			allowed = {
+				# has_DLC = "Waking the Tiger"
+				OR = {
+					is_literally_china = yes
+					#original_tag = CHI
+					tag = MAN
+				}
+			}
+
+			
+			research_bonus = {
+				air_equipment = 0.15
+			}
+			
+			traits = { heavy_aircraft_manufacturer }
 			
 			# assembled hawk II and hawk III fighter bombers as well as the Vultee V-11 ground attackers
 						
@@ -42,4 +189,272 @@ ideas = {
 			}
 		}
 	}
+
+
+
+	naval_manufacturer = {
+		
+		CHI_beiyang_navy = {
+			picture = generic_navy_bonus #
+
+			available = {
+				if = {
+					limit = {
+						has_DLC = "Waking the Tiger"
+					}
+					has_completed_focus = CHI_large_navy
+				}
+				else = {
+					#has_completed_focus = CHI_fighter_focus
+					has_completed_focus = CHI_nodlc_large_navy
+				}
+			}
+
+			allowed = {
+				# has_DLC = "Waking the Tiger"
+				OR = {
+					is_literally_china = yes
+					#original_tag = CHI
+					tag = MAN
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+
+			traits = { atlantic_fleet_naval_manufacturer }
+		}
+
+		CHI_nanyang_navy = {
+			picture = generic_sea_focused_navy #brooklyn_naval_yard
+
+			allowed = {
+				# has_DLC = "Waking the Tiger"
+				OR = {
+					is_literally_china = yes
+					#original_tag = CHI
+					tag = MAN
+				}
+			}
+
+			available = {
+				if = {
+					limit = {
+						has_DLC = "Waking the Tiger"
+					}
+					has_completed_focus = CHI_flexible_navy
+				}
+				else = {
+					#has_completed_focus = CHI_fighter_focus
+					has_completed_focus = CHI_nodlc_flexible_navy
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+
+			traits = { pacific_fleet_naval_manufacturer }
+		}
+
+
+		CHI_mawei_shipyard = {
+			picture = generic_coastal_navy
+
+			allowed = {
+				# has_DLC = "Waking the Tiger"
+				OR = {
+					is_literally_china = yes
+					#original_tag = CHI
+					tag = MAN
+				}
+			}
+
+			available = {
+				if = {
+					limit = {
+						has_DLC = "Waking the Tiger"
+					}
+					has_completed_focus = CHI_flexible_navy
+				}
+				else = {
+					#has_completed_focus = CHI_fighter_focus
+					has_completed_focus = CHI_nodlc_flexible_navy
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+
+			traits = { coastal_defence_naval_manufacturer }
+		}
+
+		CHI_canton_shipyard = {
+			picture = brooklyn_naval_yard
+
+			allowed = {
+				# has_DLC = "Waking the Tiger"
+				OR = {
+					is_literally_china = yes
+					#original_tag = CHI
+					tag = MAN
+				}
+			}
+
+			research_bonus = {
+				naval_equipment = 0.15
+			}
+
+			traits = { raiding_fleet_naval_manufacturer naval_manufacturer }
+		}
+	}
+
+
+
+
+	tank_manufacturer = { 
+	
+		designer = yes
+	
+		CHI_tank1 = {
+
+			picture = generic_tank_manufacturer_3
+			
+			allowed = {
+				# has_DLC = "Waking the Tiger"
+				OR = {
+					is_literally_china = yes
+					#original_tag = CHI
+					tag = MAN
+				}
+			}		
+
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { tank_manufacturer }
+			
+			modifier = {
+			}
+		}
+		
+
+		CHI_tank2 = {
+			
+			picture = man_five_year_plan_tank
+			allowed = {
+				# has_DLC = "Waking the Tiger"
+				OR = {
+					is_literally_china = yes
+					#original_tag = CHI
+					tag = MAN
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_DLC = "Waking the Tiger"
+					}
+					has_completed_focus = CHI_tank_production
+				}
+				else = {
+					#has_completed_focus = CHI_fighter_focus
+					has_completed_focus = CHI_nodlc_tank_production
+				}
+			}
+
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			traits = { }
+			
+			equipment_bonus = {
+				
+				light_tank_equipment = {
+					build_cost_ic = -0.5
+					reliability = -0.1
+					soft_attack = -0.1
+					hard_attack = -0.1
+					armor_value = -0.1
+					maximum_speed = -0.1
+				}
+
+				medium_tank_equipment = {
+					build_cost_ic = -0.5
+					reliability = -0.1
+					soft_attack = -0.1
+					hard_attack = -0.1
+					armor_value = -0.1
+					maximum_speed = -0.1
+				}
+
+				heavy_tank_equipment = {
+					build_cost_ic = -0.5
+					reliability = -0.1
+					soft_attack = -0.1
+					hard_attack = -0.1
+					armor_value = -0.1
+					maximum_speed = -0.1
+				}
+				
+			}
+
+			modifier = {
+
+			}
+		}
+		CHI_tank3 = {
+			
+			picture = generic_artillery_regiments
+			allowed = {
+				# has_DLC = "Waking the Tiger"
+				OR = {
+					is_literally_china = yes
+					#original_tag = CHI
+					tag = MAN
+				}
+			}
+			available = {
+				if = {
+					limit = {
+						has_DLC = "Waking the Tiger"
+					}
+					has_completed_focus = CHI_antitank_production
+				}
+				else = {
+					#has_completed_focus = CHI_fighter_focus
+					has_completed_focus = CHI_nodlc_antitank_production
+				}
+			}
+
+			
+			research_bonus = {
+				armor = 0.15
+			}
+			
+			#traits = { tank_manufacturer }
+			
+			equipment_bonus = {
+				anti_tank_equipment = {
+					build_cost_ic = -0.5
+					reliability = 0.1
+					soft_attack = 0.1
+					hard_attack = 0.1
+				}
+			}
+
+			modifier = {
+
+			}
+		}
+		
+	}
+
+	
 }

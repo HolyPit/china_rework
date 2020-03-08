@@ -93,8 +93,8 @@
   CHI_restore_beiyang_government:0 "Restore the Beiyang Government"
   CHI_restore_beiyang_government_desc:0 "Restore the Beiyang Government"
 
-  CHI_centralise_power:0 "Centralise Power"
-  CHI_centralise_power_desc:0 "Centralise Power"
+  CHI_centralise_power:0 "Centralize Power"
+  CHI_centralise_power_desc:0 "Centralize Power"
   CHI_pressure_ma_bufang:0 "Pressure Ma Bufang"
   CHI_pressure_ma_bufang_desc:0 "Pressure Ma Bufang"
   CHI_pressure_long_yun:0 "Pressure Long Yun"
@@ -132,8 +132,8 @@
   CHI_retake_outer_manchuria:0 "Retake Outer Manchuria"
 
 
-  CHI_wartime_industrialisation:0 "Wartime Industrialisation"
-  CHI_wartime_industrialisation_desc:0 "Wartime Industrialisation"
+  CHI_wartime_industrialisation:0 "Wartime Industrialization"
+  CHI_wartime_industrialisation_desc:0 "Wartime Industrialization"
   CHI_hanyang_steel_company:0 "Hanyang Steel Company"
   CHI_hanyang_steel_company_desc:0 "Hanyang Steel Company"
   CHI_chongqing_iron_and_steel_company:0 "Chongqing Iron and Steel Company"
@@ -266,6 +266,53 @@
   CHI_second_golden_decade_desc:0 "The Second Golden Decade"
 
 
+  CHI_military_branch: "Ministry of National Defense"
+  CHI_military_branch_desc: "Ministry of National Defense"
+
+  CHI_equipment_effort:0 "Equipment Division"
+  CHI_equipment_effort_desc:0 "Equipment Division"
+  CHI_motorization_effort:0 "Motorization Division"
+  CHI_motorization_effort_desc:0 "Motorization Division"
+  CHI_doctrine_effort:0 "War Plan Division"
+  CHI_doctrine_effort_desc:0 "War Plan Division"
+  CHI_tank_production:0 "Tank Division"
+  CHI_tank_production_desc:0 "Tank Division"
+  CHI_antitank_production:0 "Anti-Tank Division"
+  CHI_antitank_production_desc:0 "Anti-Tank Division"
+
+  CHI_aviation_effort:0 "Air Force Command Headquarters"
+  CHI_aviation_effort_desc:0 "Air Force Command Headquarters"
+  CHI_army_effort:0 "Army Command Headquarters"
+  CHI_army_effort_desc:0 "Army Command Headquarters"
+  CHI_naval_effort:0 "Navy Command Headquarters"
+  CHI_naval_effort_desc:0 "Navy Command Headquarters"
+  CHI_fighter_focus:0 "Local Fighter Production"
+  CHI_fighter_focus_desc:0 "Local Fighter Production"
+  CHI_fighter_order:0 "Order Foreign Fighters"
+  CHI_fighter_order_desc:0 "Order Foreign Fighters"
+  CHI_aviation_effort_2:0 "Elite Air Division"
+  CHI_aviation_effort_2_desc:0 "Elite Air Division"
+  CHI_CAS_effort:0 "CAS Division"
+  CHI_CAS_effort_desc:0 "CAS Division"
+  CHI_rocket_effort:0 "Advanced Weapon Research Division"
+  CHI_rocket_effort_desc:0 "Advanced Weapon Research Division"
+  CHI_NAV_effort:0 "Naval Air Force Division"
+  CHI_large_navy:0 "Beiyang Navy Legacy"
+  CHI_large_navy_desc:0 "Beiyang Navy Legacy"
+  CHI_flexible_navy:0 "Affordable Morden Navy"
+  CHI_flexible_navy_desc:0 "Affordable Morden Navy"
+  CHI_submarine_effort:0 "Submarine Division"
+  CHI_submarine_effort_desc:0 "Submarine Division"
+  CHI_cruiser_effort:0 "Cruiser Division"
+  CHI_cruiser_effort_desc:0 "Cruiser Division"
+  CHI_destroyer_effort:0 "Destroyer Division"
+  CHI_destroyer_effort_desc:0 "Destroyer Division"
+  CHI_capital_ships_effort:0 "Restore the Beiyang Glory"
+  CHI_capital_ships_effort_desc:0 "Restore the Beiyang Glory"
+
+
+
+
 
   ####### ideas localisation #####
   CHI_chinese_nationalism:0 "Chinese Nationalism"
@@ -327,10 +374,24 @@
   CHI_research_behind1:0 "Uneducated Citizens"
 
   CHI_foreign_fighter_idea:0 "Rely on Foreign Fighters"
+  CHI_foreign_tank_idea:0 "Low Tank Production"
 
   CHI_wu_ta_you:0 "Wu Ta-You"
 
   CHI_aftb:0 "Air Force Technical Bureau"
+  CHI_aftb2:0 "Advanced Air Technical Department"
+  CHI_aftb3:0 "Hangzhou Central Aircraft Manufactory"
+  CHI_aftb4:0 "Shanghai Hongqiao Aircraft Manufactory"
+  CHI_aftb5:0 "Nanchang Central Aircraft Manufactory"
+
+  CHI_tank1:0 "Central Tank Design Bureau"
+  CHI_tank2:0 "Tank Production Bureau"
+  CHI_tank3:0 "Anti-Tank Research Department"
+
+  CHI_beiyang_navy:0 "Beiyang Fleet Designer"
+  CHI_nanyang_navy:0 "Nanyang Fleet Designer"
+  CHI_mawei_shipyard:0 "Mawei Shipyard"
+  CHI_canton_shipyard:0 "Canton Shipyard"
 
 
 

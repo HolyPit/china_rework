@@ -5990,43 +5990,12 @@ focus_tree = {
 	#########################################
 
 
-	# focus = {
-	# 	id = CHI_nodlc_government_reform
-	# 	icon = GFX_goal_generic_forceful_treaty
-	# 	x = 28
-	# 	y = 0
-	# 	relative_position_id = CHI_nodlc_three_principles_of_the_people
-
-	# 	cost = 10
-
-	# 	ai_will_do = {
-	# 		factor = 4
-	# 	}
-
-	# 	available = {
-
-	# 	}
-
-	# 	bypass = {
-
-	# 	}
-
-	# 	cancel_if_invalid = yes
-	# 	continue_if_invalid = no
-	# 	available_if_capitulated = no
-
-	# 	completion_reward = {
-	# 		add_ideas = partial_economic_mobilisation
-	# 	}
-	# }
-
 	focus = {
-		id = CHI_nodlc_military_affairs_commission
-		icon = GFX_focus_secret_rearmament
-		x = 20
-		y = 1
-		#relative_position_id = CHI_nodlc_government_reform
-		#prerequisite = {focus = CHI_nodlc_government_reform}
+		id = CHI_nodlc_ministry_of_industrial_affairs
+		icon = GFX_focus_generic_industry_2
+		x = 30
+		y = 0
+		relative_position_id = CHI_nodlc_three_principles_of_the_people
 
 		cost = 10
 
@@ -6045,20 +6014,23 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+
 		completion_reward = {
-			add_ideas = partial_economic_mobilisation
+			add_political_power = 150
 		}
 	}
+
+	
 
 
 
 	focus = {
-		id = CHI_nodlc_unified_industrial_planning
+		id = CHI_nodlc_national_resources_commission
 		icon = GFX_goal_generic_construction
 		x = -2
-		y = 0
-		relative_position_id = CHI_nodlc_military_affairs_commission
+		y = 1
+		relative_position_id = CHI_nodlc_ministry_of_industrial_affairs
+		prerequisite = {focus = CHI_nodlc_ministry_of_industrial_affairs}
 
 		cost = 10
 
@@ -6120,6 +6092,42 @@ focus_tree = {
 	}
 
 
+	focus = {
+		id = CHI_nodlc_establish_department_of_transportation
+		icon = GFX_goal_generic_construct_infrastructure
+
+
+		x = 2
+		y = 1
+		relative_position_id = CHI_nodlc_national_resources_commission
+		prerequisite = { focus = CHI_nodlc_national_resources_commission }
+
+		cost = 10
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+
+		available = {
+
+
+
+		}
+
+		bypass = {
+
+			}
+
+
+
+		completion_reward = {
+
+			add_ideas = CHI_department_of_transportation
+
+		}
+	}
+
+
 
 
 
@@ -6131,165 +6139,20 @@ focus_tree = {
 	##### Industry & Economy  ######
 	################################
 
-	focus = {
-		id = CHI_nodlc_wartime_industrialisation
-		icon = GFX_goal_generic_construct_civ_factory
-
-
-		x = 0
-		y = 1
-		relative_position_id = CHI_nodlc_military_affairs_commission
-		prerequisite = { focus = CHI_nodlc_military_affairs_commission }
-		prerequisite = { focus = CHI_nodlc_unified_industrial_planning}
-
-		cost = 10
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = yes
-
-		available = {
-
-			OR = {
-				threat > 0.1
-				has_war = yes
-			}
-
-		}
-
-		bypass = {
-
-		}
-
-
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-
-			add_ideas = CHI_wartime_economy
-
-	}
-	}
 
 
 
-	focus = {
-		id = CHI_nodlc_develop_the_hanyan_arsenal
-		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = CHI_nodlc_wartime_industrialisation }
-		x = 0
-		y = 1
-		relative_position_id = CHI_nodlc_wartime_industrialisation
 
-		cost = 10
 
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			NOT = {
-				#has_idea = CHI_hyper_inflation_5
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		complete_tooltip = {
-			#CHI_hyper_inflation_level_up = yes
-			random_state = {
-				limit = {
-					has_state_flag = CHI_develop_the_hanyan_arsenal_AF
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-			}
-		}
-
-		completion_reward = {
-			add_ideas = CHI_hanyang_arsenal
-			#CHI_hyper_inflation_level_up = yes
-			random_owned_controlled_state = {
-				prioritize = { 620 }
-				limit = {
-					free_building_slots = {
-						building = arms_factory
-						size > 1
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-				set_state_flag = CHI_develop_the_hanyan_arsenal_AF
-			}
-		}
-	}
-
-	focus = {
-		id = CHI_nodlc_taiyuan_arsenal
-		icon = GFX_goal_generic_construct_mil_factory
-		prerequisite = { focus = CHI_nodlc_develop_the_hanyan_arsenal }
-		x = 0
-		y = 1
-		relative_position_id = CHI_nodlc_develop_the_hanyan_arsenal
-
-		cost = 10
-
-		ai_will_do = {
-			factor = 1
-		}
-
-		available = {
-			controls_state = 615
-			NOT = {
-				#has_idea = CHI_hyper_inflation_5
-			}
-		}
-
-		bypass = {
-
-		}
-
-		cancel_if_invalid = yes
-		continue_if_invalid = no
-		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
-		completion_reward = {
-			add_ideas = CHI_taiyuan_arsenal_idea
-			#CHI_hyper_inflation_level_up = yes
-
-			615 = {
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = arms_factory
-					level = 3
-					instant_build = yes
-				}
-			}
-		}
-	}
 
 
 	focus = {
 		id = CHI_nodlc_develop_the_longhai_railway
 		icon = GFX_goal_generic_construct_infrastructure
-		prerequisite = { focus = CHI_nodlc_unified_industrial_planning }
+		prerequisite = { focus = CHI_nodlc_establish_department_of_transportation }
 		x = 0
 		y = 1
-		relative_position_id = CHI_nodlc_unified_industrial_planning
+		relative_position_id = CHI_nodlc_establish_department_of_transportation
 
 		cost = 10
 
@@ -6391,40 +6254,7 @@ focus_tree = {
 		}
 	}
 
-	focus = {
-		id = CHI_nodlc_establish_department_of_transportation
-		icon = GFX_goal_generic_construct_infrastructure
 
-
-		x = 0
-		y = 1
-		relative_position_id = CHI_nodlc_develop_the_yuehan_railway
-		prerequisite = { focus = CHI_nodlc_develop_the_yuehan_railway }
-
-		cost = 10
-
-		cancel_if_invalid = no
-		continue_if_invalid = yes
-		available_if_capitulated = yes
-
-		available = {
-
-
-
-		}
-
-		bypass = {
-
-			}
-
-
-
-		completion_reward = {
-
-			add_ideas = CHI_department_of_transportation
-
-		}
-	}
 
 
 
@@ -6437,10 +6267,10 @@ focus_tree = {
 	focus = {
 		id = CHI_nodlc_hanyang_steel_company
 		icon = GFX_goal_generic_construction2
-		prerequisite = { focus = CHI_nodlc_unified_industrial_planning }
-		x = -2
+		prerequisite = { focus = CHI_nodlc_national_resources_commission }
+		x = 0
 		y = 1
-		relative_position_id = CHI_nodlc_unified_industrial_planning
+		relative_position_id = CHI_nodlc_national_resources_commission
 
 		cost = 10
 
@@ -6561,10 +6391,11 @@ focus_tree = {
 	focus = {
 		id = CHI_nodlc_wartime_resources_policy
 		icon = GFX_goal_generic_positive_trade_relations
-		prerequisite = { focus = CHI_nodlc_develop_taoxikeng_tungsten_mine }
-		x = 0
-		y = 1
-		relative_position_id = CHI_nodlc_develop_taoxikeng_tungsten_mine
+		prerequisite = { focus = CHI_nodlc_national_resources_commission }
+		prerequisite = { focus = CHI_nodlc_chinese_economy }
+		x = -2
+		y = 2
+		relative_position_id = CHI_nodlc_national_resources_commission
 
 		cost = 10
 
@@ -6596,13 +6427,203 @@ focus_tree = {
 
 	###################################################################
 
+
+	focus = {
+		id = CHI_nodlc_military_affairs_commission
+		icon = GFX_focus_secret_rearmament
+		x = 3
+		y = 1
+		relative_position_id = CHI_nodlc_ministry_of_industrial_affairs
+		prerequisite = {focus = CHI_nodlc_ministry_of_industrial_affairs }
+		prerequisite = {focus = CHI_nodlc_military_branch }
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+			
+
+		}
+
+		bypass = {
+			OR = {
+				has_idea = partial_economic_mobilisation
+				has_idea = war_economy
+				has_idea = tot_economic_mobilisation
+			}
+			
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = partial_economic_mobilisation
+		}
+	}
+
+	focus = {
+		id = CHI_nodlc_wartime_industrialisation
+		icon = GFX_goal_generic_construct_civ_factory
+
+
+		x = 0
+		y = 1
+		relative_position_id = CHI_nodlc_military_affairs_commission
+		prerequisite = { focus = CHI_nodlc_military_affairs_commission }
+		prerequisite = { focus = CHI_nodlc_unified_industrial_planning}
+
+		cost = 10
+
+		cancel_if_invalid = no
+		continue_if_invalid = yes
+		available_if_capitulated = yes
+
+		available = {
+
+			OR = {
+				threat > 0.1
+				has_war = yes
+			}
+
+		}
+
+		bypass = {
+
+		}
+
+
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+
+			add_ideas = CHI_wartime_economy
+
+		}
+	}
+
+	focus = {
+		id = CHI_nodlc_develop_the_hanyan_arsenal
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = CHI_nodlc_wartime_industrialisation }
+		x = -1
+		y = 1
+		relative_position_id = CHI_nodlc_wartime_industrialisation
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			NOT = {
+				#has_idea = CHI_hyper_inflation_5
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		complete_tooltip = {
+			#CHI_hyper_inflation_level_up = yes
+			random_state = {
+				limit = {
+					has_state_flag = CHI_develop_the_hanyan_arsenal_AF
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+
+		completion_reward = {
+			add_ideas = CHI_hanyang_arsenal
+			#CHI_hyper_inflation_level_up = yes
+			random_owned_controlled_state = {
+				prioritize = { 620 }
+				limit = {
+					free_building_slots = {
+						building = arms_factory
+						size > 1
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+				set_state_flag = CHI_develop_the_hanyan_arsenal_AF
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_nodlc_taiyuan_arsenal
+		icon = GFX_goal_generic_construct_mil_factory
+		prerequisite = { focus = CHI_nodlc_develop_the_hanyan_arsenal }
+		x = 0
+		y = 1
+		relative_position_id = CHI_nodlc_develop_the_hanyan_arsenal
+
+		cost = 10
+
+		ai_will_do = {
+			factor = 1
+		}
+
+		available = {
+			controls_state = 615
+			NOT = {
+				#has_idea = CHI_hyper_inflation_5
+			}
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			add_ideas = CHI_taiyuan_arsenal_idea
+			#CHI_hyper_inflation_level_up = yes
+
+			615 = {
+				add_extra_state_shared_building_slots = 3
+				add_building_construction = {
+					type = arms_factory
+					level = 3
+					instant_build = yes
+				}
+			}
+		}
+	}
+
+
 	focus = {
 		id = CHI_nodlc_fortify_beijing
 		icon = GFX_goal_generic_fortify_city
-		prerequisite = { focus = CHI_nodlc_military_affairs_commission }
-		x = 2
+		prerequisite = { focus = CHI_nodlc_wartime_industrialisation }
+		x = 1
 		y = 1
-		relative_position_id = CHI_nodlc_military_affairs_commission
+		relative_position_id = CHI_nodlc_wartime_industrialisation
 
 		cost = 10
 
@@ -6788,9 +6809,9 @@ focus_tree = {
 	focus = {
 		id = CHI_nodlc_military_branch
 		icon = GFX_focus_secret_rearmament
-		x = 30
+		x = 11
 		y = 0
-		#relative_position_id = CHI_nodlc_government_reform
+		relative_position_id = CHI_nodlc_ministry_of_industrial_affairs
 		#prerequisite = {focus = CHI_nodlc_government_reform}
 
 		cost = 10
@@ -6810,9 +6831,11 @@ focus_tree = {
 		cancel_if_invalid = yes
 		continue_if_invalid = no
 		available_if_capitulated = no
-		search_filters = { FOCUS_FILTER_INDUSTRY }
+		#search_filters = { FOCUS_FILTER_INDUSTRY }
 		completion_reward = {
-			add_ideas = partial_economic_mobilisation
+			army_experience = 25
+			air_experience = 25
+			navy_experience = 25
 		}
 	}
 
@@ -6831,7 +6854,7 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 5
+			army_experience = 25
 			add_tech_bonus = {
 				name = land_doc_bonus
 				bonus = 1.0
@@ -6858,7 +6881,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name = infantry_artillery_bonus
 				bonus = 1.0
-				uses = 1
+				uses = 3
 				category = infantry_weapons
 				category = artillery
 			}
@@ -6902,20 +6925,21 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			army_experience = 5
+			army_experience = 25
 			add_tech_bonus = {
 				name = land_doc_bonus
 				bonus = 1.0
-				uses = 1
+				uses = 2
 				category = land_doctrine
 			}
 		}
 	}
 
 	focus = {
-		id = CHI_nodlc_equipment_effort_2
-		icon = GFX_goal_generic_army_artillery
+		id = CHI_nodlc_antitank_production
+		icon = GFX_goal_generic_army_artillery2
 		prerequisite = { focus = CHI_nodlc_equipment_effort }
+		mutually_exclusive = { focus = CHI_nodlc_tank_production }
 		x = 0
 		y = 2
 		relative_position_id = CHI_nodlc_equipment_effort
@@ -6926,20 +6950,24 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			
 			add_tech_bonus = {
-				name = infantry_artillery_bonus
+				name = CHI_chinese_antitank
 				bonus = 1.0
-				uses = 1
-				category = infantry_weapons
-				category = artillery
+				uses = 2
+				category = cat_anti_tank
 			}
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = CHI_tank3
+			add_ideas = CHI_foreign_tank_idea
 		}
 	}
 
 	focus = {
-		id = CHI_nodlc_mechanization_effort
-		icon = GFX_goal_generic_build_tank
+		id = CHI_nodlc_tank_production
+		icon = GFX_goal_generic_army_tanks
 		prerequisite = { focus = CHI_nodlc_motorization_effort }
+		mutually_exclusive = { focus = CHI_nodlc_antitank_production }
 		x = 0
 		y = 2
 		relative_position_id = CHI_nodlc_motorization_effort
@@ -6951,115 +6979,17 @@ focus_tree = {
 
 		completion_reward = {
 			add_tech_bonus = {
-				name = motorized_bonus
-				ahead_reduction = 2
-				uses = 1
-				category = motorized_equipment
-			}
-		}
-	}
-
-	focus = {
-		id = CHI_nodlc_doctrine_effort_2
-		icon = GFX_goal_generic_army_doctrines
-		prerequisite = { focus = CHI_nodlc_doctrine_effort }
-		x = 0
-		y = 2
-		relative_position_id = CHI_nodlc_doctrine_effort
-		cost = 10
-
-		search_filters = {  FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-			army_experience = 5
-			add_tech_bonus = {
-				name = land_doc_bonus
-				bonus = 1.0
-				uses = 1
-				category = land_doctrine
-			}
-		}
-	}
-
-	focus = {
-		id = CHI_nodlc_equipment_effort_3
-		icon = GFX_goal_generic_army_artillery2
-		prerequisite = { focus = CHI_nodlc_equipment_effort_2 }
-		x = 0
-		y = 2
-		relative_position_id = CHI_nodlc_equipment_effort_2
-		cost = 10
-
-		search_filters = {  FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = infantry_artillery_bonus
-				ahead_reduction = 2
-				uses = 1
-				category = infantry_weapons
-				category = artillery
-			}
-		}
-	}
-
-	focus = {
-		id = CHI_nodlc_armor_effort
-		icon = GFX_goal_generic_army_tanks
-		prerequisite = { focus = CHI_nodlc_mechanization_effort }
-		x = 0
-		y = 2
-		relative_position_id = CHI_nodlc_mechanization_effort
-		cost = 10
-
-		search_filters = {  FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_tech_bonus = {
-				name = armor_bonus
+				name = CHI_chinese_panzers
 				bonus = 1.0
 				uses = 2
 				category = armor
 			}
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = CHI_tank2
 		}
 	}
 
-	focus = {
-		id = CHI_nodlc_special_forces
-		icon = GFX_goal_generic_special_forces
-		prerequisite = { focus = CHI_nodlc_equipment_effort_3 }
-		prerequisite = { focus = CHI_nodlc_doctrine_effort_2 }
-		prerequisite = { focus = CHI_nodlc_armor_effort }
-		x = 1
-		y = 1
-		relative_position_id = CHI_nodlc_equipment_effort_3
-		cost = 10
-
-		search_filters = { FOCUS_FILTER_RESEARCH }
-		
-		available_if_capitulated = yes
-
-		completion_reward = {
-			add_ideas = special_forces
-			add_tech_bonus = {
-				name = special_forces_bonus
-				bonus = 1.0
-				uses = 1
-				technology = paratroopers
-				technology = paratroopers2
-				technology = marines
-				technology = marines2
-				technology = tech_mountaineers
-				technology = tech_mountaineers2
-			}
-		}
-	}
+	
 
 	focus = {
 		id = CHI_nodlc_aviation_effort
@@ -7150,7 +7080,7 @@ focus_tree = {
 
 	focus = {
 		id = CHI_nodlc_fighter_focus
-		icon = GFX_goal_generic_air_fighter
+		icon = GFX_goal_generic_air_production
 		prerequisite = { focus = CHI_nodlc_aviation_effort }
 		mutually_exclusive = { focus = CHI_nodlc_fighter_order }
 		x = -1
@@ -7163,6 +7093,8 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = CHI_aftb
 			add_tech_bonus = {
 				name = fighter_bonus
 				bonus = 1.0
@@ -7180,7 +7112,7 @@ focus_tree = {
 
 	focus = {
 		id = CHI_nodlc_fighter_order
-		icon = GFX_goal_generic_air_bomber
+		icon = GFX_goal_generic_air_fighter
 		prerequisite = { focus = CHI_nodlc_aviation_effort }
 		mutually_exclusive = { focus = CHI_nodlc_fighter_focus }
 		x = 1
@@ -7193,10 +7125,12 @@ focus_tree = {
 		available_if_capitulated = yes
 
 		completion_reward = {
-			unlock_decision_category_tooltip = CHI_fighter_order
+			
 			add_ideas = {
 				CHI_foreign_fighter_idea
 			}
+			unlock_decision_category_tooltip = CHI_fighter_order
+			custom_effect_tooltip = CHI_fighter_order_tt
 			# add_tech_bonus = {
 			# 	name = bomber_bonus
 			# 	bonus = 1.0
@@ -7240,6 +7174,8 @@ focus_tree = {
 			}
 		}
 		completion_reward = {
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = CHI_aftb2
 			air_experience = 25
 			if = {
 				limit = {
@@ -7292,7 +7228,7 @@ focus_tree = {
 			add_tech_bonus = {
 				name =  air_doc_bonus
 				bonus = 1.0
-				uses = 1
+				uses = 2
 				category = air_doctrine
 			}
 		}
@@ -7317,7 +7253,7 @@ focus_tree = {
 				name = CAS_bonus
 				bonus = 1.0
 				ahead_reduction = 2
-				uses = 1
+				uses = 2
 				category = cas_bomber
 			}
 		}
@@ -7375,7 +7311,7 @@ focus_tree = {
 				name = nav_bomber_bonus
 				bonus = 1.0
 				ahead_reduction = 2
-				uses = 1
+				uses = 2
 				category = naval_bomber
 			}
 		}
@@ -7513,7 +7449,7 @@ focus_tree = {
 
 	focus = {
 		id = CHI_nodlc_flexible_navy
-		icon = GFX_goal_generic_build_navy
+		icon = GFX_goal_generic_navy_submarine
 		prerequisite = { focus = CHI_nodlc_naval_effort }
 		mutually_exclusive = { focus = CHI_nodlc_large_navy }
 		x = -1
@@ -7550,12 +7486,28 @@ focus_tree = {
 				technology = advanced_submarine_warfare
 				technology = combined_operations_raiding
 			}
+			random_state = {
+				limit = {
+					controller = { tag = ROOT }
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = CHI_nodlc_large_navy
-		icon = GFX_goal_generic_navy_doctrines_tactics
+		icon = GFX_goal_generic_navy_battleship
 		prerequisite = { focus = CHI_nodlc_naval_effort }
 		mutually_exclusive = { focus = CHI_nodlc_flexible_navy }
 		x = 1
@@ -7588,12 +7540,28 @@ focus_tree = {
 				uses = 2
 				category = fleet_in_being_tree
 			}
+			random_state = {
+				limit = {
+					controller = { tag = ROOT }
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = CHI_nodlc_submarine_effort
-		icon = GFX_goal_generic_navy_submarine
+		icon = GFX_goal_generic_wolf_pack
 		prerequisite = { focus = CHI_nodlc_flexible_navy focus = CHI_nodlc_large_navy }
 		x = 0
 		y = 1
@@ -7626,12 +7594,28 @@ focus_tree = {
 				uses = 1
 				category = ss_tech
 			}
+			random_state = {
+				limit = {
+					controller = { tag = ROOT }
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = CHI_nodlc_cruiser_effort
-		icon = GFX_goal_generic_navy_cruiser
+		icon = GFX_focus_generic_cruiser2
 		prerequisite = { focus = CHI_nodlc_large_navy focus = CHI_nodlc_flexible_navy }
 		x = 0
 		y = 1
@@ -7665,12 +7649,28 @@ focus_tree = {
 				category = cl_tech
 				category = ca_tech
 			}
+			random_state = {
+				limit = {
+					controller = { tag = ROOT }
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = CHI_nodlc_destroyer_effort
-		icon = GFX_goal_generic_wolf_pack
+		icon = GFX_focus_generic_destroyer
 		prerequisite = { focus = CHI_nodlc_submarine_effort }
 		x = 0
 		y = 1
@@ -7703,12 +7703,28 @@ focus_tree = {
 				uses = 1
 				category = dd_tech
 			}
+			random_state = {
+				limit = {
+					controller = { tag = ROOT }
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
 		}
 	}
 
 	focus = {
 		id = CHI_nodlc_capital_ships_effort
-		icon = GFX_goal_generic_navy_battleship
+		icon = GFX_focus_generic_navy_battleship2
 		prerequisite = { focus = CHI_nodlc_cruiser_effort }
 		x = 0
 		y = 1
@@ -7742,6 +7758,22 @@ focus_tree = {
 				category = bc_tech
 				category = bb_tech
 				category = cv_tech
+			}
+			random_state = {
+				limit = {
+					controller = { tag = ROOT }
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
 			}
 		}
 	}

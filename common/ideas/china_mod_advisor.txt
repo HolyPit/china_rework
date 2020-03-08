@@ -6,10 +6,22 @@ ideas = {
 			picture = chi_mao
 
 			available = {
-				has_completed_focus = CHI_summit_with_mao
+				
+				if = {
+					limit = {
+						has_DLC = "Waking the Tiger"
+					}
+					has_completed_focus = CHI_summit_with_mao
+				}
+				else = {
+					#has_completed_focus = CHI_fighter_focus
+					has_completed_focus = CHI_nodlc_summit_with_mao
+				}
+				
+				
 				OR = {
-				has_idea = CHI_ccp_kmt_4
-				has_idea = CHI_ccp_kmt_5
+					has_idea = CHI_ccp_kmt_4
+					has_idea = CHI_ccp_kmt_5
 				}
 			}
 
