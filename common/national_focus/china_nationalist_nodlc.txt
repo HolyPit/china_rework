@@ -382,7 +382,7 @@ focus_tree = {
 
 		available = {
 			WTT_is_ROOT_current_leader_of_china = yes
-
+			NOT = { has_government = democratic }
 			any_other_country = {
 			NOT = {
 			has_country_leader =  {ruling_only = yes name = "Zhang Xueliang"}
@@ -400,8 +400,7 @@ focus_tree = {
 		search_filters = { FOCUS_FILTER_POLITICAL }
 		completion_reward = {
 
-		if = {
-		limit = {has_government = neutrality}
+		
 			create_country_leader = {
 				name = "Zhang Xueliang"
 				desc = "POLITICS_ZHANG_XUELIANG_DESC"
@@ -413,56 +412,37 @@ focus_tree = {
 					young_marshal
 					dislikes_japan
 				}
-		}
+			}
 			hidden_effect = {
-			create_country_leader = {
-				name = "Zhang Xueliang"
-				desc = "POLITICS_ZHANG_XUELIANG_DESC"
-				picture = "GFX_portrait_chi_zhang_xueliang"
-				expire = "1965.1.1"
-				ideology = fascism_ideology
-				traits = {fascist_sympathies
-					young_marshal
-					dislikes_japan
-				}
-			}
-			set_party_name = { ideology = fascism long_name = CHI_party_fengtian_clique_long
-			name = CHI_party_fengtian_clique }
-
-			}
-			}
-
-			if = {
-			limit = {has_government = fascism}
 				create_country_leader = {
 					name = "Zhang Xueliang"
 					desc = "POLITICS_ZHANG_XUELIANG_DESC"
 					picture = "GFX_portrait_chi_zhang_xueliang"
 					expire = "1965.1.1"
 					ideology = fascism_ideology
-					traits = {
-						fascist_sympathies
-						young_marshal
-						dislikes_japan
-					}
-				}
-				hidden_effect = {
-				create_country_leader = {
-					name = "Zhang Xueliang"
-					desc = "POLITICS_ZHANG_XUELIANG_DESC"
-					picture = "GFX_portrait_chi_zhang_xueliang"
-					expire = "1965.1.1"
-					ideology = despotism
 					traits = {fascist_sympathies
 						young_marshal
 						dislikes_japan
 					}
 				}
+
+				create_country_leader = {
+					name = "Zhang Xueliang"
+					desc = "POLITICS_ZHANG_XUELIANG_DESC"
+					picture = "GFX_portrait_chi_zhang_xueliang"
+					expire = "1965.1.1"
+					ideology = socialism
+					traits = {fascist_sympathies
+						young_marshal
+						dislikes_japan
+					}
+				}
+
 				set_party_name = { ideology = fascism long_name = CHI_party_fengtian_clique_long
 				name = CHI_party_fengtian_clique }
 
-				}
-				}
+			}
+			
 
 		}
 	}
@@ -2569,7 +2549,7 @@ focus_tree = {
 
 		completion_reward = {
 
-
+			remove_ideas = { CHI_communist_uprisings }
 			PRC = {
 				add_autonomy_ratio = {
 					value = -1.00
