@@ -3316,7 +3316,7 @@ focus_tree = {
 	focus = {
 		id = CHI_nodlc_legalise_communist_party
 		icon = GFX_focus_chi_cooperation_with_the_communists
-		prerequisite = { focus = CHI_first_election focus = CHI_military_guided_goverment }
+		prerequisite = { focus = CHI_nodlc_first_election focus = CHI_nodlc_military_guided_goverment }
 		mutually_exclusive = { focus =  CHI_nodlc_suppress_the_communists}
 		x = 0
 		y = 1
@@ -3701,7 +3701,7 @@ focus_tree = {
 		prerequisite = { focus = CHI_nodlc_secure_army_support }
 		x = 0
 		y = 1
-		relative_position_id = CHI_secure_army_support
+		relative_position_id = CHI_nodlc_secure_army_support
 
 		cost = 10
 
