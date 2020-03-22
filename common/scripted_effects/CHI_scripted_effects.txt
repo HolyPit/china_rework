@@ -445,4 +445,100 @@ CHI_negative_spirit_transfer = {
 		}
 		add_ideas = CHI_hyper_inflation_5
 	}
+	if = {
+		limit = {
+			event_target:old_leader = { has_idea = CHI_end_of_golden_decade3 }	
+		}
+		add_ideas = CHI_end_of_golden_decade3
+	}
+	if = {
+		limit = {
+			event_target:old_leader = { has_idea = CHI_end_of_golden_decade2 }	
+		}
+		add_ideas = CHI_end_of_golden_decade2
+	}
+	if = {
+		limit = {
+			event_target:old_leader = { has_idea = CHI_end_of_golden_decade1 }	
+		}
+		add_ideas = CHI_end_of_golden_decade1
+	}
+	if = {
+		limit = {
+			event_target:old_leader = { has_idea = CHI_end_of_golden_decade0 }	
+		}
+		add_ideas = CHI_end_of_golden_decade0
+	}
+	if = {
+		limit = {
+			event_target:old_leader = { has_idea = CHI_factory_strikes3 }	
+		}
+		add_ideas = CHI_factory_strikes3
+	}
+	if = {
+		limit = {
+			event_target:old_leader = { has_idea = CHI_factory_strikes2 }	
+		}
+		add_ideas = CHI_factory_strikes2
+	}
+	if = {
+		limit = {
+			event_target:old_leader = { has_idea = CHI_factory_strikes1 }	
+		}
+		add_ideas = CHI_factory_strikes1
+	}
+	if = {
+		limit = {
+			event_target:old_leader = { has_idea = CHI_factory_strikes0 }	
+		}
+		add_ideas = CHI_factory_strikes0
+	}
+	if = {
+		limit = {
+			event_target:old_leader = { has_idea = CHI_risk_of_famine2 }	
+		}
+		add_ideas = CHI_risk_of_famine2
+	}
+	if = {
+		limit = {
+			event_target:old_leader = { has_idea = CHI_risk_of_famine1 }	
+		}
+		add_ideas = CHI_risk_of_famine1
+	}
+	if = {
+		limit = {
+			event_target:old_leader = { has_idea = CHI_lack_of_labor3 }	
+		}
+		add_ideas = CHI_lack_of_labor3
+	}
+	if = {
+		limit = {
+			event_target:old_leader = { has_idea = CHI_lack_of_labor2 }	
+		}
+		add_ideas = CHI_lack_of_labor2
+	}
+	if = {
+		limit = {
+			event_target:old_leader = { has_idea = CHI_lack_of_labor1 }	
+		}
+		add_ideas = CHI_lack_of_labor1
+	}
+	if = {
+		limit = {
+			event_target:old_leader = { has_idea = CHI_research_behind3 }	
+		}
+		add_ideas = CHI_research_behind3
+	}
+	if = {
+		limit = {
+			event_target:old_leader = { has_idea = CHI_research_behind2 }	
+		}
+		add_ideas = CHI_research_behind2
+	}
+	if = {
+		limit = {
+			event_target:old_leader = { has_idea = CHI_research_behind1 }	
+		}
+		add_ideas = CHI_research_behind1
+	}
 }
