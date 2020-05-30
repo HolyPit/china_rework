@@ -55,7 +55,8 @@ focus_tree = {
 	focus = {
 		id = CHI_three_principles_of_the_people
 		icon = GFX_goal_generic_national_unity
-		x = -10
+		mutually_exclusive = { focus = CHI_no_hope_in_government }
+		x = 20
 		y = 0
 		#relative_position_id = CHI_invite_foreign_investors
 
@@ -7913,382 +7914,228 @@ focus_tree = {
 ############ Military and Technologies ##################################
 #########################################################################
 
-focus = {
-	id = CHI_military_branch
-	icon = GFX_goal_generic_fortify_city
-	x = 41
-	y = 0
-	#relative_position_id = CHI_government_reform
-	#prerequisite = {focus = CHI_government_reform}
+	focus = {
+		id = CHI_military_branch
+		icon = GFX_goal_generic_fortify_city
+		x = 71
+		y = 0
+		#relative_position_id = CHI_government_reform
+		#prerequisite = {focus = CHI_government_reform}
 
-	cost = 10
+		cost = 10
 
-	ai_will_do = {
-		factor = 4
-	}
+		ai_will_do = {
+			factor = 4
+		}
 
-	available = {
+		available = {
 
-	}
+		}
 
-	bypass = {
+		bypass = {
 
-	}
+		}
 
-	cancel_if_invalid = yes
-	continue_if_invalid = no
-	available_if_capitulated = no
-	#search_filters = { FOCUS_FILTER_INDUSTRY }
-	completion_reward = {
-		army_experience = 25
-		air_experience = 25
-		navy_experience = 25
-	}
-}
-
-
-
-focus = {
-	id = CHI_army_effort
-	icon = GFX_goal_generic_allies_build_infantry
-	x = -4
-	y = 1
-	prerequisite = {focus = CHI_military_branch }
-	relative_position_id = CHI_military_branch
-	cost = 5
-	search_filters = {  FOCUS_FILTER_RESEARCH }
-	
-	available_if_capitulated = yes
-
-	completion_reward = {
-		army_experience = 25
-		add_tech_bonus = {
-			name = land_doc_bonus
-			bonus = 1.0
-			uses = 1
-			category = land_doctrine
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+		#search_filters = { FOCUS_FILTER_INDUSTRY }
+		completion_reward = {
+			army_experience = 25
+			air_experience = 25
+			navy_experience = 25
 		}
 	}
-}
 
-focus = {
-	id = CHI_equipment_effort
-	icon = GFX_goal_generic_small_arms
-	prerequisite = { focus = CHI_army_effort }
-	x = -1
-	y = 1
-	relative_position_id = CHI_army_effort
-	cost = 5
 
-	search_filters = {  FOCUS_FILTER_RESEARCH }
-	
-	available_if_capitulated = yes
 
-	completion_reward = {
-		add_tech_bonus = {
-			name = infantry_artillery_bonus
-			bonus = 1.0
-			uses = 3
-			category = infantry_weapons
-			category = artillery
-		}
-	}
-}
-
-focus = {
-	id = CHI_motorization_effort
-	icon = GFX_goal_generic_army_motorized
-	prerequisite = { focus = CHI_army_effort }
-	bypass = { has_tech = motorised_infantry }
-	x = 1
-	y = 1
-	relative_position_id = CHI_army_effort
-	cost = 5
-
-	search_filters = {  FOCUS_FILTER_RESEARCH }
-	
-	available_if_capitulated = yes
-
-	completion_reward = {
-		add_tech_bonus = {
-			name = motorized_bonus
-			bonus = 3.0
-			technology = motorised_infantry
-		}
-	}
-}
-
-focus = {
-	id = CHI_doctrine_effort
-	icon = GFX_goal_generic_army_doctrines
-	prerequisite = { focus = CHI_army_effort }
-	x = 0
-	y = 2
-	relative_position_id = CHI_army_effort
-	cost = 5
-
-	search_filters = {  FOCUS_FILTER_RESEARCH }
-	
-	available_if_capitulated = yes
-
-	completion_reward = {
-		army_experience = 25
-		add_tech_bonus = {
-			name = land_doc_bonus
-			bonus = 1.0
-			uses = 2
-			category = land_doctrine
-		}
-	}
-}
-
-focus = {
-	id = CHI_antitank_production
-	icon = GFX_goal_generic_army_artillery2
-	prerequisite = { focus = CHI_equipment_effort }
-	mutually_exclusive = { focus = CHI_tank_production }
-	x = 0
-	y = 2
-	relative_position_id = CHI_equipment_effort
-	cost = 5
-
-	search_filters = {  FOCUS_FILTER_RESEARCH }
-	
-	available_if_capitulated = yes
-
-	completion_reward = {
+	focus = {
+		id = CHI_army_effort
+		icon = GFX_goal_generic_allies_build_infantry
+		x = -4
+		y = 1
+		prerequisite = {focus = CHI_military_branch }
+		relative_position_id = CHI_military_branch
+		cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
 		
-		add_tech_bonus = {
-			name = CHI_chinese_antitank
-			bonus = 1.0
-			uses = 2
-			category = cat_anti_tank
-		}
-		custom_effect_tooltip = available_designer
-		show_ideas_tooltip = CHI_tank3
-		add_ideas = CHI_foreign_tank_idea
-	}
-}
+		available_if_capitulated = yes
 
-focus = {
-	id = CHI_tank_production
-	icon = GFX_goal_generic_army_tanks
-	prerequisite = { focus = CHI_motorization_effort }
-	mutually_exclusive = { focus = CHI_antitank_production }
-	x = 0
-	y = 2
-	relative_position_id = CHI_motorization_effort
-	cost = 5
-	
-	search_filters = {  FOCUS_FILTER_RESEARCH }
-
-	available_if_capitulated = yes
-
-	completion_reward = {
-		add_tech_bonus = {
-			name = CHI_chinese_panzers
-			bonus = 1.0
-			uses = 2
-			category = armor
-		}
-		custom_effect_tooltip = available_designer
-		show_ideas_tooltip = CHI_tank2
-	}
-}
-
-
-
-focus = {
-	id = CHI_aviation_effort
-	icon = GFX_goal_generic_build_airforce
-	x = 0
-	y = 1
-	prerequisite = {focus = CHI_military_branch }
-	relative_position_id = CHI_military_branch
-	cost = 5
-	
-	search_filters = {   FOCUS_FILTER_RESEARCH }
-
-	available_if_capitulated = yes
-
-
-	complete_tooltip = {
-		air_experience = 25
-		if = { limit = { has_country_flag = aviation_effort_AB }
-			add_building_construction = {
-				type = air_base
-				level = 2
-				instant_build = yes
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = land_doctrine
 			}
-		}			
-		add_tech_bonus = {
-			name = air_doc_bonus
-			bonus = 1.0
-			uses = 1
-			category = air_doctrine
-		}			
+		}
 	}
 
-	completion_reward = {
-		air_experience = 25
+	focus = {
+		id = CHI_equipment_effort
+		icon = GFX_goal_generic_small_arms
+		prerequisite = { focus = CHI_army_effort }
+		x = -1
+		y = 1
+		relative_position_id = CHI_army_effort
+		cost = 5
 
-		if = {
-			limit = {
-				capital_scope = {
-					NOT = {
-						free_building_slots = {
-							building = air_base
-							size > 1
-						}
-					}
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = infantry_artillery_bonus
+				bonus = 1.0
+				uses = 3
+				category = infantry_weapons
+				category = artillery
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_motorization_effort
+		icon = GFX_goal_generic_army_motorized
+		prerequisite = { focus = CHI_army_effort }
+		bypass = { has_tech = motorised_infantry }
+		x = 1
+		y = 1
+		relative_position_id = CHI_army_effort
+		cost = 5
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = motorized_bonus
+				bonus = 3.0
+				technology = motorised_infantry
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_doctrine_effort
+		icon = GFX_goal_generic_army_doctrines
+		prerequisite = { focus = CHI_army_effort }
+		x = 0
+		y = 2
+		relative_position_id = CHI_army_effort
+		cost = 5
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			army_experience = 25
+			add_tech_bonus = {
+				name = land_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = land_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_antitank_production
+		icon = GFX_goal_generic_army_artillery2
+		prerequisite = { focus = CHI_equipment_effort }
+		mutually_exclusive = { focus = CHI_tank_production }
+		x = 0
+		y = 2
+		relative_position_id = CHI_equipment_effort
+		cost = 5
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+			add_tech_bonus = {
+				name = CHI_chinese_antitank
+				bonus = 1.0
+				uses = 2
+				category = cat_anti_tank
+			}
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = CHI_tank3
+			add_ideas = CHI_foreign_tank_idea
+		}
+	}
+
+	focus = {
+		id = CHI_tank_production
+		icon = GFX_goal_generic_army_tanks
+		prerequisite = { focus = CHI_motorization_effort }
+		mutually_exclusive = { focus = CHI_antitank_production }
+		x = 0
+		y = 2
+		relative_position_id = CHI_motorization_effort
+		cost = 5
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CHI_chinese_panzers
+				bonus = 1.0
+				uses = 2
+				category = armor
+			}
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = CHI_tank2
+		}
+	}
+
+
+
+	focus = {
+		id = CHI_aviation_effort
+		icon = GFX_goal_generic_build_airforce
+		x = 0
+		y = 1
+		prerequisite = {focus = CHI_military_branch }
+		relative_position_id = CHI_military_branch
+		cost = 5
+		
+		search_filters = {   FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_AB }
+				add_building_construction = {
+					type = air_base
+					level = 2
+					instant_build = yes
 				}
-			}
-			random_owned_controlled_state = {
+			}			
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}			
+		}
+
+		completion_reward = {
+			air_experience = 25
+
+			if = {
 				limit = {
-					free_building_slots = {
-						building = air_base
-						size > 1
-					}
-				}
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-				ROOT = { set_country_flag = aviation_effort_AB }
-			}
-		}
-		if = {
-			limit = {
-				capital_scope = {
-					free_building_slots = {
-						building = air_base
-						size > 1
-					}
-				}
-			}
-			capital_scope = {
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-				ROOT = { set_country_flag = aviation_effort_AB }
-			}
-		}
-		add_tech_bonus = {
-			name = air_doc_bonus
-			bonus = 1.0
-			uses = 1
-			category = air_doctrine
-		}
-	}
-}
-
-focus = {
-	id = CHI_fighter_focus
-	icon = GFX_goal_generic_air_production
-	prerequisite = { focus = CHI_aviation_effort }
-	mutually_exclusive = { focus = CHI_fighter_order }
-	x = -1
-	y = 1
-	relative_position_id = CHI_aviation_effort
-	cost = 5
-
-	search_filters = {  FOCUS_FILTER_RESEARCH }
-	
-	available_if_capitulated = yes
-
-	completion_reward = {
-		custom_effect_tooltip = available_designer
-		show_ideas_tooltip = CHI_aftb
-		add_tech_bonus = {
-			name = fighter_bonus
-			bonus = 1.0
-			uses = 2
-			technology = early_fighter
-			technology = fighter1
-			technology = fighter2
-			technology = fighter3
-			technology = heavy_fighter1
-			technology = heavy_fighter2
-			technology = heavy_fighter3
-		}
-	}
-}
-
-focus = {
-	id = CHI_fighter_order
-	icon = GFX_goal_generic_air_fighter
-	prerequisite = { focus = CHI_aviation_effort }
-	mutually_exclusive = { focus = CHI_fighter_focus }
-	x = 1
-	y = 1
-	relative_position_id = CHI_aviation_effort
-	cost = 5
-
-	#search_filters = {  FOCUS_FILTER_RESEARCH }
-	
-	available_if_capitulated = yes
-
-	completion_reward = {
-		
-		add_ideas = {
-			CHI_foreign_fighter_idea
-		}
-		unlock_decision_category_tooltip = CHI_fighter_order
-		custom_effect_tooltip = CHI_fighter_order_tt
-		# add_tech_bonus = {
-		# 	name = bomber_bonus
-		# 	bonus = 1.0
-		# 	uses = 2
-		# 	technology = strategic_bomber1
-		# 	technology = strategic_bomber2
-		# 	technology = strategic_bomber3
-		# 	category = tactical_bomber
-		# }
-	}
-}
-
-focus = {
-	id = CHI_aviation_effort_2
-	icon = GFX_goal_generic_air_doctrine
-	prerequisite = { focus = CHI_fighter_order focus = CHI_fighter_focus }
-	x = -1
-	y = 1
-	relative_position_id = CHI_fighter_order
-	cost = 5
-
-	search_filters = {   FOCUS_FILTER_RESEARCH }
-	
-	available_if_capitulated = yes
-
-
-	complete_tooltip = {
-		air_experience = 25
-		if = { limit = { has_country_flag = aviation_effort_2_AB }
-			add_building_construction = {
-				type = air_base
-				level = 2
-				instant_build = yes
-			}
-		}
-		add_tech_bonus = {
-			name =  air_doc_bonus
-			bonus = 1.0
-			uses = 1
-			category = air_doctrine
-		}
-	}
-	completion_reward = {
-		custom_effect_tooltip = available_designer
-		show_ideas_tooltip = CHI_aftb2
-		air_experience = 25
-		if = {
-			limit = {
-				capital_scope = {
-					OR = {
-						NOT = { is_controlled_by = ROOT }
+					capital_scope = {
 						NOT = {
 							free_building_slots = {
 								building = air_base
@@ -8297,169 +8144,357 @@ focus = {
 						}
 					}
 				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_AB }
+				}
 			}
-			random_owned_controlled_state = {
+			if = {
 				limit = {
-					free_building_slots = {
-						building = air_base
-						size > 1
+					capital_scope = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
 					}
 				}
-				add_building_construction = {
-					type = air_base
-					level = 2
-					instant_build = yes
-				}
-				ROOT = { set_country_flag = aviation_effort_2_AB }
-			}
-		}
-		if = {
-			limit = {
 				capital_scope = {
-					is_controlled_by = ROOT
-					free_building_slots = {
-						building = air_base
-						size > 1
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
 					}
+					ROOT = { set_country_flag = aviation_effort_AB }
 				}
 			}
-			capital_scope = {
+			add_tech_bonus = {
+				name = air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_fighter_focus
+		icon = GFX_goal_generic_air_production
+		prerequisite = { focus = CHI_aviation_effort }
+		mutually_exclusive = { focus = CHI_fighter_order }
+		x = -1
+		y = 1
+		relative_position_id = CHI_aviation_effort
+		cost = 5
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = CHI_aftb
+			add_tech_bonus = {
+				name = fighter_bonus
+				bonus = 1.0
+				uses = 2
+				technology = early_fighter
+				technology = fighter1
+				technology = fighter2
+				technology = fighter3
+				technology = heavy_fighter1
+				technology = heavy_fighter2
+				technology = heavy_fighter3
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_fighter_order
+		icon = GFX_goal_generic_air_fighter
+		prerequisite = { focus = CHI_aviation_effort }
+		mutually_exclusive = { focus = CHI_fighter_focus }
+		x = 1
+		y = 1
+		relative_position_id = CHI_aviation_effort
+		cost = 5
+
+		#search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			
+			add_ideas = {
+				CHI_foreign_fighter_idea
+			}
+			unlock_decision_category_tooltip = CHI_fighter_order
+			custom_effect_tooltip = CHI_fighter_order_tt
+			# add_tech_bonus = {
+			# 	name = bomber_bonus
+			# 	bonus = 1.0
+			# 	uses = 2
+			# 	technology = strategic_bomber1
+			# 	technology = strategic_bomber2
+			# 	technology = strategic_bomber3
+			# 	category = tactical_bomber
+			# }
+		}
+	}
+
+	focus = {
+		id = CHI_aviation_effort_2
+		icon = GFX_goal_generic_air_doctrine
+		prerequisite = { focus = CHI_fighter_order focus = CHI_fighter_focus }
+		x = -1
+		y = 1
+		relative_position_id = CHI_fighter_order
+		cost = 5
+
+		search_filters = {   FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		complete_tooltip = {
+			air_experience = 25
+			if = { limit = { has_country_flag = aviation_effort_2_AB }
 				add_building_construction = {
 					type = air_base
 					level = 2
 					instant_build = yes
-				}				
-				ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 1.0
+				uses = 1
+				category = air_doctrine
 			}
 		}
-		add_tech_bonus = {
-			name =  air_doc_bonus
-			bonus = 1.0
-			uses = 2
-			category = air_doctrine
-		}
-	}
-}
-
-focus = {
-	id = CHI_CAS_effort
-	icon = GFX_goal_generic_CAS
-	prerequisite = { focus = CHI_aviation_effort_2 }
-	prerequisite = { focus = CHI_motorization_effort }
-	x = -1
-	y = 1
-	relative_position_id = CHI_aviation_effort_2
-	cost = 5
-
-	search_filters = {  FOCUS_FILTER_RESEARCH }
-	
-	available_if_capitulated = yes
-
-	completion_reward = {
-		add_tech_bonus = {
-			name = CAS_bonus
-			bonus = 1.0
-			ahead_reduction = 2
-			uses = 2
-			category = cas_bomber
-		}
-	}
-}
-
-focus = {
-	id = CHI_rocket_effort
-	icon = GFX_focus_rocketry
-	prerequisite = { focus = CHI_aviation_effort_2 }
-	#prerequisite = { focus = CHI_infrastructure_effort }
-	x = 0
-	y = 2
-	relative_position_id = CHI_aviation_effort_2
-	cost = 5
-
-	search_filters = {  FOCUS_FILTER_RESEARCH }
-	
-	available_if_capitulated = yes
-
-	completion_reward = {
-		add_tech_bonus = {
-			name = jet_rocket_bonus
-			ahead_reduction = 2
-			uses = 2
-			category = rocketry
-			category = jet_technology
-		}
-	}
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0.25
-			always = yes
-		}
-	}
-}
-
-focus = {
-	id = CHI_NAV_effort
-	icon = GFX_goal_generic_air_naval_bomber
-	prerequisite = { focus = CHI_aviation_effort_2 }
-	prerequisite = { focus = CHI_flexible_navy }
-	x = 1
-	y = 1
-	relative_position_id = CHI_aviation_effort_2
-	cost = 5
-
-	search_filters = {  FOCUS_FILTER_RESEARCH }
-	
-	available_if_capitulated = yes
-
-	completion_reward = {
-		add_tech_bonus = {
-			name = nav_bomber_bonus
-			bonus = 1.0
-			ahead_reduction = 2
-			uses = 2
-			category = naval_bomber
-		}
-	}
-}
-
-focus = {
-	id = CHI_naval_effort
-	icon = GFX_goal_generic_construct_naval_dockyard
-	x = 4
-	y = 1
-	prerequisite = {focus = CHI_military_branch }
-	relative_position_id = CHI_military_branch
-	cost = 5
-
-	search_filters = {  FOCUS_FILTER_INDUSTRY }
-	
-	available_if_capitulated = yes
-
-
-	available = {
-		any_state = {
-			is_coastal = yes
-			is_controlled_by = ROOT
+		completion_reward = {
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = CHI_aftb2
+			air_experience = 25
+			if = {
+				limit = {
+					capital_scope = {
+						OR = {
+							NOT = { is_controlled_by = ROOT }
+							NOT = {
+								free_building_slots = {
+									building = air_base
+									size > 1
+								}
+							}
+						}
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			if = {
+				limit = {
+					capital_scope = {
+						is_controlled_by = ROOT
+						free_building_slots = {
+							building = air_base
+							size > 1
+						}
+					}
+				}
+				capital_scope = {
+					add_building_construction = {
+						type = air_base
+						level = 2
+						instant_build = yes
+					}				
+					ROOT = { set_country_flag = aviation_effort_2_AB }
+				}
+			}
+			add_tech_bonus = {
+				name =  air_doc_bonus
+				bonus = 1.0
+				uses = 2
+				category = air_doctrine
+			}
 		}
 	}
 
-	complete_tooltip = {
-		navy_experience = 25
-		add_extra_state_shared_building_slots = 3
-		add_building_construction = {
-			type = dockyard
-			level = 3
-			instant_build = yes
+	focus = {
+		id = CHI_CAS_effort
+		icon = GFX_goal_generic_CAS
+		prerequisite = { focus = CHI_aviation_effort_2 }
+		prerequisite = { focus = CHI_motorization_effort }
+		x = -1
+		y = 1
+		relative_position_id = CHI_aviation_effort_2
+		cost = 5
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = CAS_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 2
+				category = cas_bomber
+			}
 		}
 	}
-	
-	completion_reward = {
-		navy_experience = 25
-		if = {
-			limit = {
-				NOT = {
+
+	focus = {
+		id = CHI_rocket_effort
+		icon = GFX_focus_rocketry
+		prerequisite = { focus = CHI_aviation_effort_2 }
+		#prerequisite = { focus = CHI_infrastructure_effort }
+		x = 0
+		y = 2
+		relative_position_id = CHI_aviation_effort_2
+		cost = 5
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = jet_rocket_bonus
+				ahead_reduction = 2
+				uses = 2
+				category = rocketry
+				category = jet_technology
+			}
+		}
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0.25
+				always = yes
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_NAV_effort
+		icon = GFX_goal_generic_air_naval_bomber
+		prerequisite = { focus = CHI_aviation_effort_2 }
+		prerequisite = { focus = CHI_flexible_navy }
+		x = 1
+		y = 1
+		relative_position_id = CHI_aviation_effort_2
+		cost = 5
+
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = nav_bomber_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 2
+				category = naval_bomber
+			}
+		}
+	}
+
+	focus = {
+		id = CHI_naval_effort
+		icon = GFX_goal_generic_construct_naval_dockyard
+		x = 4
+		y = 1
+		prerequisite = {focus = CHI_military_branch }
+		relative_position_id = CHI_military_branch
+		cost = 5
+
+		search_filters = {  FOCUS_FILTER_INDUSTRY }
+		
+		available_if_capitulated = yes
+
+
+		available = {
+			any_state = {
+				is_coastal = yes
+				is_controlled_by = ROOT
+			}
+		}
+
+		complete_tooltip = {
+			navy_experience = 25
+			add_extra_state_shared_building_slots = 3
+			add_building_construction = {
+				type = dockyard
+				level = 3
+				instant_build = yes
+			}
+		}
+		
+		completion_reward = {
+			navy_experience = 25
+			if = {
+				limit = {
+					NOT = {
+						any_owned_state = {
+							dockyard > 0
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+					any_owned_state = {
+						is_coastal = yes
+					}
+				}
+				random_owned_controlled_state = {
+					limit = {
+						is_coastal = yes
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
 					any_owned_state = {
 						dockyard > 0
 						free_building_slots = {
@@ -8469,427 +8504,682 @@ focus = {
 						}
 					}
 				}
-				any_owned_state = {
-					is_coastal = yes
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					is_coastal = yes
-					free_building_slots = {
-						building = dockyard
-						size > 2
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = dockyard
-					level = 3
-					instant_build = yes
-				}
-			}
-			set_country_flag = naval_effort_built
-		}
-		if = {
-			limit = {
-				NOT = { has_country_flag = naval_effort_built }
-				any_owned_state = {
-					dockyard > 0
-					free_building_slots = {
-						building = dockyard
-						size > 2
-						include_locked = yes
-					}
-				}
-			}
-			random_owned_controlled_state = {
-				limit = {
-					dockyard > 0
-					free_building_slots = {
-						building = dockyard
-						size > 2
-						include_locked = yes
-					}
-				}
-				add_extra_state_shared_building_slots = 3
-				add_building_construction = {
-					type = dockyard
-					level = 3
-					instant_build = yes
-				}
-			}
-			set_country_flag = naval_effort_built
-		}
-		if = {
-			limit = {
-				NOT = { has_country_flag = naval_effort_built }
-				NOT = {
-					any_owned_state = {
+				random_owned_controlled_state = {
+					limit = {
+						dockyard > 0
 						free_building_slots = {
 							building = dockyard
 							size > 2
 							include_locked = yes
 						}
 					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
 				}
+				set_country_flag = naval_effort_built
+			}
+			if = {
+				limit = {
+					NOT = { has_country_flag = naval_effort_built }
+					NOT = {
+						any_owned_state = {
+							free_building_slots = {
+								building = dockyard
+								size > 2
+								include_locked = yes
+							}
+						}
+					}
+				}
+				random_state = {
+					limit = {
+						controller = { tag = ROOT }
+						free_building_slots = {
+							building = dockyard
+							size > 2
+							include_locked = yes
+						}
+					}
+					add_extra_state_shared_building_slots = 3
+					add_building_construction = {
+						type = dockyard
+						level = 3
+						instant_build = yes
+					}
+				}
+			}			
+		}
+	}
+
+	focus = {
+		id = CHI_flexible_navy
+		icon = GFX_goal_generic_navy_submarine
+		prerequisite = { focus = CHI_naval_effort }
+		mutually_exclusive = { focus = CHI_large_navy }
+		x = -1
+		y = 1
+		relative_position_id = CHI_naval_effort
+		cost = 5
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = sub_op_bonus
+				bonus = 1.0
+				uses = 2
+				technology = convoy_interdiction_ti
+				technology = unrestricted_submarine_warfare
+				technology = wolfpacks
+				technology = advanced_submarine_warfare
+				technology = combined_operations_raiding
 			}
 			random_state = {
 				limit = {
 					controller = { tag = ROOT }
 					free_building_slots = {
 						building = dockyard
-						size > 2
+						size > 0
 						include_locked = yes
 					}
 				}
-				add_extra_state_shared_building_slots = 3
+				add_extra_state_shared_building_slots = 1
 				add_building_construction = {
 					type = dockyard
-					level = 3
+					level = 1
 					instant_build = yes
 				}
 			}
-		}			
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = CHI_nanyang_navy
+			show_ideas_tooltip = CHI_mawei_shipyard
+		}
 	}
-}
 
-focus = {
-	id = CHI_flexible_navy
-	icon = GFX_goal_generic_navy_submarine
-	prerequisite = { focus = CHI_naval_effort }
-	mutually_exclusive = { focus = CHI_large_navy }
-	x = -1
-	y = 1
-	relative_position_id = CHI_naval_effort
-	cost = 5
-	
-	search_filters = {  FOCUS_FILTER_RESEARCH }
+	focus = {
+		id = CHI_large_navy
+		icon = GFX_goal_generic_navy_battleship
+		prerequisite = { focus = CHI_naval_effort }
+		mutually_exclusive = { focus = CHI_flexible_navy }
+		x = 1
+		y = 1
+		relative_position_id = CHI_naval_effort
+		cost = 5
+		
+		search_filters = {   FOCUS_FILTER_RESEARCH }
 
-	available_if_capitulated = yes
+		available_if_capitulated = yes
 
 
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			all_owned_state = {
-				OR = {
-					is_coastal = no
-					dockyard < 1
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = fleet_in_being_bonus
+				bonus = 1.0
+				uses = 2
+				category = fleet_in_being_tree
+			}
+			random_state = {
+				limit = {
+					controller = { tag = ROOT }
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
+				}
+			}
+			custom_effect_tooltip = available_designer
+			show_ideas_tooltip = CHI_beiyang_navy
+		}
+	}
+
+	focus = {
+		id = CHI_submarine_effort
+		icon = GFX_goal_generic_wolf_pack
+		prerequisite = { focus = CHI_flexible_navy focus = CHI_large_navy }
+		x = 0
+		y = 1
+		relative_position_id = CHI_flexible_navy
+		cost = 5
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
+				}
+			}
+		}
+
+		completion_reward = {
+			add_tech_bonus = {
+				name = ss_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = ss_tech
+			}
+			random_state = {
+				limit = {
+					controller = { tag = ROOT }
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
 				}
 			}
 		}
 	}
 
-	completion_reward = {
-		add_tech_bonus = {
-			name = sub_op_bonus
-			bonus = 1.0
-			uses = 2
-			technology = convoy_interdiction_ti
-			technology = unrestricted_submarine_warfare
-			technology = wolfpacks
-			technology = advanced_submarine_warfare
-			technology = combined_operations_raiding
-		}
-		random_state = {
-			limit = {
-				controller = { tag = ROOT }
-				free_building_slots = {
-					building = dockyard
-					size > 0
-					include_locked = yes
+	focus = {
+		id = CHI_cruiser_effort
+		icon = GFX_focus_generic_cruiser2
+		prerequisite = { focus = CHI_large_navy focus = CHI_flexible_navy }
+		x = 0
+		y = 1
+		relative_position_id = CHI_large_navy
+		cost = 5
+		
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+
+		available_if_capitulated = yes
+
+
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
 				}
 			}
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = dockyard
-				level = 1
-				instant_build = yes
-			}
 		}
-		custom_effect_tooltip = available_designer
-		show_ideas_tooltip = CHI_nanyang_navy
-		show_ideas_tooltip = CHI_mawei_shipyard
-	}
-}
 
-focus = {
-	id = CHI_large_navy
-	icon = GFX_goal_generic_navy_battleship
-	prerequisite = { focus = CHI_naval_effort }
-	mutually_exclusive = { focus = CHI_flexible_navy }
-	x = 1
-	y = 1
-	relative_position_id = CHI_naval_effort
-	cost = 5
-	
-	search_filters = {   FOCUS_FILTER_RESEARCH }
-
-	available_if_capitulated = yes
-
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			all_owned_state = {
-				OR = {
-					is_coastal = no
-					dockyard < 1
+		completion_reward = {
+			add_tech_bonus = {
+				name = cr_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = cl_tech
+				category = ca_tech
+			}
+			random_state = {
+				limit = {
+					controller = { tag = ROOT }
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
+				}
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
 				}
 			}
 		}
 	}
 
-	completion_reward = {
-		add_tech_bonus = {
-			name = fleet_in_being_bonus
-			bonus = 1.0
-			uses = 2
-			category = fleet_in_being_tree
-		}
-		random_state = {
-			limit = {
-				controller = { tag = ROOT }
-				free_building_slots = {
-					building = dockyard
-					size > 0
-					include_locked = yes
-				}
-			}
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = dockyard
-				level = 1
-				instant_build = yes
-			}
-		}
-		custom_effect_tooltip = available_designer
-		show_ideas_tooltip = CHI_beiyang_navy
-	}
-}
+	focus = {
+		id = CHI_destroyer_effort
+		icon = GFX_focus_generic_destroyer
+		prerequisite = { focus = CHI_submarine_effort }
+		x = 0
+		y = 1
+		relative_position_id = CHI_submarine_effort
+		cost = 5
 
-focus = {
-	id = CHI_submarine_effort
-	icon = GFX_goal_generic_wolf_pack
-	prerequisite = { focus = CHI_flexible_navy focus = CHI_large_navy }
-	x = 0
-	y = 1
-	relative_position_id = CHI_flexible_navy
-	cost = 5
-	
-	search_filters = {  FOCUS_FILTER_RESEARCH }
-	
-	available_if_capitulated = yes
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
 
 
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			all_owned_state = {
-				OR = {
-					is_coastal = no
-					dockyard < 1
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
 				}
 			}
 		}
-	}
 
-	completion_reward = {
-		add_tech_bonus = {
-			name = ss_bonus
-			bonus = 1.0
-			ahead_reduction = 2
-			uses = 1
-			category = ss_tech
-		}
-		random_state = {
-			limit = {
-				controller = { tag = ROOT }
-				free_building_slots = {
-					building = dockyard
-					size > 0
-					include_locked = yes
+		completion_reward = {
+			add_tech_bonus = {
+				name = dd_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = dd_tech
+			}
+			random_state = {
+				limit = {
+					controller = { tag = ROOT }
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
 				}
-			}
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = dockyard
-				level = 1
-				instant_build = yes
-			}
-		}
-	}
-}
-
-focus = {
-	id = CHI_cruiser_effort
-	icon = GFX_focus_generic_cruiser2
-	prerequisite = { focus = CHI_large_navy focus = CHI_flexible_navy }
-	x = 0
-	y = 1
-	relative_position_id = CHI_large_navy
-	cost = 5
-	
-	search_filters = {  FOCUS_FILTER_RESEARCH }
-
-	available_if_capitulated = yes
-
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			all_owned_state = {
-				OR = {
-					is_coastal = no
-					dockyard < 1
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
 				}
 			}
 		}
 	}
 
-	completion_reward = {
-		add_tech_bonus = {
-			name = cr_bonus
-			bonus = 1.0
-			ahead_reduction = 2
-			uses = 1
-			category = cl_tech
-			category = ca_tech
-		}
-		random_state = {
-			limit = {
-				controller = { tag = ROOT }
-				free_building_slots = {
-					building = dockyard
-					size > 0
-					include_locked = yes
-				}
-			}
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = dockyard
-				level = 1
-				instant_build = yes
-			}
-		}
-	}
-}
+	focus = {
+		id = CHI_capital_ships_effort
+		icon = GFX_focus_generic_navy_battleship2
+		prerequisite = { focus = CHI_cruiser_effort }
+		x = 0
+		y = 1
+		relative_position_id = CHI_cruiser_effort
+		cost = 5
 
-focus = {
-	id = CHI_destroyer_effort
-	icon = GFX_focus_generic_destroyer
-	prerequisite = { focus = CHI_submarine_effort }
-	x = 0
-	y = 1
-	relative_position_id = CHI_submarine_effort
-	cost = 5
+		search_filters = {  FOCUS_FILTER_RESEARCH }
+		
+		available_if_capitulated = yes
 
-	search_filters = {  FOCUS_FILTER_RESEARCH }
-	
-	available_if_capitulated = yes
-
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			all_owned_state = {
-				OR = {
-					is_coastal = no
-					dockyard < 1
+		ai_will_do = {
+			factor = 1
+			modifier = {
+				factor = 0
+				all_owned_state = {
+					OR = {
+						is_coastal = no
+						dockyard < 1
+					}
 				}
 			}
 		}
-	}
 
-	completion_reward = {
-		add_tech_bonus = {
-			name = dd_bonus
-			bonus = 1.0
-			ahead_reduction = 2
-			uses = 1
-			category = dd_tech
-		}
-		random_state = {
-			limit = {
-				controller = { tag = ROOT }
-				free_building_slots = {
-					building = dockyard
-					size > 0
-					include_locked = yes
+		completion_reward = {
+			navy_experience = 25
+			add_tech_bonus = {
+				name = capital_ships_bonus
+				bonus = 1.0
+				ahead_reduction = 2
+				uses = 1
+				category = bc_tech
+				category = bb_tech
+				category = cv_tech
+			}
+			random_state = {
+				limit = {
+					controller = { tag = ROOT }
+					free_building_slots = {
+						building = dockyard
+						size > 0
+						include_locked = yes
+					}
 				}
-			}
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = dockyard
-				level = 1
-				instant_build = yes
-			}
-		}
-	}
-}
-
-focus = {
-	id = CHI_capital_ships_effort
-	icon = GFX_focus_generic_navy_battleship2
-	prerequisite = { focus = CHI_cruiser_effort }
-	x = 0
-	y = 1
-	relative_position_id = CHI_cruiser_effort
-	cost = 5
-
-	search_filters = {  FOCUS_FILTER_RESEARCH }
-	
-	available_if_capitulated = yes
-
-	ai_will_do = {
-		factor = 1
-		modifier = {
-			factor = 0
-			all_owned_state = {
-				OR = {
-					is_coastal = no
-					dockyard < 1
+				add_extra_state_shared_building_slots = 1
+				add_building_construction = {
+					type = dockyard
+					level = 1
+					instant_build = yes
 				}
 			}
 		}
 	}
 
-	completion_reward = {
-		navy_experience = 25
-		add_tech_bonus = {
-			name = capital_ships_bonus
-			bonus = 1.0
-			ahead_reduction = 2
-			uses = 1
-			category = bc_tech
-			category = bb_tech
-			category = cv_tech
+
+
+#########################################
+########### Anarchism ###################
+#########################################
+
+	focus = {
+		id = CHI_no_hope_in_government
+		icon = GFX_goal_generic_dangerous_deal
+		x = -17
+		y = 0
+		relative_position_id = CHI_three_principles_of_the_people
+		mutually_exclusive = { focus = CHI_three_principles_of_the_people }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
 		}
-		random_state = {
-			limit = {
-				controller = { tag = ROOT }
-				free_building_slots = {
-					building = dockyard
-					size > 0
-					include_locked = yes
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_stability = -0.1
+		}
+	}
+
+	focus = {
+		id = CHI_new_boxer_movement
+		icon = GFX_goal_tfv_saf_anti_colonialist_crusade
+		x = 0
+		y = 1
+		prerequisite = { focus= CHI_no_hope_in_government }
+		relative_position_id = CHI_no_hope_in_government
+		#mutually_exclusive = { focus = CHI_three_principles_of_the_people }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_stability = -0.1
+		}
+	}
+
+	focus = {
+		id = CHI_fund_raising
+		icon = GFX_focus_mex_privatisation
+		x = -2
+		y = 1
+		prerequisite = { focus= CHI_no_hope_in_government }
+		relative_position_id = CHI_no_hope_in_government
+		#mutually_exclusive = { focus = CHI_three_principles_of_the_people }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_stability = -0.1
+		}
+	}
+
+	focus = {
+		id = CHI_the_manifesto
+		icon = GFX_goal_generic_forceful_treaty
+		x = 2
+		y = 1
+		prerequisite = { focus= CHI_no_hope_in_government }
+		relative_position_id = CHI_no_hope_in_government
+		#mutually_exclusive = { focus = CHI_three_principles_of_the_people }
+
+		cost = 5
+
+		ai_will_do = {
+			factor = 4
+		}
+
+		available = {
+
+		}
+
+		bypass = {
+
+		}
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {
+
+		}
+		search_filters = { FOCUS_FILTER_STABILITY }
+		completion_reward = {
+			add_stability = -0.1
+		}
+	}
+
+	focus = {
+		id = CHI_overthrow_local_government
+		icon = GFX_focus_generic_support_the_left_right
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = { focus = CHI_new_boxer_movement }
+		prerequisite = { focus = CHI_fund_raising }
+		prerequisite = { focus = CHI_the_manifesto }
+		relative_position_id = CHI_new_boxer_movement
+		completion_reward = { }
+	}
+
+	focus = {
+		id = CHI_set_up_regional_councils
+		icon = GFX_goal_generic_alliance
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = { focus = CHI_overthrow_local_government }
+		relative_position_id = CHI_overthrow_local_government
+		completion_reward = { }
+	}
+
+	focus = {
+		id = CHI_orignise_local_militia
+		icon = GFX_goal_generic_small_arms
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = { focus = CHI_set_up_regional_councils }
+		relative_position_id = CHI_set_up_regional_councils
+		completion_reward = { }
+	}
+
+	focus = {
+		id = CHI_seize_infrastructure
+		icon = GFX_goal_generic_construct_infrastructure
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = { focus = CHI_orignise_local_militia }
+		relative_position_id = CHI_orignise_local_militia
+		completion_reward = { }
+	}
+
+	focus = {
+		id = CHI_persuade_amry_leaders
+		icon = GFX_focus_generic_military_mission
+		cost = 5
+		x = 0
+		y = 1
+		prerequisite = { focus = CHI_seize_infrastructure }
+		relative_position_id = CHI_seize_infrastructure
+		completion_reward = { }
+	}
+
+	focus = {
+		id = CHI_national_uprising
+		icon = GFX_focus_spr_masters_of_our_own_fate
+		cost = 5
+		x = 0
+		y = 5
+		prerequisite = { 
+			focus = CHI_overthrow_local_government 
+			focus = CHI_set_up_regional_councils
+			focus = CHI_orignise_local_militia
+			focus = CHI_seize_infrastructure
+			focus = CHI_persuade_amry_leaders
+		}
+		relative_position_id = CHI_overthrow_local_government
+
+		cancel_if_invalid = yes
+		continue_if_invalid = no
+		available_if_capitulated = no
+
+		complete_tooltip = {  }
+
+		completion_reward = {
+
+			if = {
+				limit = { has_completed_focus = CHI_persuade_amry_leaders }
+				start_civil_war = {
+					ruling_party = neutrality 
+					ideology = democratic
+					size = 0.1
 				}
 			}
-			add_extra_state_shared_building_slots = 1
-			add_building_construction = {
-				type = dockyard
-				level = 1
-				instant_build = yes
+
+			else_if = {
+				limit = { has_completed_focus = CHI_seize_infrastructure }
+				start_civil_war = {
+					ruling_party = neutrality 
+					ideology = democratic
+					size = 0.2
+				}
+			}
+
+			else_if = {
+				limit = { has_completed_focus = CHI_orignise_local_militia }
+				start_civil_war = {
+					ruling_party = neutrality 
+					ideology = democratic
+					size = 0.3
+				}
+			}
+
+			else_if = {
+				limit = { has_completed_focus = CHI_set_up_regional_councils }
+				start_civil_war = {
+					ruling_party = neutrality 
+					ideology = democratic
+					size = 0.4
+				}
+			}
+
+			else = {
+				#limit = { has_completed_focus = CHI_set_up_regional_councils }
+				start_civil_war = {
+					ruling_party = neutrality 
+					ideology = democratic
+					size = 0.5
+				}
+			}
+
+			set_cosmetic_tag = CAC
+			set_party_name = { ideology = neutrality long_name = CHI_party_anarchist_long
+				name = CHI_party_anarchist }
+			
+			create_country_leader = {
+				name = "Anarchist Commune"
+				desc = "POLITICS_ANARCHIST_COMMUNE_DESC"
+				picture = "gfx/leaders/CHI/Portrait_China_anarchists2.dds"
+				expire = "1965.1.1"
+				ideology = anarchism
+				traits = {
+					our_right_to_survive
+				}
 			}
 		}
 	}
-}
-
-
 
 }
