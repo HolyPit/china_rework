@@ -6,7 +6,7 @@ bookmarks = {
 		picture = "GFX_select_date_1936"
 		default_country = "GER"
 		default = yes
-
+		
 		"FRA"={
 			history = "FRA_GATHERING_STORM_DESC"
 			ideology = democratic
@@ -25,7 +25,7 @@ bookmarks = {
 		"FRA"={
 			history = "FRA_GATHERING_STORM_DESC"
 			ideology = democratic
-			available = { has_dlc = "La Resistance" }
+			available = { has_dlc = "La Resistance" } 
 			ideas = {
 				FRA_victors_of_wwi
 				FRA_disjointed_government
@@ -117,12 +117,12 @@ bookmarks = {
 			ideas = {
 				vittoria_mutilata
 				victor_emmanuel
-			}
+			}	
 			focuses = {
 				ITA_pact_of_steel
 				ITA_spanish_italian_faction
 				ITA_italy_first
-			}
+			}		
 		}
 		"JAP"={
 			minor = yes
@@ -132,12 +132,12 @@ bookmarks = {
 				state_shintoism
 				JAP_zaibatsus
 				JAP_militarism
-			}
+			}	
 			focuses = {
 				JAP_the_zero
 				JAP_warrior_spirit
 				JAP_strike_on_the_southern_resource_area
-			}
+			}			
 		}
 		"SOV"={
 			history = "SOV_GATHERING_STORM_DESC"
@@ -150,7 +150,7 @@ bookmarks = {
 				SOV_great_purge
 				SOV_claims_on_baltic
 				SOV_war_with_uk
-			}
+			}	
 		}
 
 		"CHI"={
@@ -163,9 +163,9 @@ bookmarks = {
 				CHI_nine_power_treaty
 			}
 			focuses = {
-			CHI_restore_beiyang_government
-			CHI_nothing_personal
-			CHI_brother_nation_of_japan
+				CHI_restore_beiyang_government
+				CHI_nothing_personal
+				CHI_brother_nation_of_japan
 			}
 		}
 
@@ -180,7 +180,7 @@ bookmarks = {
 			history = "POL_GATHERING_STORM_DESC"
 			ideology = neutrality
 			ideas = {
-
+				
 			}
 			focuses = {
 				POL_the_baltic_alliance
@@ -220,7 +220,7 @@ bookmarks = {
 			history = "NZL_GATHERING_STORM_DESC"
 			ideology = democratic
 			ideas = {
-
+				
 			}
 			focuses = {
 				NZL_bob_semple_tank
@@ -299,7 +299,7 @@ bookmarks = {
 				ROM_preserve_greater_romania
 			}
 		}
-
+		
 		"YUG"={
 			minor = yes
 			history = "YUG_GATHERING_STORM_DESC"
@@ -310,9 +310,9 @@ bookmarks = {
 				YUG_idea_serbian_general_staff
 			}
 			focuses = {
-				YUG_western_focus
+				YUG_end_the_regency
 				YUG_abolish_the_monarchy
-				YUG_establish_the_banovina_of_croatia
+				YUG_dissolve_serbia
 			}
 		}
 		# "CHI"={
@@ -360,7 +360,7 @@ bookmarks = {
 				MAN_claim_the_mandate_of_heaven
 			}
 		}
-
+		
 		"GXC"={
 			minor = yes
 			history = "WARLORDS_GATHERING_STORM_DESC"
@@ -374,7 +374,7 @@ bookmarks = {
 				CHI_provoke_border_clashes
 				CHI_join_the_chinese_soviet
 			}
-		}
+		}		
 		"YUN"={
 			minor = yes
 			history = "WARLORDS_GATHERING_STORM_DESC"
@@ -388,7 +388,7 @@ bookmarks = {
 				CHI_provoke_border_clashes
 				CHI_join_the_chinese_soviet
 			}
-		}
+		}		
 		"SHX"={
 			minor = yes
 			history = "WARLORDS_GATHERING_STORM_DESC"
@@ -402,7 +402,7 @@ bookmarks = {
 				CHI_provoke_border_clashes
 				CHI_join_the_chinese_soviet
 			}
-		}
+		}		
 		"XSM"={
 			minor = yes
 			history = "WARLORDS_GATHERING_STORM_DESC"
@@ -416,7 +416,7 @@ bookmarks = {
 				CHI_provoke_border_clashes
 				CHI_join_the_chinese_soviet
 			}
-		}
+		}		
 		"SIK"={
 			minor = yes
 			history = "WARLORDS_GATHERING_STORM_DESC"
@@ -431,7 +431,7 @@ bookmarks = {
 				CHI_join_the_chinese_soviet
 			}
 		}
-
+		
 		"MEX"={
 			minor = yes
 			history = "MEXICO_GATHERING_STORM_DESC"
@@ -495,6 +495,54 @@ bookmarks = {
 			}
 		}
 
+		"BUL"={
+			minor = yes
+			history = "BUL_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				BUL_second_national_catastrophe
+				BUL_army_restrictions
+				BUL_imro_01
+			}
+			focuses = {
+				BUL_the_fatherland_front
+				BUL_restore_the_bulgarian_patriarchate
+				BUL_prussia_of_the_balkans
+			}
+		}
+
+		"GRE"={
+			minor = yes
+			history = "GRE_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				GRE_debt_to_the_ifc
+				GRE_schachtplan
+				GRE_political_instability_dummy
+			}
+			focuses = {
+				GRE_metaxism_focus
+				GRE_resurrecting_the_megali_idea
+				GRE_stage_an_incident_in_the_bosporus
+			}
+		}
+
+		"TUR"={
+			minor = yes
+			history = "TUR_GATHERING_STORM_DESC"
+			ideology = neutrality
+			ideas = {
+				TUR_sectarian_woes
+				TUR_disorganised_armed_forces
+				TUR_debt_council
+			}
+			focuses = {
+				TUR_ratify_the_six_arrows
+				TUR_reaffirm_the_balkan_pact
+				TUR_pivot_to_the_past
+			}
+		}
+		
 		effect = {
 			randomize_weather = 22345 # <- Obligatory in every bookmark !
 			#123 = { rain_light = yes }
