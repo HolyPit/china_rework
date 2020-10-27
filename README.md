@@ -10,6 +10,7 @@ This mod gives you more choices where you can lead the Nationalist China to, reg
 [b]In this section you are seeing the most recent changes in this mod:[/b]
 
 [list]
+    [*] New portrait for Lin Sen.
     [*] New focus tree branch for researches.
     [*] New aircraft, ship and tank designers.
     [*] New focus tree branch for fixing your collapsing economy.
