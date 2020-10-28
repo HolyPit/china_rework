@@ -6468,7 +6468,7 @@ focus_tree = {
 	focus = {
 		id = CHI_military_affairs_commission
 		icon = GFX_focus_secret_rearmament
-		x = 42
+		x = 52
 		y = 0
 		relative_position_id = CHI_three_principles_of_the_people
 
@@ -7917,8 +7917,8 @@ focus_tree = {
 	focus = {
 		id = CHI_military_branch
 		icon = GFX_goal_generic_fortify_city
-		x = 71
-		y = 0
+		x = 72
+		y = 4
 		#relative_position_id = CHI_government_reform
 		#prerequisite = {focus = CHI_government_reform}
 
@@ -8900,7 +8900,7 @@ focus_tree = {
 	focus = {
 		id = CHI_no_hope_in_government
 		icon = GFX_goal_generic_dangerous_deal
-		x = -17
+		x = 34
 		y = 0
 		relative_position_id = CHI_three_principles_of_the_people
 		mutually_exclusive = { focus = CHI_three_principles_of_the_people }
@@ -9125,7 +9125,7 @@ focus_tree = {
 				start_civil_war = {
 					ruling_party = neutrality 
 					ideology = democratic
-					size = 0.1
+					size = 0.5
 				}
 			}
 
@@ -9134,7 +9134,7 @@ focus_tree = {
 				start_civil_war = {
 					ruling_party = neutrality 
 					ideology = democratic
-					size = 0.2
+					size = 0.6
 				}
 			}
 
@@ -9143,7 +9143,7 @@ focus_tree = {
 				start_civil_war = {
 					ruling_party = neutrality 
 					ideology = democratic
-					size = 0.3
+					size = 0.7
 				}
 			}
 
@@ -9152,7 +9152,7 @@ focus_tree = {
 				start_civil_war = {
 					ruling_party = neutrality 
 					ideology = democratic
-					size = 0.4
+					size = 0.8
 				}
 			}
 
@@ -9161,7 +9161,7 @@ focus_tree = {
 				start_civil_war = {
 					ruling_party = neutrality 
 					ideology = democratic
-					size = 0.5
+					size = 0.9
 				}
 			}
 
