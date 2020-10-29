@@ -1,3 +1,13 @@
+CHI_anachists_uprising = {
+	icon = border_war
+
+	priority = 95
+
+	allowed = {
+		WTT_is_ROOT_current_leader_of_china = yes
+	}
+}
+
 CHI_army_support = {
 	icon = army_reform
 	allowed = {

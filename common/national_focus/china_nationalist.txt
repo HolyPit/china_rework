@@ -8905,14 +8905,14 @@ focus_tree = {
 		relative_position_id = CHI_three_principles_of_the_people
 		mutually_exclusive = { focus = CHI_three_principles_of_the_people }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 4
 		}
 
 		available = {
-
+			NOT ={ has_country_flag = CHI_anachists_uprising_failed }
 		}
 
 		bypass = {
@@ -8941,7 +8941,7 @@ focus_tree = {
 		relative_position_id = CHI_no_hope_in_government
 		#mutually_exclusive = { focus = CHI_three_principles_of_the_people }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 4
@@ -8977,7 +8977,7 @@ focus_tree = {
 		relative_position_id = CHI_no_hope_in_government
 		#mutually_exclusive = { focus = CHI_three_principles_of_the_people }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 4
@@ -9013,7 +9013,7 @@ focus_tree = {
 		relative_position_id = CHI_no_hope_in_government
 		#mutually_exclusive = { focus = CHI_three_principles_of_the_people }
 
-		cost = 5
+		cost = 2
 
 		ai_will_do = {
 			factor = 4
@@ -9043,7 +9043,7 @@ focus_tree = {
 	focus = {
 		id = CHI_overthrow_local_government
 		icon = GFX_focus_generic_support_the_left_right
-		cost = 5
+		cost = 4
 		x = 0
 		y = 1
 		prerequisite = { focus = CHI_new_boxer_movement }
@@ -9056,18 +9056,23 @@ focus_tree = {
 	focus = {
 		id = CHI_set_up_regional_councils
 		icon = GFX_goal_generic_alliance
-		cost = 5
+		cost = 4
 		x = 0
 		y = 1
 		prerequisite = { focus = CHI_overthrow_local_government }
 		relative_position_id = CHI_overthrow_local_government
-		completion_reward = { }
+		completion_reward = { 
+			add_days_mission_timeout = {
+				mission = army_move_into_position
+				days = 30
+			}
+		}
 	}
 
 	focus = {
 		id = CHI_orignise_local_militia
 		icon = GFX_goal_generic_small_arms
-		cost = 5
+		cost = 4
 		x = 0
 		y = 1
 		prerequisite = { focus = CHI_set_up_regional_councils }
@@ -9078,7 +9083,7 @@ focus_tree = {
 	focus = {
 		id = CHI_seize_infrastructure
 		icon = GFX_goal_generic_construct_infrastructure
-		cost = 5
+		cost = 4
 		x = 0
 		y = 1
 		prerequisite = { focus = CHI_orignise_local_militia }
@@ -9089,7 +9094,7 @@ focus_tree = {
 	focus = {
 		id = CHI_persuade_amry_leaders
 		icon = GFX_focus_generic_military_mission
-		cost = 5
+		cost = 4
 		x = 0
 		y = 1
 		prerequisite = { focus = CHI_seize_infrastructure }
@@ -9100,7 +9105,7 @@ focus_tree = {
 	focus = {
 		id = CHI_national_uprising
 		icon = GFX_focus_spr_masters_of_our_own_fate
-		cost = 5
+		cost = 2
 		x = 0
 		y = 5
 		prerequisite = { 

@@ -203,7 +203,7 @@ CHI_army_support = {
 
 
 #Category only allowed for CHI
-	CHI_pressure_the_warlords = {
+CHI_pressure_the_warlords = {
 
 
 	CHI_pressure_yan_xishan = {
@@ -331,7 +331,7 @@ CHI_army_support = {
 
 
 
-	CHI_ccp_kmt_support = {
+CHI_ccp_kmt_support = {
 
 
 	add_ccp_support = {
@@ -500,4 +500,76 @@ CHI_army_support = {
 
 		}
 	}
+}
+
+CHI_anachists_uprising = {
+
+	arrest_anachists = {
+
+		icon = generic_prepare_civil_war
+
+		allowed = {
+			original_tag = CHI
+		}
+
+		available = {
+			has_completed_focus = CHI_no_hope_in_government
+		}
+
+		days_mission_timeout = 150
+
+		activation = {
+			NOT ={ has_completed_focus = CHI_no_hope_in_government }
+		}
+
+		is_good = no
+
+		fire_only_once = yes
+
+		
+
+		timeout_effect = {
+			set_global_flag = CHI_anachists_uprising_failed
+			custom_effect_tooltip = CHI_anachists_uprising_failed_tt
+		}
+	} 
+
+
+	army_move_into_position = {
+
+		icon = generic_civil_support
+
+		allowed = {
+			original_tag = CHI
+		}
+		
+		available = {
+			has_completed_focus = CHI_national_uprising
+		}
+
+		days_mission_timeout = 5
+		#days_remove = 1
+
+		activation = {
+			has_completed_focus = CHI_no_hope_in_government
+		}
+
+		fixed_random_seed = no
+
+		fire_only_once = no
+
+		is_good = no
+
+		timeout_effect = {
+			# unlock_national_focus = CHI_fund_raising
+			# unlock_national_focus = CHI_new_boxer_movement
+			# unlock_national_focus = CHI_the_manifesto
+			# unlock_national_focus = CHI_overthrow_local_government
+			# unlock_national_focus = CHI_national_uprising
+			complete_national_focus = CHI_national_uprising
+			set_global_flag = CHI_anachists_uprising_war
+			custom_effect_tooltip = CHI_anachists_uprising_war_tt
+		}
+	}
+
 }
