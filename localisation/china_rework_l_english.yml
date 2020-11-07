@@ -214,8 +214,8 @@
   CHI_invite_asian_desc:0 "Asian Memberships"
   CHI_invite_latin:0 "Latin American Memberships"
   CHI_invite_latin_desc:0 "Latin American Memberships"
-  CHI_go_with_britain: "Go with Britain"
-  CHI_go_with_britain_desc: "Go with Britain"
+  CHI_go_with_britain:0 "Go with Britain"
+  CHI_go_with_britain_desc:0 "Go with Britain"
   CHI_form_cni:0 "Form the CBI Theater"
   CHI_form_cni_desc:0 "Form the China-Burma-India Theater"
   CHI_singapore_strategy:0 "The Singapore Strategy"
@@ -266,8 +266,8 @@
   CHI_second_golden_decade_desc:0 "The Second Golden Decade"
 
 
-  CHI_military_branch: "Ministry of National Defense"
-  CHI_military_branch_desc: "Ministry of National Defense"
+  CHI_military_branch:0 "Ministry of National Defense"
+  CHI_military_branch_desc:0 "Ministry of National Defense"
 
   CHI_equipment_effort:0 "Equipment Division"
   CHI_equipment_effort_desc:0 "Equipment Division"
@@ -310,7 +310,7 @@
   CHI_capital_ships_effort:0 "Restore the Beiyang Glory"
   CHI_capital_ships_effort_desc:0 "Restore the Beiyang Glory"
 
-
+  CHI_anachists_uprising_preparation_tt:0 "§GComeplete this focus before the uprising will grant you more advantages over the nationalist government. More troops and even generals may join your side at the struggle."
 
 
 
