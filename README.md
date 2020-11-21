@@ -68,4 +68,4 @@ This mod gives you more choices where you can lead the Nationalist China to, reg
 [*]To expand the focus tree even more, suggestions are extremely welcome!
 [/list]
 
-This mod is now public on GitHub at https://github.com/HolyPit/china_rework, please use reasonably with crrdits to HolyPit. Feel free to contribute too!
+This mod is now public on GitHub at https://github.com/HolyPit/china_rework, please use reasonably with credits to HolyPit. Feel free to contribute too!
